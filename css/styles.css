@@ -1,0 +1,218 @@
+body {
+    background-color: #0E0E0E; /* Couleur de fond du corps */
+    color: rgb(255, 255, 255);
+    font-family: 'Poppins', sans-serif;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh; /* Hauteur minimale de l'écran */
+    text-align: center;
+}
+
+/* Réinitialisation des marges et padding */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Logo et nom centrés pour les autres pages */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-bottom: 30px;
+}
+
+.logo {
+    width: 150px; /* Taille du logo agrandie */
+    max-width: 100px; /* Limite la taille sur les petits écrans */
+    margin-right: 10px;
+    height: auto;
+}
+
+.site-name {
+    font-size: 32px;
+    font-weight: 600;
+    color: white;
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+/* Ajout d'une règle supplémentaire pour s'assurer qu'il n'y a pas de soulignement */
+.site-name:link,
+.site-name:visited {
+    text-decoration: none; /* Assure que les liens ne sont pas soulignés */
+}
+
+.site-name:hover {
+    color: white; /* Garde la couleur inchangée au survol */
+}
+
+/* Conteneur principal pour la barre de recherche */
+.search-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+/* Titre et description */
+.search-container h1 {
+    font-size: 48px;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.search-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+    color: #CCCCCC;
+}
+
+/* Barre de recherche */
+.search-box {
+    display: flex;
+    align-items: center;
+    background-color: #1C1C1C;
+    border-radius: 50px;
+    padding: 10px;
+    width: 90%; /* Utilise 90% de la largeur sur mobile */
+    max-width: 400px; /* Limite à une largeur maximale */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.5);
+    margin: 0 auto; /* Centre la barre de recherche */
+}
+
+.search-box input {
+    background: none !important; /* Pas de fond */
+    border: none !important; /* Pas de bordure */
+    outline: none !important; /* Pas d'outline */
+    color: white !important; /* Couleur du texte */
+    font-size: 16px !important; /* Taille de police */
+    padding: 10px !important; /* Espacement interne */
+    flex-grow: 1 !important; /* Prend la place restante */
+    font-family: 'Poppins', sans-serif !important; /* Utilisation de la police Poppins */
+}
+
+.search-box input::placeholder {
+    color: #BBBBBB; /* Couleur du texte du placeholder */
+}
+
+/* Effet lors du focus sur la barre de recherche */
+.search-box input:focus {
+    background-color: #1C1C1C !important; /* Couleur de fond sombre lors du focus */
+    color: white !important; /* Couleur du texte en blanc */
+}
+
+.search-box button {
+    background-color: #E50914;
+    color: white;
+    border: none;
+    border-radius: 50px;
+    padding: 10px 20px; /* Ajuster pour le rendre plus compact */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+/* Effet au survol du bouton */
+.search-box button:hover {
+    background-color: #b81b0e;
+    transform: scale(1.05);
+}
+
+/* Styles pour les résultats de recherche */
+#searchResults {
+    margin-top: 10px; /* Espacement au-dessus des résultats */
+    border: 1px solid #E50914; /* Bordure rouge autour des résultats */
+    border-radius: 15px; /* Coins plus arrondis */
+    background-color: #1C1C1C; /* Fond sombre pour correspondre au design général */
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.5); /* Ombre plus prononcée pour le contraste */
+    width: 80%; /* Largeur à 80% */
+    max-width: 300px; /* Limite à une largeur maximale de 300px */
+    padding: 10px; /* Ajoute un espacement intérieur */
+    font-family: 'Poppins', sans-serif; /* Utilisation de la police Poppins */
+}
+
+/* Styles pour chaque résultat */
+#searchResults a {
+    display: block; /* Chaque lien s'affiche sur une nouvelle ligne */
+    padding: 10px; /* Espacement intérieur des liens */
+    text-decoration: none; /* Supprime le soulignement par défaut */
+    color: #E50914; /* Couleur du texte changée à rouge pour plus de visibilité */
+    transition: background-color 0.3s; /* Animation au survol */
+}
+
+/* Règles supplémentaires pour s'assurer qu'il n'y a pas de soulignement */
+#searchResults a:link,
+#searchResults a:visited {
+    text-decoration: none; /* Supprime le soulignement */
+}
+
+#searchResults a:hover {
+    background-color: rgba(229, 9, 20, 0.1); /* Fond rouge clair au survol */
+}
+
+/* Styles pour le conteneur d'erreur */
+.error-container {
+    margin-top: 50px; /* Espace au-dessus de la zone d'erreur */
+}
+
+/* Styles spécifiques à la page 404 */
+.error-container h1 {
+    font-size: 48px;
+    margin-bottom: 20px;
+}
+
+.error-container p {
+    font-size: 18px;
+    margin-bottom: 30px;
+}
+
+.error-container button {
+    background-color: #E50914;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s;
+}
+
+.error-container button:hover {
+    background-color: #b81b0e; /* Couleur au survol */
+}
+
+/* Styles pour le bouton Tutoriel et Application */
+.tutorial-button, .application-button {
+    background-color: #E50914;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 25px; /* Arrondir le bouton */
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.3s;
+    margin: 10px; /* Espace autour des boutons */
+    width: 150px; /* Largeur fixe pour les deux boutons */
+}
+
+.tutorial-button:hover, .application-button:hover {
+    background-color: #b81b0e; /* Couleur au survol */
+    transform: scale(1.05); /* Légère augmentation de taille au survol */
+}
+
+/* Styles pour le conteneur des boutons */
+.button-container {
+    display: flex; /* Utiliser Flexbox pour aligner les boutons */
+    justify-content: center; /* Centrer les boutons horizontalement */
+    margin-top: 20px; /* Espace au-dessus des boutons */
+}
+
+/* Suppression du contour bleu et des ombres */
+input.form-control:focus {
+    outline: none !important;
+    box-shadow: none !important;
+    border-color: transparent !important;
+} 

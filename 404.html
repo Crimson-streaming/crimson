@@ -1,0 +1,50 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Page non trouvée - Crimson Streaming</title>
+    <link rel="stylesheet" href="css/styles.css">
+    
+     <!-- Affichage plein écran pour iPhone -->
+     <meta name="apple-mobile-web-app-capable" content="yes">
+     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+     <meta name="apple-mobile-web-app-title" content="Crimson">
+     
+     <!-- Icônes pour iPhone et lien vers le manifest pour la PWA -->
+     <link rel="apple-touch-icon" sizes="192x192" href="img/logo-iphone.png">
+     <link rel="manifest" href="/pwa/manifest.json"
+    
+     <!-- Favicon -->
+     <link rel="icon" type="image/png" sizes="32x32" href="favicon/favicon-32x32.png">
+     <link rel="icon" type="image/png" sizes="16x16" href="favicon/favicon-16x16.png">
+     <link rel="shortcut icon" href="favicon/favicon.ico">
+     <link rel="apple-touch-icon" sizes="180x180" href="favicon/apple-touch-icon.png">
+     <link rel="icon" type="image/png" sizes="192x192" href="favicon/android-chrome-192x192.png">
+     <link rel="icon" type="image/png" sizes="512x512" href="favicon/android-chrome-512x512.png">
+     <link rel="manifest" href="favicon/site.webmanifest">
+</head>
+<body>
+    <!-- En-tête avec logo et nom du site -->
+    <header class="header">
+        <img src="img/logo.png" alt="Logo Crimson" class="logo">
+        <span class="site-name">Crimson</span>
+    </header>
+
+    <!-- Conteneur d'erreur 404 -->
+    <div class="error-container">
+        <h1>404 - Page non trouvée</h1>
+        <p>Il semble que la page que vous cherchez n'existe.</p>
+        <button onclick="goHome()">Retour à l'accueil</button>
+    </div>
+
+    <script>
+    function goHome() {
+        window.location.href = 'index.html'; // Redirection vers la page d'accueil
+    }
+    </script>
+     <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
