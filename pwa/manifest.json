@@ -15,20 +15,20 @@
     {
       "src": "../img/logo-iphone-180.png",
       "sizes": "180x180",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
+      
     },
     {
       "src": "../img/logo-iphone-167.png",
       "sizes": "167x167",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
+      
     },
     {
       "src": "../img/logo-iphone-152.png",
       "sizes": "152x152",
-      "type": "image/png",
-      "purpose": "maskable"
+      "type": "image/png"
+    
     },
     {
       "src": "../img/logo-iphone-120.png",
