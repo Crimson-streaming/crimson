@@ -16,19 +16,16 @@
       "src": "../img/logo-iphone-180.png",
       "sizes": "180x180",
       "type": "image/png"
-      
     },
     {
       "src": "../img/logo-iphone-167.png",
       "sizes": "167x167",
       "type": "image/png"
-      
     },
     {
       "src": "../img/logo-iphone-152.png",
       "sizes": "152x152",
       "type": "image/png"
-    
     },
     {
       "src": "../img/logo-iphone-120.png",
@@ -41,5 +38,16 @@
   "background_color": "#FFFFFF",
   "theme_color": "#000000",
   "description": "Une plateforme de streaming innovante pour films, séries et anime.",
-  "lang": "fr"
+  "lang": "fr",
+  "orientation": "portrait",
+  "categories": [
+    "utilities"
+  ],
+  "screenshots": [
+    {
+      "src": "../img/recherche.jpeg",
+      "sizes": "1170x2255",
+      "type": "image/jpeg"
+    }
+  ]
 }
