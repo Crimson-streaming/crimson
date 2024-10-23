@@ -11,7 +11,7 @@
     ,
     {
         "nom": "Athena",
-        "affiche": "Img/film/Athena/Athena-affiche.jpg",
+        "affiche": "img/film/Athena/Athena-affiche.jpg",
             "emplacement": "film/deadpool-et-wolverine.html"
     }
 ]
