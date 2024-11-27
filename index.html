@@ -779,5 +779,42 @@ async function showSuggestions(query) {
 		return false;
 	});
 </script>
+
+<script>
+    // Vérifier si c'est la première visite en utilisant localStorage
+    if (!localStorage.getItem('popupDisplayed')) {
+        // Afficher la popup si c'est la première visite
+        Swal.fire({
+            title: "⚠️ Site en construction ⚠️",
+            text: "Le site est actuellement en construction. Vous pourriez rencontrer des bugs ou des films qui ne fonctionnent pas.",
+            icon: "info",
+            confirmButtonText: "Je comprends",
+            confirmButtonColor: "#b81b0e",  // Couleur du bouton
+            background: "#0d071e",  // Couleur du fond
+            iconColor: "#b81b0e",  // Couleur de l'icône
+            color: "#ffffff",  // Texte en blanc
+            footer: '<a href="https://crimson-streaming.github.io/crimson/pages/signaler-un-probl%C3%A8me.html" style="color: #b81b0e; text-decoration: underline;">Signaler un problème</a>',  // Lien dans le footer
+            allowOutsideClick: false,
+            allowEscapeKey: false,
+            customClass: {
+                popup: 'custom-swal'  // Appliquer la classe personnalisée pour la largeur et les bords arrondis
+            }
+        });
+
+        // Enregistrer que la popup a été affichée
+        localStorage.setItem('popupDisplayed', 'true');
+    }
+</script>
+
+<style>
+    /* Personnalisation de la popup */
+    .custom-swal {
+        border-radius: 15px;  /* Bords plus arrondis */
+        width: 80%;  /* Réduire la largeur de la popup */
+        max-width: 400px;  /* Limiter la largeur à 500px */
+    }
+</style>
+<script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+
 </body>
 </html>
