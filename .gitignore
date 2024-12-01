@@ -5,6 +5,7 @@ Thumbs.db
 # Configurations spécifiques à votre éditeur et environnements de développement
 .vscode/
 .idea/
+.venv/
 
 # Dossiers de modules et de compilation
 node_modules/
@@ -12,8 +13,7 @@ dist/
 cache/
 dowload/
 
-# Ignorer tous les fichiers `.m3u`, sauf `playlist.m3u` si nécessaire
+# Ignorer tous les fichiers `.m3u`
 .m3u
 
-.venv/
 movies-engine/

@@ -18720,7 +18720,8 @@
                 <a href="film/tant-que-le-soleil-frappe.html" title="Tant que le soleil frappe">
                     <div class="video-img"> 
                         <span class="video-item-content">Tant que le soleil frappe</span>
-                        <img src="https://www.themoviedb.org/t/p/original/snJb6oCdRAco3GueLpnP3vKBH2K.jpg
+                        <img src="https://www.themoviedb.org/t/p/original/snJb6oCdRAco3GueLpnP3vKBH2K.jpg
+
 " alt="Tant que le soleil frappe" title="Tant que le soleil frappe" loading="lazy">         
                     </div>       
                 </a>
@@ -32267,7 +32268,7 @@ async function showSuggestions(query) {
                 <a href="${movie.emplacement}">
                     <div class="video-img">
                         <span class="video-item-content">${movie.nom}</span>
-                        <img src="${movie.affiche}" alt="${movie.nom}">
+                        <img src="${movie.affiche}" alt="${movie.nom}" loading="lazy">
                     </div>
                 </a>
             `;
@@ -32278,25 +32279,6 @@ async function showSuggestions(query) {
     }
 }
 </script> 
-<script> 
-document.addEventListener('keydown', function(event) {
-    // Ctrl + U
-    if (event.ctrlKey && event.key === 'u') {
-        event.preventDefault();
-    }
-
-    // Ctrl + Maj + C
-    if (event.ctrlKey && event.shiftKey && event.key === 'C') {
-        event.preventDefault();
-    }
-
-    // Ctrl + Maj + I
-    if (event.ctrlKey && event.shiftKey && event.key === 'I') {
-        event.preventDefault();
-    }
-});
-
-</script>  
 
 <!-- Load Local JS -->
 <script src="js/sw.js"></script>

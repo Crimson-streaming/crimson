@@ -405,7 +405,7 @@
 </div>     
 
 <div class="eupopup eupopup-bottom"></div>
-<script>
+ <script>
 async function showSuggestions(query) {
   const searchOutput = document.getElementById('search_output');
   searchOutput.innerHTML = ''; // Réinitialiser les résultats
@@ -425,7 +425,7 @@ async function showSuggestions(query) {
               <a href="${movie.emplacement}">
                   <div class="video-img">
                       <span class="video-item-content">${movie.nom}</span>
-                      <img src="${movie.affiche}" alt="${movie.nom}">
+                      <img src="${movie.affiche}" alt="${movie.nom}" loading="lazy">
                   </div>
               </a>
           `;

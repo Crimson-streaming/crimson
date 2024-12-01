@@ -125,24 +125,23 @@ Seulement, la faute à la mouloukhia, il a fait un si petit voyage dans le temps
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4 mb-5">
         <video id="player" playsinline controls preload="auto" poster="https://image.tmdb.org/t/p/original/hpCVGnsOzdciHsPSgdDdj4FKwuw.jpg">
           <source src="https://matoc22140.cloudmatoc.com/files/aa/1QnJmF4WrKB8aX0ttjIoGEfAY8ZxTIpUyMD.m3u8" type="application/x-mpegURL">
-        <!-- JS Imports -->
-                                  <!-- sw emplacement -->
-       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-       <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-       <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-       <script src="../js/FWDEVPlayer.js"></script>
-       <script src="../js/bootstrap.min.js"></script>
-       <script src="../js/jquery.nice-select.min.js"></script>  
-       <script src="../js/megamenu.js"></script> 
-       <script src="../js/custom-main.js"></script>
-       <script src="../js/player.js"></script>
-       <script src="../js/search.js"></script>
-       <script src="../js/key.js"></script>
-       <script src="../js/ww.js"></script>
-       <script src="../js/copie.js"></script>
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<script type="text/javascript">
- document.addEventListener('DOMContentLoaded', () => {
+          <!-- Load Local JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/jquery.easing.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="../js/jquery.nice-select.min.js"></script>
+        <script src="../js/megamenu.js"></script>
+        <script src="../js/splide.min.js"></script>
+        <script src="../js/custom-main.js"></script>
+        <script src="../js/jquery-eu-cookie-law-popup.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+       <script type="text/javascript">
+        document.addEventListener('DOMContentLoaded', () => {
             const playerControls = ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
             const player = new Plyr('#player', {
                 controls: playerControls,
@@ -193,56 +192,51 @@ Seulement, la faute à la mouloukhia, il a fait un si petit voyage dans le temps
                 },
             });
 
-    const videoElement = document.getElementById('player');
-    const hlsSource = videoElement.querySelector('source').src;
+            const videoElement = document.getElementById('player');
+            const hlsSource = videoElement.querySelector('source').src;
 
-    // Utiliser l'URL comme clé unique pour la vidéo
-    const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
+            // Utiliser l'URL comme clé unique pour la vidéo
+            const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
 
-    // Charger le temps de lecture
-    const loadVideoTime = () => {
-        const savedTime = localStorage.getItem(storageKey);
-        if (savedTime) {
-            videoElement.currentTime = parseFloat(savedTime);
-        }
-    };
+            // Charger le temps de lecture
+            const loadVideoTime = () => {
+                const savedTime = localStorage.getItem(storageKey);
+                if (savedTime) {
+                    videoElement.currentTime = parseFloat(savedTime);
+                }
+            };
 
-    if (Hls.isSupported()) {
-        const hls = new Hls();
-        hls.loadSource(hlsSource);
-        hls.attachMedia(videoElement);
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(hlsSource);
+                hls.attachMedia(videoElement);
 
-        videoElement.addEventListener('ended', () => {
-            hls.loadSource(hlsSource);
-            videoElement.play(); // Replay video
+                videoElement.addEventListener('ended', () => {
+                    hls.loadSource(hlsSource);
+                    videoElement.play(); // Replay video
+                });
+
+                // Sauvegarder le temps de lecture
+                videoElement.addEventListener('timeupdate', () => {
+                    localStorage.setItem(storageKey, videoElement.currentTime);
+                });
+
+                loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+            } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                // Fallback for native HLS support (Safari)
+                videoElement.src = hlsSource;
+                videoElement.addEventListener('ended', () => {
+                    videoElement.play(); // Replay video
+                });
+                loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+            }
         });
-
-        // Sauvegarder le temps de lecture
-        videoElement.addEventListener('timeupdate', () => {
-            localStorage.setItem(storageKey, videoElement.currentTime);
-        });
-
-        loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
-    } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-        // Fallback for native HLS support (Safari)
-        videoElement.src = hlsSource;
-        videoElement.addEventListener('ended', () => {
-            videoElement.play(); // Replay video
-        });
-        loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
-    }
-});
-</script>  
-       <script src="../js/copie.js"></script>
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-
+    </script>
       </div>
     </div>
   </div>
 </div>
-
-<div id="popup1" class="popup-view popup-overlay">
+   <div id="popup1" class="popup-view popup-overlay">
   <div class="search">
     <div class="search-container has-results"><span class="title">Rechercher</span>
       <div class="search-input">
@@ -255,7 +249,43 @@ Seulement, la faute à la mouloukhia, il a fait un si petit voyage dans le temps
 </div>     
 
 <div class="eupopup eupopup-bottom"></div>
+ <script>
+async function showSuggestions(query) {
+  const searchOutput = document.getElementById('search_output');
+  searchOutput.innerHTML = ''; // Réinitialiser les résultats
 
-<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>
+  if (!query) return; // Si la requête est vide, ne rien faire
+
+  const response = await fetch('../search/d.json');
+  const movies = await response.json();
+
+  const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
+
+  if (filteredMovies.length > 0) {
+      filteredMovies.forEach(movie => {
+          const movieDiv = document.createElement('div');
+          movieDiv.classList.add('single-video');
+          movieDiv.innerHTML = `
+              <a href="${movie.emplacement}">
+                  <div class="video-img">
+                      <span class="video-item-content">${movie.nom}</span>
+                      <img src="${movie.affiche}" alt="${movie.nom}" loading="lazy">
+                  </div>
+              </a>
+          `;
+          searchOutput.appendChild(movieDiv);
+      });
+  } else {
+      searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
+  }
+}
+</script>  
+<script>
+$(document).ready(function() {
+    $(document).bind("contextmenu", function() {
+        return false;
+    });
+});
+</script> 
 </body>
 </html>

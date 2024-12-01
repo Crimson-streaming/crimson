@@ -123,136 +123,167 @@
           <source src="https://share22147.sharecloudy.com/files/aa/1cNqdNjbj1e1Ldyyxd0vecLJ7FqMV4gWg3n.m3u8" type="application/x-mpegURL">
           Nous travaillons activement pour vous offrir ce contenu. Merci de votre patience. ❤️
         </video>
-        <!-- JS Imports -->
-                                  <!-- sw emplacement -->
-       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-       <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-       <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-       <script src="../js/FWDEVPlayer.js"></script>
-       <script src="../js/bootstrap.min.js"></script>
-       <script src="../js/jquery.nice-select.min.js"></script>  
-       <script src="../js/megamenu.js"></script> 
-       <script src="../js/custom-main.js"></script>
-       <script src="../js/player.js"></script>
-       <script src="../js/search.js"></script>
-       <script src="../js/key.js"></script>
-       <script src="../js/ww.js"></script>
-       <script src="../js/copie.js"></script>
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
-<script type="text/javascript">
- document.addEventListener('DOMContentLoaded', () => {
-            const playerControls = ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
-            const player = new Plyr('#player', {
-                controls: playerControls,
-                quality: {
-                    default: 720,
-                    options: [720]
-                },
-                playsinline: true,
-                keyboard: { focused: true, global: true },
-                fullscreen: { enabled: true, fallback: true, iosNative: true },
-                disableContextMenu: true,
-                i18n: {
-                      restart: 'Recommencer',
-            rewind: 'Revenir de {seektime}s',
-            play: 'Play',
-            pause: 'Pause',
-            fastForward: 'Passer {seektime}s',
-            seek: 'Rechercher',
-            seekLabel: '{currentTime} de {duration}',
-            played: 'Lancé',
-            buffered: 'Buffered',
-            currentTime: 'Temps actuel',
-            duration: 'Durée',
-            volume: 'Volume',
-            mute: 'Silence',
-            unmute: 'Son activé',
-            enableCaptions: 'Activer les sous-titres',
-            disableCaptions: 'Désactiver les sous-titres',
-            download: 'Télécharger',
-            enterFullscreen: 'Plein écran',
-            exitFullscreen: 'Sortir du plein écran',
-            frameTitle: 'Lecteur pour {title}',
-            captions: 'Sous-titres',
-            settings: 'Réglages',
-            pip: 'Picture-In-Picture',
-            menuBack: 'Retour au menu précédent',
-            speed: 'Vitesse',
-            normal: 'Normal',
-            quality: 'Qualité',
-            loop: 'Boucle',
-            start: 'Début',
-            end: 'Fin',
-            all: 'Tous',
-            reset: 'Réinitialiser',
-            disabled: 'Désactivé',
-            enabled: 'Activé',
-            advertisement: 'Publicité',
-                },
-            });
-
-    const videoElement = document.getElementById('player');
-    const hlsSource = videoElement.querySelector('source').src;
-
-    // Utiliser l'URL comme clé unique pour la vidéo
-    const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
-
-    // Charger le temps de lecture
-    const loadVideoTime = () => {
-        const savedTime = localStorage.getItem(storageKey);
-        if (savedTime) {
-            videoElement.currentTime = parseFloat(savedTime);
-        }
-    };
-
-    if (Hls.isSupported()) {
-        const hls = new Hls();
-        hls.loadSource(hlsSource);
-        hls.attachMedia(videoElement);
-
-        videoElement.addEventListener('ended', () => {
-            hls.loadSource(hlsSource);
-            videoElement.play(); // Replay video
+          <!-- Load Local JS -->
+          <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+          <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+          <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+          <script src="../js/jquery-3.3.1.min.js"></script>
+          <script src="../js/jquery.easing.min.js"></script>
+          <script src="../js/bootstrap.min.js"></script>
+          <script src="../js/owl.carousel.min.js"></script>
+          <script src="../js/jquery.nice-select.min.js"></script>
+          <script src="../js/megamenu.js"></script>
+          <script src="../js/splide.min.js"></script>
+          <script src="../js/custom-main.js"></script>
+          <script src="../js/jquery-eu-cookie-law-popup.js"></script>
+          <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  
+         <script type="text/javascript">
+          document.addEventListener('DOMContentLoaded', () => {
+              const playerControls = ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
+              const player = new Plyr('#player', {
+                  controls: playerControls,
+                  quality: {
+                      default: 720,
+                      options: [720]
+                  },
+                  playsinline: true,
+                  keyboard: { focused: true, global: true },
+                  fullscreen: { enabled: true, fallback: true, iosNative: true },
+                  disableContextMenu: true,
+                  i18n: {
+                        restart: 'Recommencer',
+              rewind: 'Revenir de {seektime}s',
+              play: 'Play',
+              pause: 'Pause',
+              fastForward: 'Passer {seektime}s',
+              seek: 'Rechercher',
+              seekLabel: '{currentTime} de {duration}',
+              played: 'Lancé',
+              buffered: 'Buffered',
+              currentTime: 'Temps actuel',
+              duration: 'Durée',
+              volume: 'Volume',
+              mute: 'Silence',
+              unmute: 'Son activé',
+              enableCaptions: 'Activer les sous-titres',
+              disableCaptions: 'Désactiver les sous-titres',
+              download: 'Télécharger',
+              enterFullscreen: 'Plein écran',
+              exitFullscreen: 'Sortir du plein écran',
+              frameTitle: 'Lecteur pour {title}',
+              captions: 'Sous-titres',
+              settings: 'Réglages',
+              pip: 'Picture-In-Picture',
+              menuBack: 'Retour au menu précédent',
+              speed: 'Vitesse',
+              normal: 'Normal',
+              quality: 'Qualité',
+              loop: 'Boucle',
+              start: 'Début',
+              end: 'Fin',
+              all: 'Tous',
+              reset: 'Réinitialiser',
+              disabled: 'Désactivé',
+              enabled: 'Activé',
+              advertisement: 'Publicité',
+                  },
+              });
+  
+              const videoElement = document.getElementById('player');
+              const hlsSource = videoElement.querySelector('source').src;
+  
+              // Utiliser l'URL comme clé unique pour la vidéo
+              const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
+  
+              // Charger le temps de lecture
+              const loadVideoTime = () => {
+                  const savedTime = localStorage.getItem(storageKey);
+                  if (savedTime) {
+                      videoElement.currentTime = parseFloat(savedTime);
+                  }
+              };
+  
+              if (Hls.isSupported()) {
+                  const hls = new Hls();
+                  hls.loadSource(hlsSource);
+                  hls.attachMedia(videoElement);
+  
+                  videoElement.addEventListener('ended', () => {
+                      hls.loadSource(hlsSource);
+                      videoElement.play(); // Replay video
+                  });
+  
+                  // Sauvegarder le temps de lecture
+                  videoElement.addEventListener('timeupdate', () => {
+                      localStorage.setItem(storageKey, videoElement.currentTime);
+                  });
+  
+                  loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+              } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                  // Fallback for native HLS support (Safari)
+                  videoElement.src = hlsSource;
+                  videoElement.addEventListener('ended', () => {
+                      videoElement.play(); // Replay video
+                  });
+                  loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+              }
+          });
+      </script>
+        </div>
+      </div>
+    </div>
+  </div>
+     <div id="popup1" class="popup-view popup-overlay">
+    <div class="search">
+      <div class="search-container has-results"><span class="title">Rechercher</span>
+        <div class="search-input">
+          <input type="text" name="s" id="search_box" class="search-container-input" placeholder="Titre" onkeyup="showSuggestions(this.value)" style="background: #0d071e;" autocomplete="off">
+        </div>
+      </div>
+      <div class="search-results mt-4" id="search_output"></div>
+    </div>
+    <a class="close" href="#" title="close"><i class="fas fa-times"></i></a>
+  </div>     
+  
+  <div class="eupopup eupopup-bottom"></div>
+   <script>
+  async function showSuggestions(query) {
+    const searchOutput = document.getElementById('search_output');
+    searchOutput.innerHTML = ''; // Réinitialiser les résultats
+  
+    if (!query) return; // Si la requête est vide, ne rien faire
+  
+    const response = await fetch('../search/d.json');
+    const movies = await response.json();
+  
+    const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
+  
+    if (filteredMovies.length > 0) {
+        filteredMovies.forEach(movie => {
+            const movieDiv = document.createElement('div');
+            movieDiv.classList.add('single-video');
+            movieDiv.innerHTML = `
+                <a href="${movie.emplacement}">
+                    <div class="video-img">
+                        <span class="video-item-content">${movie.nom}</span>
+                        <img src="${movie.affiche}" alt="${movie.nom}" loading="lazy">
+                    </div>
+                </a>
+            `;
+            searchOutput.appendChild(movieDiv);
         });
-
-        // Sauvegarder le temps de lecture
-        videoElement.addEventListener('timeupdate', () => {
-            localStorage.setItem(storageKey, videoElement.currentTime);
-        });
-
-        loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
-    } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-        // Fallback for native HLS support (Safari)
-        videoElement.src = hlsSource;
-        videoElement.addEventListener('ended', () => {
-            videoElement.play(); // Replay video
-        });
-        loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+    } else {
+        searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
     }
-});
-</script>  
-
-
-      </div>
-    </div>
-  </div>
-</div>
-
-<div id="popup1" class="popup-view popup-overlay">
-  <div class="search">
-    <div class="search-container has-results"><span class="title">Rechercher</span>
-      <div class="search-input">
-        <input type="text" name="s" id="search_box" class="search-container-input" placeholder="Titre" onkeyup="showSuggestions(this.value)" style="background: #0d071e;" autocomplete="off">
-      </div>
-    </div>
-    <div class="search-results mt-4" id="search_output"></div>
-  </div>
-  <a class="close" href="#" title="close"><i class="fas fa-times"></i></a>
-</div>     
-
-<div class="eupopup eupopup-bottom"></div>
-
-<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>
-</body>
-</html>
+  }
+  </script>  
+  <script>
+  $(document).ready(function() {
+      $(document).bind("contextmenu", function() {
+          return false;
+      });
+  });
+  </script> 
+  </body>
+  </html>

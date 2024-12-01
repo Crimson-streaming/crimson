@@ -523,7 +523,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <a href="${movie.emplacement}">
                         <div class="video-img">
                             <span class="video-item-content">${movie.nom}</span>
-                            <img src="${movie.affiche}" alt="${movie.nom}">
+                            <img src="${movie.affiche}" alt="${movie.nom}" loading="lazy">
                         </div>
                     </a>
                 `;
@@ -534,25 +534,7 @@ document.addEventListener('DOMContentLoaded', function() {
         }
     }
     </script>  
-    <script> 
-        document.addEventListener('keydown', function(event) {
-            // Ctrl + U
-            if (event.ctrlKey && event.key === 'u') {
-                event.preventDefault();
-            }
-        
-            // Ctrl + Maj + C
-            if (event.ctrlKey && event.shiftKey && event.key === 'C') {
-                event.preventDefault();
-            }
-        
-            // Ctrl + Maj + I
-            if (event.ctrlKey && event.shiftKey && event.key === 'I') {
-                event.preventDefault();
-            }
-        });
-        
-        </script>  
+ 
   
 
    <!-- JS Imports -->
