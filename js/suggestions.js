@@ -13,7 +13,7 @@
           console.log("Nom du film extrait :", filmName);
 
           // Étape 2 : Charger les fichiers JSON
-          const dataResponse = await fetch('data.json');
+          const dataResponse = await fetch('search/data.json');
           const dataFilms = await dataResponse.json();
 
           const searchResponse = await fetch('search/d.json');
