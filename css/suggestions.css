@@ -1,0 +1,39 @@
+h3 {
+    font-size: 30px;
+    color: #FFF;
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.single-video {
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    border-radius: 8px;
+    overflow: hidden;
+    background-color: #fff;
+    transition: transform 0.3s ease;
+}
+
+
+
+.video-img img {
+  width: 50%; /* Assure que l'image occupe toute la largeur */
+    height: 250%; /* Remplit la hauteur spécifiée */
+    object-fit: cover; /* Maintient les proportions tout en remplissant le conteneur */
+    display: block; /* Évite les espaces indésirables sous l'image */
+}
+
+.video-item-content {
+    position: absolute;
+    bottom: 10px;
+    left: 10px;
+    background: rgba(0, 0, 0, 0.6);
+    color: #fff;
+    padding: 5px;
+    font-size: 12px;
+    border-radius: 4px;
+}
+
+.container-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
