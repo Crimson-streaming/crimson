@@ -248,7 +248,11 @@
 
 <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', () => {
-        const playerControls = ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
+        // Initialisation des contrôles Plyr
+        const playerControls = [
+            'play-large', 'play', 'progress', 'current-time', 'mute',
+            'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'
+        ];
         const player = new Plyr('#player', {
             controls: playerControls,
             quality: {
@@ -297,47 +301,58 @@
                 advertisement: 'Publicité',
             },
         });
-    
+
+        // Sélection de l'élément vidéo et récupération de la source
         const videoElement = document.getElementById('player');
-        const hlsSource = videoElement.querySelector('source').src;
-    
-        // Utiliser l'URL comme clé unique pour la vidéo
+        const hlsSource = videoElement.querySelector('source')?.src;
+
+        if (!hlsSource) {
+            console.error("La source de la vidéo n'a pas été trouvée.");
+            return; // Arrêt si la source de la vidéo est introuvable
+        }
+
+        // Utilisation de l'URL comme clé unique pour la vidéo
         const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
-    
-        // Charger le temps de lecture
+
+        // Charger le temps de lecture depuis le stockage local
         const loadVideoTime = () => {
             const savedTime = localStorage.getItem(storageKey);
             if (savedTime) {
                 videoElement.currentTime = parseFloat(savedTime);
             }
         };
-    
+
+        // Gestion de la lecture HLS
         if (Hls.isSupported()) {
             const hls = new Hls();
             hls.loadSource(hlsSource);
             hls.attachMedia(videoElement);
-    
+
             videoElement.addEventListener('ended', () => {
                 hls.loadSource(hlsSource);
-                videoElement.play(); // Replay video
+                videoElement.play(); // Relancer la vidéo
             });
-    
-            // Sauvegarder le temps de lecture
+
+            // Sauvegarder le temps de lecture à chaque mise à jour
             videoElement.addEventListener('timeupdate', () => {
                 localStorage.setItem(storageKey, videoElement.currentTime);
             });
-    
-            loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+
+            loadVideoTime(); // Charger le temps de lecture au démarrage
         } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-            // Fallback for native HLS support (Safari)
+            // Fallback pour les navigateurs comme Safari
             videoElement.src = hlsSource;
+
             videoElement.addEventListener('ended', () => {
-                videoElement.play(); // Replay video
+                videoElement.play(); // Relancer la vidéo
             });
-            loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+
+            loadVideoTime(); // Charger le temps de lecture au démarrage
+        } else {
+            console.error("HLS non supporté par ce navigateur.");
         }
-    
-        // Initialisation du Cast API
+
+        // Initialisation de l'API Cast
         function initializeCastApi() {
             if (window.cast && cast.framework) {
                 const castContext = cast.framework.CastContext.getInstance();
@@ -345,7 +360,8 @@
                     receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID,
                     autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED,
                 });
-    
+
+                // Gestion des changements d'état de Cast
                 castContext.addEventListener(cast.framework.CastContextEventType.CAST_STATE_CHANGED, (event) => {
                     if (event.castState === cast.framework.CastState.NOT_CONNECTED) {
                         console.log("Pas d'appareil connecté.");
@@ -353,43 +369,40 @@
                         console.log("Appareil connecté avec succès.");
                     }
                 });
+
+                console.log("Google Cast API initialisée avec succès.");
             } else {
-                console.log("Google Cast API non chargée.");
+                console.log("Google Cast API non chargée ou non disponible.");
             }
         }
-    
-        // Initialisation de l'API Cast
+
+        // Initialiser l'API Cast
         initializeCastApi();
-    
-        // Fonction pour caster la vidéo
+
+        // Gestion du clic sur le bouton Cast
         document.getElementById('castButton').addEventListener('click', () => {
             const castContext = cast.framework.CastContext.getInstance();
-            
+            const castSession = castContext.getCurrentSession();
+
             // Vérification de la session Cast avant de tenter de diffuser
-            if (castContext.getCurrentSession()) {
+            if (castSession) {
                 const mediaInfo = new chrome.cast.media.MediaInfo(hlsSource, 'application/x-mpegURL');
                 const request = new chrome.cast.media.LoadRequest(mediaInfo);
-                castContext.getCurrentSession().loadMedia(request)
+
+                castSession.loadMedia(request)
                     .then(() => {
                         console.log("Vidéo envoyée avec succès à Chromecast.");
                     })
                     .catch((error) => {
-                        console.log("Erreur lors de l'envoi de la vidéo au Chromecast : ", error);
+                        console.error("Erreur lors de l'envoi de la vidéo au Chromecast :", error);
                     });
             } else {
                 console.log("Aucune session active avec un appareil Chromecast.");
             }
         });
     });
-    </script>
+</script>
 
- <script>
- $(document).ready(function() {
-     $(document).bind("contextmenu", function() {
-         return false;
-     });
- });
- </script> 
  </body>
  </html>
  
