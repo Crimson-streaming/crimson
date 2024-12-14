@@ -100,29 +100,79 @@
         "emplacement": "../film/la-planète-des-singes--le-nouveau-royaume.html"
     },
     {
-        "nom": "Carnages",
-        "affiche": "https://media.themoviedb.org/t/p/original/tgZDMgUTUHtKMFG7NvYzUcdzwln.jpg",
-        "emplacement": "../film/carnages.html"
+        "nom": "Largo Winch : Le Prix de l'argent",
+        "affiche": "https://media.themoviedb.org/t/p/original/9ccXmqC2J8sglLCATVsphxGbwZr.jpg",
+        "emplacement": "../film/largo-winch--le-prix-de-largent.html"
     },
     {
-        "nom": "Le Larbin",
-        "affiche": "https://media.themoviedb.org/t/p/original/yZkkuIGTnxkpGcXfld0T2gSQ3Gm.jpg",
-        "emplacement": "../film/le-larbin.html"
+        "nom": "La Nuit se traîne",
+        "affiche": "https://media.themoviedb.org/t/p/original/jzZJXEa8KX5hsjCCpRaWc69e9gz.jpg",
+        "emplacement": "../film/la-nuit-se-traîne.html"
     },
     {
-        "nom": "Smile",
-        "affiche": "https://www.themoviedb.org/t/p/original/3kbtoJw6ZN0UUQhSuiRbAatr2kV.jpg",
-        "emplacement": "../film/smile.html"
+        "nom": "Armor",
+        "affiche": "https://media.themoviedb.org/t/p/original/pnXLFioDeftqjlCVlRmXvIdMsdP.jpg",
+        "emplacement": "../film/armor.html"
     },
     {
-        "nom": "The Portable Door",
-        "affiche": "https://media.themoviedb.org/t/p/original/49NQGuvaMWYeAD22h135tFd2Grs.jpg",
-        "emplacement": "../film/the-portable-door.html"
+        "nom": "Conclave",
+        "affiche": "https://media.themoviedb.org/t/p/original/A6MSwpe963WmbNiOoAyBe7kn3Pa.jpg",
+        "emplacement": "../film/conclave.html"
     },
     {
-        "nom": "Jake Paul vs. Mike Tyson",
-        "affiche": "https://i.imgur.com/V860UQV.png",
-        "emplacement": "../film/jake-paul-vs-mike-tyson.html"
+        "nom": "Absolution",
+        "affiche": "https://media.themoviedb.org/t/p/original/cNtAslrDhk1i3IOZ16vF7df6lMy.jpg",
+        "emplacement": "../film/absolution.html"
+    },
+    {
+        "nom": "L'Amour au présent",
+        "affiche": "https://media.themoviedb.org/t/p/original/7SyNfQ99bleDYDbukUauhX4O0Q1.jpg",
+        "emplacement": "../film/lamour-au-présent.html"
+    },
+    {
+        "nom": "Largo Winch",
+        "affiche": "https://media.themoviedb.org/t/p/original/xoW2ePFvIffyWzg2sx6qOKrMMOo.jpg",
+        "emplacement": "../film/largo-winch.html"
+    },
+    {
+        "nom": "4x4",
+        "affiche": "https://media.themoviedb.org/t/p/original/4o3Wr0zrYot5Q3rVS7c3YlFOpYJ.jpg",
+        "emplacement": "../film/4x4.html"
+    },
+    {
+        "nom": "Je ne me laisserai plus faire",
+        "affiche": "https://media.themoviedb.org/t/p/original/7Wxcz15llOhCadB8JI512JoaxeE.jpg",
+        "emplacement": "../film/je-ne-me-laisserai-plus-faire.html"
+    },
+    {
+        "nom": "Cut Throat City",
+        "affiche": "https://media.themoviedb.org/t/p/original/9702nIZf5EVxS3FrzycamQUlSjw.jpg",
+        "emplacement": "../film/cut-throat-city.html"
+    },
+    {
+        "nom": "Sweethearts",
+        "affiche": "https://media.themoviedb.org/t/p/original/890UDXYal6i8A9NbMV5TAxZpOzH.jpg",
+        "emplacement": "../film/sweethearts.html"
+    },
+    {
+        "nom": "GTMAX",
+        "affiche": "https://media.themoviedb.org/t/p/original/qrWTjqbf4gzT8BkWqB7VceWJXVU.jpg",
+        "emplacement": "../film/gtmax.html"
+    },
+    {
+        "nom": "The Clean Up Crew",
+        "affiche": "https://media.themoviedb.org/t/p/original/zaZL3PVVQ5SXBAfEUv4nSVq20Ty.jpg",
+        "emplacement": "../film/the-clean-up-crew.html"
+    },
+    {
+        "nom": "Here : Les plus belles années de notre vie",
+        "affiche": "https://media.themoviedb.org/t/p/original/xdogUWhMlAhbLQpiKJOnhTRidyl.jpg",
+        "emplacement": "../film/here--les-plus-belles-années-de-notre-vie.html"
+    },
+    {
+        "nom": "Tigres et Hyènes",
+        "affiche": "https://media.themoviedb.org/t/p/original/80Fpd8a5BibX3kAD5lpZhCKqSyV.jpg",
+        "emplacement": "../film/tigres-et-hyènes.html"
     },
     {
         "nom": "The Substance",
@@ -130,59 +180,19 @@
         "emplacement": "../film/the-substance.html"
     },
     {
-        "nom": "Strangers",
-        "affiche": "https://media.themoviedb.org/t/p/original/ohpuwSBMgP44OPduPkpOtLxh90w.jpg",
-        "emplacement": "../film/strangers.html"
+        "nom": "Le Larbin",
+        "affiche": "https://media.themoviedb.org/t/p/original/yZkkuIGTnxkpGcXfld0T2gSQ3Gm.jpg",
+        "emplacement": "../film/le-larbin.html"
     },
     {
-        "nom": "1992",
-        "affiche": "https://media.themoviedb.org/t/p/original/tPvFmQZM5HMspryyYbrtW02NR0G.jpg",
-        "emplacement": "../film/1992.html"
+        "nom": "Our Little Secret",
+        "affiche": "https://media.themoviedb.org/t/p/original/7isqmWUryG2xksrw0E75m3vYTFd.jpg",
+        "emplacement": "../film/our-little-secret.html"
     },
     {
-        "nom": "Un p'tit truc en plus",
-        "affiche": "https://media.themoviedb.org/t/p/original/uIlJ1wOlEt5K3NowJQDG4qscQAC.jpg",
-        "emplacement": "../film/un-p'tit-truc-en-plus.html"
-    },
-    {
-        "nom": "Un conte de Noël, ou presque",
-        "affiche": "https://media.themoviedb.org/t/p/original/2B8C4ZF4N7Ie3vuENIFRFjSI9P6.jpg",
-        "emplacement": "../film/un-conte-de-noël-ou-presque.html"
-    },
-    {
-        "nom": "I'll Be Right There",
-        "affiche": "https://media.themoviedb.org/t/p/original/jHbn6gQqEGFZXExp7oxuA84JsRe.jpg",
-        "emplacement": "../film/i'll-be-right-there.html"
-    },
-    {
-        "nom": "Apocalypse Z : Le Début de la fin",
-        "affiche": "https://media.themoviedb.org/t/p/original/y1zseasmkIWs2IKIIVQOU5UuwaK.jpg",
-        "emplacement": "../film/apocalypse-z--le-début-de-la-fin.html"
-    },
-    {
-        "nom": "Maman, j'ai raté ma vie",
-        "affiche": "https://media.themoviedb.org/t/p/original/riO8SqgY5rPDoLkWSJJVH4IblTM.jpg",
-        "emplacement": "../film/maman-j'ai-raté-ma-vie.html"
-    },
-    {
-        "nom": "Elyas",
-        "affiche": "https://media.themoviedb.org/t/p/original/dB6ojZkXfk6JFYaqZTTDUK8wj9O.jpg",
-        "emplacement": "../film/elyas.html"
-    },
-    {
-        "nom": "Skincare",
-        "affiche": "https://media.themoviedb.org/t/p/original/hBuprCd23nhi6IOwzVKI0tIAZDG.jpg",
-        "emplacement": "../film/skincare.html"
-    },
-    {
-        "nom": "Bagman",
-        "affiche": "https://media.themoviedb.org/t/p/original/8Mxnebl5Eje3Z2EH5ucprr2UHBo.jpg",
-        "emplacement": "../film/bagman.html"
-    },
-    {
-        "nom": "Pendant ce temps sur Terre",
-        "affiche": "https://media.themoviedb.org/t/p/original/yQTZNWr1uADktCBstY5QUtckHvj.jpg",
-        "emplacement": "../film/pendant-ce-temps-sur-terre.html"
+        "nom": "Salem",
+        "affiche": "https://media.themoviedb.org/t/p/original/48GicG21kW9J5cbGf8a5khigr5g.jpg",
+        "emplacement": "../film/salem.html"
     },
     {
         "nom": "Furiosa : une saga Mad Max",
@@ -247,7 +257,7 @@
     {
         "nom": "L'Abbé Pierre : Une vie de combats",
         "affiche": "https://media.themoviedb.org/t/p/original/6LjskUOqWCVN7GTFn6stARLzoyf.jpg",
-        "emplacement": "../film/l'abbé-pierre--une-vie-de-combats.html"
+        "emplacement": "../film/labbé-pierre--une-vie-de-combats.html"
     },
     {
         "nom": "Iron Claw",
@@ -282,7 +292,7 @@
     {
         "nom": "Hunger Games : La ballade du serpent et de l'oiseau chanteur",
         "affiche": "https://www.themoviedb.org/t/p/original/A1FnJai5qjvtwYA8GiWYrqFA8Xo.jpg",
-        "emplacement": "../film/hunger-games--la-ballade-du-serpent-et-de-l'oiseau-chanteur.html"
+        "emplacement": "../film/hunger-games--la-ballade-du-serpent-et-de-loiseau-chanteur.html"
     },
     {
         "nom": "Killers of the Flower Moon",
@@ -302,12 +312,12 @@
     {
         "nom": "Five Nights At Freddy's",
         "affiche": "https://www.themoviedb.org/t/p/original/A4j8S6moJS2zNtRR8oWF08gRnL5.jpg",
-        "emplacement": "../film/five-nights-at-freddy's.html"
+        "emplacement": "../film/five-nights-at-freddys.html"
     },
     {
         "nom": "L'Exorciste : Dévotion",
         "affiche": "https://www.themoviedb.org/t/p/original/vqFW2ZYgPzrPXVWcl4uihzYt6Eo.jpg",
-        "emplacement": "../film/l'exorciste--dévotion.html"
+        "emplacement": "../film/lexorciste--dévotion.html"
     },
     {
         "nom": "Saw X",
@@ -437,12 +447,12 @@
     {
         "nom": "L'Exorciste du Vatican",
         "affiche": "https://www.themoviedb.org/t/p/original/nelLXDgKEvyVs86RLrTxxUzie4t.jpg",
-        "emplacement": "../film/l'exorciste-du-vatican.html"
+        "emplacement": "../film/lexorciste-du-vatican.html"
     },
     {
         "nom": "Donjons & Dragons : L'Honneur des voleurs",
         "affiche": "https://www.themoviedb.org/t/p/original/tT8ys0GKleuWQ3mBHrFdAE0boNf.jpg",
-        "emplacement": "../film/donjons--dragons--l'honneur-des-voleurs.html"
+        "emplacement": "../film/donjons--dragons--lhonneur-des-voleurs.html"
     },
     {
         "nom": "Scream VI",
@@ -472,7 +482,7 @@
     {
         "nom": "Avatar : La voie de l'eau",
         "affiche": "https://www.themoviedb.org/t/p/original/hYeB9GpFaT7ysabBoGG5rbo9mF4.jpg",
-        "emplacement": "../film/avatar--la-voie-de-l'eau.html"
+        "emplacement": "../film/avatar--la-voie-de-leau.html"
     },
     {
         "nom": "The Son",
@@ -557,7 +567,7 @@
     {
         "nom": "Buzz l'Éclair",
         "affiche": "https://www.themoviedb.org/t/p/original/5aM7y4Du4whbTCx4GafQXKj14xi.jpg",
-        "emplacement": "../film/buzz-l'éclair.html"
+        "emplacement": "../film/buzz-léclair.html"
     },
     {
         "nom": "Les Minions 2 : Il était une fois Gru",
@@ -567,7 +577,7 @@
     {
         "nom": "Jurassic World : Le Monde d'après",
         "affiche": "https://www.themoviedb.org/t/p/original/4tRxeoxwf6X8l3yWYJr1CniKm6O.jpg",
-        "emplacement": "../film/jurassic-world--le-monde-d'après.html"
+        "emplacement": "../film/jurassic-world--le-monde-daprès.html"
     },
     {
         "nom": "Doctor Strange in the Multiverse of Madness",
@@ -667,7 +677,7 @@
     {
         "nom": "Spirale : L'Héritage de Saw",
         "affiche": "https://i.imgur.com/lGhrKxq.jpg",
-        "emplacement": "../film/spirale--l'héritage-de-saw.html"
+        "emplacement": "../film/spirale--lhéritage-de-saw.html"
     },
     {
         "nom": "Baby Boss 2 : Une affaire de famille",
@@ -691,8 +701,8 @@
     },
     {
         "nom": "Conjuring 3 - Sous l'emprise du Diable",
-        "affiche": "https://i.imgur.com/DyNLugB.jpg",
-        "emplacement": "../film/conjuring-3---sous-l'emprise-du-diable.html"
+        "affiche": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/k0JaMRifwHCk9b1T12koZKqXnnS.jpg",
+        "emplacement": "../film/conjuring-3---sous-lemprise-du-diable.html"
     },
     {
         "nom": "Cruella",
@@ -727,7 +737,7 @@
     {
         "nom": "Zack Snyder's Justice League",
         "affiche": "https://www.themoviedb.org/t/p/original/yWmbO5tQNlIpIEt6nNKD72TpXtM.jpg",
-        "emplacement": "../film/zack-snyder's-justice-league.html"
+        "emplacement": "../film/zack-snyders-justice-league.html"
     },
     {
         "nom": "Une affaire de détails",
@@ -773,6 +783,26 @@
         "nom": "Mulan",
         "affiche": "https://image.tmdb.org/t/p/original/ffVoswXHDZvyi53yJ1Q4rb9I60q.jpg",
         "emplacement": "../film/mulan.html"
+    },
+    {
+        "nom": "Flow, le chat qui n'avait plus peur de l'eau",
+        "affiche": "https://media.themoviedb.org/t/p/original/dzDMewC0Hwv01SROiWgKOi4iOc1.jpg",
+        "emplacement": "../film/flow-le-chat-qui-navait-plus-peur-de-leau.html"
+    },
+    {
+        "nom": "Super Wings : Vitesse maximum",
+        "affiche": "https://media.themoviedb.org/t/p/original/fnX7GP1GSaFuVerfX8fAHbV7Gng.jpg",
+        "emplacement": "../film/super-wings--vitesse-maximum.html"
+    },
+    {
+        "nom": "Ellian et le sortilège",
+        "affiche": "https://media.themoviedb.org/t/p/original/fwJkILPtJSVxxvH67V7GAojisZB.jpg",
+        "emplacement": "../film/ellian-et-le-sortilège.html"
+    },
+    {
+        "nom": "Un conte de Noël, ou presque",
+        "affiche": "https://media.themoviedb.org/t/p/original/2B8C4ZF4N7Ie3vuENIFRFjSI9P6.jpg",
+        "emplacement": "../film/un-conte-de-noël-ou-presque.html"
     },
     {
         "nom": "Look Back",
@@ -827,7 +857,7 @@
     {
         "nom": "Les Aventuriers de l'arche de Noé",
         "affiche": "https://media.themoviedb.org/t/p/original/l6EfcYboho6ovq7rcAjeInCati9.jpg",
-        "emplacement": "../film/les-aventuriers-de-l'arche-de-noé.html"
+        "emplacement": "../film/les-aventuriers-de-larche-de-noé.html"
     },
     {
         "nom": "Pretty Guardian Sailor Moon Cosmos : Le Film, 2e partie",
@@ -882,7 +912,7 @@
     {
         "nom": "Les Explorateurs: l'aventure fantastique",
         "affiche": "https://media.themoviedb.org/t/p/original/fjGaq4trEbUHvkXSLmFQKP3cNam.jpg",
-        "emplacement": "../film/les-explorateurs-l'aventure-fantastique.html"
+        "emplacement": "../film/les-explorateurs-laventure-fantastique.html"
     },
     {
         "nom": "S.O.S. Bikini Bottom : Une mission pour Sandy Écureuil",
@@ -897,7 +927,7 @@
     {
         "nom": "South Park : la fin de l'obésité",
         "affiche": "https://media.themoviedb.org/t/p/original/hpJnuHw432kcMm2nPnx4NaoQPdC.jpg",
-        "emplacement": "../film/south-park--la-fin-de-l'obésité.html"
+        "emplacement": "../film/south-park--la-fin-de-lobésité.html"
     },
     {
         "nom": "Justice League : Crisis on Infinite Earths Partie 3",
@@ -922,7 +952,7 @@
     {
         "nom": "L'Imaginaire",
         "affiche": "https://media.themoviedb.org/t/p/original/pQ5vSSj4FejYpWrTIeE2ahPYIoK.jpg",
-        "emplacement": "../film/l'imaginaire.html"
+        "emplacement": "../film/limaginaire.html"
     },
     {
         "nom": "Le garçon et le héron",
@@ -977,7 +1007,7 @@
     {
         "nom": "L'Épée magique",
         "affiche": "https://media.themoviedb.org/t/p/original/b4sw2cY5txWbcUQ3znB4MLnUfFa.jpg",
-        "emplacement": "../film/l'épée-magique.html"
+        "emplacement": "../film/lépée-magique.html"
     },
     {
         "nom": "Mars Express",
@@ -1001,7 +1031,7 @@
     },
     {
         "nom": "Woody Woodpecker : Alerte en colo",
-        "affiche": "https://i.imgur.com/uqBDTJx.jpeg",
+        "affiche": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/eWGd2HnIHbK74u9W5KT3GXskidi.jpg",
         "emplacement": "../film/woody-woodpecker--alerte-en-colo.html"
     },
     {
@@ -1051,7 +1081,7 @@
     },
     {
         "nom": "Contes de printemps",
-        "affiche": "https://i.imgur.com/yEyLid1.jpeg",
+        "affiche": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/f3CF5w2t1VnyMKN9mStue8xhG0B.jpg",
         "emplacement": "../film/contes-de-printemps.html"
     },
     {
@@ -1087,7 +1117,7 @@
     {
         "nom": "La Nuit d'Orion",
         "affiche": "https://media.themoviedb.org/t/p/original/gFzfnuAcr551q4FMGurYMUMR8fp.jpg",
-        "emplacement": "../film/la-nuit-d'orion.html"
+        "emplacement": "../film/la-nuit-dorion.html"
     },
     {
         "nom": "South Park : Joining the Panderverse",
@@ -1162,12 +1192,12 @@
     {
         "nom": "Journal d'un dégonflé : Un Noël carrément claustro !",
         "affiche": "https://www.themoviedb.org/t/p/original/tc4m0hzeHsLEK7nCmFPwUo7179H.jpg",
-        "emplacement": "../film/journal-d'un-dégonflé--un-noël-carrément-claustro-.html"
+        "emplacement": "../film/journal-dun-dégonflé--un-noël-carrément-claustro-.html"
     },
     {
         "nom": "L'Étrange Noël du petit Batman",
         "affiche": "https://www.themoviedb.org/t/p/original/qifWFWMAkn6qGEzrbHFE3BymKNW.jpg",
-        "emplacement": "../film/l'étrange-noël-du-petit-batman.html"
+        "emplacement": "../film/létrange-noël-du-petit-batman.html"
     },
     {
         "nom": "Le Rêve de Daisy",
@@ -1177,7 +1207,7 @@
     {
         "nom": "Angelo la débrouille : Réveille-toi ! C'est Noël",
         "affiche": "https://www.themoviedb.org/t/p/original/q20rlx318La4DJ0HThmAuEskBLJ.jpg",
-        "emplacement": "../film/angelo-la-débrouille--réveille-toi--c'est-noël.html"
+        "emplacement": "../film/angelo-la-débrouille--réveille-toi--cest-noël.html"
     },
     {
         "nom": "Un Noël façon Bad Guys",
@@ -1212,7 +1242,7 @@
     {
         "nom": "La Pat' Patrouille : La Super Patrouille Le Film",
         "affiche": "https://www.themoviedb.org/t/p/original/5unJTEPH5ipMY7cV87idGfhgIw7.jpg",
-        "emplacement": "../film/la-pat'-patrouille--la-super-patrouille-le-film.html"
+        "emplacement": "../film/la-pat-patrouille--la-super-patrouille-le-film.html"
     },
     {
         "nom": "Le Gardien de la cité perdue",
@@ -1222,7 +1252,7 @@
     {
         "nom": "Le cygne et la princesse: La naissance d'un conte de fées",
         "affiche": "https://www.themoviedb.org/t/p/original/2cZZZyMYUbfRNONFv1FC937ypA4.jpg",
-        "emplacement": "../film/le-cygne-et-la-princesse-la-naissance-d'un-conte-de-fées.html"
+        "emplacement": "../film/le-cygne-et-la-princesse-la-naissance-dun-conte-de-fées.html"
     },
     {
         "nom": "Miraculous World Paris : Les Aventures de Toxinelle et Griffe noire",
@@ -1252,7 +1282,7 @@
     {
         "nom": "Charlotte aux fraises et le monstre d'automne",
         "affiche": "https://www.themoviedb.org/t/p/original/lGk0YZNoBv0s2PznlyVk1YHO2I9.jpg",
-        "emplacement": "../film/charlotte-aux-fraises-et-le-monstre-d'automne.html"
+        "emplacement": "../film/charlotte-aux-fraises-et-le-monstre-dautomne.html"
     },
     {
         "nom": "La Famille Paloni présente Halloween",
@@ -1292,7 +1322,7 @@
     {
         "nom": "A vol d'oiseaux",
         "affiche": "https://themoviedb.org/t/p/original/tVfPC91gkSJsProFi8K53bFoDan.jpg",
-        "emplacement": "../film/a-vol-d'oiseaux.html"
+        "emplacement": "../film/a-vol-doiseaux.html"
     },
     {
         "nom": "Le Roi Singe",
@@ -1327,7 +1357,7 @@
     {
         "nom": "Batman : La Malédiction qui s'abattit sur Gotham",
         "affiche": "https://www.themoviedb.org/t/p/original/9n8d79Xoj4c76gJv3ISFOghYcyS.jpg",
-        "emplacement": "../film/batman--la-malédiction-qui-s'abattit-sur-gotham.html"
+        "emplacement": "../film/batman--la-malédiction-qui-sabattit-sur-gotham.html"
     },
     {
         "nom": "Spider-Man : New Generation",
@@ -1391,8 +1421,8 @@
     },
     {
         "nom": "Ruby, l'ado Kraken",
-        "affiche": "https://www.themoviedb.org/t/p/original/eTQS72K0sDmbdpNiOCN0jerlRvC.jpg",
-        "emplacement": "../film/ruby-l'ado-kraken.html"
+        "affiche": "https://image.tmdb.org/t/p/original/eTQS72K0sDmbdpNiOCN0jerlRvC.jpg",
+        "emplacement": "../film/ruby-lado-kraken.html"
     },
     {
         "nom": "Titina",
@@ -1401,7 +1431,7 @@
     },
     {
         "nom": "Grosse colère et fantaisies",
-        "affiche": "https://i.imgur.com/4IZe6Jc.jpg",
+        "affiche": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/cSTHv9cR8RQGdTg5gg0S0OUPbpq.jpg",
         "emplacement": "../film/grosse-colère-et-fantaisies.html"
     },
     {
@@ -1457,27 +1487,27 @@
     {
         "nom": "Black Clover : L'épée de l'empereur-mage",
         "affiche": "https://www.themoviedb.org/t/p/original/b9tLF8NUdBANjTRXXvBVBumIQEF.jpg",
-        "emplacement": "../film/black-clover--l'épée-de-l'empereur-mage.html"
+        "emplacement": "../film/black-clover--lépée-de-lempereur-mage.html"
     },
     {
         "nom": "Bob l'éponge la 4ème immersion",
         "affiche": "https://www.themoviedb.org/t/p/original/rozwpOPiTEYnXygWGvUPST4lVQa.jpg",
-        "emplacement": "../film/bob-l'éponge-la-4ème-immersion.html"
+        "emplacement": "../film/bob-léponge-la-4ème-immersion.html"
     },
     {
         "nom": "Bob l'éponge, le film: Éponge en eaux troubles",
         "affiche": "https://www.themoviedb.org/t/p/original/sVeJ29yoYF9iExsALVBGLY26Of2.jpg",
-        "emplacement": "../film/bob-l'éponge-le-film-éponge-en-eaux-troubles.html"
+        "emplacement": "../film/bob-léponge-le-film-éponge-en-eaux-troubles.html"
     },
     {
         "nom": "Bob l'éponge, le film : Un héros sort de l'eau",
         "affiche": "https://www.themoviedb.org/t/p/original/rpPuc4vpjef0stPjQbpKgRslrxZ.jpg",
-        "emplacement": "../film/bob-l'éponge-le-film--un-héros-sort-de-l'eau.html"
+        "emplacement": "../film/bob-léponge-le-film--un-héros-sort-de-leau.html"
     },
     {
         "nom": "Bob l'éponge - Le film",
         "affiche": "https://www.themoviedb.org/t/p/original/gjZD811kfY1ideNuBukcuCy8ocA.jpg",
-        "emplacement": "../film/bob-l'éponge---le-film.html"
+        "emplacement": "../film/bob-léponge---le-film.html"
     },
     {
         "nom": "Megamind",
@@ -1497,12 +1527,12 @@
     {
         "nom": "Dounia et la Princesse d'Alep",
         "affiche": "https://www.themoviedb.org/t/p/original/ghbylpaqHeZcVaxxenx67jTva06.jpg",
-        "emplacement": "../film/dounia-et-la-princesse-d'alep.html"
+        "emplacement": "../film/dounia-et-la-princesse-dalep.html"
     },
     {
         "nom": "Winnie l'ourson",
         "affiche": "https://www.themoviedb.org/t/p/original/pUeFtL9BqTYhx53DGY8q8GVx0ij.jpg",
-        "emplacement": "../film/winnie-l'ourson.html"
+        "emplacement": "../film/winnie-lourson.html"
     },
     {
         "nom": "Kim Possible: Mission Cupidon",
@@ -1612,12 +1642,12 @@
     {
         "nom": "L'Éléphante du magicien",
         "affiche": "https://i.imgur.com/xkMGqJE.jpg",
-        "emplacement": "../film/l'éléphante-du-magicien.html"
+        "emplacement": "../film/léléphante-du-magicien.html"
     },
     {
         "nom": "Made in Abyss : L'aurore de l'âme des profondeurs",
         "affiche": "https://www.themoviedb.org/t/p/original/ogvt3GgPGZ2RFuborSyCteBcYoe.jpg",
-        "emplacement": "../film/made-in-abyss--l'aurore-de-l'âme-des-profondeurs.html"
+        "emplacement": "../film/made-in-abyss--laurore-de-lâme-des-profondeurs.html"
     },
     {
         "nom": "Souvenirs de Marnie",
@@ -1627,7 +1657,7 @@
     {
         "nom": "Kubo et l'armure magique",
         "affiche": "https://www.themoviedb.org/t/p/original/vbVomBFh965jxqIa64CnCdg6PVX.jpg",
-        "emplacement": "../film/kubo-et-l'armure-magique.html"
+        "emplacement": "../film/kubo-et-larmure-magique.html"
     },
     {
         "nom": "One Piece Film - Red",
@@ -1662,7 +1692,7 @@
     {
         "nom": "Le Petit Nicolas - Qu'est-ce qu'on attend pour être heureux ?",
         "affiche": "https://www.themoviedb.org/t/p/original/96IgO4KJrry9k5ZVrwJxsLFgubF.jpg",
-        "emplacement": "../film/le-petit-nicolas---qu'est-ce-qu'on-attend-pour-être-heureux-.html"
+        "emplacement": "../film/le-petit-nicolas---quest-ce-quon-attend-pour-être-heureux-.html"
     },
     {
         "nom": "South Park the Streaming Wars Partie 2",
@@ -1677,7 +1707,7 @@
     {
         "nom": "Lupin III VS Cat's Eye",
         "affiche": "https://www.themoviedb.org/t/p/original/jY1Wgdi2vL5Xltpx37LvH0iAOCG.jpg",
-        "emplacement": "../film/lupin-iii-vs-cat's-eye.html"
+        "emplacement": "../film/lupin-iii-vs-cats-eye.html"
     },
     {
         "nom": "King Shakir Recycle",
@@ -1687,7 +1717,7 @@
     {
         "nom": "L'enfant, la taupe, le renard et le cheval",
         "affiche": "https://www.themoviedb.org/t/p/original/4E9RzdRAx6ZlemBEW4IL9yl6JHb.jpg",
-        "emplacement": "../film/l'enfant-la-taupe-le-renard-et-le-cheval.html"
+        "emplacement": "../film/lenfant-la-taupe-le-renard-et-le-cheval.html"
     },
     {
         "nom": "Le Chat Potté",
@@ -1697,17 +1727,17 @@
     {
         "nom": "De l'autre côté du ciel",
         "affiche": "https://www.themoviedb.org/t/p/original/kEIeAiYJds06Aqma4LTr3jNY72w.jpg",
-        "emplacement": "../film/de-l'autre-côté-du-ciel.html"
+        "emplacement": "../film/de-lautre-côté-du-ciel.html"
     },
     {
         "nom": "Tad l'explorateur et la table d'émeraude",
         "affiche": "https://www.themoviedb.org/t/p/original/aUuwzpXf3HD0vROqgjVFLq5yUr0.jpg",
-        "emplacement": "../film/tad-l'explorateur-et-la-table-d'émeraude.html"
+        "emplacement": "../film/tad-lexplorateur-et-la-table-démeraude.html"
     },
     {
         "nom": "Avalonia, l'étrange voyage",
         "affiche": "https://www.themoviedb.org/t/p/original/ryW6BRF8zDZoTFVSjmaoIiHxUa5.jpg",
-        "emplacement": "../film/avalonia-l'étrange-voyage.html"
+        "emplacement": "../film/avalonia-létrange-voyage.html"
     },
     {
         "nom": "Le Roi cerf",
@@ -1737,7 +1767,7 @@
     {
         "nom": "Le Journal d'un dégonflé : Rodrick fait sa loi",
         "affiche": "https://www.themoviedb.org/t/p/original/q5qIVm9URjCA6iq4gRDuhzkuUxx.jpg",
-        "emplacement": "../film/le-journal-d'un-dégonflé--rodrick-fait-sa-loi.html"
+        "emplacement": "../film/le-journal-dun-dégonflé--rodrick-fait-sa-loi.html"
     },
     {
         "nom": "Scrooge, Un (mé)chant de Noël",
@@ -1767,7 +1797,7 @@
     {
         "nom": "My Hero Academia - World Heroes' Mission",
         "affiche": "https://www.themoviedb.org/t/p/original/AsTlA7dj2ySGY1pzGSD0MoHFhEF.jpg",
-        "emplacement": "../film/my-hero-academia---world-heroes'-mission.html"
+        "emplacement": "../film/my-hero-academia---world-heroes-mission.html"
     },
     {
         "nom": "Le Dragon de mon père",
@@ -1807,7 +1837,7 @@
     {
         "nom": "Scooby-Doo et la mission d'Halloween",
         "affiche": "https://www.themoviedb.org/t/p/original/aXTIZpimlytL86FkK5VujsUuMLi.jpg",
-        "emplacement": "../film/scooby-doo-et-la-mission-d'halloween.html"
+        "emplacement": "../film/scooby-doo-et-la-mission-dhalloween.html"
     },
     {
         "nom": "Entergalactic",
@@ -1827,7 +1857,7 @@
     {
         "nom": "Pokémon : Les chroniques d'Arceus",
         "affiche": "https://www.themoviedb.org/t/p/original/r9AxrlhBgmFfipnYZ3UNUpsM8JZ.jpg",
-        "emplacement": "../film/pokémon--les-chroniques-d'arceus.html"
+        "emplacement": "../film/pokémon--les-chroniques-darceus.html"
     },
     {
         "nom": "Les Murs vagabonds",
@@ -1872,7 +1902,7 @@
     {
         "nom": "LEGO Star Wars - C'est l'été !",
         "affiche": "https://www.themoviedb.org/t/p/original/dzPbH4B2xlN1ClxsT8Qh5r5qNRs.jpg",
-        "emplacement": "../film/lego-star-wars---c'est-l'été-.html"
+        "emplacement": "../film/lego-star-wars---cest-lété-.html"
     },
     {
         "nom": "Le Destin des Tortues Ninja : Le film",
@@ -1897,7 +1927,7 @@
     {
         "nom": "Bob's Burgers : Le Film",
         "affiche": "https://www.themoviedb.org/t/p/original/31vliI2mopLlh5kUoWpJZ19cF8y.jpg",
-        "emplacement": "../film/bob's-burgers--le-film.html"
+        "emplacement": "../film/bobs-burgers--le-film.html"
     },
     {
         "nom": "Belle",
@@ -1906,7 +1936,7 @@
     },
     {
         "nom": "Le Monstre des mers",
-        "affiche": "https://i.imgur.com/y4VQrXz.png",
+        "affiche": "https://image.tmdb.org/t/p/w600_and_h900_bestv2/wWehjjuY02MlyWM9GvLBsGl5mj.jpg",
         "emplacement": "../film/le-monstre-des-mers.html"
     },
     {
@@ -1946,7 +1976,7 @@
     },
     {
         "nom": "Le Voyage extraordinaire de Seraphima",
-        "affiche": "https://i.imgur.com/2WztsYB.jpg",
+        "affiche": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/d4MmL5f8zqB0oYWgCyQx9y68Yl0.jpg",
         "emplacement": "../film/le-voyage-extraordinaire-de-seraphima.html"
     },
     {
@@ -1972,7 +2002,7 @@
     {
         "nom": "Space dogs : L'aventure tropicale",
         "affiche": "https://www.themoviedb.org/t/p/original/gWWaMSDSXpL7kFvVDhI3sbG2K0h.jpg",
-        "emplacement": "../film/space-dogs--l'aventure-tropicale.html"
+        "emplacement": "../film/space-dogs--laventure-tropicale.html"
     },
     {
         "nom": "La Princesse et le monstre charmant",
@@ -2002,7 +2032,7 @@
     {
         "nom": "Monster Family : En route pour l'aventure !",
         "affiche": "https://www.themoviedb.org/t/p/original/g6GXLbbBTRKViVVJi97Y2EyMZGy.jpg",
-        "emplacement": "../film/monster-family--en-route-pour-l'aventure-.html"
+        "emplacement": "../film/monster-family--en-route-pour-laventure-.html"
     },
     {
         "nom": "Monster Family",
@@ -2055,9 +2085,29 @@
         "emplacement": "../film/retour-au-bercail.html"
     },
     {
+        "nom": "Pimpinero : De Pétrole et de Sang",
+        "affiche": "https://media.themoviedb.org/t/p/original/56W7fXQbRnL2fLjpEJLSLspaFnP.jpg",
+        "emplacement": "../film/pimpinero--de-pétrole-et-de-sang.html"
+    },
+    {
+        "nom": "Carnages",
+        "affiche": "https://media.themoviedb.org/t/p/original/tgZDMgUTUHtKMFG7NvYzUcdzwln.jpg",
+        "emplacement": "../film/carnages.html"
+    },
+    {
+        "nom": "Strangers",
+        "affiche": "https://media.themoviedb.org/t/p/original/ohpuwSBMgP44OPduPkpOtLxh90w.jpg",
+        "emplacement": "../film/strangers.html"
+    },
+    {
         "nom": "Hijack 1971",
         "affiche": "https://media.themoviedb.org/t/p/original/68jNkFi61MQjrJEqj2up5wZ4w5R.jpg",
         "emplacement": "../film/hijack-1971.html"
+    },
+    {
+        "nom": "Elyas",
+        "affiche": "https://media.themoviedb.org/t/p/original/dB6ojZkXfk6JFYaqZTTDUK8wj9O.jpg",
+        "emplacement": "../film/elyas.html"
     },
     {
         "nom": "Libre",
@@ -2232,7 +2282,7 @@
     {
         "nom": "House of Ga'a",
         "affiche": "https://media.themoviedb.org/t/p/original/tlBVhYp9ByAVgRC5QQpGG1vc4IX.jpg",
-        "emplacement": "../film/house-of-ga'a.html"
+        "emplacement": "../film/house-of-gaa.html"
     },
     {
         "nom": "Le Ministère de la sale guerre",
@@ -2367,7 +2417,7 @@
     {
         "nom": "Noryang : L'Affrontement final",
         "affiche": "https://media.themoviedb.org/t/p/original/5xrEG2TSOYzxoTVixxEXtQOIuGV.jpg",
-        "emplacement": "../film/noryang--l'affrontement-final.html"
+        "emplacement": "../film/noryang--laffrontement-final.html"
     },
     {
         "nom": "Damaged",
@@ -2467,7 +2517,7 @@
     {
         "nom": "Condor's Nest",
         "affiche": "https://media.themoviedb.org/t/p/original/aBAsCMzsbGlFtQFqeWsKWM6hvOE.jpg",
-        "emplacement": "../film/condor's-nest.html"
+        "emplacement": "../film/condors-nest.html"
     },
     {
         "nom": "Dead Shot",
@@ -2487,7 +2537,7 @@
     {
         "nom": "Gold Run - Le convoi de l'impossible",
         "affiche": "https://media.themoviedb.org/t/p/original/egzhrSLWlYqTK9E0IfCNqsZVVxq.jpg",
-        "emplacement": "../film/gold-run---le-convoi-de-l'impossible.html"
+        "emplacement": "../film/gold-run---le-convoi-de-limpossible.html"
     },
     {
         "nom": "Dogman",
@@ -2692,7 +2742,7 @@
     {
         "nom": "Accident Man: Hitman's Holiday",
         "affiche": "https://www.themoviedb.org/t/p/original/npW9nfL7F3ZVpaCpabqo98KTLw6.jpg",
-        "emplacement": "../film/accident-man-hitman's-holiday.html"
+        "emplacement": "../film/accident-man-hitmans-holiday.html"
     },
     {
         "nom": "Sniper: G.R.I.T.",
@@ -2832,7 +2882,7 @@
     {
         "nom": "Dead Man's Hand",
         "affiche": "https://www.themoviedb.org/t/p/original/aIrSz4uiIubq3yiIUZ0fRZgNZyq.jpg",
-        "emplacement": "../film/dead-man's-hand.html"
+        "emplacement": "../film/dead-mans-hand.html"
     },
     {
         "nom": "God is a Bullet",
@@ -2972,7 +3022,7 @@
     {
         "nom": "Sisu : de l'or et du sang",
         "affiche": "https://www.themoviedb.org/t/p/original/ECTTTwuql4WqoqIPUywlfpZaTz.jpg",
-        "emplacement": "../film/sisu--de-l'or-et-du-sang.html"
+        "emplacement": "../film/sisu--de-lor-et-du-sang.html"
     },
     {
         "nom": "The Best Man",
@@ -3290,14 +3340,14 @@
         "emplacement": "../film/deliver-us-from-evil.html"
     },
     {
-        "nom": "Night Of The SicarioHD",
+        "nom": "Night Of The Sicario",
         "affiche": "https://www.themoviedb.org/t/p/original/f16MT2rp0htg9aHDqTIYyrQHTpi.jpg",
-        "emplacement": "../film/night-of-the-sicariohd.html"
+        "emplacement": "../film/night-of-the-sicario.html"
     },
     {
-        "nom": "A Perfect PlanHD",
+        "nom": "A Perfect Plan",
         "affiche": "https://www.themoviedb.org/t/p/original/c4KScb5pxg5MtuvctjTbg5ACfs.jpg",
-        "emplacement": "../film/a-perfect-planhd.html"
+        "emplacement": "../film/a-perfect-plan.html"
     },
     {
         "nom": "The Roundup",
@@ -3562,7 +3612,7 @@
     {
         "nom": "Fortress : Sniper's Eye",
         "affiche": "https://www.themoviedb.org/t/p/original/wi2RKJYYWbrvrVdJ6zmCdg9Gq6b.jpg",
-        "emplacement": "../film/fortress--sniper's-eye.html"
+        "emplacement": "../film/fortress--snipers-eye.html"
     },
     {
         "nom": "Fortress",
@@ -3622,7 +3672,7 @@
     {
         "nom": "Kingsman : Le Cercle d'or",
         "affiche": "https://www.themoviedb.org/t/p/original/dVRihFRMfuwSoda5lyok1xkJEKN.jpg",
-        "emplacement": "../film/kingsman--le-cercle-d'or.html"
+        "emplacement": "../film/kingsman--le-cercle-dor.html"
     },
     {
         "nom": "Kingsman : Services secrets",
@@ -3638,6 +3688,16 @@
         "nom": "Drive or Die",
         "affiche": "https://www.themoviedb.org/t/p/original/7nwN1OFvHinBPM2TVf3uuLvgChz.jpg",
         "emplacement": "../film/drive-or-die.html"
+    },
+    {
+        "nom": "Largo Winch II",
+        "affiche": "https://media.themoviedb.org/t/p/original/oB0tY4N5r3Hmw2dvXhyvl6AvWEM.jpg",
+        "emplacement": "../film/largo-winch-ii.html"
+    },
+    {
+        "nom": "Riddle of Fire",
+        "affiche": "https://media.themoviedb.org/t/p/original/xeLpipKMvcsUhMiBENNkcrqG3UX.jpg",
+        "emplacement": "../film/riddle-of-fire.html"
     },
     {
         "nom": "Loups-Garous",
@@ -3662,7 +3722,7 @@
     {
         "nom": "Jeanne d'Arc",
         "affiche": "https://media.themoviedb.org/t/p/original/wkMvIIUGZIxcjFihn19rl2CiPTa.jpg",
-        "emplacement": "../film/jeanne-d'arc.html"
+        "emplacement": "../film/jeanne-darc.html"
     },
     {
         "nom": "Harold et le crayon magique",
@@ -3732,7 +3792,7 @@
     {
         "nom": "Les Trois Mousquetaires: D'Artagnan",
         "affiche": "https://www.themoviedb.org/t/p/original/lm0pfF0HSLsSpFlhGCmR6Bhl8EE.jpg",
-        "emplacement": "../film/les-trois-mousquetaires-d'artagnan.html"
+        "emplacement": "../film/les-trois-mousquetaires-dartagnan.html"
     },
     {
         "nom": "Jumanji : Next Level",
@@ -3807,7 +3867,7 @@
     {
         "nom": "Les Aventuriers de l'arche perdue",
         "affiche": "https://www.themoviedb.org/t/p/original/pb6ZqNK1luGnkILnkONicFXwNeW.jpg",
-        "emplacement": "../film/les-aventuriers-de-l'arche-perdue.html"
+        "emplacement": "../film/les-aventuriers-de-larche-perdue.html"
     },
     {
         "nom": "Jurassic Pet 2 : Le Secret perdu",
@@ -3817,7 +3877,7 @@
     {
         "nom": "L'Odyssée d'Albert (Jurassic Pet)",
         "affiche": "https://www.themoviedb.org/t/p/original/eaIjzgGrNI6QizgzRYBSkNpSWQy.jpg",
-        "emplacement": "../film/l'odyssée-d'albert-jurassic-pet.html"
+        "emplacement": "../film/lodyssée-dalbert-jurassic-pet.html"
     },
     {
         "nom": "Mon chat et moi, la grande aventure de Rroû",
@@ -3892,7 +3952,7 @@
     {
         "nom": "Divergente 2 : L'Insurrection",
         "affiche": "https://www.themoviedb.org/t/p/original/m1QmXuYeTqvIYjqnafWLoFZEZdf.jpg",
-        "emplacement": "../film/divergente-2--l'insurrection.html"
+        "emplacement": "../film/divergente-2--linsurrection.html"
     },
     {
         "nom": "Divergente",
@@ -3912,7 +3972,7 @@
     {
         "nom": "Pirates des Caraïbes : Jusqu'au bout du monde",
         "affiche": "https://www.themoviedb.org/t/p/original/3JjceHUzbtgJ4fJs6x2ow4ckH89.jpg",
-        "emplacement": "../film/pirates-des-caraïbes--jusqu'au-bout-du-monde.html"
+        "emplacement": "../film/pirates-des-caraïbes--jusquau-bout-du-monde.html"
     },
     {
         "nom": "Pirates des Caraïbes : Le Secret du coffre maudit",
@@ -3942,7 +4002,7 @@
     {
         "nom": "Belle et Sébastien, l'aventure continue",
         "affiche": "https://www.themoviedb.org/t/p/original/qw2TAyhYZKxXPuzmxjhVc4aT2cV.jpg",
-        "emplacement": "../film/belle-et-sébastien-l'aventure-continue.html"
+        "emplacement": "../film/belle-et-sébastien-laventure-continue.html"
     },
     {
         "nom": "Belle et Sébastien",
@@ -3992,7 +4052,7 @@
     {
         "nom": "Le Mauvais Esprit d'Halloween",
         "affiche": "https://www.themoviedb.org/t/p/original/rZZQTieT7EdwaERaiy6RDUtpDvN.jpg",
-        "emplacement": "../film/le-mauvais-esprit-d'halloween.html"
+        "emplacement": "../film/le-mauvais-esprit-dhalloween.html"
     },
     {
         "nom": "Werewolf by Night",
@@ -4083,6 +4143,31 @@
         "nom": "Onoda, 10 000 nuits dans la jungle",
         "affiche": "https://www.themoviedb.org/t/p/original/lVToagGbPhiJzusNrWpM1smZSiM.jpg",
         "emplacement": "../film/onoda-10-000-nuits-dans-la-jungle.html"
+    },
+    {
+        "nom": "Carla et Moi",
+        "affiche": "https://media.themoviedb.org/t/p/original/anqUDL7XDGCnuMzRu4MptvJtt6G.jpg",
+        "emplacement": "../film/carla-et-moi.html"
+    },
+    {
+        "nom": "The Merry Gentlemen",
+        "affiche": "https://media.themoviedb.org/t/p/original/4t80WORFWqDYf4BRwV2jrXNHJdN.jpg",
+        "emplacement": "../film/the-merry-gentlemen.html"
+    },
+    {
+        "nom": "Maybe Baby 2",
+        "affiche": "https://media.themoviedb.org/t/p/original/5ikADeVa7HAEOMmi0CZWiT95KHl.jpg",
+        "emplacement": "../film/maybe-baby-2.html"
+    },
+    {
+        "nom": "Maybe Baby",
+        "affiche": "https://media.themoviedb.org/t/p/original/kKG7t9pHxt8XNr3Ssnqg4Cv2WXU.jpg",
+        "emplacement": "../film/maybe-baby.html"
+    },
+    {
+        "nom": "Maman, j'ai raté ma vie",
+        "affiche": "https://media.themoviedb.org/t/p/original/riO8SqgY5rPDoLkWSJJVH4IblTM.jpg",
+        "emplacement": "../film/maman-jai-raté-ma-vie.html"
     },
     {
         "nom": "Pourquoi tu souris ?",
@@ -4250,6 +4335,11 @@
         "emplacement": "../film/unlucky-sisters.html"
     },
     {
+        "nom": "Un p'tit truc en plus",
+        "affiche": "https://media.themoviedb.org/t/p/original/uIlJ1wOlEt5K3NowJQDG4qscQAC.jpg",
+        "emplacement": "../film/un-ptit-truc-en-plus.html"
+    },
+    {
         "nom": "Crazy Night",
         "affiche": "https://media.themoviedb.org/t/p/original/2YzugQM7XfaU8MLP4kJBlSHHgrI.jpg",
         "emplacement": "../film/crazy-night.html"
@@ -4277,22 +4367,22 @@
     {
         "nom": "L'Étoile filante",
         "affiche": "https://media.themoviedb.org/t/p/original/1QkL1RP6uCudLbaX6KUdcxRpdfx.jpg",
-        "emplacement": "../film/l'étoile-filante.html"
+        "emplacement": "../film/létoile-filante.html"
     },
     {
         "nom": "L'Incroyable Destin de Harold Crick",
         "affiche": "https://media.themoviedb.org/t/p/original/mTOS2zInLLAYY4A9ZTVBXlbZoDH.jpg",
-        "emplacement": "../film/l'incroyable-destin-de-harold-crick.html"
+        "emplacement": "../film/lincroyable-destin-de-harold-crick.html"
     },
     {
         "nom": "Le Joyeux Noël d'Harold et Kumar",
         "affiche": "https://media.themoviedb.org/t/p/original/yHzAT9E5BeqnjFbpUIK1Nh67i5r.jpg",
-        "emplacement": "../film/le-joyeux-noël-d'harold-et-kumar.html"
+        "emplacement": "../film/le-joyeux-noël-dharold-et-kumar.html"
     },
     {
         "nom": "Harold et Kumar s'évadent de Guantanamo",
         "affiche": "https://media.themoviedb.org/t/p/original/yXM7fCiQd1dpKHCYsKRZPrpWBBk.jpg",
-        "emplacement": "../film/harold-et-kumar-s'évadent-de-guantanamo.html"
+        "emplacement": "../film/harold-et-kumar-sévadent-de-guantanamo.html"
     },
     {
         "nom": "Harold et Kumar chassent le burger",
@@ -4307,7 +4397,7 @@
     {
         "nom": "N'avoue jamais",
         "affiche": "https://media.themoviedb.org/t/p/original/eClC4JywN7ZIW0HllSLkx4GEQTp.jpg",
-        "emplacement": "../film/n'avoue-jamais.html"
+        "emplacement": "../film/navoue-jamais.html"
     },
     {
         "nom": "Nice Girls",
@@ -4327,7 +4417,7 @@
     {
         "nom": "L'Esprit Coubertin",
         "affiche": "https://media.themoviedb.org/t/p/original/tCmSyQnHqFm77dgjDi37883BpSJ.jpg",
-        "emplacement": "../film/l'esprit-coubertin.html"
+        "emplacement": "../film/lesprit-coubertin.html"
     },
     {
         "nom": "Nous, les Leroy",
@@ -4357,7 +4447,7 @@
     {
         "nom": "L'Élève Ducobu",
         "affiche": "https://media.themoviedb.org/t/p/original/piVjl9Xhd6xeYxJnm7ifJaURjHd.jpg",
-        "emplacement": "../film/l'élève-ducobu.html"
+        "emplacement": "../film/lélève-ducobu.html"
     },
     {
         "nom": "Et plus si affinités",
@@ -4392,7 +4482,7 @@
     {
         "nom": "Don't Tell Mom the Babysitter's Dead",
         "affiche": "https://media.themoviedb.org/t/p/original/aMLrX8qaagRUESyPSJCARNlT8Xd.jpg",
-        "emplacement": "../film/don't-tell-mom-the-babysitter's-dead.html"
+        "emplacement": "../film/dont-tell-mom-the-babysitters-dead.html"
     },
     {
         "nom": "What Happens Later",
@@ -4562,7 +4652,7 @@
     {
         "nom": "Unfrosted : L'épopée de la Pop-Tart",
         "affiche": "https://media.themoviedb.org/t/p/original/5olvSD5rMbIkKq3mvjjmYppQWfD.jpg",
-        "emplacement": "../film/unfrosted--l'épopée-de-la-pop-tart.html"
+        "emplacement": "../film/unfrosted--lépopée-de-la-pop-tart.html"
     },
     {
         "nom": "Les SEGPA au ski",
@@ -4627,7 +4717,7 @@
     {
         "nom": "L'Amour au pied du mur",
         "affiche": "https://i.imgur.com/e1ZYqEn.jpeg",
-        "emplacement": "../film/l'amour-au-pied-du-mur.html"
+        "emplacement": "../film/lamour-au-pied-du-mur.html"
     },
     {
         "nom": "Noël Joyeux",
@@ -4697,7 +4787,7 @@
     {
         "nom": "L'Ascension",
         "affiche": "https://media.themoviedb.org/t/p/original/l7JqOhzH0cWBB9L6imoWRFRFa84.jpg",
-        "emplacement": "../film/l'ascension.html"
+        "emplacement": "../film/lascension.html"
     },
     {
         "nom": "Drive-Away Dolls",
@@ -4837,7 +4927,7 @@
     {
         "nom": "Le Fabuleux Destin d'Amélie Poulain",
         "affiche": "https://www.themoviedb.org/t/p/original/tdXtLG6L1QMwrv0MNdW6B9IwC8B.jpg",
-        "emplacement": "../film/le-fabuleux-destin-d'amélie-poulain.html"
+        "emplacement": "../film/le-fabuleux-destin-damélie-poulain.html"
     },
     {
         "nom": "Super-bourrés",
@@ -4852,7 +4942,7 @@
     {
         "nom": "Maman, j'ai raté l'avion !",
         "affiche": "https://www.themoviedb.org/t/p/original/aP9UrDpKS5i5PCiYKDgJvkRz7ne.jpg",
-        "emplacement": "../film/maman-j'ai-raté-l'avion-.html"
+        "emplacement": "../film/maman-jai-raté-lavion-.html"
     },
     {
         "nom": "The Belgian Wave",
@@ -5042,7 +5132,7 @@
     {
         "nom": "L'Histoire racontée par des chaussettes - Le Film",
         "affiche": "https://www.themoviedb.org/t/p/original/cQNP41c5JAO5zpyJfRAVloGYqsN.jpg",
-        "emplacement": "../film/l'histoire-racontée-par-des-chaussettes---le-film.html"
+        "emplacement": "../film/lhistoire-racontée-par-des-chaussettes---le-film.html"
     },
     {
         "nom": "Sexygénaires",
@@ -5052,7 +5142,7 @@
     {
         "nom": "Si c'était l'amour",
         "affiche": "https://www.themoviedb.org/t/p/original/iGZWuz4DNrRgwTPHRDxDTdsSO1M.jpg",
-        "emplacement": "../film/si-c'était-l'amour.html"
+        "emplacement": "../film/si-cétait-lamour.html"
     },
     {
         "nom": "Swing Rendez-vous",
@@ -5387,7 +5477,7 @@
     {
         "nom": "Et l'amour dans tout ça ?",
         "affiche": "https://www.themoviedb.org/t/p/original/YjbBrhvupukw0NlBSegjEQsVrE.jpg",
-        "emplacement": "../film/et-l'amour-dans-tout-ça-.html"
+        "emplacement": "../film/et-lamour-dans-tout-ça-.html"
     },
     {
         "nom": "La Grande magie",
@@ -5422,7 +5512,7 @@
     {
         "nom": "Fool's Paradise",
         "affiche": "https://www.themoviedb.org/t/p/original/au2VRem7V7sekOnG0SBTvrtvvdo.jpg",
-        "emplacement": "../film/fool's-paradise.html"
+        "emplacement": "../film/fools-paradise.html"
     },
     {
         "nom": "Buddy Games - Spring Awakening",
@@ -5492,7 +5582,7 @@
     {
         "nom": "Astérix et Obélix : L'Empire du milieu",
         "affiche": "https://www.themoviedb.org/t/p/original/hZvqv0iRg5S3Aqw3HjXw7gShG6g.jpg",
-        "emplacement": "../film/astérix-et-obélix--l'empire-du-milieu.html"
+        "emplacement": "../film/astérix-et-obélix--lempire-du-milieu.html"
     },
     {
         "nom": "Chœur de Rockers",
@@ -5507,7 +5597,7 @@
     {
         "nom": "L'Amour en touriste",
         "affiche": "https://www.themoviedb.org/t/p/original/r6zrsB5DTeQWodEBopTj0Q0lMNI.jpg",
-        "emplacement": "../film/l'amour-en-touriste.html"
+        "emplacement": "../film/lamour-en-touriste.html"
     },
     {
         "nom": "Mon héroïne",
@@ -5532,7 +5622,7 @@
     {
         "nom": "Flirt avec l'extrême",
         "affiche": "https://www.themoviedb.org/t/p/original/fSriE4tCvyCGYecwZPyVXZxgp7O.jpg",
-        "emplacement": "../film/flirt-avec-l'extrême.html"
+        "emplacement": "../film/flirt-avec-lextrême.html"
     },
     {
         "nom": "Queens on the Run",
@@ -5557,7 +5647,7 @@
     {
         "nom": "Les Rois de Mulberry : Au cœur de l'action",
         "affiche": "https://www.themoviedb.org/t/p/original/oYMIvk8d7k4CL1cFhovU7dkOFIY.jpg",
-        "emplacement": "../film/les-rois-de-mulberry--au-cœur-de-l'action.html"
+        "emplacement": "../film/les-rois-de-mulberry--au-cœur-de-laction.html"
     },
     {
         "nom": "Spin Me Round",
@@ -5682,7 +5772,7 @@
     {
         "nom": "L'École est à nous",
         "affiche": "https://www.themoviedb.org/t/p/original/6f29PNchQVMjvyG3wFZeLkZtRi.jpg",
-        "emplacement": "../film/l'école-est-à-nous.html"
+        "emplacement": "../film/lécole-est-à-nous.html"
     },
     {
         "nom": "BDE",
@@ -5792,7 +5882,7 @@
     {
         "nom": "Citoyen d'honneur",
         "affiche": "https://www.themoviedb.org/t/p/original/gMrwq2Ey6GDIdoPEGZ7hmgdFUMI.jpg",
-        "emplacement": "../film/citoyen-d'honneur.html"
+        "emplacement": "../film/citoyen-dhonneur.html"
     },
     {
         "nom": "Disconnect: The Wedding Planner",
@@ -5807,7 +5897,7 @@
     {
         "nom": "Le Fiancé d'un jour",
         "affiche": "https://www.themoviedb.org/t/p/original/gTw3SYIRfewAXhhC1iQHYtzQNB6.jpg",
-        "emplacement": "../film/le-fiancé-d'un-jour.html"
+        "emplacement": "../film/le-fiancé-dun-jour.html"
     },
     {
         "nom": "Le Secret de la momie 2",
@@ -5892,7 +5982,7 @@
     {
         "nom": "The Binge 2: It's A Wonderful Binge",
         "affiche": "https://www.themoviedb.org/t/p/original/wqMmXVthE8OkZJwuqc27nqDEEwq.jpg",
-        "emplacement": "../film/the-binge-2-it's-a-wonderful-binge.html"
+        "emplacement": "../film/the-binge-2-its-a-wonderful-binge.html"
     },
     {
         "nom": "La très très grande classe",
@@ -5902,7 +5992,7 @@
     {
         "nom": "Something From Tiffany's",
         "affiche": "https://www.themoviedb.org/t/p/original/hzQV66zQHqWKRjLVphISNOqadIp.jpg",
-        "emplacement": "../film/something-from-tiffany's.html"
+        "emplacement": "../film/something-from-tiffanys.html"
     },
     {
         "nom": "Livré avant Noël",
@@ -5922,7 +6012,7 @@
     {
         "nom": "L'Année du requin",
         "affiche": "https://www.themoviedb.org/t/p/original/gSJktrtxs3ZqXP0o2Nubgw2x4uf.jpg",
-        "emplacement": "../film/l'année-du-requin.html"
+        "emplacement": "../film/lannée-du-requin.html"
     },
     {
         "nom": "Meet Cute",
@@ -5967,7 +6057,7 @@
     {
         "nom": "Spirited, l'esprit de Noël",
         "affiche": "https://www.themoviedb.org/t/p/original/eJfTGitD83NCna9UuLVFVUmyrEF.jpg",
-        "emplacement": "../film/spirited-l'esprit-de-noël.html"
+        "emplacement": "../film/spirited-lesprit-de-noël.html"
     },
     {
         "nom": "The People We Hate at the Wedding",
@@ -6042,7 +6132,7 @@
     {
         "nom": "L'Homme parfait",
         "affiche": "https://www.themoviedb.org/t/p/original/uh0zvgzErHrSXmIkW9YL9H9PFZc.jpg",
-        "emplacement": "../film/l'homme-parfait.html"
+        "emplacement": "../film/lhomme-parfait.html"
     },
     {
         "nom": "Irréductible",
@@ -6117,7 +6207,7 @@
     {
         "nom": "C'est magnifique !",
         "affiche": "https://www.themoviedb.org/t/p/original/kXncN0io58NdvgOoxB6n42Uh7oP.jpg",
-        "emplacement": "../film/c'est-magnifique-.html"
+        "emplacement": "../film/cest-magnifique-.html"
     },
     {
         "nom": "Les Goûts et les couleurs",
@@ -6142,7 +6232,7 @@
     {
         "nom": "J'adore ce que vous faites",
         "affiche": "https://www.themoviedb.org/t/p/original/dwQLHMpuUlN3yIIpjIkb6vWeD0n.jpg",
-        "emplacement": "../film/j'adore-ce-que-vous-faites.html"
+        "emplacement": "../film/jadore-ce-que-vous-faites.html"
     },
     {
         "nom": "Coupez !",
@@ -6177,7 +6267,7 @@
     {
         "nom": "That's Amor",
         "affiche": "https://www.themoviedb.org/t/p/original/iyYibVfi8q0zwsX1evl7mxTZJp1.jpg",
-        "emplacement": "../film/that's-amor.html"
+        "emplacement": "../film/thats-amor.html"
     },
     {
         "nom": "Mission Paradis",
@@ -6187,7 +6277,7 @@
     {
         "nom": "Pas moyen de s'entendre !",
         "affiche": "https://i.imgur.com/ooxYWTh.png",
-        "emplacement": "../film/pas-moyen-de-s'entendre-.html"
+        "emplacement": "../film/pas-moyen-de-sentendre-.html"
     },
     {
         "nom": "On sourit pour la photo",
@@ -6237,7 +6327,7 @@
     {
         "nom": "Petite leçon d'amour",
         "affiche": "https://www.themoviedb.org/t/p/original/cyC4Iw654S1CSxZjk5TIff5kxsh.jpg",
-        "emplacement": "../film/petite-leçon-d'amour.html"
+        "emplacement": "../film/petite-leçon-damour.html"
     },
     {
         "nom": "Wedding Season",
@@ -6247,17 +6337,17 @@
     {
         "nom": "Qu'est-ce qu'on a tous fait au Bon Dieu ?",
         "affiche": "https://www.themoviedb.org/t/p/original/jN0xIYBgkfSWIMqhJlQMyPY29ti.jpg",
-        "emplacement": "../film/qu'est-ce-qu'on-a-tous-fait-au-bon-dieu-.html"
+        "emplacement": "../film/quest-ce-quon-a-tous-fait-au-bon-dieu-.html"
     },
     {
         "nom": "Qu'est-ce qu'on a encore fait au Bon Dieu ?",
         "affiche": "https://www.themoviedb.org/t/p/original/uT9FhaKYzR8XQg0etoPiqQxaMj8.jpg",
-        "emplacement": "../film/qu'est-ce-qu'on-a-encore-fait-au-bon-dieu-.html"
+        "emplacement": "../film/quest-ce-quon-a-encore-fait-au-bon-dieu-.html"
     },
     {
         "nom": "Qu'est-ce qu'on a fait au Bon Dieu ?",
         "affiche": "https://www.themoviedb.org/t/p/original/A1IwL0gl6mX3tm4uhpcNn29d1ka.jpg",
-        "emplacement": "../film/qu'est-ce-qu'on-a-fait-au-bon-dieu.html"
+        "emplacement": "../film/quest-ce-quon-a-fait-au-bon-dieu.html"
     },
     {
         "nom": "La Faute au karma ?",
@@ -6447,7 +6537,7 @@
     {
         "nom": "On est fait pour s'entendre",
         "affiche": "https://www.themoviedb.org/t/p/original/54sdlz8guOTzvmiYCiImnDssRbX.jpg",
-        "emplacement": "../film/on-est-fait-pour-s'entendre.html"
+        "emplacement": "../film/on-est-fait-pour-sentendre.html"
     },
     {
         "nom": "Fatales",
@@ -6492,7 +6582,7 @@
     {
         "nom": "Les Bodin's en Thaïlande",
         "affiche": "https://www.themoviedb.org/t/p/original/1rpDCiHqnDmFy74gSVGG4lLZSic.jpg",
-        "emplacement": "../film/les-bodin's-en-thaïlande.html"
+        "emplacement": "../film/les-bodins-en-thaïlande.html"
     },
     {
         "nom": "Treize à la douzaine",
@@ -6512,7 +6602,7 @@
     {
         "nom": "Don't Look Up : Déni cosmique",
         "affiche": "https://www.themoviedb.org/t/p/original/5SkzM3TPpt72FoO46NSjipNXkNG.jpg",
-        "emplacement": "../film/don't-look-up--déni-cosmique.html"
+        "emplacement": "../film/dont-look-up--déni-cosmique.html"
     },
     {
         "nom": "Aux antipodes de Noël",
@@ -6527,7 +6617,7 @@
     {
         "nom": "C'est la vie",
         "affiche": "https://www.themoviedb.org/t/p/original/ie96hFRmdWEqiSSegaT3K48yMzD.jpg",
-        "emplacement": "../film/c'est-la-vie.html"
+        "emplacement": "../film/cest-la-vie.html"
     },
     {
         "nom": "Un Noël en 8 bits",
@@ -6538,6 +6628,36 @@
         "nom": "La Cassette",
         "affiche": "https://i.imgur.com/JrysBZi.png",
         "emplacement": "../film/la-cassette.html"
+    },
+    {
+        "nom": "Le Silence de Mélodie",
+        "affiche": "https://media.themoviedb.org/t/p/original/ihrRgRyXs5Ch73oulvtz2qWCZuT.jpg",
+        "emplacement": "../film/le-silence-de-mélodie.html"
+    },
+    {
+        "nom": "Joy",
+        "affiche": "https://media.themoviedb.org/t/p/original/zciWal3a5QPjqqJAgmpHVLBlFMj.jpg",
+        "emplacement": "../film/joy.html"
+    },
+    {
+        "nom": "The Piano Lesson",
+        "affiche": "https://media.themoviedb.org/t/p/original/cgampq63AqCrza6bnvmWqCcvCzY.jpg",
+        "emplacement": "../film/the-piano-lesson.html"
+    },
+    {
+        "nom": "Blitz",
+        "affiche": "https://media.themoviedb.org/t/p/original/e9tyjbF2rugENtBolTtEhHOXgzD.jpg",
+        "emplacement": "../film/blitz.html"
+    },
+    {
+        "nom": "Aristote et Dante Découvrent les Secrets de l'Univers",
+        "affiche": "https://media.themoviedb.org/t/p/original/iZTPaMtqj9v9rmBT5l1giH2Uclq.jpg",
+        "emplacement": "../film/aristote-et-dante-découvrent-les-secrets-de-lunivers.html"
+    },
+    {
+        "nom": "I'll Be Right There",
+        "affiche": "https://media.themoviedb.org/t/p/original/jHbn6gQqEGFZXExp7oxuA84JsRe.jpg",
+        "emplacement": "../film/ill-be-right-there.html"
     },
     {
         "nom": "50/50",
@@ -6602,7 +6722,7 @@
     {
         "nom": "L'enfant qui mesurait le monde",
         "affiche": "https://media.themoviedb.org/t/p/original/4T9i1X8OZcWkwqXsFH7UN0Ap5h0.jpg",
-        "emplacement": "../film/l'enfant-qui-mesurait-le-monde.html"
+        "emplacement": "../film/lenfant-qui-mesurait-le-monde.html"
     },
     {
         "nom": "Braquage",
@@ -6643,11 +6763,6 @@
         "nom": "The Forge",
         "affiche": "https://media.themoviedb.org/t/p/original/3eVMVcr8bv8UHgmC0RycunKM7uN.jpg",
         "emplacement": "../film/the-forge.html"
-    },
-    {
-        "nom": "Salem",
-        "affiche": "https://media.themoviedb.org/t/p/original/48GicG21kW9J5cbGf8a5khigr5g.jpg",
-        "emplacement": "../film/salem.html"
     },
     {
         "nom": "Heist 88",
@@ -6712,7 +6827,7 @@
     {
         "nom": "Le Mal n'existe pas",
         "affiche": "https://media.themoviedb.org/t/p/original/rgk6mTk0DSBKRHW59Ywh6fu1uMm.jpg",
-        "emplacement": "../film/le-mal-n'existe-pas.html"
+        "emplacement": "../film/le-mal-nexiste-pas.html"
     },
     {
         "nom": "Joika",
@@ -6772,7 +6887,7 @@
     {
         "nom": "Jusqu'au bout du monde",
         "affiche": "https://media.themoviedb.org/t/p/original/5SmLqGqwhBTctwJIFwC70bpTGhi.jpg",
-        "emplacement": "../film/jusqu'au-bout-du-monde.html"
+        "emplacement": "../film/jusquau-bout-du-monde.html"
     },
     {
         "nom": "Le Jeu de la Reine",
@@ -7012,7 +7127,7 @@
     {
         "nom": "L'Esquisse de nos vies",
         "affiche": "https://media.themoviedb.org/t/p/original/aeJiCeORIazhTqMdpK8jMUjks8.jpg",
-        "emplacement": "../film/l'esquisse-de-nos-vies.html"
+        "emplacement": "../film/lesquisse-de-nos-vies.html"
     },
     {
         "nom": "Cabrini",
@@ -7092,7 +7207,7 @@
     {
         "nom": "Irena's Vow",
         "affiche": "https://media.themoviedb.org/t/p/original/8q3aN6Yffp0xuQ1WZHpTDwF1XSC.jpg",
-        "emplacement": "../film/irena's-vow.html"
+        "emplacement": "../film/irenas-vow.html"
     },
     {
         "nom": "La Bête",
@@ -7217,7 +7332,7 @@
     {
         "nom": "L'Enfant du paradis",
         "affiche": "https://media.themoviedb.org/t/p/original/ejWRYaa2Yf1UgLub0jFNxreqwXw.jpg",
-        "emplacement": "../film/l'enfant-du-paradis.html"
+        "emplacement": "../film/lenfant-du-paradis.html"
     },
     {
         "nom": "The Last Rifleman",
@@ -7242,7 +7357,7 @@
     {
         "nom": "Une affaire d'honneur",
         "affiche": "https://media.themoviedb.org/t/p/original/8L9qADwmqTCjxmGFcTrZdSY66gR.jpg",
-        "emplacement": "../film/une-affaire-d'honneur.html"
+        "emplacement": "../film/une-affaire-dhonneur.html"
     },
     {
         "nom": "La Fille de son père",
@@ -7262,7 +7377,7 @@
     {
         "nom": "La Zone d'intérêt",
         "affiche": "https://media.themoviedb.org/t/p/original/wD2eFNkSLV0ACM9C82qIYfTMFv9.jpg",
-        "emplacement": "../film/la-zone-d'intérêt.html"
+        "emplacement": "../film/la-zone-dintérêt.html"
     },
     {
         "nom": "Ordinary Angels",
@@ -7397,7 +7512,7 @@
     {
         "nom": "Je m'appelle Loh Kiwan",
         "affiche": "https://media.themoviedb.org/t/p/original/aGYiSSEO4eku3CdPieupT2MqoQr.jpg",
-        "emplacement": "../film/je-m'appelle-loh-kiwan.html"
+        "emplacement": "../film/je-mappelle-loh-kiwan.html"
     },
     {
         "nom": "La Passion de Dodin Bouffant",
@@ -7407,7 +7522,7 @@
     {
         "nom": "L'Enlèvement",
         "affiche": "https://media.themoviedb.org/t/p/original/pChHblmG0Vs9HZAh8tvn8rOJWaE.jpg",
-        "emplacement": "../film/l'enlèvement.html"
+        "emplacement": "../film/lenlèvement.html"
     },
     {
         "nom": "Monsieur, le Maire",
@@ -7552,7 +7667,7 @@
     {
         "nom": "L'Affaire de la mutinerie Caine",
         "affiche": "https://media.themoviedb.org/t/p/original/6hQg8uZW0TyHlm1uKeMZRXrgKVy.jpg",
-        "emplacement": "../film/l'affaire-de-la-mutinerie-caine.html"
+        "emplacement": "../film/laffaire-de-la-mutinerie-caine.html"
     },
     {
         "nom": "Le Grand chariot",
@@ -7592,7 +7707,7 @@
     {
         "nom": "L'Été dernier",
         "affiche": "https://www.themoviedb.org/t/p/original/yx0Wn5RuwrhILVWFT7tjL1doFps.jpg",
-        "emplacement": "../film/l'été-dernier.html"
+        "emplacement": "../film/lété-dernier.html"
     },
     {
         "nom": "Race for Glory: Audi vs Lancia",
@@ -7642,7 +7757,7 @@
     {
         "nom": "Thank You, I'm Sorry",
         "affiche": "https://www.themoviedb.org/t/p/original/uGnFNjzi1hXZ7CiywbOERUh1KAE.jpg",
-        "emplacement": "../film/thank-you-i'm-sorry.html"
+        "emplacement": "../film/thank-you-im-sorry.html"
     },
     {
         "nom": "Love Actually",
@@ -7662,7 +7777,7 @@
     {
         "nom": "Butcher's Crossing",
         "affiche": "https://www.themoviedb.org/t/p/original/2KdkRsYuzYPlJMLrV39gdjY3WkS.jpg",
-        "emplacement": "../film/butcher's-crossing.html"
+        "emplacement": "../film/butchers-crossing.html"
     },
     {
         "nom": "Priscilla",
@@ -7687,7 +7802,7 @@
     {
         "nom": "L'Amour du monde",
         "affiche": "https://www.themoviedb.org/t/p/original/sDDd6n6MmOSsKTxGesmWaI7CtH3.jpg",
-        "emplacement": "../film/l'amour-du-monde.html"
+        "emplacement": "../film/lamour-du-monde.html"
     },
     {
         "nom": "Un coup de maître",
@@ -7707,7 +7822,7 @@
     {
         "nom": "Le Fils d'un Roi",
         "affiche": "https://www.themoviedb.org/t/p/original/yia4DdrLtaRoTahWm5DJicHnVqZ.jpg",
-        "emplacement": "../film/le-fils-d'un-roi.html"
+        "emplacement": "../film/le-fils-dun-roi.html"
     },
     {
         "nom": "Dernier appel pour Istanbul",
@@ -7717,7 +7832,7 @@
     {
         "nom": "L'Intime Conviction d'Elena",
         "affiche": "https://www.themoviedb.org/t/p/original/9YAFKvgfJzsligVdizQbUdT2IZm.jpg",
-        "emplacement": "../film/l'intime-conviction-d'elena.html"
+        "emplacement": "../film/lintime-conviction-delena.html"
     },
     {
         "nom": "Juniors",
@@ -7757,7 +7872,7 @@
     {
         "nom": "Varsovie 83, une affaire d'État",
         "affiche": "https://www.themoviedb.org/t/p/original/2xXS2kTtbfmKz2JVtjIIL2YWuOi.jpg",
-        "emplacement": "../film/varsovie-83-une-affaire-d'état.html"
+        "emplacement": "../film/varsovie-83-une-affaire-détat.html"
     },
     {
         "nom": "La Voie Royale",
@@ -7832,7 +7947,7 @@
     {
         "nom": "L'Autre Zoey",
         "affiche": "https://www.themoviedb.org/t/p/original/596eFlS6qytLwbDNIdQQ5FTjK3G.jpg",
-        "emplacement": "../film/l'autre-zoey.html"
+        "emplacement": "../film/lautre-zoey.html"
     },
     {
         "nom": "Magnificat",
@@ -7852,7 +7967,7 @@
     {
         "nom": "Si près de l'horizon",
         "affiche": "https://www.themoviedb.org/t/p/original/7Jk5DBgLVQ7BPs2DZw4Nywck5Jf.jpg",
-        "emplacement": "../film/si-près-de-l'horizon.html"
+        "emplacement": "../film/si-près-de-lhorizon.html"
     },
     {
         "nom": "Fifi",
@@ -7882,7 +7997,7 @@
     {
         "nom": "L'Île rouge",
         "affiche": "https://www.themoviedb.org/t/p/original/hQUdwmFkSLFMvfHHuyDn8IxFyiu.jpg",
-        "emplacement": "../film/l'île-rouge.html"
+        "emplacement": "../film/lîle-rouge.html"
     },
     {
         "nom": "Margrete : Reine du Nord",
@@ -7937,12 +8052,12 @@
     {
         "nom": "L'Amour et les Forêts",
         "affiche": "https://www.themoviedb.org/t/p/original/wmAYyJAJ9VD7vj5ocupdp1TYGS8.jpg",
-        "emplacement": "../film/l'amour-et-les-forêts.html"
+        "emplacement": "../film/lamour-et-les-forêts.html"
     },
     {
         "nom": "Plus tard, j'atteindrai les étoiles",
         "affiche": "https://www.themoviedb.org/t/p/original/n4apHXLQErV0SBBFXHLvNasAApz.jpg",
-        "emplacement": "../film/plus-tard-j'atteindrai-les-étoiles.html"
+        "emplacement": "../film/plus-tard-jatteindrai-les-étoiles.html"
     },
     {
         "nom": "Love At First Sight",
@@ -7987,7 +8102,7 @@
     {
         "nom": "Ehrengard ou l'Art de la séduction",
         "affiche": "https://www.themoviedb.org/t/p/original/8A637JOrLDBMQwPjfGfBtkyeBZs.jpg",
-        "emplacement": "../film/ehrengard-ou-l'art-de-la-séduction.html"
+        "emplacement": "../film/ehrengard-ou-lart-de-la-séduction.html"
     },
     {
         "nom": "Foudre",
@@ -8032,7 +8147,7 @@
     {
         "nom": "L'Improbable voyage d'Harold Fry",
         "affiche": "https://www.themoviedb.org/t/p/original/xc3JXAmQzV1AaDo8jAsPni9F0uv.jpg",
-        "emplacement": "../film/l'improbable-voyage-d'harold-fry.html"
+        "emplacement": "../film/limprobable-voyage-dharold-fry.html"
     },
     {
         "nom": "Nos cérémonies",
@@ -8047,7 +8162,7 @@
     {
         "nom": "L'Homme debout",
         "affiche": "https://www.themoviedb.org/t/p/original/3i6t0OdxVnBZkoF5MNVhjfRwjch.jpg",
-        "emplacement": "../film/l'homme-debout.html"
+        "emplacement": "../film/lhomme-debout.html"
     },
     {
         "nom": "Remise de peine",
@@ -8067,7 +8182,7 @@
     {
         "nom": "L'Amour tout-puissant",
         "affiche": "https://www.themoviedb.org/t/p/original/uZBmIqehIAH6fPdVoHNGugUZMHB.jpg",
-        "emplacement": "../film/l'amour-tout-puissant.html"
+        "emplacement": "../film/lamour-tout-puissant.html"
     },
     {
         "nom": "Past Lives – Nos vies d’avant",
@@ -8142,7 +8257,7 @@
     {
         "nom": "L'Établi",
         "affiche": "https://www.themoviedb.org/t/p/original/IPhULxzFXIFZl6fDJovRXDuD1S.jpg",
-        "emplacement": "../film/l'établi.html"
+        "emplacement": "../film/létabli.html"
     },
     {
         "nom": "Kokon",
@@ -8202,7 +8317,7 @@
     {
         "nom": "Prisoner's Daughter",
         "affiche": "https://www.themoviedb.org/t/p/original/2NYd7jKFnilcIOUfDI8o2TOuCmu.jpg",
-        "emplacement": "../film/prisoner's-daughter.html"
+        "emplacement": "../film/prisoners-daughter.html"
     },
     {
         "nom": "Ninjababy",
@@ -8222,7 +8337,7 @@
     {
         "nom": "Toi non plus tu n'as rien vu",
         "affiche": "https://www.themoviedb.org/t/p/original/gCbEPVtdekc3qeKWfNpxqoVstQg.jpg",
-        "emplacement": "../film/toi-non-plus-tu-n'as-rien-vu.html"
+        "emplacement": "../film/toi-non-plus-tu-nas-rien-vu.html"
     },
     {
         "nom": "La Chambre des merveilles",
@@ -8262,7 +8377,7 @@
     {
         "nom": "Ailleurs si j'y suis",
         "affiche": "https://www.themoviedb.org/t/p/original/on36gDhpYN1JukcBTpKzV1v14ZV.jpg",
-        "emplacement": "../film/ailleurs-si-j'y-suis.html"
+        "emplacement": "../film/ailleurs-si-jy-suis.html"
     },
     {
         "nom": "Warrior",
@@ -8292,7 +8407,7 @@
     {
         "nom": "Mr. Malcolm's List",
         "affiche": "https://www.themoviedb.org/t/p/original/76SeGCukVxqZFAJkke4fkk4uVN9.jpg",
-        "emplacement": "../film/mr-malcolm's-list.html"
+        "emplacement": "../film/mr-malcolms-list.html"
     },
     {
         "nom": "Joyland",
@@ -8322,7 +8437,7 @@
     {
         "nom": "Goutte d'or",
         "affiche": "https://www.themoviedb.org/t/p/original/RTk5Qccbr4r9MyJNe68jFcsA7E.jpg",
-        "emplacement": "../film/goutte-d'or.html"
+        "emplacement": "../film/goutte-dor.html"
     },
     {
         "nom": "La Haine",
@@ -8397,7 +8512,7 @@
     {
         "nom": "L'Astronaute",
         "affiche": "https://www.themoviedb.org/t/p/original/4pZTM4PWWXEKg36bYMQPwMh0FOZ.jpg",
-        "emplacement": "../film/l'astronaute.html"
+        "emplacement": "../film/lastronaute.html"
     },
     {
         "nom": "Spinning Gold",
@@ -8422,7 +8537,7 @@
     {
         "nom": "Flamin' Hot",
         "affiche": "https://www.themoviedb.org/t/p/original/a7KyFMPXj0iY4EoLq1PIGU1WJPw.jpg",
-        "emplacement": "../film/flamin'-hot.html"
+        "emplacement": "../film/flamin-hot.html"
     },
     {
         "nom": "À contre-sens",
@@ -8507,7 +8622,7 @@
     {
         "nom": "Le Diable n'existe pas",
         "affiche": "https://www.themoviedb.org/t/p/original/76KOnyPgy9H8kvucg85So5gCKLl.jpg",
-        "emplacement": "../film/le-diable-n'existe-pas.html"
+        "emplacement": "../film/le-diable-nexiste-pas.html"
     },
     {
         "nom": "Arrête avec tes mensonges",
@@ -8547,7 +8662,7 @@
     {
         "nom": "L'immensità",
         "affiche": "https://www.themoviedb.org/t/p/original/o1bPKUymQ5OtOvPmcOlE3cj7Ld3.jpg",
-        "emplacement": "../film/l'immensità.html"
+        "emplacement": "../film/limmensità.html"
     },
     {
         "nom": "Nostalgia",
@@ -8567,12 +8682,12 @@
     {
         "nom": "Vous n'aurez pas ma haine",
         "affiche": "https://www.themoviedb.org/t/p/original/wPUzHiKIZVlyg8I1uUcTsrynV0h.jpg",
-        "emplacement": "../film/vous-n'aurez-pas-ma-haine.html"
+        "emplacement": "../film/vous-naurez-pas-ma-haine.html"
     },
     {
         "nom": "L'Envol",
         "affiche": "https://www.themoviedb.org/t/p/original/4NdQqpFbIJZgZik8yXPxZLYpa0x.jpg",
-        "emplacement": "../film/l'envol.html"
+        "emplacement": "../film/lenvol.html"
     },
     {
         "nom": "MVP",
@@ -8612,7 +8727,7 @@
     {
         "nom": "L'Equipier",
         "affiche": "https://www.themoviedb.org/t/p/original/w3T1GzZ5Jsl05iNIXIVDwl3y41l.jpg",
-        "emplacement": "../film/l'equipier.html"
+        "emplacement": "../film/lequipier.html"
     },
     {
         "nom": "Caravage",
@@ -8767,7 +8882,7 @@
     {
         "nom": "Creed : L'héritage de Rocky Balboa",
         "affiche": "https://www.themoviedb.org/t/p/original/yZsrBgOgz59cCGCltv02DVzmOtA.jpg",
-        "emplacement": "../film/creed--l'héritage-de-rocky-balboa.html"
+        "emplacement": "../film/creed--lhéritage-de-rocky-balboa.html"
     },
     {
         "nom": "Rocky Balboa",
@@ -8787,7 +8902,7 @@
     {
         "nom": "Rocky III :  L'oeil du tigre",
         "affiche": "https://www.themoviedb.org/t/p/original/zplg0q9s5pbJDQLWCTlIQfMxC9A.jpg",
-        "emplacement": "../film/rocky-iii---l'oeil-du-tigre.html"
+        "emplacement": "../film/rocky-iii---loeil-du-tigre.html"
     },
     {
         "nom": "Rocky II : La Revanche",
@@ -8897,7 +9012,7 @@
     {
         "nom": "Couleurs de l'incendie",
         "affiche": "https://www.themoviedb.org/t/p/original/d0gdCYwLIWfFzYGTNxNIkk6wd6F.jpg",
-        "emplacement": "../film/couleurs-de-l'incendie.html"
+        "emplacement": "../film/couleurs-de-lincendie.html"
     },
     {
         "nom": "Murina",
@@ -9012,7 +9127,7 @@
     {
         "nom": "L'Innocent",
         "affiche": "https://www.themoviedb.org/t/p/original/yKJrsWzHupuJ7Yvc0cekkW21rg4.jpg",
-        "emplacement": "../film/l'innocent.html"
+        "emplacement": "../film/linnocent.html"
     },
     {
         "nom": "The Fabelmans",
@@ -9032,7 +9147,7 @@
     {
         "nom": "Dieu n'est pas mort 4, nous le peuple",
         "affiche": "https://www.themoviedb.org/t/p/original/5pdjg6KKuRMVIutAGDaLNi0NKnA.jpg",
-        "emplacement": "../film/dieu-n'est-pas-mort-4-nous-le-peuple.html"
+        "emplacement": "../film/dieu-nest-pas-mort-4-nous-le-peuple.html"
     },
     {
         "nom": "Dieu n’est pas mort 3",
@@ -9052,12 +9167,12 @@
     {
         "nom": "Jarhead - la fin de l'innocence",
         "affiche": "https://www.themoviedb.org/t/p/original/4rCzaZy5Qkvxh5xaVpHriXSLTgC.jpg",
-        "emplacement": "../film/jarhead---la-fin-de-l'innocence.html"
+        "emplacement": "../film/jarhead---la-fin-de-linnocence.html"
     },
     {
         "nom": "L'Amour puissance mille",
         "affiche": "https://www.themoviedb.org/t/p/original/snUAXvXEe5HgUsRJD1Vf7TiTic0.jpg",
-        "emplacement": "../film/l'amour-puissance-mille.html"
+        "emplacement": "../film/lamour-puissance-mille.html"
     },
     {
         "nom": "Un hiver en été",
@@ -9117,7 +9232,7 @@
     {
         "nom": "L'histoire d'Annette Zelman",
         "affiche": "https://i.imgur.com/ggDC9nx.jpg",
-        "emplacement": "../film/l'histoire-d'annette-zelman.html"
+        "emplacement": "../film/lhistoire-dannette-zelman.html"
     },
     {
         "nom": "Les Enfants des autres",
@@ -9187,7 +9302,7 @@
     {
         "nom": "Pelé : Naissance d'une légende",
         "affiche": "https://www.themoviedb.org/t/p/original/b1XoAl8TJi7zbKO3GUzRUBrpSxq.jpg",
-        "emplacement": "../film/pelé--naissance-d'une-légende.html"
+        "emplacement": "../film/pelé--naissance-dune-légende.html"
     },
     {
         "nom": "Les Volets verts",
@@ -9197,7 +9312,7 @@
     {
         "nom": "Les Banshees d'Inisherin",
         "affiche": "https://www.themoviedb.org/t/p/original/tDgZKRRU3AlcAH0SQemytcfWRl4.jpg",
-        "emplacement": "../film/les-banshees-d'inisherin.html"
+        "emplacement": "../film/les-banshees-dinisherin.html"
     },
     {
         "nom": "The Power of the Dog",
@@ -9302,7 +9417,7 @@
     {
         "nom": "A l'Ouest, rien de nouveau",
         "affiche": "https://www.themoviedb.org/t/p/original/qS6lVMc53jiEtlOAFSRxFGSa5pN.jpg",
-        "emplacement": "../film/a-l'ouest-rien-de-nouveau.html"
+        "emplacement": "../film/a-louest-rien-de-nouveau.html"
     },
     {
         "nom": "Wild Is the Wind",
@@ -9312,7 +9427,7 @@
     {
         "nom": "Le Monde d'hier",
         "affiche": "https://www.themoviedb.org/t/p/original/i3IqaY5cjbhTZjBidxCcywVXqNx.jpg",
-        "emplacement": "../film/le-monde-d'hier.html"
+        "emplacement": "../film/le-monde-dhier.html"
     },
     {
         "nom": "My Policeman",
@@ -9322,7 +9437,7 @@
     {
         "nom": "Par-delà l'univers",
         "affiche": "https://www.themoviedb.org/t/p/original/ruhyz4Qgi5v07iL0yJ7jYbMCSfR.jpg",
-        "emplacement": "../film/par-delà-l'univers.html"
+        "emplacement": "../film/par-delà-lunivers.html"
     },
     {
         "nom": "Meurtres sans ordonnance",
@@ -9462,7 +9577,7 @@
     {
         "nom": "A Jazzman's Blues",
         "affiche": "https://www.themoviedb.org/t/p/original/juvKmySdoCFmjuPeokOtEK3jGHx.jpg",
-        "emplacement": "../film/a-jazzman's-blues.html"
+        "emplacement": "../film/a-jazzmans-blues.html"
     },
     {
         "nom": "Le Parfumeur",
@@ -9487,7 +9602,7 @@
     {
         "nom": "J'irai au bout de mes rêves",
         "affiche": "https://www.themoviedb.org/t/p/original/3Izez1AXbEgh3tFQfafOM8Dmuv7.jpg",
-        "emplacement": "../film/j'irai-au-bout-de-mes-rêves.html"
+        "emplacement": "../film/jirai-au-bout-de-mes-rêves.html"
     },
     {
         "nom": "Broad Peak",
@@ -9522,7 +9637,7 @@
     {
         "nom": "Train de guerre : le corridor de l'espoir",
         "affiche": "https://www.themoviedb.org/t/p/original/3quDnxahqLnQWYE67xsmVIvDN7D.jpg",
-        "emplacement": "../film/train-de-guerre--le-corridor-de-l'espoir.html"
+        "emplacement": "../film/train-de-guerre--le-corridor-de-lespoir.html"
     },
     {
         "nom": "Animals",
@@ -9552,7 +9667,7 @@
     {
         "nom": "L'horizon",
         "affiche": "https://www.themoviedb.org/t/p/original/l6lEBiRMPwwhCEE43LFpZFaufz7.jpg",
-        "emplacement": "../film/l'horizon.html"
+        "emplacement": "../film/lhorizon.html"
     },
     {
         "nom": "Les Racines du monde",
@@ -9587,12 +9702,12 @@
     {
         "nom": "Royalteen : L'héritier",
         "affiche": "https://www.themoviedb.org/t/p/original/oK6I9Wa5RIqxpNbJ4NWemsotcYJ.jpg",
-        "emplacement": "../film/royalteen--l'héritier.html"
+        "emplacement": "../film/royalteen--lhéritier.html"
     },
     {
         "nom": "Une vie ou l'autre",
         "affiche": "https://www.themoviedb.org/t/p/original/g0XnDidedm4USR443h56yWiglMu.jpg",
-        "emplacement": "../film/une-vie-ou-l'autre.html"
+        "emplacement": "../film/une-vie-ou-lautre.html"
     },
     {
         "nom": "First Love",
@@ -9627,12 +9742,12 @@
     {
         "nom": "Bruno Reidal : confession d'un meurtrier",
         "affiche": "https://www.themoviedb.org/t/p/original/xYMHI0lks44QPvtnHKhErPOtaj0.jpg",
-        "emplacement": "../film/bruno-reidal--confession-d'un-meurtrier.html"
+        "emplacement": "../film/bruno-reidal--confession-dun-meurtrier.html"
     },
     {
         "nom": "L'été l'éternité",
         "affiche": "https://www.themoviedb.org/t/p/original/bVVrgwHNqbCJ2sM67VldKnoYdIh.jpg",
-        "emplacement": "../film/l'été-l'éternité.html"
+        "emplacement": "../film/lété-léternité.html"
     },
     {
         "nom": "Buba",
@@ -9662,7 +9777,7 @@
     {
         "nom": "Qu'est-ce qu'elle a ma famille ?",
         "affiche": "https://www.themoviedb.org/t/p/original/5q9XzeK2janV0cFaFG0szZL7i9W.jpg",
-        "emplacement": "../film/qu'est-ce-qu'elle-a-ma-famille-.html"
+        "emplacement": "../film/quest-ce-quelle-a-ma-famille-.html"
     },
     {
         "nom": "Ma nuit",
@@ -9682,7 +9797,7 @@
     {
         "nom": "Je m'appelle Bagdad",
         "affiche": "https://www.themoviedb.org/t/p/original/nnBLvZngzaco05UEwdh8cmUElq9.jpg",
-        "emplacement": "../film/je-m'appelle-bagdad.html"
+        "emplacement": "../film/je-mappelle-bagdad.html"
     },
     {
         "nom": "Vous ne désirez que moi",
@@ -9702,7 +9817,7 @@
     {
         "nom": "Rien n'est impossible",
         "affiche": "https://www.themoviedb.org/t/p/original/aLeswI1zxf2xN5iIdcJpqx9XEnX.jpg",
-        "emplacement": "../film/rien-n'est-impossible.html"
+        "emplacement": "../film/rien-nest-impossible.html"
     },
     {
         "nom": "Heroes : The Battle at Lake Changjin",
@@ -9712,7 +9827,7 @@
     {
         "nom": "Don't Make Me Go",
         "affiche": "https://www.themoviedb.org/t/p/original/lUPrLn7g5x0jrPP5pZWMVGlQy2s.jpg",
-        "emplacement": "../film/don't-make-me-go.html"
+        "emplacement": "../film/dont-make-me-go.html"
     },
     {
         "nom": "Persuasion",
@@ -9727,7 +9842,7 @@
     {
         "nom": "Sous le soleil d'Amalfi",
         "affiche": "https://i.imgur.com/y4xRM3N.png",
-        "emplacement": "../film/sous-le-soleil-d'amalfi.html"
+        "emplacement": "../film/sous-le-soleil-damalfi.html"
     },
     {
         "nom": "Jewel",
@@ -9787,7 +9902,7 @@
     {
         "nom": "Le Joueur d'échecs",
         "affiche": "https://www.themoviedb.org/t/p/original/slo3YM5wVXgW7ZHqiwtOC4heKC2.jpg",
-        "emplacement": "../film/le-joueur-d'échecs.html"
+        "emplacement": "../film/le-joueur-déchecs.html"
     },
     {
         "nom": "Un autre monde",
@@ -9817,7 +9932,7 @@
     {
         "nom": "Viens je t'emmène",
         "affiche": "https://www.themoviedb.org/t/p/original/wwZAgmPSPDefQN2RZZDWZcarIfi.jpg",
-        "emplacement": "../film/viens-je-t'emmène.html"
+        "emplacement": "../film/viens-je-temmène.html"
     },
     {
         "nom": "Lost Transmissions",
@@ -9827,7 +9942,7 @@
     {
         "nom": "Enquête sur un scandale d'État",
         "affiche": "https://www.themoviedb.org/t/p/original/kXGWSH09gLpRKdKloeHXuVAuBaU.jpg",
-        "emplacement": "../film/enquête-sur-un-scandale-d'état.html"
+        "emplacement": "../film/enquête-sur-un-scandale-détat.html"
     },
     {
         "nom": "Les arbres de la paix",
@@ -9867,7 +9982,7 @@
     {
         "nom": "Nos âmes d'enfants",
         "affiche": "https://www.themoviedb.org/t/p/original/egGU04GIouAZJitu20gbhO2ddsc.jpg",
-        "emplacement": "../film/nos-âmes-d'enfants.html"
+        "emplacement": "../film/nos-âmes-denfants.html"
     },
     {
         "nom": "Piège de guerre",
@@ -9897,7 +10012,7 @@
     {
         "nom": "L'Ombre de la violence",
         "affiche": "https://i.imgur.com/5QTmSNj.jpg",
-        "emplacement": "../film/l'ombre-de-la-violence.html"
+        "emplacement": "../film/lombre-de-la-violence.html"
     },
     {
         "nom": "Emergency",
@@ -9987,7 +10102,7 @@
     {
         "nom": "Le Milieu de l'horizon",
         "affiche": "https://www.themoviedb.org/t/p/original/cly3W5Ev0JwoAufMCobp0YQN2sb.jpg",
-        "emplacement": "../film/le-milieu-de-l'horizon.html"
+        "emplacement": "../film/le-milieu-de-lhorizon.html"
     },
     {
         "nom": "Vasectomia",
@@ -10032,7 +10147,7 @@
     {
         "nom": "L'Homme qui a vendu sa peau",
         "affiche": "https://www.themoviedb.org/t/p/original/n8MaXLTlENcz5LFIiNjwoTnlT8W.jpg",
-        "emplacement": "../film/l'homme-qui-a-vendu-sa-peau.html"
+        "emplacement": "../film/lhomme-qui-a-vendu-sa-peau.html"
     },
     {
         "nom": "Les Intranquilles",
@@ -10090,6 +10205,16 @@
         "emplacement": "../film/many-saints-of-newark---une-histoire-des-soprano.html"
     },
     {
+        "nom": "The Portable Door",
+        "affiche": "https://media.themoviedb.org/t/p/original/49NQGuvaMWYeAD22h135tFd2Grs.jpg",
+        "emplacement": "../film/the-portable-door.html"
+    },
+    {
+        "nom": "Apocalypse Z : Le Début de la fin",
+        "affiche": "https://media.themoviedb.org/t/p/original/y1zseasmkIWs2IKIIVQOU5UuwaK.jpg",
+        "emplacement": "../film/apocalypse-z--le-début-de-la-fin.html"
+    },
+    {
         "nom": "Girl Haunts Boy",
         "affiche": "https://media.themoviedb.org/t/p/original/6mabVBqKWdGbBKgUz6YK4G6Caws.jpg",
         "emplacement": "../film/girl-haunts-boy.html"
@@ -10112,7 +10237,7 @@
     {
         "nom": "Hellboy II : Les Légions d'or maudites",
         "affiche": "https://media.themoviedb.org/t/p/original/tkeVCCyP8vx6M6igcCs3Vv4apkR.jpg",
-        "emplacement": "../film/hellboy-ii--les-légions-d'or-maudites.html"
+        "emplacement": "../film/hellboy-ii--les-légions-dor-maudites.html"
     },
     {
         "nom": "The Crow",
@@ -10152,7 +10277,7 @@
     {
         "nom": "L'Académie de M. Kleks",
         "affiche": "https://media.themoviedb.org/t/p/original/sEN4kImmHXTIuT3KEqcaWuI8BtL.jpg",
-        "emplacement": "../film/l'académie-de-m-kleks.html"
+        "emplacement": "../film/lacadémie-de-m-kleks.html"
     },
     {
         "nom": "Monster High 2",
@@ -10167,7 +10292,7 @@
     {
         "nom": "S.O.S. Fantômes : L'Héritage",
         "affiche": "https://media.themoviedb.org/t/p/original/w1cmavTc0IwISr9ypI1XkBtxhVK.jpg",
-        "emplacement": "../film/sos-fantômes--l'héritage.html"
+        "emplacement": "../film/sos-fantômes--lhéritage.html"
     },
     {
         "nom": "S.O.S fantômes II",
@@ -10287,7 +10412,7 @@
     {
         "nom": "Batman v Superman : L'Aube de la Justice",
         "affiche": "https://www.themoviedb.org/t/p/original/krEWtXK2K7dg5RyMlx9f5WnI1xd.jpg",
-        "emplacement": "../film/batman-v-superman--l'aube-de-la-justice.html"
+        "emplacement": "../film/batman-v-superman--laube-de-la-justice.html"
     },
     {
         "nom": "Man of Steel",
@@ -10362,7 +10487,7 @@
     {
         "nom": "The King's Daughter",
         "affiche": "https://www.themoviedb.org/t/p/original/zwRf07ECh7nV7xlahKzN5wFYhGx.jpg",
-        "emplacement": "../film/the-king's-daughter.html"
+        "emplacement": "../film/the-kings-daughter.html"
     },
     {
         "nom": "Trois vœux pour Cendrillon",
@@ -10382,7 +10507,7 @@
     {
         "nom": "L'esprit s'amuse",
         "affiche": "https://www.themoviedb.org/t/p/original/20BArsHLPbnwRzwyRXj0e1QqWyq.jpg",
-        "emplacement": "../film/l'esprit-s'amuse.html"
+        "emplacement": "../film/lesprit-samuse.html"
     },
     {
         "nom": "Troll",
@@ -10417,7 +10542,7 @@
     {
         "nom": "L'École du Bien et du Mal",
         "affiche": "https://www.themoviedb.org/t/p/original/rnCqC51BLayhvziN7bGN8rJFn6X.jpg",
-        "emplacement": "../film/l'école-du-bien-et-du-mal.html"
+        "emplacement": "../film/lécole-du-bien-et-du-mal.html"
     },
     {
         "nom": "Achoura",
@@ -10427,7 +10552,7 @@
     {
         "nom": "De brique et d'or",
         "affiche": "https://www.themoviedb.org/t/p/original/dM2FFGHrejozC2lcC3Af5up0edZ.jpg",
-        "emplacement": "../film/de-brique-et-d'or.html"
+        "emplacement": "../film/de-brique-et-dor.html"
     },
     {
         "nom": "Hocus Pocus 2",
@@ -10448,21 +10573,6 @@
         "nom": "Rainbow",
         "affiche": "https://www.themoviedb.org/t/p/original/pFg29SbNbXkcuSgbnwnTz4wie4x.jpg",
         "emplacement": "../film/rainbow.html"
-    },
-    {
-        "nom": "Fullmetal Alchemist : La dernière alchimie",
-        "affiche": "https://www.themoviedb.org/t/p/original/ssnwetts0osPUCvX1lWrHWHSNLV.jpg",
-        "emplacement": "../film/fullmetal-alchemist--la-dernière-alchimie.html"
-    },
-    {
-        "nom": "Trois mille ans à t'attendre",
-        "affiche": "https://www.themoviedb.org/t/p/original/eCYaYduejXz9SIkLsKkHESU1sWq.jpg",
-        "emplacement": "../film/trois-mille-ans-à-t'attendre.html"
-    },
-    {
-        "nom": "Thor : Ragnarok",
-        "affiche": "https://www.themoviedb.org/t/p/original/mAA8RXkgF87jSWWMSf6hgLl73mk.jpg",
-        "emplacement": "../film/thor--ragnarok.html"
     },
     {
         "nom": "Thor : Le Monde des ténèbres",
@@ -10522,7 +10632,7 @@
     {
         "nom": "Les aventures d'aladdin",
         "affiche": "https://www.themoviedb.org/t/p/original/14HPHgdsY2JbgCy2aeTV6RuF06c.jpg",
-        "emplacement": "../film/les-aventures-d'aladdin.html"
+        "emplacement": "../film/les-aventures-daladdin.html"
     },
     {
         "nom": "Cendrillon",
@@ -10567,7 +10677,7 @@
     {
         "nom": "Harry Potter et l'Ordre du Phénix",
         "affiche": "https://www.themoviedb.org/t/p/original/9ZfpCVNx0y8jpColnnfdA1HI4Zb.jpg",
-        "emplacement": "../film/harry-potter-et-l'ordre-du-phénix.html"
+        "emplacement": "../film/harry-potter-et-lordre-du-phénix.html"
     },
     {
         "nom": "Harry Potter et la Coupe de feu",
@@ -10577,7 +10687,7 @@
     {
         "nom": "Harry Potter et le Prisonnier d'Azkaban",
         "affiche": "https://www.themoviedb.org/t/p/original/t4P2079IyK19njHDP2GwQrKdvzd.jpg",
-        "emplacement": "../film/harry-potter-et-le-prisonnier-d'azkaban.html"
+        "emplacement": "../film/harry-potter-et-le-prisonnier-dazkaban.html"
     },
     {
         "nom": "Harry Potter et la Chambre des secrets",
@@ -10587,12 +10697,22 @@
     {
         "nom": "Harry Potter à l'école des sorciers",
         "affiche": "https://www.themoviedb.org/t/p/original/rpFxYBmIOrUUHamhJ1A2AWRqAl1.jpg",
-        "emplacement": "../film/harry-potter-à-l'école-des-sorciers.html"
+        "emplacement": "../film/harry-potter-à-lécole-des-sorciers.html"
     },
     {
         "nom": "La Princesse enchantée",
         "affiche": "https://www.themoviedb.org/t/p/original/6liz6IZ4EroA3WpNsKxSmOTdH51.jpg",
         "emplacement": "../film/la-princesse-enchantée.html"
+    },
+    {
+        "nom": "Smile",
+        "affiche": "https://www.themoviedb.org/t/p/original/3kbtoJw6ZN0UUQhSuiRbAatr2kV.jpg",
+        "emplacement": "../film/smile.html"
+    },
+    {
+        "nom": "Bagman",
+        "affiche": "https://media.themoviedb.org/t/p/original/8Mxnebl5Eje3Z2EH5ucprr2UHBo.jpg",
+        "emplacement": "../film/bagman.html"
     },
     {
         "nom": "Piper, le joueur de flûte",
@@ -10657,7 +10777,7 @@
     {
         "nom": "Salem's Lot",
         "affiche": "https://media.themoviedb.org/t/p/original/j7ncdqBVufydVzVtxmXu8Ago4ox.jpg",
-        "emplacement": "../film/salem's-lot.html"
+        "emplacement": "../film/salems-lot.html"
     },
     {
         "nom": "Speak No Evil",
@@ -10677,7 +10797,7 @@
     {
         "nom": "L'I.A. du mal",
         "affiche": "https://media.themoviedb.org/t/p/original/oJ64JVF4unLSznJZtN0F1yNklyp.jpg",
-        "emplacement": "../film/l'ia-du-mal.html"
+        "emplacement": "../film/lia-du-mal.html"
     },
     {
         "nom": "When Evil Lurks",
@@ -10757,7 +10877,7 @@
     {
         "nom": "Le Mangeur d'âmes",
         "affiche": "https://media.themoviedb.org/t/p/original/7ocEVzK1tHiN6WkPXvasBt1gqfe.jpg",
-        "emplacement": "../film/le-mangeur-d'âmes.html"
+        "emplacement": "../film/le-mangeur-dâmes.html"
     },
     {
         "nom": "MaXXXine",
@@ -10792,7 +10912,7 @@
     {
         "nom": "Le veilleur de nuit : L'héritage",
         "affiche": "https://media.themoviedb.org/t/p/original/r5GZxwmfDbaZg8N6f9O9ehvD1zu.jpg",
-        "emplacement": "../film/le-veilleur-de-nuit--l'héritage.html"
+        "emplacement": "../film/le-veilleur-de-nuit--lhéritage.html"
     },
     {
         "nom": "Le Veilleur de nuit",
@@ -10822,12 +10942,12 @@
     {
         "nom": "There's Something in the Barn",
         "affiche": "https://media.themoviedb.org/t/p/original/8qSov4Y66aXtMSQoVh4iEi5wLnd.jpg",
-        "emplacement": "../film/there's-something-in-the-barn.html"
+        "emplacement": "../film/theres-something-in-the-barn.html"
     },
     {
         "nom": "Amelia's Children",
         "affiche": "https://media.themoviedb.org/t/p/original/kFFvKDu6H5FjyYEMlgrGVnTKkCg.jpg",
-        "emplacement": "../film/amelia's-children.html"
+        "emplacement": "../film/amelias-children.html"
     },
     {
         "nom": "13 Exorcismes",
@@ -10837,7 +10957,7 @@
     {
         "nom": "La Malédiction : L'Origine",
         "affiche": "https://media.themoviedb.org/t/p/original/yqHysom0aKQsCWJDnLmtVvFRlGV.jpg",
-        "emplacement": "../film/la-malédiction--l'origine.html"
+        "emplacement": "../film/la-malédiction--lorigine.html"
     },
     {
         "nom": "Les Cartes du mal",
@@ -10922,7 +11042,7 @@
     {
         "nom": "Thanksgiving : La semaine de l'horreur",
         "affiche": "https://www.themoviedb.org/t/p/original/40xZvFgDZqdWkKKyUW6zj4pFqd4.jpg",
-        "emplacement": "../film/thanksgiving--la-semaine-de-l'horreur.html"
+        "emplacement": "../film/thanksgiving--la-semaine-de-lhorreur.html"
     },
     {
         "nom": "Naga",
@@ -10967,12 +11087,12 @@
     {
         "nom": "L'Exorciste : Aux sources du mal",
         "affiche": "https://www.themoviedb.org/t/p/original/5Kks5Y1bEW637TIJUAQO3dLuCmK.jpg",
-        "emplacement": "../film/l'exorciste--aux-sources-du-mal.html"
+        "emplacement": "../film/lexorciste--aux-sources-du-mal.html"
     },
     {
         "nom": "L'Exorciste : Au commencement",
         "affiche": "https://www.themoviedb.org/t/p/original/2xf6w9U8bSabQehkDFbzY4oI9oC.jpg",
-        "emplacement": "../film/l'exorciste--au-commencement.html"
+        "emplacement": "../film/lexorciste--au-commencement.html"
     },
     {
         "nom": "Gliitch",
@@ -11227,7 +11347,7 @@
     {
         "nom": "L'Oeil du mal",
         "affiche": "https://www.themoviedb.org/t/p/original/7ToOejML1WLeywcou73hEn0sVXI.jpg",
-        "emplacement": "../film/l'oeil-du-mal.html"
+        "emplacement": "../film/loeil-du-mal.html"
     },
     {
         "nom": "La Tour",
@@ -11352,12 +11472,12 @@
     {
         "nom": "L'Emprise du Démon",
         "affiche": "https://www.themoviedb.org/t/p/original/wrRQNxkMVhF352LUtcU2z7Mca3G.jpg",
-        "emplacement": "../film/l'emprise-du-démon.html"
+        "emplacement": "../film/lemprise-du-démon.html"
     },
     {
         "nom": "There's Something Wrong with the Children",
         "affiche": "https://www.themoviedb.org/t/p/original/e49Sr3Lxfk2psYhv1SzQjs7MeGo.jpg",
-        "emplacement": "../film/there's-something-wrong-with-the-children.html"
+        "emplacement": "../film/theres-something-wrong-with-the-children.html"
     },
     {
         "nom": "The lair",
@@ -11400,9 +11520,9 @@
         "emplacement": "../film/homebound.html"
     },
     {
-        "nom": "Letters to Satan ClausHD",
+        "nom": "Letters to Satan Claus",
         "affiche": "https://www.themoviedb.org/t/p/original/q03C31Ul4AdHx5TAL3OyUxGcPcu.jpg",
-        "emplacement": "../film/letters-to-satan-claushd.html"
+        "emplacement": "../film/letters-to-satan-claus.html"
     },
     {
         "nom": "The Bunker Game",
@@ -11507,12 +11627,12 @@
     {
         "nom": "Grimcutty : l'enfer des réseaux",
         "affiche": "https://www.themoviedb.org/t/p/original/fAZNhn35XtgWcpSUfYNTw8sCbpm.jpg",
-        "emplacement": "../film/grimcutty--l'enfer-des-réseaux.html"
+        "emplacement": "../film/grimcutty--lenfer-des-réseaux.html"
     },
     {
         "nom": "Devil's Workshop",
         "affiche": "https://www.themoviedb.org/t/p/original/bz6mLaaM9hJAjKnxWXPNdhmgRrK.jpg",
-        "emplacement": "../film/devil's-workshop.html"
+        "emplacement": "../film/devils-workshop.html"
     },
     {
         "nom": "The Sadness",
@@ -11527,7 +11647,7 @@
     {
         "nom": "You Won't Be Alone",
         "affiche": "https://www.themoviedb.org/t/p/original/kJ1bSR2T16yzgRMSySpbAJzF3rM.jpg",
-        "emplacement": "../film/you-won't-be-alone.html"
+        "emplacement": "../film/you-wont-be-alone.html"
     },
     {
         "nom": "Ecorché",
@@ -11537,7 +11657,7 @@
     {
         "nom": "L'exorcisme de ma meilleure amie",
         "affiche": "https://www.themoviedb.org/t/p/original/yLTsKZv8T7f9XEIM3K01inCWcRz.jpg",
-        "emplacement": "../film/l'exorcisme-de-ma-meilleure-amie.html"
+        "emplacement": "../film/lexorcisme-de-ma-meilleure-amie.html"
     },
     {
         "nom": "Margaux",
@@ -11557,7 +11677,7 @@
     {
         "nom": "Le Bal de l'Enfer",
         "affiche": "https://www.themoviedb.org/t/p/original/kuHvnvP5zBkazEuI3WcuanDd83D.jpg",
-        "emplacement": "../film/le-bal-de-l'enfer.html"
+        "emplacement": "../film/le-bal-de-lenfer.html"
     },
     {
         "nom": "Goodnight Mommy",
@@ -11692,7 +11812,7 @@
     {
         "nom": "iNumber Number : L'or de Johannesbourg",
         "affiche": "https://www.themoviedb.org/t/p/original/uACOrkHLNgCsqAnk71bnSUhA3iz.jpg",
-        "emplacement": "../film/inumber-number--l'or-de-johannesbourg.html"
+        "emplacement": "../film/inumber-number--lor-de-johannesbourg.html"
     },
     {
         "nom": "Misanthrope",
@@ -11708,6 +11828,11 @@
         "nom": "Novembre",
         "affiche": "https://www.themoviedb.org/t/p/original/ylr0lRmfpmTzTI7A4J7UDjuO71F.jpg",
         "emplacement": "../film/novembre.html"
+    },
+    {
+        "nom": "Pendant ce temps sur Terre",
+        "affiche": "https://media.themoviedb.org/t/p/original/yQTZNWr1uADktCBstY5QUtckHvj.jpg",
+        "emplacement": "../film/pendant-ce-temps-sur-terre.html"
     },
     {
         "nom": "Long Distance",
@@ -11772,7 +11897,7 @@
     {
         "nom": "Wolverine : Le Combat de l'immortel",
         "affiche": "https://media.themoviedb.org/t/p/original/7OHkz1Y50UsZovKJ3r0q7nTvOxF.jpg",
-        "emplacement": "../film/wolverine--le-combat-de-l'immortel.html"
+        "emplacement": "../film/wolverine--le-combat-de-limmortel.html"
     },
     {
         "nom": "X-Men Origins : Wolverine",
@@ -11802,7 +11927,7 @@
     {
         "nom": "X-Men : L'Affrontement final",
         "affiche": "https://media.themoviedb.org/t/p/original/c5oKaVtfy5Y02oI2LdCo638rg6U.jpg",
-        "emplacement": "../film/x-men--l'affrontement-final.html"
+        "emplacement": "../film/x-men--laffrontement-final.html"
     },
     {
         "nom": "X-Men 2",
@@ -11827,7 +11952,7 @@
     {
         "nom": "E.T. l'extra-terrestre",
         "affiche": "https://media.themoviedb.org/t/p/original/5jl5sfhTeAlp60rM9GxoDA2dmX9.jpg",
-        "emplacement": "../film/et-l'extra-terrestre.html"
+        "emplacement": "../film/et-lextra-terrestre.html"
     },
     {
         "nom": "Minority Report",
@@ -11842,7 +11967,7 @@
     {
         "nom": "Donnie Darko 2 : L'Héritage du sang",
         "affiche": "https://media.themoviedb.org/t/p/original/rQJjsKhqL4VZx0VN2sD8PR0dK1h.jpg",
-        "emplacement": "../film/donnie-darko-2--l'héritage-du-sang.html"
+        "emplacement": "../film/donnie-darko-2--lhéritage-du-sang.html"
     },
     {
         "nom": "Donnie Darko",
@@ -11867,12 +11992,12 @@
     {
         "nom": "Rebel Moon - Partie 2 : Director's cut",
         "affiche": "https://media.themoviedb.org/t/p/original/9nHyCabReeWmaQVWY6m3YeXVrbX.jpg",
-        "emplacement": "../film/rebel-moon---partie-2--director's-cut.html"
+        "emplacement": "../film/rebel-moon---partie-2--directors-cut.html"
     },
     {
         "nom": "Rebel Moon - Partie 2 : L'Entailleuse",
         "affiche": "https://media.themoviedb.org/t/p/original/1BfXp9BanCSs5DxrOt7YnbnWoX5.jpg",
-        "emplacement": "../film/rebel-moon---partie-2--l'entailleuse.html"
+        "emplacement": "../film/rebel-moon---partie-2--lentailleuse.html"
     },
     {
         "nom": "Rebel Moon - Partie 1 : Enfant de feu",
@@ -11907,7 +12032,7 @@
     {
         "nom": "La Planète des singes : L'Affrontement",
         "affiche": "https://media.themoviedb.org/t/p/original/uuYpuLK1VmvNEdL2CHZ8PWAEXvS.jpg",
-        "emplacement": "../film/la-planète-des-singes--l'affrontement.html"
+        "emplacement": "../film/la-planète-des-singes--laffrontement.html"
     },
     {
         "nom": "La Planète des singes : Les Origines",
@@ -12062,7 +12187,7 @@
     {
         "nom": "Hunger Games : L'Embrasement",
         "affiche": "https://www.themoviedb.org/t/p/original/oOHRjh3RsUAKQocOVjhaid3CLm.jpg",
-        "emplacement": "../film/hunger-games--l'embrasement.html"
+        "emplacement": "../film/hunger-games--lembrasement.html"
     },
     {
         "nom": "Hunger Games",
@@ -12127,7 +12252,7 @@
     {
         "nom": "La Guerre des mondes : l'invasion",
         "affiche": "https://www.themoviedb.org/t/p/original/a3TMXVT8Rszk2nziknYVPNOXcZj.jpg",
-        "emplacement": "../film/la-guerre-des-mondes--l'invasion.html"
+        "emplacement": "../film/la-guerre-des-mondes--linvasion.html"
     },
     {
         "nom": "Timescape : retour aux dinosaures",
@@ -12137,7 +12262,7 @@
     {
         "nom": "Les 4 Cavaliers de l'Apocalypse",
         "affiche": "https://www.themoviedb.org/t/p/original/wlZ0WrOBMLSqMvpE9oQczNRvsCI.jpg",
-        "emplacement": "../film/les-4-cavaliers-de-l'apocalypse.html"
+        "emplacement": "../film/les-4-cavaliers-de-lapocalypse.html"
     },
     {
         "nom": "Time Wars",
@@ -12177,7 +12302,7 @@
     {
         "nom": "Star Wars : L'Ascension de Skywalker",
         "affiche": "https://www.themoviedb.org/t/p/original/w1fqnG3W2xqCPTvjdPJTcfPMYH1.jpg",
-        "emplacement": "../film/star-wars--l'ascension-de-skywalker.html"
+        "emplacement": "../film/star-wars--lascension-de-skywalker.html"
     },
     {
         "nom": "Solo : A Star Wars Story",
@@ -12207,7 +12332,7 @@
     {
         "nom": "Star Wars, épisode II - L'Attaque des clones",
         "affiche": "https://www.themoviedb.org/t/p/original/3nqpcTkODCBhuKuDQJ1dtRhgTqZ.jpg",
-        "emplacement": "../film/star-wars-épisode-ii---l'attaque-des-clones.html"
+        "emplacement": "../film/star-wars-épisode-ii---lattaque-des-clones.html"
     },
     {
         "nom": "Star Wars, épisode I - La Menace fantôme",
@@ -12222,7 +12347,7 @@
     {
         "nom": "Star Wars, épisode V : L'Empire contre-attaque",
         "affiche": "https://www.themoviedb.org/t/p/original/qDvctAykmNWAmi9G2GrVrwWx3pr.jpg",
-        "emplacement": "../film/star-wars-épisode-v--l'empire-contre-attaque.html"
+        "emplacement": "../film/star-wars-épisode-v--lempire-contre-attaque.html"
     },
     {
         "nom": "Star Wars, épisode IV : Un nouvel espoir",
@@ -12342,7 +12467,7 @@
     {
         "nom": "65 - la Terre d'avant",
         "affiche": "https://www.themoviedb.org/t/p/original/qHndw8DJTMRWCUNlvbvXhXtvCAn.jpg",
-        "emplacement": "../film/65---la-terre-d'avant.html"
+        "emplacement": "../film/65---la-terre-davant.html"
     },
     {
         "nom": "Captain America : Civil War",
@@ -12352,7 +12477,7 @@
     {
         "nom": "Captain America : Le Soldat de l'hiver",
         "affiche": "https://www.themoviedb.org/t/p/original/zCkOSBWsKyj7ieV4eR0BqMBFoRF.jpg",
-        "emplacement": "../film/captain-america--le-soldat-de-l'hiver.html"
+        "emplacement": "../film/captain-america--le-soldat-de-lhiver.html"
     },
     {
         "nom": "Captain America : First Avenger",
@@ -12392,7 +12517,7 @@
     {
         "nom": "Avengers : L'Ère d'Ultron",
         "affiche": "https://www.themoviedb.org/t/p/original/rbJGuPedx0aDhyFlKAIJG7I6hrg.jpg",
-        "emplacement": "../film/avengers--l'ère-d'ultron.html"
+        "emplacement": "../film/avengers--lère-dultron.html"
     },
     {
         "nom": "Avengers",
@@ -12447,12 +12572,12 @@
     {
         "nom": "L'Effet papillon",
         "affiche": "https://www.themoviedb.org/t/p/original/oSfTtRBT8L9FiPbeQoCi48zHL0B.jpg",
-        "emplacement": "../film/l'effet-papillon.html"
+        "emplacement": "../film/leffet-papillon.html"
     },
     {
         "nom": "Une obsession venue d'ailleurs",
         "affiche": "https://www.themoviedb.org/t/p/original/Av7wOcpSoWyf6VIsWqEfsMzoiZP.jpg",
-        "emplacement": "../film/une-obsession-venue-d'ailleurs.html"
+        "emplacement": "../film/une-obsession-venue-dailleurs.html"
     },
     {
         "nom": "Secret Headquarters",
@@ -12615,6 +12740,16 @@
         "emplacement": "../film/encounter.html"
     },
     {
+        "nom": "Skincare",
+        "affiche": "https://media.themoviedb.org/t/p/original/hBuprCd23nhi6IOwzVKI0tIAZDG.jpg",
+        "emplacement": "../film/skincare.html"
+    },
+    {
+        "nom": "1992",
+        "affiche": "https://media.themoviedb.org/t/p/original/tPvFmQZM5HMspryyYbrtW02NR0G.jpg",
+        "emplacement": "../film/1992.html"
+    },
+    {
         "nom": "10 jours entre le bien et le mal",
         "affiche": "https://media.themoviedb.org/t/p/original/nVNLGppnuf15VgrIQBnSiLqrzeT.jpg",
         "emplacement": "../film/10-jours-entre-le-bien-et-le-mal.html"
@@ -12652,7 +12787,7 @@
     {
         "nom": "Don't Move",
         "affiche": "https://media.themoviedb.org/t/p/original/1ONEBprtZiWwiSbHKhs72vzUyjl.jpg",
-        "emplacement": "../film/don't-move.html"
+        "emplacement": "../film/dont-move.html"
     },
     {
         "nom": "Force of Nature: The Dry 2",
@@ -12712,7 +12847,7 @@
     {
         "nom": "It's What's Inside",
         "affiche": "https://media.themoviedb.org/t/p/original/lnYn5X6vWFbw9CLzcuP56Svjksm.jpg",
-        "emplacement": "../film/it's-what's-inside.html"
+        "emplacement": "../film/its-whats-inside.html"
     },
     {
         "nom": "CTRL",
@@ -12822,17 +12957,17 @@
     {
         "nom": "Ocean's Thirteen",
         "affiche": "https://media.themoviedb.org/t/p/original/73OQ7Qlkq6bpNJytnvQLpQs4boa.jpg",
-        "emplacement": "../film/ocean's-thirteen.html"
+        "emplacement": "../film/oceans-thirteen.html"
     },
     {
         "nom": "Ocean's Twelve",
         "affiche": "https://media.themoviedb.org/t/p/original/x2lepGLOFv6XijMVl0mFpIs16AG.jpg",
-        "emplacement": "../film/ocean's-twelve.html"
+        "emplacement": "../film/oceans-twelve.html"
     },
     {
         "nom": "Ocean's Eleven",
         "affiche": "https://media.themoviedb.org/t/p/original/69bxGYGUv5ngRoxRblMaiqyX7Zn.jpg",
-        "emplacement": "../film/ocean's-eleven.html"
+        "emplacement": "../film/oceans-eleven.html"
     },
     {
         "nom": "No Way Up",
@@ -12862,7 +12997,7 @@
     {
         "nom": "Tyler Perry's Divorce in the Black",
         "affiche": "https://media.themoviedb.org/t/p/original/d5X03SA51Ezd02iF9BCjWXC9X9F.jpg",
-        "emplacement": "../film/tyler-perry's-divorce-in-the-black.html"
+        "emplacement": "../film/tyler-perrys-divorce-in-the-black.html"
     },
     {
         "nom": "Boneyard",
@@ -12902,12 +13037,12 @@
     {
         "nom": "You Can't Run Forever",
         "affiche": "https://media.themoviedb.org/t/p/original/svDSsFpAkYUayuFc5wt61NAevt0.jpg",
-        "emplacement": "../film/you-can't-run-forever.html"
+        "emplacement": "../film/you-cant-run-forever.html"
     },
     {
         "nom": "Mothers' Instinct",
         "affiche": "https://media.themoviedb.org/t/p/original/lYjguuPOB9PqCClPiv6HIFPDDqI.jpg",
-        "emplacement": "../film/mothers'-instinct.html"
+        "emplacement": "../film/mothers-instinct.html"
     },
     {
         "nom": "Sous la seine",
@@ -12972,7 +13107,7 @@
     {
         "nom": "L'innocence",
         "affiche": "https://media.themoviedb.org/t/p/original/lQ9A2hcgczlUYEYxwGMFkSxnCtw.jpg",
-        "emplacement": "../film/l'innocence.html"
+        "emplacement": "../film/linnocence.html"
     },
     {
         "nom": "La Tête Froide",
@@ -12992,7 +13127,7 @@
     {
         "nom": "Miller's Girl",
         "affiche": "https://media.themoviedb.org/t/p/original/6ICEPOoDRPoTCKS7GFuqPnSlgv.jpg",
-        "emplacement": "../film/miller's-girl.html"
+        "emplacement": "../film/millers-girl.html"
     },
     {
         "nom": "Ida",
@@ -13027,7 +13162,7 @@
     {
         "nom": "Smile, c'était écrit",
         "affiche": "https://media.themoviedb.org/t/p/original/qktM042rdFMWes1EEsAWyofj7ny.jpg",
-        "emplacement": "../film/smile-c'était-écrit.html"
+        "emplacement": "../film/smile-cétait-écrit.html"
     },
     {
         "nom": "Mea Culpa",
@@ -13077,7 +13212,7 @@
     {
         "nom": "The Marsh King's Daughter",
         "affiche": "https://www.themoviedb.org/t/p/original/bcuEjrwhp5HgEUnFe5lc4xpEqzt.jpg",
-        "emplacement": "../film/the-marsh-king's-daughter.html"
+        "emplacement": "../film/the-marsh-kings-daughter.html"
     },
     {
         "nom": "Parasite",
@@ -13097,17 +13232,17 @@
     {
         "nom": "Millénium : les hommes qui n'aimaient pas les femmes",
         "affiche": "https://www.themoviedb.org/t/p/original/wnfC3z6SzlRjQtmXqTsWadM8G4C.jpg",
-        "emplacement": "../film/millénium--les-hommes-qui-n'aimaient-pas-les-femmes.html"
+        "emplacement": "../film/millénium--les-hommes-qui-naimaient-pas-les-femmes.html"
     },
     {
         "nom": "Millénium 3 : La Reine dans le palais des courants d'air",
         "affiche": "https://www.themoviedb.org/t/p/original/6h1UELUpz5vF5uFv77glJdFtc5E.jpg",
-        "emplacement": "../film/millénium-3--la-reine-dans-le-palais-des-courants-d'air.html"
+        "emplacement": "../film/millénium-3--la-reine-dans-le-palais-des-courants-dair.html"
     },
     {
         "nom": "Millénium 2 : La Fille qui rêvait d'un bidon d'essence et d'une allumette",
         "affiche": "https://www.themoviedb.org/t/p/original/zFRu3rz6DsMweEY95mfA1yuMh0P.jpg",
-        "emplacement": "../film/millénium-2--la-fille-qui-rêvait-d'un-bidon-d'essence-et-d'une-allumette.html"
+        "emplacement": "../film/millénium-2--la-fille-qui-rêvait-dun-bidon-dessence-et-dune-allumette.html"
     },
     {
         "nom": "Millénium",
@@ -13182,7 +13317,7 @@
     {
         "nom": "Je suis l'abysse",
         "affiche": "https://www.themoviedb.org/t/p/original/2JZmj8mZbxAisQFQcYo47PL33PK.jpg",
-        "emplacement": "../film/je-suis-l'abysse.html"
+        "emplacement": "../film/je-suis-labysse.html"
     },
     {
         "nom": "Nitram",
@@ -13337,7 +13472,7 @@
     {
         "nom": "Devil's Peak",
         "affiche": "https://www.themoviedb.org/t/p/original/bfrGhxKkLBfpmHXLuAwGlVUXDIX.jpg",
-        "emplacement": "../film/devil's-peak.html"
+        "emplacement": "../film/devils-peak.html"
     },
     {
         "nom": "American Carnage",
@@ -13372,7 +13507,7 @@
     {
         "nom": "Le Capitaine Volkonogov s'est échappé",
         "affiche": "https://www.themoviedb.org/t/p/original/5UUlKmLbovrmqSxdSsbHs2pOANJ.jpg",
-        "emplacement": "../film/le-capitaine-volkonogov-s'est-échappé.html"
+        "emplacement": "../film/le-capitaine-volkonogov-sest-échappé.html"
     },
     {
         "nom": "Les Minutes Noires",
@@ -13477,7 +13612,7 @@
     {
         "nom": "L'un de nous doit mourir",
         "affiche": "https://www.themoviedb.org/t/p/original/iMCN3Ok9iJIgc4dLsWESKsPstLE.jpg",
-        "emplacement": "../film/l'un-de-nous-doit-mourir.html"
+        "emplacement": "../film/lun-de-nous-doit-mourir.html"
     },
     {
         "nom": "Les Survivants",
@@ -13652,7 +13787,7 @@
     {
         "nom": "Bruno Reidal, confession d'un meurtrier",
         "affiche": "https://www.themoviedb.org/t/p/original/xYMHI0lks44QPvtnHKhErPOtaj0.jpg",
-        "emplacement": "../film/bruno-reidal-confession-d'un-meurtrier.html"
+        "emplacement": "../film/bruno-reidal-confession-dun-meurtrier.html"
     },
     {
         "nom": "We Have a Ghost",
@@ -13662,7 +13797,7 @@
     {
         "nom": "La Malédiction de Raven's Hollow",
         "affiche": "https://www.themoviedb.org/t/p/original/rEhYo7TZkPtmlDd2gPzWWUBaOau.jpg",
-        "emplacement": "../film/la-malédiction-de-raven's-hollow.html"
+        "emplacement": "../film/la-malédiction-de-ravens-hollow.html"
     },
     {
         "nom": "Knock at the Cabin",
@@ -13697,7 +13832,7 @@
     {
         "nom": "L'Origine du mal",
         "affiche": "https://www.themoviedb.org/t/p/original/wRg2irZ6RAdmxOIIipGBnaKAaqU.jpg",
-        "emplacement": "../film/l'origine-du-mal.html"
+        "emplacement": "../film/lorigine-du-mal.html"
     },
     {
         "nom": "Coup de théâtre",
@@ -13785,14 +13920,9 @@
         "emplacement": "../film/nocturnal-animals.html"
     },
     {
-        "nom": "Locked InHD",
-        "affiche": "https://www.themoviedb.org/t/p/original/zYMggudURGVqMmeJxMlPPX9N5AS.jpg",
-        "emplacement": "../film/locked-inhd.html"
-    },
-    {
-        "nom": "Le Patient (20222)HD",
+        "nom": "Le Patient",
         "affiche": "https://i.imgur.com/oiSjjZH.png",
-        "emplacement": "../film/le-patient-20222hd.html"
+        "emplacement": "../film/le-patient.html"
     },
     {
         "nom": "Filière Criminelle",
@@ -13857,7 +13987,7 @@
     {
         "nom": "Don't Worry Darling",
         "affiche": "https://www.themoviedb.org/t/p/original/cWE7Qd0qD44muVLfqYP2mqhojQV.jpg",
-        "emplacement": "../film/don't-worry-darling.html"
+        "emplacement": "../film/dont-worry-darling.html"
     },
     {
         "nom": "Entre la vie et la mort",
@@ -13967,7 +14097,7 @@
     {
         "nom": "L'Été nucléaire",
         "affiche": "https://www.themoviedb.org/t/p/original/uDQptpEmk2RbfEcVfARLMOp5wua.jpg",
-        "emplacement": "../film/l'été-nucléaire.html"
+        "emplacement": "../film/lété-nucléaire.html"
     },
     {
         "nom": "The Aviary",
@@ -13987,7 +14117,7 @@
     {
         "nom": "Alice : De l'esclavage à la liberté",
         "affiche": "https://www.themoviedb.org/t/p/original/4VvXHIWw6yie5Y4G41Vnrh2n0XL.jpg",
-        "emplacement": "../film/alice--de-l'esclavage-à-la-liberté.html"
+        "emplacement": "../film/alice--de-lesclavage-à-la-liberté.html"
     },
     {
         "nom": "The Ledge",
@@ -14047,7 +14177,7 @@
     {
         "nom": "L'Affaire Collini",
         "affiche": "https://www.themoviedb.org/t/p/original/37yk4NkeCuRg8afofANKwZIxdzm.jpg",
-        "emplacement": "../film/l'affaire-collini.html"
+        "emplacement": "../film/laffaire-collini.html"
     },
     {
         "nom": "The Innocents",
@@ -14112,7 +14242,7 @@
     {
         "nom": "L'Ennemi",
         "affiche": "https://www.themoviedb.org/t/p/original/tcG84wmkHxG9krgEjyl0JfEx73p.jpg",
-        "emplacement": "../film/l'ennemi.html"
+        "emplacement": "../film/lennemi.html"
     },
     {
         "nom": "Un alibi",
@@ -14162,7 +14292,7 @@
     {
         "nom": "Les Enquêtes du département V : L'Effet Papillon",
         "affiche": "https://www.themoviedb.org/t/p/original/fZNugFFV3xCNVR2Br4xGgfJil0Q.jpg",
-        "emplacement": "../film/les-enquêtes-du-département-v--l'effet-papillon.html"
+        "emplacement": "../film/les-enquêtes-du-département-v--leffet-papillon.html"
     },
     {
         "nom": "Les Enquêtes du Département V : Dossier 64",
@@ -14232,7 +14362,7 @@
     {
         "nom": "Ibelin : La vie remarquable d'un gamer",
         "affiche": "https://media.themoviedb.org/t/p/original/1FkHH0g2CFPvREqwQy74vJyEnnY.jpg",
-        "emplacement": "../film/ibelin--la-vie-remarquable-d'un-gamer.html"
+        "emplacement": "../film/ibelin--la-vie-remarquable-dun-gamer.html"
     },
     {
         "nom": "Money Electric: The Bitcoin Mystery [VOSTFR]",
@@ -14271,8 +14401,8 @@
     },
     {
         "nom": "J'irai dormir chez vous - Spéciale Algérie",
-        "affiche": "https://i.imgur.com/3RzlZm2.jpeg",
-        "emplacement": "../film/j'irai-dormir-chez-vous---spéciale-algérie.html"
+        "affiche": "https://www.justwatch.com/images/poster/308257157/s332/saison-13",
+        "emplacement": "../film/jirai-dormir-chez-vous---spéciale-algérie.html"
     },
     {
         "nom": "Lost on Everest",
@@ -14307,12 +14437,12 @@
     {
         "nom": "Crypto Queen, la reine de l'arnaque",
         "affiche": "https://www.themoviedb.org/t/p/original/2XbCAXGtQ7cZd96mE4zJaSci7JU.jpg",
-        "emplacement": "../film/crypto-queen-la-reine-de-l'arnaque.html"
+        "emplacement": "../film/crypto-queen-la-reine-de-larnaque.html"
     },
     {
         "nom": "Mental Combat : La naissance d'un sport",
         "affiche": "https://www.themoviedb.org/t/p/original/lT25Wqgxk4bg63eH2v02reDxicp.jpg",
-        "emplacement": "../film/mental-combat--la-naissance-d'un-sport.html"
+        "emplacement": "../film/mental-combat--la-naissance-dun-sport.html"
     },
     {
         "nom": "Hallelujah, les mots de Leonard Cohen",
@@ -14327,7 +14457,7 @@
     {
         "nom": "Marcher sur l'eau",
         "affiche": "https://i.imgur.com/pdMQfvL.jpg",
-        "emplacement": "../film/marcher-sur-l'eau.html"
+        "emplacement": "../film/marcher-sur-leau.html"
     },
     {
         "nom": "Elon Musk : The Real Life Iron Man",
@@ -14347,7 +14477,7 @@
     {
         "nom": "L'Affaire Pantani",
         "affiche": "https://www.themoviedb.org/t/p/original/pwuV1reqA9U14Y0esk3JAbZK92Q.jpg",
-        "emplacement": "../film/l'affaire-pantani.html"
+        "emplacement": "../film/laffaire-pantani.html"
     },
     {
         "nom": "Jackass 4.5",
@@ -14375,9 +14505,14 @@
         "emplacement": "../film/jackass-forever.html"
     },
     {
+        "nom": "Jake Paul vs. Mike Tyson",
+        "affiche": "https://i.imgur.com/V860UQV.png",
+        "emplacement": "../film/jake-paul-vs-mike-tyson.html"
+    },
+    {
         "nom": "Thomas VDB s'acclimate",
         "affiche": "https://media.themoviedb.org/t/p/original/3JZncyvc1fHnoC2APWK00neAWS1.jpg",
-        "emplacement": "../film/thomas-vdb-s'acclimate.html"
+        "emplacement": "../film/thomas-vdb-sacclimate.html"
     },
     {
         "nom": "Dédo - Biafine",
@@ -14412,7 +14547,7 @@
     {
         "nom": "Redouane Bougheraba - On M'appelle Marseille",
         "affiche": "https://www.themoviedb.org/t/p/original/vUiLO6IWVVB9mwlbmCUIieNMtRY.jpg",
-        "emplacement": "../film/redouane-bougheraba---on-m'appelle-marseille.html"
+        "emplacement": "../film/redouane-bougheraba---on-mappelle-marseille.html"
     },
     {
         "nom": "Mustapha El Atrassi : Que Du Sale",
@@ -14437,7 +14572,7 @@
     {
         "nom": "Thomas Ngijol : L'oeil du tigre",
         "affiche": "https://www.themoviedb.org/t/p/original/y6GdgGpwbPCjMvFEBCs6YHuGyvk.jpg",
-        "emplacement": "../film/thomas-ngijol--l'oeil-du-tigre.html"
+        "emplacement": "../film/thomas-ngijol--loeil-du-tigre.html"
     },
     {
         "nom": "Jason Brokerss : 21ème seconde",
@@ -14461,7 +14596,7 @@
     },
     {
         "nom": "Mustapha El Atrassi : N**** SA GRAND-MÈRE",
-        "affiche": "https://i.imgur.com/bnG9ADR.jpg",
+        "affiche": "https://play-lh.googleusercontent.com/mF-quVCkJOnMnlftbZf_HVF-BQsSwqPoj3OLPnam5adZJBfQ7tt8lOOkNvOhkOrR4LhZKptoBnnmK9JUWDc=w240-h480-rw",
         "emplacement": "../film/mustapha-el-atrassi--n-sa-grand-mère.html"
     },
     {
@@ -14502,7 +14637,7 @@
     {
         "nom": "D'jal : À Cœur Ouvert",
         "affiche": "https://www.themoviedb.org/t/p/original/cV0pp6YPh1c8kqDwPrXArwcvZyA.jpg",
-        "emplacement": "../film/d'jal--à-cœur-ouvert.html"
+        "emplacement": "../film/djal--à-cœur-ouvert.html"
     },
     {
         "nom": "Camille Lellouche, le spectacle",
