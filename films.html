@@ -18973,7 +18973,8 @@
                 <a href="film/tant-que-le-soleil-frappe.html" title="Tant que le soleil frappe">
                     <div class="video-img"> 
                         <span class="video-item-content">Tant que le soleil frappe</span>
-                        <img src="https://www.themoviedb.org/t/p/original/snJb6oCdRAco3GueLpnP3vKBH2K.jpg
+                        <img src="https://www.themoviedb.org/t/p/original/snJb6oCdRAco3GueLpnP3vKBH2K.jpg
+
 " alt="Tant que le soleil frappe" title="Tant que le soleil frappe" loading="lazy">         
                     </div>       
                 </a>
@@ -32565,7 +32566,16 @@ async function showSuggestions(query) {
     const response = await fetch('search/f.json');
     const movies = await response.json();
 
-    const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
+    // Fonction pour normaliser les chaînes
+    function normalizeString(str) {
+        return str
+            .toLowerCase()
+            .replace(/['’]/g, ""); // Supprime les apostrophes simples et typographiques
+    }
+
+    const filteredMovies = movies.filter(movie => 
+        normalizeString(movie.nom).includes(normalizeString(query))
+    );
 
     if (filteredMovies.length > 0) {
         filteredMovies.forEach(movie => {
@@ -32575,7 +32585,7 @@ async function showSuggestions(query) {
                 <a href="${movie.emplacement}">
                     <div class="video-img">
                         <span class="video-item-content">${movie.nom}</span>
-                        <img src="${movie.affiche}" alt="${movie.nom}">
+                        <img src="${movie.affiche}" alt="${movie.nom}" loading="lazy">
                     </div>
                 </a>
             `;
@@ -32585,6 +32595,7 @@ async function showSuggestions(query) {
         searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
     }
 }
+
 </script> 
 <script> 
 document.addEventListener('keydown', function(event) {

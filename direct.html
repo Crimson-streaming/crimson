@@ -504,35 +504,45 @@ document.addEventListener('DOMContentLoaded', function() {
        
     <div class="eupopup eupopup-bottom"></div>
     <script>
-    async function showSuggestions(query) {
-        const searchOutput = document.getElementById('search_output');
-        searchOutput.innerHTML = ''; // Réinitialiser les résultats
-    
-        if (!query) return; // Si la requête est vide, ne rien faire
-    
-        const response = await fetch('search/direct.json');
-        const movies = await response.json();
-    
-        const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
-    
-        if (filteredMovies.length > 0) {
-            filteredMovies.forEach(movie => {
-                const movieDiv = document.createElement('div');
-                movieDiv.classList.add('single-video');
-                movieDiv.innerHTML = `
-                    <a href="${movie.emplacement}">
-                        <div class="video-img">
-                            <span class="video-item-content">${movie.nom}</span>
-                            <img src="${movie.affiche}" alt="${movie.nom}" loading="lazy">
-                        </div>
-                    </a>
-                `;
-                searchOutput.appendChild(movieDiv);
-            });
-        } else {
-            searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
-        }
+   async function showSuggestions(query) {
+    const searchOutput = document.getElementById('search_output');
+    searchOutput.innerHTML = ''; // Réinitialiser les résultats
+
+    if (!query) return; // Si la requête est vide, ne rien faire
+
+    const response = await fetch('search/f.json');
+    const movies = await response.json();
+
+    // Fonction pour normaliser les chaînes
+    function normalizeString(str) {
+        return str
+            .toLowerCase()
+            .replace(/['’]/g, ""); // Supprime les apostrophes simples et typographiques
     }
+
+    const filteredMovies = movies.filter(movie => 
+        normalizeString(movie.nom).includes(normalizeString(query))
+    );
+
+    if (filteredMovies.length > 0) {
+        filteredMovies.forEach(movie => {
+            const movieDiv = document.createElement('div');
+            movieDiv.classList.add('single-video');
+            movieDiv.innerHTML = `
+                <a href="${movie.emplacement}">
+                    <div class="video-img">
+                        <span class="video-item-content">${movie.nom}</span>
+                        <img src="${movie.affiche}" alt="${movie.nom}" loading="lazy">
+                    </div>
+                </a>
+            `;
+            searchOutput.appendChild(movieDiv);
+        });
+    } else {
+        searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
+    }
+}
+
     </script>  
  
   
