@@ -189,7 +189,7 @@
                       <div id="movie-button-important-margin" class="video-watch-share-item" style="margin-top: 160px;"></div>
                       <div style="height: 5px;"></div>
                       <div style="margin: 0px !important; margin-right: 10px !important;">    
-<!-- Bouton pour ouvrir la bande-annonce avec le nouvel ID -->
+<!-- Bouton pour ouvrir la bande-annonce -->
 <span>
     <a id="2222" href="javascript:void(0);" title="Regarde la bande-annonce">
         <i class="fa fa-play-circle"></i> Regarde la bande-annonce
@@ -200,58 +200,68 @@
 <div id="video-popup" class="popup">
     <div class="popup-rectangle"></div>
     <iframe id="youtube-player" 
-        width="640" 
-        height="360" 
         src="" 
         title="YouTube video player" 
         frameborder="0" 
         allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
         allowfullscreen
-        style="opacity: 0; transition: opacity 0.2s ease-in-out;"> <!-- Lecture avec animation d'apparition -->
+        style="opacity: 0; transition: opacity 0.2s ease-in-out;">
     </iframe>
 </div>
 
 <!-- Styles CSS -->
 <style>
-    /* Conteneur principal */
     .popup {
-        display: none; /* Cachée par défaut */
+        display: none;
         position: fixed;
         top: 0;
         left: 0;
         width: 100%;
         height: 100%;
-        background-color: rgba(0, 0, 0, 0.8); /* Fond assombri */
+        background-color: rgba(0, 0, 0, 0.8);
         z-index: 9999;
         justify-content: center;
         align-items: center;
     }
 
-    /* Rectangle noir pour l'animation */
     .popup-rectangle {
         width: 0;
         height: 0;
         background-color: black;
-        transition: width 0.4s cubic-bezier(0.4, 0.0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0.0, 0.2, 1); /* Animation fluide */
+        transition: width 0.4s cubic-bezier(0.4, 0.0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
         position: absolute;
     }
 
-    /* Classe active pour agrandir le rectangle */
     .popup.active .popup-rectangle {
-        width: 640px; /* Largeur de la vidéo */
-        height: 360px; /* Hauteur de la vidéo */
+        width: 80vw;
+        height: 45vw;
     }
 
-    /* Style iframe */
     iframe {
         position: absolute;
-        z-index: 2; /* Au-dessus du rectangle */
+        z-index: 2;
+        width: 100%;
+        height: 100%;
+        opacity: 0;
+        transition: opacity 0.2s ease-in-out;
+    }
+
+    @media (max-width: 600px) {
+        .popup.active .popup-rectangle {
+            width: 90vw;
+            height: 50vw;
+        }
+
+        iframe {
+            width: 100%;
+            height: 100%;
+        }
     }
 </style>
 
 <!-- Script JavaScript -->
 <script>
-    const trailerButton = document.getElementById("2222");  // ID du bouton
+    const trailerButton = document.getElementById("2222");
     const popup = document.getElementById("video-popup");
     const rectangle = document.querySelector(".popup-rectangle");
     const youtubePlayer = document.getElementById("youtube-player");
@@ -259,25 +269,26 @@
     // Ouvrir la popup avec l'animation
     trailerButton.addEventListener("click", () => {
         popup.style.display = "flex"; // Afficher le conteneur
-
-        // Ajouter la classe active qui démarre l'agrandissement du rectangle
         setTimeout(() => {
             popup.classList.add("active"); // Agrandir le rectangle
-            youtubePlayer.src = "https://www.youtube-nocookie.com/embed/1GKL57sPdQE?si=hO9iclDicc5sUBU9"; // Ajouter le lecteur vidéo immédiatement
-            youtubePlayer.style.opacity = "1"; // Faire apparaître l'iframe (lecteur vidéo)
-        }, 10); // Déclencher l'animation immédiatement
+        }, 10);
 
+        // Afficher le lecteur immédiatement après l'agrandissement du rectangle
+        setTimeout(() => {
+            youtubePlayer.src = "https://www.youtube.com/embed/3HKgkkLCazw?autoplay=1";
+            youtubePlayer.style.opacity = "1";
+        }, 400);
     });
 
     // Fermer la popup en cliquant n'importe où
     popup.addEventListener("click", () => {
-        youtubePlayer.style.opacity = "0"; // Cacher doucement le lecteur
-        youtubePlayer.src = ""; // Arrêter la vidéo
+        youtubePlayer.style.opacity = "0";
+        youtubePlayer.src = "";
 
-        popup.classList.remove("active"); // Rétrécir le rectangle
+        popup.classList.remove("active");
         setTimeout(() => {
-            popup.style.display = "none"; // Masquer tout après l'animation
-        }, 400); // Correspond à la durée de l'animation
+            popup.style.display = "none";
+        }, 400);
     });
 </script>
 
