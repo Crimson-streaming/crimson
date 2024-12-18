@@ -261,7 +261,10 @@
 <!-- Banner -->
 <!-- Start Upcoming Section -->
 
-  
+<div class="row" id="recent-movie-container">
+	<!-- Les affiches des films seront ajoutées ici dynamiquement -->
+</div>
+
   
 <div class="video-carousel-area vfx-item-ptb">
 	<div class="container-fluid">
@@ -748,6 +751,40 @@ async function showSuggestions(query) {
 }
 
 </script> 
+<script defer>
+	// Récupérer les données du Local Storage
+	const recentMovie = JSON.parse(localStorage.getItem('recentMovie'));
+	
+	// Débogage : Afficher les données récupérées
+	console.log("Données récupérées :", recentMovie);
+
+	// Vérifier si les données existent
+	if (recentMovie && recentMovie.poster && recentMovie.link) {
+		const container = document.getElementById('recent-movie-container');
+
+		// Créer une colonne pour le poster
+		const colDiv = document.createElement('div');
+		colDiv.className = "col-md-3";
+
+		// Créer un lien pour rediriger vers la page du film
+		const movieLink = document.createElement('a');
+		movieLink.href = recentMovie.link;
+
+		// Ajouter le poster avec les styles
+		const moviePoster = document.createElement('div');
+		moviePoster.className = "poster-recent-movie";
+		moviePoster.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url(${recentMovie.poster})`;
+
+		// Assembler les éléments
+		movieLink.appendChild(moviePoster);
+		colDiv.appendChild(movieLink);
+		container.appendChild(colDiv);
+
+		console.log("Affiche ajoutée avec succès !");
+	} else {
+		console.error("Aucune donnée trouvée dans le Local Storage.");
+	}
+</script>
  
   
 <!-- Load Local JS -->
