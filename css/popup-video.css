@@ -1,0 +1,48 @@
+
+.popup {
+  display: none; /* Cachée par défaut */
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8); /* Fond assombri */
+  z-index: 9999;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Rectangle noir pour l'animation */
+.popup-rectangle {
+  width: 0;
+  height: 0;
+  background-color: black;
+  position: absolute;
+  transition: width 0.4s cubic-bezier(0.4, 0.0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
+}
+
+/* État agrandi */
+.popup.active .popup-rectangle {
+  width: 90vw;
+  height: calc(90vw * 9 / 16);
+  max-width: 640px;
+  max-height: 360px;
+}
+
+/* État rétréci proprement */
+.popup.closing .popup-rectangle {
+  width: 0;
+  height: 0;
+}
+
+
+/* Style iframe */
+iframe {
+  position: absolute;
+  z-index: 2; /* Au-dessus du rectangle */
+  width: 90vw; /* Largeur à 90% de l'écran */
+  height: calc(90vw * 9 / 16); /* Maintenir un ratio 16:9 */
+  max-width: 640px; /* Largeur maximale */
+  max-height: 360px; /* Hauteur maximale */
+  transition: opacity 0.2s ease-in-out;
+}

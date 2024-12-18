@@ -103,6 +103,7 @@
   <link rel="stylesheet" href="css/validatesecurity.css">
   <link rel="stylesheet" href="css/global.css">
   <link rel="stylesheet" href="css/nice-select.css">
+  <link rel="stylesheet" href="css/popup-video.css">
   <!-- owl Carousel -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
@@ -163,160 +164,64 @@
   </div>
 
 </header>
-  <div class="page-content-area vfx-item-ptb pt-0">
-    <div class="container-fluid">
-      <div class="row">
-        <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
-          <div class="video-post-wrapper">
-            <div class="row mt-30">
-              <div class="col-lg-12 col-md-12 col-sm-12">
-                <div class="video-posts-data mt-0 mb-0">
-                  <div id="poster-watch-movie" class="video-post-info" style="background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url(https://image.tmdb.org/t/p/original/1nkEaCMMKMjZ7NdaMBvBHd4wkhd.jpg); background-repeat: no-repeat; background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; min-height: 330px; max-width: 1600px; border-radius: 14px;">
-                    <div class="play-icon-item" id="regarder">
-                      <i id="icon-fa-fa-play" class="icon fa fa-play"></i>
-                      <span id="ripple" class="ripple"></span>
-                    </div>
-                    <div class="d-flex dtl-title-block mb-2">
-                      <h1 class="mb-0" style="font-weight: bold;">Agents très spéciaux - Code U.N.C.L.E</h1>
-                    </div>
-                    <ul class="actor-video-link">
-                      <li><span>Comédie</span></li><li><span>Action</span></li><li><span>Aventure</span></li>
-                    </ul>
-                    <div class="video-post-date">
-                      <span class="video-posts-author"><i class="fa fa-calendar-alt"></i>16/09/2015 </span>
-                      <span class="video-posts-author"><i class="fa fa-clock"></i>1h 56m</span>
-                      <span class="video-imdb-view">7,2/10 ⭐</span>
-                    </div>
-                      <div id="movie-button-important-margin" class="video-watch-share-item" style="margin-top: 160px;"></div>
-                      
-                     
-               
-          
-                      <div style="height: 5px;"></div>
-          
-                                <div style="margin: 0px !important; margin-right: 10px !important;">   
-                              
-                       
-               
-<!-- Bouton pour ouvrir la bande-annonce avec le nouvel ID -->
-<span>
-    <a id="2222" href="javascript:void(0);" title="Regarde la bande-annonce">
-        <i class="fa fa-play-circle"></i> Regarde la bande-annonce
-    </a>
-</span>
-
-<!-- Modale pour l'animation et le lecteur vidéo -->
-<div id="video-popup" class="popup">
-    <div class="popup-rectangle"></div>
-    <iframe id="youtube-player" 
-        width="640" 
-        height="360" 
-        src="" 
-        title="YouTube video player" 
-        frameborder="0" 
-        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
-        allowfullscreen
-        style="opacity: 0; transition: opacity 0.2s ease-in-out;"> <!-- Lecture avec animation d'apparition -->
-    </iframe>
-</div>
-
-<!-- Styles CSS -->
-<style>
-  /* Conteneur principal */
-.popup {
-    display: none; /* Cachée par défaut */
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: rgba(0, 0, 0, 0.8); /* Fond assombri */
-    z-index: 9999;
-    justify-content: center;
-    align-items: center;
-}
-
-/* Rectangle noir pour l'animation */
-.popup-rectangle {
-    width: 0;
-    height: 0;
-    background-color: black;
-    position: absolute;
-    transition: width 0.4s cubic-bezier(0.4, 0.0, 0.2, 1), height 0.4s cubic-bezier(0.4, 0.0, 0.2, 1);
-}
-
-/* État agrandi */
-.popup.active .popup-rectangle {
-    width: 90vw;
-    height: calc(90vw * 9 / 16);
-    max-width: 640px;
-    max-height: 360px;
-}
-
-/* État rétréci proprement */
-.popup.closing .popup-rectangle {
-    width: 0;
-    height: 0;
-}
-
-
-/* Style iframe */
-iframe {
-    position: absolute;
-    z-index: 2; /* Au-dessus du rectangle */
-    width: 90vw; /* Largeur à 90% de l'écran */
-    height: calc(90vw * 9 / 16); /* Maintenir un ratio 16:9 */
-    max-width: 640px; /* Largeur maximale */
-    max-height: 360px; /* Hauteur maximale */
-    transition: opacity 0.2s ease-in-out;
-}
-
-
-</style>
-
-<!-- Script JavaScript -->
-<script>
-const trailerButton = document.getElementById("2222");
-const popup = document.getElementById("video-popup");
-const rectangle = document.querySelector(".popup-rectangle");
-const youtubePlayer = document.getElementById("youtube-player");
-
-// Ouvrir la popup avec animation
-trailerButton.addEventListener("click", () => {
-    popup.style.display = "flex"; // Affiche la popup
-    popup.classList.remove("closing"); // Retire l'état de fermeture précédent
-
-    setTimeout(() => {
-        popup.classList.add("active"); // Lance l'animation d'agrandissement
-        youtubePlayer.src = "https://www.youtube.com/embed/3HKgkkLCazw?autoplay=1";
-        youtubePlayer.style.opacity = "1";
-    }, 10);
-});
-
-// Fermer la popup proprement
-popup.addEventListener("click", () => {
-    youtubePlayer.style.opacity = "0"; // Cache doucement la vidéo
-    youtubePlayer.src = ""; // Arrête la vidéo
-
-    popup.classList.remove("active"); // Retire l'état agrandi
-    popup.classList.add("closing"); // Lance l'animation de rétrécissement
-
-    // Attendre la fin de l'animation pour cacher complètement la popup
-    setTimeout(() => {
-        popup.style.display = "none";
-        popup.classList.remove("closing"); // Nettoie les classes
-    }, 400); // Durée identique à celle de la transition CSS
-});
-
-
-</script>
-
-                    </div>
-                    
-                    </div>
+<div class="page-content-area vfx-item-ptb pt-0">
+  <div class="container-fluid">
+    <div class="row">
+      <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+        <div class="video-post-wrapper">
+          <div class="row mt-30">
+            <div class="col-lg-12 col-md-12 col-sm-12">
+              <div class="video-posts-data mt-0 mb-0">
+                <div id="poster-watch-movie" class="video-post-info" style="background-image: linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url(https://image.tmdb.org/t/p/original/1nkEaCMMKMjZ7NdaMBvBHd4wkhd.jpg); background-repeat: no-repeat; background-size: cover; -webkit-background-size: cover; -moz-background-size: cover; -o-background-size: cover; min-height: 330px; max-width: 1600px; border-radius: 14px;">
+                  <div class="play-icon-item" id="regarder">
+                    <i id="icon-fa-fa-play" class="icon fa fa-play"></i>
+                    <span id="ripple" class="ripple"></span>
                   </div>
-                </div>
-              </div>
+                  <div class="d-flex dtl-title-block mb-2">
+                    <h1 class="mb-0" style="font-weight: bold;">Agents très spéciaux - Code U.N.C.L.E</h1>
+                  </div>
+                  <ul class="actor-video-link">
+                    <li><span>Comédie</span></li>
+                    <li><span>Action</span></li>
+                    <li><span>Aventure</span></li>
+                  </ul>
+                  <div class="video-post-date">
+                    <span class="video-posts-author"><i class="fa fa-calendar-alt"></i>16/09/2015 </span>
+                    <span class="video-posts-author"><i class="fa fa-clock"></i>1h 56m</span>
+                    <span class="video-imdb-view">7,2/10 ⭐</span>
+                  </div>
+                  <div id="movie-button-important-margin" class="video-watch-share-item" style="margin-top: 160px;"></div>
+                  <div style="height: 5px;"></div>
+                  <div style="margin: 0px !important; margin-right: 10px !important;">
+                    <span>
+                      <a id="2222" href="javascript:void(0);" title="Regarde la bande-annonce" data-video="https://www.youtube.com/embed/3HKgkkLCazw">
+                        <i class="fa fa-play-circle"></i> Regarde la bande-annonce
+                      </a>
+                    </span>
+                    <div id="video-popup" class="popup">
+                      <div class="popup-rectangle"></div>
+                      <iframe id="youtube-player" 
+                        width="640" 
+                        height="360" 
+                        src="" 
+                        title="YouTube video player" 
+                        frameborder="0" 
+                        allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                        allowfullscreen
+                        style="opacity: 0; transition: opacity 0.2s ease-in-out;">
+                      </iframe>
+                    </div>
+                  </div> 
+                </div> 
+              </div> 
+            </div> 
+          </div> 
+        </div> 
+      </div> 
+    </div> 
+  </div> 
+</div> 
+
               <div class="vfx-tabs-item mt-30">
                 <input checked="checked" id="tab1" type="radio" name="pct" />
                 <nav>
@@ -354,6 +259,7 @@ popup.addEventListener("click", () => {
         <script src="js/custom-main.js"></script>
         <script src="js/suggestions.js"></script>
         <script src="js/jquery-eu-cookie-law-popup.js"></script>
+        <script src="js/popup-video.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
  
         <script type="text/javascript">
