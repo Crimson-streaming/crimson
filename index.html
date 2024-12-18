@@ -129,7 +129,10 @@
 	<link rel="stylesheet" href="css/validatesecurity.css">
     <link rel="stylesheet" href="css/search.css">
 
-	
+	<!-- owl Carousel -->
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
     <!-- SweetAlert2 -->
 	<script src="js/sweetalert2@11.js"></script>
 	
@@ -141,6 +144,28 @@
 		.search .search-input input[type=text].focus {
 			background: #0d071e !important;
 		}
+
+		.recently-watched-video-carousel .single-video {
+    flex: 0 0 auto;
+    width: 300px; /* Taille plus grande */
+    margin-right: 15px;
+}
+
+.recently-watched-video-carousel .video-img {
+    position: relative;
+    border-radius: 8px; /* Arrondi moins prononcé */
+    overflow: hidden;
+    width: 100%; /* La largeur s'adapte à l'élément parent */
+    aspect-ratio: 16 / 9; /* Conserve le ratio 16:9 */
+}
+
+.recently-watched-video-carousel .video-img img {
+    width: 100%;
+    height: 100%;
+    display: block;
+    object-fit: cover; /* Empêche la déformation des images */
+}
+
 </style>
 </head>
 <!-- Start Header -->
@@ -152,7 +177,7 @@
 				<div class="mod-menu">
 					<div class="row">
 						<div class="col-2">
-							<a href="index.html" title="logo" class="logo"><img src="img/logo.png" alt="logo" title="logo"></a>
+							<a href="index.html" title="logo" class="logo"><img src="img/Logo-noël.png" alt="logo" title="logo"></a>
 						</div>
 						<div class="col-7 nav-order-last nopadding">
 							<div class="main-nav leftnav">
@@ -261,9 +286,21 @@
 <!-- Banner -->
 <!-- Start Upcoming Section -->
 
-<div class="row" id="recent-movie-container">
-	<!-- Les affiches des films seront ajoutées ici dynamiquement -->
+<div class="video-shows-section vfx-item-ptb">
+    <div class="container-fluid">
+        <div class="row">
+            <div class="col-md-12">
+                <div class="vfx-item-section">
+                    <h3>Regardé récemment</h3>
+                </div>
+                <div id="recently-watched" class="recently-watched-video-carousel owl-carousel">
+                    <!-- Les films récemment visionnés seront ajoutés ici -->
+                </div>
+            </div>
+        </div>
+    </div>
 </div>
+
 
   
 <div class="video-carousel-area vfx-item-ptb">
@@ -751,40 +788,7 @@ async function showSuggestions(query) {
 }
 
 </script> 
-<script defer>
-	// Récupérer les données du Local Storage
-	const recentMovie = JSON.parse(localStorage.getItem('recentMovie'));
-	
-	// Débogage : Afficher les données récupérées
-	console.log("Données récupérées :", recentMovie);
 
-	// Vérifier si les données existent
-	if (recentMovie && recentMovie.poster && recentMovie.link) {
-		const container = document.getElementById('recent-movie-container');
-
-		// Créer une colonne pour le poster
-		const colDiv = document.createElement('div');
-		colDiv.className = "col-md-3";
-
-		// Créer un lien pour rediriger vers la page du film
-		const movieLink = document.createElement('a');
-		movieLink.href = recentMovie.link;
-
-		// Ajouter le poster avec les styles
-		const moviePoster = document.createElement('div');
-		moviePoster.className = "poster-recent-movie";
-		moviePoster.style.backgroundImage = `linear-gradient(rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0.1)), url(${recentMovie.poster})`;
-
-		// Assembler les éléments
-		movieLink.appendChild(moviePoster);
-		colDiv.appendChild(movieLink);
-		container.appendChild(colDiv);
-
-		console.log("Affiche ajoutée avec succès !");
-	} else {
-		console.error("Aucune donnée trouvée dans le Local Storage.");
-	}
-</script>
  
   
 <!-- Load Local JS -->
@@ -798,7 +802,9 @@ async function showSuggestions(query) {
 <script src="js/splide.min.js"></script>
 <script src="js/custom-main.js"></script>
 <script src="js/jquery-eu-cookie-law-popup.js"></script>
-
+<script src="js/recently-watched.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 <script>
 	// Fonction exécutée lors de l'utilisation du clic droit.

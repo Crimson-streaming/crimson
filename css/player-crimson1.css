@@ -1,108 +1,105 @@
 :root {
-    --plyr-color-main: #b81b0e !important;
-    --plyr-font-family: Rubik !important;
-    --plyr-font-weight-regular: 500 !important;
-    --plyr-font-weight-bold: 700 !important;
+    --plyr-color-main: #960EF3;
+    --plyr-font-family: 'Rubik', sans-serif;
+    --plyr-font-weight-regular: 500;
+    --plyr-font-weight-bold: 700;
+    --spinner-color-primary: #960EF3;
+    --spinner-color-secondary: #f92033;
+    --overlay-bg-color: rgba(0, 0, 0, 0.7);
+    --error-bg-color: #710eb4d6;
+    --text-light: #fff;
 }
 
-@media (min-width:700px) {
-    .plyr__control.plyr__control--overlaid {
-        transform: scale(1.5) !important;
-        margin-top: -4% !important;
-        margin-left: -4% !important;
-    }
+* {
+    box-sizing: border-box;
 }
 
-@media (min-width:1100px) {
-    .plyr__control.plyr__control--overlaid {
-        transform: scale(2.5) !important;
-        margin-top: -2.5% !important;
-        margin-left: -2.5% !important;
-    }
-    .spinner {
-        transform: scale(1.8) !important;
-    }
+body {
+    font-family: var(--plyr-font-family);
+    margin: 0;
+    padding: 0;
 }
 
-@media (max-width:699px) {
-    .plyr__control.plyr__control--overlaid {
-        margin-top: 0 !important;
-        margin-left: 0 !important;
-    }
-    .spinner {
-        transform: scale(1.3) !important;
-    }
+.plyr__controls {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    gap: 15px;
+    width: 100%;
+}
+
+.plyr__progress {
+    flex-grow: 1;
+    position: relative;
+    padding: 0 25px;
+    transform: translateY(80%);
+}
+
+.plyr__progress__buffer {
+    padding: 0 25px;
+}
+
+.plyr__progress--seek .plyr__progress__handle {
+    display: none;
 }
 
 .spinner {
     width: fit-content;
-    font-size: 17px;
+    font-size: 1rem;
     font-family: monospace;
     line-height: 1.4;
     font-weight: bold;
     padding: 30px 2px 50px;
-    background: linear-gradient(#b81b0e 0 0) 0 0 / 100% 100% content-box padding-box no-repeat;
+    background: linear-gradient(var(--spinner-color-primary) 0 0) 0 0 / 100% 100% content-box padding-box no-repeat;
     position: relative;
-    overflow: hidden;
-    animation: l10-0 3s infinite cubic-bezier(1,175,.5,175);
-    transform: scale(1.5) !important;
+    animation: spin-animation 3s infinite cubic-bezier(1, 0.175, 0.5, 1.75);
+    transform: scale(1.5);
 }
+
 .spinner::before {
-    content:"Chargement";
-    display:inline-block;
-    animation: l10-2 3s infinite;
+    content: "Chargement";
+    display: inline-block;
+    animation: text-animation 3s infinite;
 }
+
 .spinner::after {
-    content:"";
+    content: '';
     position: absolute;
     width: 34px;
     height: 28px;
     top: 110%;
     left: calc(50% - 16px);
-    background:
-        linear-gradient(90deg,#0000 12px,#f92033 0 22px,#0000 0 26px,#fdc98d 0 32px,#0000) bottom 26px left 50%,
-        linear-gradient(90deg,#0000 10px,#f92033 0 28px,#fdc98d 0 32px,#0000 0) bottom 24px  left 50%,
-        linear-gradient(90deg,#0000 10px,#643700 0 16px,#fdc98d 0 20px,#000 0 22px,#fdc98d 0 24px,#000 0 26px,#f92033 0 32px,#0000 0) bottom 22px left 50%,
-        linear-gradient(90deg,#0000 8px,#643700 0 10px,#fdc98d 0 12px,#643700 0 14px,#fdc98d 0 20px,#000 0 22px,#fdc98d 0 28px,#f92033 0 32px,#0000 0) bottom 20px left 50%,
-        linear-gradient(90deg,#0000 8px,#643700 0 10px,#fdc98d 0 12px,#643700 0 16px,#fdc98d 0 22px,#000 0 24px,#fdc98d 0 30px,#f92033 0 32px,#0000 0) bottom 18px left 50%,
-        linear-gradient(90deg,#0000 8px,#643700 0 12px,#fdc98d 0 20px,#000 0 28px,#f92033 0 30px,#0000 0) bottom 16px left 50%,
-        linear-gradient(90deg,#0000 12px,#fdc98d 0 26px,#f92033 0 30px,#0000 0) bottom 14px left 50%,
-        linear-gradient(90deg,#fdc98d 6px,#f92033 0 14px,#222a87 0 16px,#f92033 0 22px,#222a87 0 24px,#f92033 0 28px,#0000 0 32px,#643700 0) bottom 12px left 50%,
-        linear-gradient(90deg,#fdc98d 6px,#f92033 0 16px,#222a87 0 18px,#f92033 0 24px,#f92033 0 26px,#0000 0 30px,#643700 0) bottom 10px left 50%,
-        linear-gradient(90deg,#0000 10px,#f92033 0 16px,#222a87 0 24px,#feee49 0 26px,#222a87 0 30px, #643700 0) bottom 8px left 50%,
-        linear-gradient(90deg,#0000 12px,#222a87 0 18px,#feee49 0 20px,#222a87 0 30px,#643700 0) bottom 6px left 50%,
-        linear-gradient(90deg,#0000 8px,#643700 0 12px,#222a87 0 30px,#643700 0) bottom 4px left 50%,
-        linear-gradient(90deg,#0000 6px,#643700 0 14px,#222a87 0 26px,#0000 0) bottom 2px left 50%,
-        linear-gradient(90deg,#0000 6px,#643700 0 10px,#0000 0 ) bottom 0px left 50%;
+    background: linear-gradient(90deg, #0000 12px, var(--spinner-color-secondary) 0 22px, #0000 0 26px, #fdc98d 0 32px, #0000) bottom 26px left 50%;
     background-size: 34px 2px;
-    background-repeat: no-repeat;
     animation: inherit;
-    animation-name: l10-1;
-}
-@keyframes l10-0 {
-    0%,30%   { background-position: 0 0px }
-    50%,100% { background-position: 0 -0.1px }
-}
-@keyframes l10-1 {
-    50%,100% { top:109.5% };
-}
-@keyframes l10-2 {
-    0%,30%   { transform:translateY(0); }
-    80%,100% { transform:translateY(-260%); }
+    animation-name: bounce-animation;
 }
 
- #video-error {
+@keyframes spin-animation {
+    0%, 30% { background-position: 0 0px; }
+    50%, 100% { background-position: 0 -0.1px; }
+}
+
+@keyframes bounce-animation {
+    50%, 100% { top: 109.5%; }
+}
+
+@keyframes text-animation {
+    0%, 30% { transform: translateY(0); }
+    80%, 100% { transform: translateY(-260%); }
+}
+
+#video-error {
     position: absolute;
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    z-index: 96;
-    background: #b81b0e;
+    background: var(--error-bg-color);
     border-radius: 12px;
     padding: 20px;
-    color: #fff;
+    color: var(--text-light);
     text-align: center;
-    font-family: 'Rubik', sans-serif;
     box-shadow: 0 4px 8px rgba(0, 0, 0, 0.3);
     animation: fadeIn 1s ease-in-out;
     max-width: 90%;
@@ -166,13 +163,12 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.7); /* GrisÃ© semi-transparent */
-    color: #fff;
+    background: var(--overlay-bg-color);
+    color: var(--text-light);
     display: flex;
     justify-content: center;
     align-items: center;
     font-size: 1.5em;
-    font-family: 'Rubik', sans-serif;
     text-align: center;
     z-index: 95;
     opacity: 0;
@@ -202,49 +198,36 @@
     }
 }
 
-.plyr__controls {
-    display: flex;
-    flex-direction: row;
-    justify-content: space-between;
-    align-items: center;
-}
-
-.plyr__progress {
-    order: 1;
-    flex: 1;
-    padding: 0 25px;
-    box-sizing: border-box;
-    margin: 0;
-    width: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    transform: translateY(80%);
-}
-.plyr__progress__buffer{
-    padding: 0 25px;
-}
-
-@media screen and (max-width: 479px) {
-.plyr__controls {
-    flex-wrap: wrap;
-    justify-content: center;
-}
-.plyr__progress {
-    padding: 0 17px;
-    transform: translateY(40%);
-}
-.plyr__progress__buffer{
-    padding: 0 17px;
-}
-}
 .plyr__logo img {
     height: 24px;
     opacity: 0.8;
 }
+
 @media screen and (max-width: 600px) {
     .plyr__logo img {
         height: 18px;
+    }
+}
+
+@media (min-width: 700px) {
+    .plyr__control.plyr__control--overlaid {
+        transform: scale(1.5);
+        margin-top: -4%;
+        margin-left: -4%;
+    }
+}
+
+@media (min-width: 1100px) {
+    .plyr__control.plyr__control--overlaid {
+        transform: scale(2.5);
+        margin-top: -2.5%;
+        margin-left: -2.5%;
+    }
+}
+
+@media (max-width: 699px) {
+    .plyr__control.plyr__control--overlaid {
+        margin-top: 0;
+        margin-left: 0;
     }
 }
