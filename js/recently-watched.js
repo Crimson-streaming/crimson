@@ -1,3 +1,4 @@
+// Fonction pour ajouter un film à la liste des films récemment visionnés
 function addMovieToTrending() {
     const posterDiv = document.getElementById('poster-watch-movie');
     if (!posterDiv) return; // Ne rien faire si l'élément n'existe pas
@@ -23,7 +24,7 @@ function addMovieToTrending() {
     // Éviter les doublons
     if (!trendingMovies.some(m => m.path === movie.path)) {
         // Ajouter le nouveau film au début du tableau
-        trendingMovies.unshift(movie); // Ajoute le film à gauche (au début)
+        trendingMovies.unshift(movie); // Ajoute le film au début
 
         // Si la limite est atteinte, retirer le film le plus ancien
         if (trendingMovies.length > 20) {
@@ -35,15 +36,29 @@ function addMovieToTrending() {
     }
 }
 
-
 // Fonction pour afficher les films récemment visionnés
 function displayRecentlyWatchedMovies() {
     const trendingMovies = JSON.parse(localStorage.getItem('trendingMovies')) || [];
+    const recentlyWatchedSection = document.querySelector('.video-shows-section.vfx-item-ptb');
     const recentlyWatchedContainer = document.getElementById('recently-watched');
+
+    // Cacher la section si aucun film n'est présent
+    if (trendingMovies.length === 0) {
+        if (recentlyWatchedSection) {
+            recentlyWatchedSection.style.display = 'none';
+        }
+        return;
+    } else {
+        if (recentlyWatchedSection) {
+            recentlyWatchedSection.style.display = 'block';
+        }
+    }
+
     if (!recentlyWatchedContainer) return; // Ne rien faire si le conteneur n'existe pas
 
     recentlyWatchedContainer.innerHTML = ''; // Nettoyer le conteneur avant d'ajouter des films
 
+    // Ajouter chaque film au conteneur
     trendingMovies.forEach(movie => {
         const movieItem = document.createElement('div');
         movieItem.classList.add('single-video');
@@ -73,8 +88,6 @@ function displayRecentlyWatchedMovies() {
             1000: { items: 4 } // 4 films sur ordinateur
         }
     });
-    
-
 }
 
 // Exécuter au chargement de la page d'accueil
