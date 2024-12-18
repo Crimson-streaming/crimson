@@ -1,7 +1,6 @@
-
 /* Conteneur principal */
 #recently-watched {
-    padding: -10px;
+    padding: 0; /* Retirer tout le padding pour réduire l'espace autour */
     overflow: hidden;
 }
 
@@ -16,7 +15,22 @@
 /* Alignement des films */
 #recently-watched .owl-item {
     display: block; /* Important pour Owl Carousel */
-    padding: 5px; /* Espacement interne */
+    padding: 2px; /* Réduire encore l'espacement interne */
+    width: calc(50% - 10px); /* Chaque film occupe 50% de l'écran, avec une marge de 10px entre les films */
+}
+
+/* Pour les tablettes et écrans plus grands */
+@media (min-width: 600px) {
+    #recently-watched .owl-item {
+        width: calc(33.33% - 10px); /* Chaque film occupe 33.33% de l'écran sur tablette, avec moins d'espacement */
+    }
+}
+
+/* Pour les grands écrans (bureau) */
+@media (min-width: 1000px) {
+    #recently-watched .owl-item {
+        width: calc(25% - 10px); /* Chaque film occupe 25% de l'écran sur bureau, avec moins d'espacement */
+    }
 }
 
 /* Boutons de navigation Owl Carousel */
@@ -25,11 +39,23 @@
     background-color: #0d071e;
     color: #fff;
     border-radius: 50%;
-    width: 40px;
-    height: 40px;
+    width: 40px; /* Taille normale des flèches */
+    height: 40px; /* Taille normale des flèches */
     display: flex;
     justify-content: center;
     align-items: center;
+    position: absolute; /* Permet de modifier leur positionnement */
+    top: -10px; /* Déplace les flèches un peu plus haut */
+}
+
+/* Ajustement pour la flèche précédente */
+.recently-watched-video-carousel .owl-nav .owl-prev {
+    left: 10px; /* Positionner à gauche */
+}
+
+/* Ajustement pour la flèche suivante */
+.recently-watched-video-carousel .owl-nav .owl-next {
+    right: 10px; /* Positionner à droite */
 }
 
 /* Points de navigation (dots) */

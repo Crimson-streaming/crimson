@@ -76,17 +76,26 @@ function displayRecentlyWatchedMovies() {
     });
 
     // Initialiser Owl Carousel après avoir ajouté les éléments
-    $('.recently-watched-video-carousel').owlCarousel({
-        items: 4, // Nombre de films visibles sur les grands écrans
-        margin: 15, // Espacement entre les films
-        nav: true, // Boutons précédent/suivant
-        dots: true, // Points de navigation
-        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
-        responsive: {
-            0: { items: 1 }, // 1 film visible sur mobile
-            600: { items: 2 }, // 2 films sur tablette
-            1000: { items: 4 } // 4 films sur ordinateur
-        }
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            loop: true,  // Activer le défilement infini
+            margin: 10,  // Espacement entre les éléments
+            nav: true, 
+            dots: true, // Points de navigation
+            loop: false,
+            navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],  // Afficher les flèches de navigation
+            responsive: {
+                0: {      // Pour les petits écrans (mobile)
+                    items: 2  // Afficher 2 éléments à la fois
+                },
+                600: {    // Pour les écrans de plus de 600px de large (tablette)
+                    items: 3  // Afficher 3 éléments à la fois
+                },
+                1000: {   // Pour les écrans de plus de 1000px de large (bureau)
+                    items: 5  // Afficher 5 éléments à la fois
+                }
+            }
+        });
     });
 }
 
