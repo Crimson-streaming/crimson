@@ -62,17 +62,19 @@ function displayRecentlyWatchedMovies() {
 
     // Initialiser Owl Carousel après avoir ajouté les éléments
     $('.recently-watched-video-carousel').owlCarousel({
-        items: 4,
-        margin: 15,
-        nav: true,
-        dots: true,
+        items: 4, // Nombre de films visibles sur les grands écrans
+        margin: 15, // Espacement entre les films
+        nav: true, // Boutons précédent/suivant
+        dots: true, // Points de navigation
         navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
         responsive: {
-            0: { items: 1 },
-            600: { items: 2 },
-            1000: { items: 4 }
+            0: { items: 1 }, // 1 film visible sur mobile
+            600: { items: 2 }, // 2 films sur tablette
+            1000: { items: 4 } // 4 films sur ordinateur
         }
     });
+    
+
 }
 
 // Exécuter au chargement de la page d'accueil
