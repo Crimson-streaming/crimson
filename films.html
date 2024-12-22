@@ -79,39 +79,7 @@
 	.search .search-input input[type=text].focus {
 		background: #0d071e !important;
 	}
-    .pagination li.active a {
-    background-color: #b81b0e; /* Couleur rouge pour la page active */
-    color: #ffffff; /* Texte blanc */
-    border-radius: 50%; /* Transforme l'élément en cercle */
-    width: 40px; /* Largeur du cercle */
-    height: 40px; /* Hauteur du cercle (même que la largeur pour un cercle parfait) */
-    line-height: 40px; /* Aligne le texte verticalement au centre */
-    text-align: center; /* Centre le texte horizontalement */
-    display: inline-block; /* Assure un comportement de bloc en ligne */
-    transition: all 0.3s ease; /* Animation fluide pour les changements */
-}
-
-.pagination li a {
-    text-decoration: none;
-    color: inherit; /* Conserve la couleur du texte */
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%; /* Rend les autres boutons arrondis aussi */
-    display: inline-block;
-    transition: all 0.3s ease; /* Animation fluide au survol */
-}
-
-.pagination li a:hover {
-    background-color: #ff6b5a; /* Couleur de survol */
-    color: #ffffff; /* Texte blanc */
-}
-
-.pagination li.disabled a {
-    pointer-events: none; /* Désactive les clics sur les boutons désactivés */
-    opacity: 0.5; /* Apparence visuellement désactivée */
-}
+    
 
 	</style>
 </head>
@@ -182,6 +150,8 @@
         </div>
     </div>
     
+    
+    
     <div class="scroll-top">
 		<div class="scroll-icon"> <i class="fa fa-angle-up"></i> </div>
 	  </div>
@@ -241,95 +211,10 @@ async function showSuggestions(query) {
 }
 
 </script> 
-<script> 
-const itemsPerPage = 48; // Nombre de films par page
-let currentPage = 1; // Page actuelle
-let films = []; // Tableau des films
-
-// Charger les films depuis le fichier JSON
-async function loadFilms() {
-    try {
-        const response = await fetch('search/f.json'); // Chemin vers le fichier JSON
-        films = await response.json();
-        renderFilms(currentPage);
-        renderPagination();
-    } catch (error) {
-        console.error("Erreur lors du chargement des films :", error);
-    }
-}
-
-// Afficher les films pour une page donnée
-function renderFilms(page) {
-    const startIndex = (page - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-    const filmsToShow = films.slice(startIndex, endIndex);
-
-    const container = document.getElementById("movies-container");
-    container.innerHTML = ""; // Vider le conteneur avant d'ajouter les films
-
-    filmsToShow.forEach(film => {
-        container.innerHTML += `
-            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 col-6">
-                <div class="single-video">
-                    <a href="${film.emplacement}" title="${film.nom}">
-                        <div class="video-img">
-                            <span class="video-item-content">${film.nom}</span>
-                            <img src="${film.affiche}" alt="${film.nom}" loading="lazy">
-                        </div>
-                    </a>
-                </div>
-            </div>
-        `;
-    });
-}
-
-// Gérer les liens de pagination
-function renderPagination() {
-    const totalPages = Math.ceil(films.length / itemsPerPage);
-    const paginationContainer = document.getElementById("pagination-links");
-    paginationContainer.innerHTML = ""; // Vider les liens de pagination
-
-    // Bouton précédent
-    paginationContainer.innerHTML += `
-        <li class="${currentPage === 1 ? "disabled" : ""}">
-            <a class="prev page-numbers" href="#" onclick="changePage(${currentPage - 1})"><i class="fa fa-caret-left"></i></a>
-        </li>
-    `;
-
-    // Liens des pages
-    for (let i = 1; i <= totalPages; i++) {
-        paginationContainer.innerHTML += `
-            <li class="${i === currentPage ? "active" : ""}">
-                <a class="page-numbers" href="#" onclick="changePage(${i})">${i}</a>
-            </li>
-        `;
-    }
-
-    // Bouton suivant
-    paginationContainer.innerHTML += `
-        <li class="${currentPage === totalPages ? "disabled" : ""}">
-            <a class="next page-numbers" href="#" onclick="changePage(${currentPage + 1})"><i class="fa fa-caret-right"></i></a>
-        </li>
-    `;
-}
-
-// Changer de page
-function changePage(page) {
-    const totalPages = Math.ceil(films.length / itemsPerPage);
-    if (page < 1 || page > totalPages) return; // Vérifier les limites
-
-    currentPage = page;
-    renderFilms(currentPage);
-    renderPagination();
-}
-
-// Charger les films à l'initialisation
-loadFilms();
-
-</script>  
+ 
 
 <!-- Load Local JS -->
-<script src="js/sw.js"></script>
+<script src="js/loadFilms.js"></script>
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
