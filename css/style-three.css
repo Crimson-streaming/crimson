@@ -2063,10 +2063,10 @@ ul.nav > li a.active, ul.nav > li:hover > a {
 	text-overflow: ellipsis;
 	line-height: 1;	
 }
-.video-carousel .single-video .video-img img{
-	max-width: 100%;
-	height: 250px;
-	object-fit: cover;
+.video-carousel .single-video .video-img img {
+    max-width: 100%;
+    height: auto; /* La hauteur est calculée automatiquement selon la largeur */
+    object-fit: cover; /* L'image couvre son conteneur sans déformation */
 }
 .video-shows-carousel .single-video .video-img img{
 	max-width: 100%;
@@ -4793,4 +4793,3 @@ ul.nav > li a.active {
 ul.nav > li:hover > a {
     color: #b81b0e; /* Couleur du texte au survol (bleu par exemple) */
 }
-
