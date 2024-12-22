@@ -64,6 +64,7 @@
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/validatesecurity.css">
     <link rel="stylesheet" href="css/search.css">
+    <link rel="stylesheet" href="css/nice-select.css">
 
      
 	
@@ -78,7 +79,40 @@
 	.search .search-input input[type=text].focus {
 		background: #0d071e !important;
 	}
-   
+    .pagination li.active a {
+    background-color: #b81b0e; /* Couleur rouge pour la page active */
+    color: #ffffff; /* Texte blanc */
+    border-radius: 50%; /* Transforme l'élément en cercle */
+    width: 40px; /* Largeur du cercle */
+    height: 40px; /* Hauteur du cercle (même que la largeur pour un cercle parfait) */
+    line-height: 40px; /* Aligne le texte verticalement au centre */
+    text-align: center; /* Centre le texte horizontalement */
+    display: inline-block; /* Assure un comportement de bloc en ligne */
+    transition: all 0.3s ease; /* Animation fluide pour les changements */
+}
+
+.pagination li a {
+    text-decoration: none;
+    color: inherit; /* Conserve la couleur du texte */
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    text-align: center;
+    border-radius: 50%; /* Rend les autres boutons arrondis aussi */
+    display: inline-block;
+    transition: all 0.3s ease; /* Animation fluide au survol */
+}
+
+.pagination li a:hover {
+    background-color: #ff6b5a; /* Couleur de survol */
+    color: #ffffff; /* Texte blanc */
+}
+
+.pagination li.disabled a {
+    pointer-events: none; /* Désactive les clics sur les boutons désactivés */
+    opacity: 0.5; /* Apparence visuellement désactivée */
+}
+
 	</style>
 </head>
 <!-- Start Header -->
