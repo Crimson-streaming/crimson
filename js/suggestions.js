@@ -89,8 +89,8 @@ document.addEventListener("DOMContentLoaded", async function () {
             ],
             responsive: {
                 0: { items: 2 }, // 2 items sur petits écrans
-                600: { items: 3 }, // 3 items sur écrans moyens
-                1000: { items: 6 } // 6 items sur écrans larges
+                600: { items: 4 }, // 3 items sur écrans moyens
+                1000: { items: 7 } // 6 items sur écrans larges
             }
         });
 

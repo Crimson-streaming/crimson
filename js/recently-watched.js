@@ -87,7 +87,7 @@ function displayRecentlyWatchedMovies() {
                     items: 2  // Afficher 2 éléments à la fois
                 },
                 600: {    // Pour les écrans de plus de 600px de large (tablette)
-                    items: 3  // Afficher 3 éléments à la fois
+                    items: 4  // Afficher 4 éléments à la fois
                 },
                 1000: {   // Pour les écrans de plus de 1000px de large (bureau)
                     items: 6  // Afficher 6 éléments à la fois
