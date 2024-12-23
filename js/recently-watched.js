@@ -75,14 +75,12 @@ function displayRecentlyWatchedMovies() {
         recentlyWatchedContainer.appendChild(movieItem);
     });
 
-    // Initialiser Owl Carousel après avoir ajouté les éléments
     $(document).ready(function(){
         $(".owl-carousel").owlCarousel({
-            loop: true,  // Activer le défilement infini
+            loop: false,  // Activer le défilement infini
             margin: 10,  // Espacement entre les éléments
             nav: true, 
             dots: true, // Points de navigation
-            loop: false,
             navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],  // Afficher les flèches de navigation
             responsive: {
                 0: {      // Pour les petits écrans (mobile)
@@ -92,11 +90,12 @@ function displayRecentlyWatchedMovies() {
                     items: 3  // Afficher 3 éléments à la fois
                 },
                 1000: {   // Pour les écrans de plus de 1000px de large (bureau)
-                    items: 5  // Afficher 5 éléments à la fois
+                    items: 6  // Afficher 6 éléments à la fois
                 }
             }
         });
     });
+    
 }
 
 // Exécuter au chargement de la page d'accueil

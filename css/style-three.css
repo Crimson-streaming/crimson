@@ -2065,8 +2065,8 @@ ul.nav > li a.active, ul.nav > li:hover > a {
 }
 .video-carousel .single-video .video-img img {
     max-width: 100%;
-    height: auto; /* La hauteur est calculée automatiquement selon la largeur */
-    object-fit: cover; /* L'image couvre son conteneur sans déformation */
+	height: auto;
+	object-fit: cover;
 }
 .video-shows-carousel .single-video .video-img img{
 	max-width: 100%;
