@@ -510,7 +510,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     if (!query) return; // Si la requête est vide, ne rien faire
 
-    const response = await fetch('search/f.json');
+    const response = await fetch('search/direct.json');
     const movies = await response.json();
 
     // Fonction pour normaliser les chaînes
@@ -532,7 +532,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 <a href="${movie.emplacement}">
                     <div class="video-img">
                         <span class="video-item-content">${movie.nom}</span>
-                        <img src="${movie.affiche}" alt="${movie.nom}" loading="lazy">
+                        <img src="${movie.affiche}" alt="${movie.nom}">
                     </div>
                 </a>
             `;

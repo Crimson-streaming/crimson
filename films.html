@@ -174,9 +174,9 @@
 async function showSuggestions(query) {
     const searchOutput = document.getElementById('search_output');
     searchOutput.innerHTML = ''; // Réinitialiser les résultats
-
+  
     if (!query) return; // Si la requête est vide, ne rien faire
-
+  
     const response = await fetch('search/f.json');
     const movies = await response.json();
 
@@ -187,19 +187,20 @@ async function showSuggestions(query) {
             .replace(/['’]/g, ""); // Supprime les apostrophes simples et typographiques
     }
 
-    const filteredMovies = movies.filter(movie => 
-        normalizeString(movie.nom).includes(normalizeString(query))
-    );
+    const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
 
-    if (filteredMovies.length > 0) {
-        filteredMovies.forEach(movie => {
+    // Limiter les résultats à 48
+    const limitedMovies = filteredMovies.slice(0, 48);
+
+    if (limitedMovies.length > 0) {
+        limitedMovies.forEach(movie => {
             const movieDiv = document.createElement('div');
             movieDiv.classList.add('single-video');
             movieDiv.innerHTML = `
                 <a href="${movie.emplacement}">
                     <div class="video-img">
                         <span class="video-item-content">${movie.nom}</span>
-                        <img src="${movie.affiche}" alt="${movie.nom}" loading="lazy">
+                        <img src="${movie.affiche}" alt="${movie.nom}">
                     </div>
                 </a>
             `;

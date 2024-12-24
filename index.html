@@ -725,80 +725,47 @@
 <div class="eupopup eupopup-bottom"></div>
 
 <script>
-let debounceTimeout;
-
-// Fonction pour normaliser les chaînes
-function normalizeString(str) {
-    return str
-        .toLowerCase()
-        .replace(/['’]/g, "") // Supprime les apostrophes simples et typographiques
-        .replace(/[^\w\s]/g, ""); // Supprime les caractères spéciaux
-}
-
-// Fonction principale de recherche
 async function showSuggestions(query) {
     const searchOutput = document.getElementById('search_output');
     searchOutput.innerHTML = ''; // Réinitialiser les résultats
-
+  
     if (!query) return; // Si la requête est vide, ne rien faire
+  
+    const response = await fetch('search/f.json');
+    const movies = await response.json();
 
-    try {
-        const response = await fetch('search/f.json');
-        if (!response.ok) {
-            throw new Error("Erreur lors du chargement des données.");
-        }
+    // Fonction pour normaliser les chaînes
+    function normalizeString(str) {
+        return str
+            .toLowerCase()
+            .replace(/['’]/g, ""); // Supprime les apostrophes simples et typographiques
+    }
 
-        const movies = await response.json();
+    const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
 
-        // Séparer la requête en mots-clés
-        const queryWords = normalizeString(query).split(' ');
+    // Limiter les résultats à 48
+    const limitedMovies = filteredMovies.slice(0, 48);
 
-        // Filtrer les films qui contiennent tous les mots-clés
-        const filteredMovies = movies.filter(movie =>
-            queryWords.every(word => normalizeString(movie.nom).includes(word))
-        );
-
-        // Limiter le nombre de résultats à 48
-        const limitedResults = filteredMovies.slice(0, 48);
-
-        if (limitedResults.length > 0) {
-            limitedResults.forEach(movie => {
-                const movieDiv = document.createElement('div');
-                movieDiv.classList.add('single-video');
-                movieDiv.innerHTML = `
-                    <a href="${movie.emplacement}">
-                        <div class="video-img">
-                            <span class="video-item-content">${movie.nom}</span>
-                            <img src="${movie.affiche}" alt="${movie.nom}">
-                        </div>
-                    </a>
-                `;
-                searchOutput.appendChild(movieDiv);
-            });
-        } else {
-            searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
-        }
-    } catch (error) {
-        searchOutput.innerHTML = `<p>Erreur : ${error.message}</p>`;
-        console.error("Erreur lors de la recherche :", error);
+    if (limitedMovies.length > 0) {
+        limitedMovies.forEach(movie => {
+            const movieDiv = document.createElement('div');
+            movieDiv.classList.add('single-video');
+            movieDiv.innerHTML = `
+                <a href="${movie.emplacement}">
+                    <div class="video-img">
+                        <span class="video-item-content">${movie.nom}</span>
+                        <img src="${movie.affiche}" alt="${movie.nom}">
+                    </div>
+                </a>
+            `;
+            searchOutput.appendChild(movieDiv);
+        });
+    } else {
+        searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
     }
 }
-
-// Fonction de délai (détection de frappe)
-function debounce(func, delay) {
-    clearTimeout(debounceTimeout);
-    debounceTimeout = setTimeout(func, delay);
-}
-
-// Ajouter un écouteur pour détecter les frappes sur le champ de recherche
-document.getElementById('search_box').addEventListener('input', (e) => {
-    debounce(() => showSuggestions(e.target.value), 300); // Attendre 300ms avant de lancer la recherche
-});
-
 </script> 
 
- 
-  
 <!-- Load Local JS -->
 
 <script src="js/jquery-3.3.1.min.js"></script>
