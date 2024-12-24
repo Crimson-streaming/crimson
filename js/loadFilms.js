@@ -30,7 +30,7 @@ function renderFilms(page) {
                     <a href="${film.emplacement}" title="${film.nom}">
                         <div class="video-img">
                             <span class="video-item-content">${film.nom}</span>
-                            <img src="${film.affiche}" alt="${film.nom}" loading="lazy">
+                            <img src="${film.affiche}" alt="${film.nom}" >
                         </div>
                     </a>
                 </div>

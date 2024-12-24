@@ -9,11 +9,10 @@
   <title>Crimson | Regarder Totally Killer en streaming</title>
   <meta name="description" content="Crimson | Regarder Totally Killer en streaming gratuitement et sans publicité ni inscription avec Crimson !" />
   <link rel="canonical" href="totally-killer.html">
-  <link rel="icon" type="image/png" href="../img/favicon/favicon.png">
+<link rel="icon" type="image/png" href="../img/favicon/favicon.png">
 
 
-
-	<script type="text/javascript">
+  <script type="text/javascript">
         function isInWebIntoApp() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
@@ -31,8 +30,8 @@
 
             window.location.href = "intent://crimson-streaming.github.io/crimson/pages/déinstallation.html#Intent;scheme=https;package=com.android.chrome;end";
         }
-</script>
-<script type="text/javascript">
+  </script>
+  <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
         if (window.self !== window.top) {
 
@@ -89,7 +88,7 @@
 </script>
 
 
- <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/megamenu.css">
   <link rel="stylesheet" href="../css/style-three.css" id="theme">
   <link rel="stylesheet" href="../css/ionicons.css">
@@ -114,7 +113,6 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
-
 
 
 
@@ -184,6 +182,7 @@
                       <span class="video-posts-author"><i class="fa fa-calendar-alt"></i>06/10/2023 </span>
                       <span class="video-posts-author"><i class="fa fa-clock"></i>1h 45m</span>
                       <span class="video-imdb-view">6,5/10 ⭐</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -206,15 +205,14 @@
         </div>
       </div>
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4 mb-5">
-        <div style="position: relative; width: 100%; margin: 0 auto;">
-            <img src="../img/logo.png" alt="Logo Crimson" id="player-logo" 
-            style="position: absolute; top: 17.5px; left: 17.5px; z-index: 9; width: 150px; max-width: 10%; opacity: 0.8;">
-        <video id="player" playsinline controls preload="auto" poster="https://image.tmdb.org/t/p/original/qjMDwBWbG5hAP43q3meplZFreFQ.jpg">
+
+ <div style="position: relative; width: 100%; margin: 0 auto;">
+      <img src="../img/logo.png" alt="Logo Crimson" id="player-logo" style="position: absolute; top: 17.5px; left: 17.5px; z-index: 9; width: 150px; max-width: 10%; opacity: 0.8;">
+      <video id="player" playsinline controls preload="auto" poster="https://image.tmdb.org/t/p/original/qjMDwBWbG5hAP43q3meplZFreFQ.jpg">
           <source src="https://matoc22148.cloudmatoc.com/files/aa/BiXbNGLl3VwwNxhW2BkdqbVA64Lxvh37A0i.m3u8" type="application/x-mpegURL">
           Nous travaillons activement pour vous offrir ce contenu. Merci de votre patience. ❤️
         </video>
-
- <!-- Load Local JS -->
+        <!-- Load Local JS -->
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
@@ -227,7 +225,6 @@
         <script src="../js/splide.min.js"></script>
         <script src="../js/custom-main.js"></script>
         <script src="../js/suggestions.js"></script>
-        <script src="../js/recently-watched.js"></script>
         <script src="../js/jquery-eu-cookie-law-popup.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
  
@@ -395,5 +392,36 @@ $(document).ready(function() {
     });
 });
 </script> 
+</body>
+</html>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+ <div class="container-fluid" style="margin: 20px auto;">
+  <h3 style="margin-left: 1px;"><strong>Tu pourrais aussi aimer</strong></h3>
+   <div class="owl-carousel" id="suggestions-carousel">
+      <!-- Les suggestions seront injectées ici -->
+  </div>
+</div>
+
+
+<div id="popup1" class="popup-view popup-overlay">
+  <div class="search">
+    <div class="search-container has-results"><span class="title">Rechercher</span>
+      <div class="search-input">
+        <input type="text" name="s" id="search_box" class="search-container-input" placeholder="Titre" onkeyup="showSuggestions(this.value)" style="background: #0d071e;" autocomplete="off">
+      </div>
+    </div>
+    <div class="search-results mt-4" id="search_output"></div>
+  </div>
+  <a class="close" href="#" title="close"><i class="fas fa-times"></i></a>
+</div>     
+
+<div class="eupopup eupopup-bottom"></div>
+
+<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>
 </body>
 </html>

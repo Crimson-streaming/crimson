@@ -1877,7 +1877,7 @@
     {
         "nom": "Charlotte",
         "affiche": "https://www.themoviedb.org/t/p/original/hTLFNVxi2P5YeULAd5Mb2XbW9i4.jpg",
-        "genre": "Animation, Biopic, Drame, Historique"
+        "genre": "Animation, Drame, Histoire"
     },
     {
         "nom": "Krypto et les Super-Animaux",
@@ -2027,7 +2027,7 @@
     {
         "nom": "Mon ninja et moi",
         "affiche": "https://www.themoviedb.org/t/p/original/xWUMNCP6XtTbgSVVhRiWo2cES4t.jpg",
-        "genre": "Animation, Comédie, Action, Familial"
+        "genre": "Animation, Comédie, Aventure, Fantastique"
     },
     {
         "nom": "Monster Family : En route pour l'aventure !",
@@ -11847,7 +11847,7 @@
     {
         "nom": "Conjuring 1 - Les Dossiers Warren",
         "affiche": "https://www.themoviedb.org/t/p/original/iqT98jBxX2NoWoSorMaylaM3K7D.jpg",
-        "genre": "Horreur"
+        "genre": "Epouvante-horreur"
     },
     {
         "nom": "Infamous",
@@ -14723,5 +14723,270 @@
         "nom": "Camille Lellouche, le spectacle",
         "affiche": "https://www.themoviedb.org/t/p/original/4kjt6wkRMCm3Qmv1yn3eEQXQczC.jpg",
         "genre": "Comédie"
+    },
+    {
+        "nom": "Gladiator II",
+        "affiche": "https://media.themoviedb.org/t/p/original/7R1EXkBAKunoG0UhZToFrnlStcp.jpg",
+        "genre": "Action, Aventure, Drame"
+    },
+    {
+        "nom": "Gladiator",
+        "affiche": "https://media.themoviedb.org/t/p/original/3fDI4D5rWefyUs7kLcvyafwBEmZ.jpg",
+        "genre": "Action, Drame, Aventure"
+    },
+    {
+        "nom": "The Beast Within",
+        "affiche": "https://media.themoviedb.org/t/p/original/eKYHtz7hPjE92oolbjNe4aYmiAp.jpg",
+        "genre": "Horreur, Drame, Thriller"
+    },
+    {
+        "nom": "Rudolph, le petit renne au nez rouge",
+        "affiche": "https://media.themoviedb.org/t/p/original/u5epea5ADbZIzeOv5bS0XPFKw51.jpg",
+        "genre": "Animation, Familial, Téléfilm"
+    },
+    {
+        "nom": "L'Étrange Noël de monsieur Jack",
+        "affiche": "https://media.themoviedb.org/t/p/original/e5hgZBkL1kvY0fGPixZD0468VIA.jpg",
+        "genre": "Fantastique, Animation, Familial"
+    },
+    {
+        "nom": "Le Grinch",
+        "affiche": "https://media.themoviedb.org/t/p/original/cmbQRAux3YdOIIk9RIj1Hq3C05f.jpg",
+        "genre": "Familial, Comédie, Fantastique"
+    },
+    {
+        "nom": "Le Grinch",
+        "affiche": "https://media.themoviedb.org/t/p/original/36a2GG5L0QW7iP2g8OCYoAW9PJ.jpg",
+        "genre": "Animation, Familial, Comédie, Fantastique"
+    },
+    {
+        "nom": "Free State of Jones",
+        "affiche": "https://media.themoviedb.org/t/p/original/1GIpqBa6SeI3u5wZO6KMGcsczQb.jpg",
+        "genre": "Action, Drame, Histoire, Guerre"
+    },
+    {
+        "nom": "Joy",
+        "affiche": "https://media.themoviedb.org/t/p/original/e0PbTnGe5RfKOnx4UvKLtNSUodM.jpg",
+        "genre": "Drame, Comédie"
+    },
+    {
+        "nom": "Tombés du camion",
+        "affiche": "https://media.themoviedb.org/t/p/original/1EpM33G9UdFjGdBXm0wVBDL6djT.jpg",
+        "genre": "Comédie, Drame"
+    },
+    {
+        "nom": "Battlefield",
+        "affiche": "https://media.themoviedb.org/t/p/original/xgtKO28F9IAqUQWz1E888NAB8nq.jpg",
+        "genre": "Action, Science-Fiction"
+    },
+    {
+        "nom": "Silex and the City, le film",
+        "affiche": "https://media.themoviedb.org/t/p/original/slkI1pFIlkeTQIcvs0s8JuFaNE0.jpg",
+        "genre": "Animation, Comédie"
+    },
+    {
+        "nom": "The Six Triple Eight",
+        "affiche": "https://media.themoviedb.org/t/p/original/1xbRMi4HZuogzHUF3PdNUhuz8yW.jpg",
+        "genre": "Drame, Guerre, Histoire"
+    },
+    {
+        "nom": "Ferry 2",
+        "affiche": "https://media.themoviedb.org/t/p/original/8pwdnL3pEISIN1EGmwZzU6hpNVk.jpg",
+        "genre": "Crime, Thriller, Action"
+    },
+    {
+        "nom": "Ferry",
+        "affiche": "https://media.themoviedb.org/t/p/w300_and_h450_bestv2/eHsvQR2pP1k5Chp4AxqMpBHuC9I.jpg",
+        "genre": "Crime, Drame, Action"
+    },
+    {
+        "nom": "Small Things Like These",
+        "affiche": "https://media.themoviedb.org/t/p/original/8wNtNXEf4KRz1Z5A3GhqodWKeUs.jpg",
+        "genre": "Drame"
+    },
+    {
+        "nom": "Anora",
+        "affiche": "https://media.themoviedb.org/t/p/original/lI16CtyyyQCm1H6dMVvLxm0gtit.jpg",
+        "genre": "Romance, Comédie, Drame"
+    },
+    {
+        "nom": "Les Simpsons : Un Noël sous hypnose",
+        "affiche": "https://media.themoviedb.org/t/p/original/vzst9twmgGxKx0eBoqBHn8fc38e.jpg",
+        "genre": "Animation, Comédie"
+    },
+    {
+        "nom": "Belle Enfant",
+        "affiche": "https://media.themoviedb.org/t/p/original/skTdBgjZSvWHDIwPLwo85xHqksk.jpg",
+        "genre": "Drame, Comédie"
+    },
+    {
+        "nom": "Mise au Vert",
+        "affiche": "https://media.themoviedb.org/t/p/original/pYTT2x2q3OWslci5cR2qV81Jdvu.jpg",
+        "genre": "Comédie"
+    },
+    {
+        "nom": "Golo et Ritchie",
+        "affiche": "https://media.themoviedb.org/t/p/original/rXMl2eqhsnWLTvdZbmwQzNM30dq.jpg",
+        "genre": "Comédie"
+    },
+    {
+        "nom": "Red One",
+        "affiche": "https://media.themoviedb.org/t/p/original/bwBkzMHDAAfnmbbRT3VOVQLKF3q.jpg",
+        "genre": "Action, Fantastique, Comédie"
+    },
+    {
+        "nom": "Carry-On",
+        "affiche": "https://media.themoviedb.org/t/p/original/sjMN7DRi4sGiledsmllEw5HJjPy.jpg",
+        "genre": "Action, Mystère, Thriller"
+    },
+    {
+        "nom": "Emilia Pérez",
+        "affiche": "https://media.themoviedb.org/t/p/original/r5sYdlJFys6YETQb63lvRR4fKEL.jpg",
+        "genre": "Drame, Thriller"
+    },
+    {
+        "nom": "Do Not Enter",
+        "affiche": "https://media.themoviedb.org/t/p/original/3BRyM09uxBu7Y3d6ThWCrijXOWQ.jpg",
+        "genre": "Horreur"
+    },
+    {
+        "nom": "Utopia",
+        "affiche": "https://media.themoviedb.org/t/p/original/wYlge2Dhw4OSShMVaQv4lVffheu.jpg",
+        "genre": "Action, Science-fiction"
+    },
+    {
+        "nom": "Close to You",
+        "affiche": "https://media.themoviedb.org/t/p/original/9vCHM2IVdLI7dsamnrhPPGdcu9h.jpg",
+        "genre": "Drame, Romance"
+    },
+    {
+        "nom": "Heretic",
+        "affiche": "https://media.themoviedb.org/t/p/original/61YrcFVQPO4h15SJiLe0vjiWbjk.jpg",
+        "genre": "Horreur, Thriller"
+    },
+    {
+        "nom": "It's a Wonderful Knife",
+        "affiche": "https://media.themoviedb.org/t/p/original/qToCVGHgu1670jZKjbdUnMVKmPc.jpg",
+        "genre": "Horreur, Comédie"
+    },
+    {
+        "nom": "The Best Christmas Pageant Ever",
+        "affiche": "https://media.themoviedb.org/t/p/original/gcZaKsOAsFJlgT4xbTCx9RvzRB.jpg",
+        "genre": "Comédie, Drame, Familial"
+    },
+    {
+        "nom": "Zénithal",
+        "affiche": "https://media.themoviedb.org/t/p/original/mSFJN4ZCyDOzyrbaOUlT4dneDSQ.jpg",
+        "genre": "Comédie, Action, Romance"
+    },
+    {
+        "nom": "The Outrun",
+        "affiche": "https://media.themoviedb.org/t/p/original/bvmqVBI6wyrcv4Z5LJulqLoeQDH.jpg",
+        "genre": "Drame"
+    },
+    {
+        "nom": "Venom : The Last Dance",
+        "affiche": "https://media.themoviedb.org/t/p/original/aosm8NMQ3UyoBVpSxyimorCQykC.jpg",
+        "genre": "Action, Science-Fiction, Aventure, Thriller"
+    },
+    {
+        "nom": "Venom : Let There Be Carnage",
+        "affiche": "https://media.themoviedb.org/t/p/original/tueBy90QPdzuY0SYjP9sBiM3qNS.jpg",
+        "genre": "Science-Fiction, Action, Aventure"
+    },
+    {
+        "nom": "Venom",
+        "affiche": "https://media.themoviedb.org/t/p/original/vVusHIRlyyFVS42XnqZso2wGKr.jpg",
+        "genre": "Science-Fiction, Action"
+    },
+    {
+        "nom": "Petit Panda en Afrique",
+        "affiche": "https://media.themoviedb.org/t/p/original/vJ8DcUTSwtvW0IX15faT9NXtki3.jpg",
+        "genre": "Aventure, Animation, Comédie, Familial"
+    },
+    {
+        "nom": "Le Cyber-casse du siècle",
+        "affiche": "https://media.themoviedb.org/t/p/original/wIS7g0i09afNbHQ9VHRnP8PErTs.jpg",
+        "genre": "Documentaire, Crime"
+    },
+    {
+        "nom": "Super Papa",
+        "affiche": "https://media.themoviedb.org/t/p/original/1jqG652MICyDGeXyHfWooBaIcQq.jpg",
+        "genre": "Comédie, Familial"
+    },
+    {
+        "nom": "City of Darkness",
+        "affiche": "https://media.themoviedb.org/t/p/original/grb47Z9Mj7pAxU66HdLdpP6fbnE.jpg",
+        "genre": "Action, Aventure, Crime, Thriller"
+    },
+    {
+        "nom": "Reagan",
+        "affiche": "https://media.themoviedb.org/t/p/original/o21NB4f5fNk1dtrRlyAmA0C0cb3.jpg",
+        "genre": "Histoire, Drame"
+    },
+    {
+        "nom": "Slingshot",
+        "affiche": "https://media.themoviedb.org/t/p/original/80zdgev0Uw1X52ouP79GJRr5fdQ.jpg",
+        "genre": "Science-Fiction, Thriller"
+    },
+    {
+        "nom": "Sympathy for the Devil",
+        "affiche": "https://media.themoviedb.org/t/p/original/afGdVMa80LMs6ibLP22CwM5uI4e.jpg",
+        "genre": "Thriller, Action"
+    },
+    {
+        "nom": "Touch",
+        "affiche": "https://media.themoviedb.org/t/p/original/ozlQnkSWLtEvdF0Xax0HspowccO.jpg",
+        "genre": "Drame, Romance"
+    },
+    {
+        "nom": "The Collective: Première Mission",
+        "affiche": "https://media.themoviedb.org/t/p/original/6NHEiMZina5EVW5zX6sDSN54ZQ7.jpg",
+        "genre": "Action, Thriller"
+    },
+    {
+        "nom": "Hildegart : La virgen roja",
+        "affiche": "https://media.themoviedb.org/t/p/original/xWj3DmRdlhjWEygzyBjvaZhzPRZ.jpg",
+        "genre": "Drame, Histoire, Thriller"
+    },
+    {
+        "nom": "Mylène Farmer : Nevermore - Le film",
+        "affiche": "https://media.themoviedb.org/t/p/original/b7rplx2L3YUrRlxpwCmpsFBldD.jpg",
+        "genre": "Musique"
+    },
+    {
+        "nom": "Manu Payet : Emmanuel 2",
+        "affiche": "https://media.themoviedb.org/t/p/original/3SxuQs4XTZuseSxAfsFzuPMgOUA.jpg",
+        "genre": "Comédie"
+    },
+    {
+        "nom": "Manu Payet : Emmanuel",
+        "affiche": "https://media.themoviedb.org/t/p/original/zPaziQDIM4b5FVQQYVmWP9qfLZ1.jpg",
+        "genre": "Comédie"
+    },
+    {
+        "nom": "Marie",
+        "affiche": "https://media.themoviedb.org/t/p/original/vNLsfo4QdVyp4DiNO0vZKxq0UlD.jpg",
+        "genre": "Drame, Histoire, Action"
+    },
+    {
+        "nom": "Une vie rêvée",
+        "affiche": "https://media.themoviedb.org/t/p/original/jJNSoRj5itqtgAFLBV3Dv0ICtye.jpg",
+        "genre": "Comédie, Drame"
+    },
+    {
+        "nom": "Siège",
+        "affiche": "https://media.themoviedb.org/t/p/original/hKfDLdWyd7fehBDsimbvYCJtBnA.jpg",
+        "genre": "Action, Aventure, Policier, Drame, Thriller"
+    },
+    {
+        "nom": "Juré n°2",
+        "affiche": "https://media.themoviedb.org/t/p/original/c18uMLBc89qmJNw9emLUhFEku2b.jpg",
+        "genre": "Crime, Drame"
+    },
+    {
+        "nom": "Bangkok Redemption",
+        "affiche": "https://media.themoviedb.org/t/p/original/jga7Kojg5EhrUteCS3VKTL2vw42.jpg",
+        "genre": "Action, Crime, Thriller"
     }
 ]

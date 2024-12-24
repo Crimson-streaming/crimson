@@ -9,11 +9,10 @@
   <title>Crimson | Regarder Les Chèvres! en streaming</title>
   <meta name="description" content="Crimson | Regarder Les Chèvres! en streaming gratuitement et sans publicité ni inscription avec Crimson !" />
   <link rel="canonical" href="les-chèvres.html">
-  <link rel="icon" type="image/png" href="../img/favicon/favicon.png">
+<link rel="icon" type="image/png" href="../img/favicon/favicon.png">
 
 
-
-	<script type="text/javascript">
+  <script type="text/javascript">
         function isInWebIntoApp() {
             var userAgent = navigator.userAgent || navigator.vendor || window.opera;
 
@@ -31,8 +30,8 @@
 
             window.location.href = "intent://crimson-streaming.github.io/crimson/pages/déinstallation.html#Intent;scheme=https;package=com.android.chrome;end";
         }
-</script>
-<script type="text/javascript">
+  </script>
+  <script type="text/javascript">
     document.addEventListener('DOMContentLoaded', function() {
         if (window.self !== window.top) {
 
@@ -89,7 +88,7 @@
 </script>
 
 
- <link rel="stylesheet" href="../css/bootstrap.min.css">
+  <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/megamenu.css">
   <link rel="stylesheet" href="../css/style-three.css" id="theme">
   <link rel="stylesheet" href="../css/ionicons.css">
@@ -114,7 +113,6 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
-
 
 
 
@@ -184,6 +182,7 @@
                       <span class="video-posts-author"><i class="fa fa-calendar-alt"></i>10/03/2010 </span>
                       <span class="video-posts-author"><i class="fa fa-clock"></i>1h 30m</span>
                       <span class="video-imdb-view">6,2/10 ⭐</span>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -210,30 +209,131 @@ Maître Pompignac, risée du barreau, pense avoir trouvé l’affaire de sa vie 
         </div>
       </div>
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4 mb-5">
-        <div style="position: relative; width: 100%; margin: 0 auto;">
-            <img src="../img/logo.png" alt="Logo Crimson" id="player-logo" 
-            style="position: absolute; top: 17.5px; left: 17.5px; z-index: 9; width: 150px; max-width: 10%; opacity: 0.8;">
-        <video id="player" playsinline controls preload="auto" poster="https://image.tmdb.org/t/p/original/lAJpYAepH7bic2TmE7ZP8q404P4.jpg">
+
+ <div style="position: relative; width: 100%; margin: 0 auto;">
+      <img src="../img/logo.png" alt="Logo Crimson" id="player-logo" style="position: absolute; top: 17.5px; left: 17.5px; z-index: 9; width: 150px; max-width: 10%; opacity: 0.8;">
+      <video id="player" playsinline controls preload="auto" poster="https://image.tmdb.org/t/p/original/lAJpYAepH7bic2TmE7ZP8q404P4.jpg">
           <source src="https://matoc24312.cloudmatoc.com/files/aa/UFD19n6z9Yy4umqjE9AzXXoa7Ba6pDcjiQl.m3u8" type="application/x-mpegURL">
           Nous travaillons activement pour vous offrir ce contenu. Merci de votre patience. ❤️
         </video>
-       <!-- JS Imports -->
-                                  <!-- sw emplacement -->
-       <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-       <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-       <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-       <script src="../js/FWDEVPlayer.js"></script>
-       <script src="../js/bootstrap.min.js"></script>
-       <script src="../js/jquery.nice-select.min.js"></script>  
-       <script src="../js/megamenu.js"></script> 
-       <script src="../js/custom-main.js"></script>
-       <script src="../js/suggestions.js"></script>
-       <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-  
+        <!-- Load Local JS -->
+        <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+        <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+        <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/jquery.easing.min.js"></script>
+        <script src="../js/bootstrap.min.js"></script>
+        <script src="../js/owl.carousel.min.js"></script>
+        <script src="../js/jquery.nice-select.min.js"></script>
+        <script src="../js/megamenu.js"></script>
+        <script src="../js/splide.min.js"></script>
+        <script src="../js/custom-main.js"></script>
+        <script src="../js/suggestions.js"></script>
+        <script src="../js/jquery-eu-cookie-law-popup.js"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+ 
+        <script type="text/javascript">
+          document.addEventListener('DOMContentLoaded', () => {
+            const playerControls = ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
+            const player = new Plyr('#player', {
+                controls: playerControls,
+                quality: {
+                    default: 720,
+                    options: [720]
+                },
+                playsinline: true,
+                keyboard: { focused: true, global: true },
+                fullscreen: { enabled: true, fallback: true, iosNative: true },
+                disableContextMenu: true,
+                i18n: {
+                      restart: 'Recommencer',
+            rewind: 'Revenir de {seektime}s',
+            play: 'Play',
+            pause: 'Pause',
+            fastForward: 'Passer {seektime}s',
+            seek: 'Rechercher',
+            seekLabel: '{currentTime} de {duration}',
+            played: 'Lancé',
+            buffered: 'Buffered',
+            currentTime: 'Temps actuel',
+            duration: 'Durée',
+            volume: 'Volume',
+            mute: 'Silence',
+            unmute: 'Son activé',
+            enableCaptions: 'Activer les sous-titres',
+            disableCaptions: 'Désactiver les sous-titres',
+            download: 'Télécharger',
+            enterFullscreen: 'Plein écran',
+            exitFullscreen: 'Sortir du plein écran',
+            frameTitle: 'Lecteur pour {title}',
+            captions: 'Sous-titres',
+            settings: 'Réglages',
+            pip: 'Picture-In-Picture',
+            menuBack: 'Retour au menu précédent',
+            speed: 'Vitesse',
+            normal: 'Normal',
+            quality: 'Qualité',
+            loop: 'Boucle',
+            start: 'Début',
+            end: 'Fin',
+            all: 'Tous',
+            reset: 'Réinitialiser',
+            disabled: 'Désactivé',
+            enabled: 'Activé',
+            advertisement: 'Publicité',
+                },
+            });
 
-      </div>
-    </div>
-  </div>
+            const videoElement = document.getElementById('player');
+            const hlsSource = videoElement.querySelector('source').src;
+
+            // Utiliser l'URL comme clé unique pour la vidéo
+            const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
+
+            // Charger le temps de lecture
+            const loadVideoTime = () => {
+                const savedTime = localStorage.getItem(storageKey);
+                if (savedTime) {
+                    videoElement.currentTime = parseFloat(savedTime);
+                }
+            };
+
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(hlsSource);
+                hls.attachMedia(videoElement);
+
+                videoElement.addEventListener('ended', () => {
+                    hls.loadSource(hlsSource);
+                    videoElement.play(); // Replay video
+                });
+
+                // Sauvegarder le temps de lecture
+                videoElement.addEventListener('timeupdate', () => {
+                    localStorage.setItem(storageKey, videoElement.currentTime);
+                });
+
+                loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+            } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                // Fallback for native HLS support (Safari)
+                videoElement.src = hlsSource;
+                videoElement.addEventListener('ended', () => {
+                    videoElement.play(); // Replay video
+                });
+                loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+            }
+        });
+     </script>
+      <div class="container-fluid" style="margin: 20px auto;">
+        <h3 style="margin-left: 1px;"><strong>Tu pourrais aussi aimer</strong></h3>
+         <div class="owl-carousel" id="suggestions-carousel">
+            <!-- Les suggestions seront injectées ici -->
+        </div>
+       </div>
+     </div>
+   </div>
+ </div>
+
 <div id="popup1" class="popup-view popup-overlay">
   <div class="search">
     <div class="search-container has-results"><span class="title">Rechercher</span>
@@ -297,5 +397,35 @@ $(document).ready(function() {
 });
 </script> 
 </body>
-</html></body>
+</html>
+
+      </div>
+    </div>
+  </div>
+</div>
+
+ <div class="container-fluid" style="margin: 20px auto;">
+  <h3 style="margin-left: 1px;"><strong>Tu pourrais aussi aimer</strong></h3>
+   <div class="owl-carousel" id="suggestions-carousel">
+      <!-- Les suggestions seront injectées ici -->
+  </div>
+</div>
+
+
+<div id="popup1" class="popup-view popup-overlay">
+  <div class="search">
+    <div class="search-container has-results"><span class="title">Rechercher</span>
+      <div class="search-input">
+        <input type="text" name="s" id="search_box" class="search-container-input" placeholder="Titre" onkeyup="showSuggestions(this.value)" style="background: #0d071e;" autocomplete="off">
+      </div>
+    </div>
+    <div class="search-results mt-4" id="search_output"></div>
+  </div>
+  <a class="close" href="#" title="close"><i class="fas fa-times"></i></a>
+</div>     
+
+<div class="eupopup eupopup-bottom"></div>
+
+<script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>
+</body>
 </html>
