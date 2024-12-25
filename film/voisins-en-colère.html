@@ -9,83 +9,7 @@
   <title>Crimson | Regarder Voisins En Colère en streaming</title>
   <meta name="description" content="Crimson | Regarder Voisins En Colère en streaming gratuitement et sans publicité ni inscription avec Crimson !" />
   <link rel="canonical" href="voisins-en-colère.html">
-<link rel="icon" type="image/png" href="../img/favicon/favicon.png">
-
-
-  <script type="text/javascript">
-        function isInWebIntoApp() {
-            var userAgent = navigator.userAgent || navigator.vendor || window.opera;
-
-            // Vérifie si le user agent contient "wv" pour WebView
-            return /wv/.test(userAgent);
-        }
-
-        if (isInWebIntoApp()) {
-
-            setTimeout(function() {
-                window.location.href = "https://crimson-streaming.github.io/crimson/pages/déinstallation.html";
-            }, 2000);
-        }
-        if (isInWebIntoApp()) {
-
-            window.location.href = "intent://crimson-streaming.github.io/crimson/pages/déinstallation.html#Intent;scheme=https;package=com.android.chrome;end";
-        }
-  </script>
-  <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', function() {
-        if (window.self !== window.top) {
-
-            const popup = document.createElement('div');
-            popup.style.position = 'fixed';
-            popup.style.top = '-30px';
-            popup.style.left = '0';
-            popup.style.width = '100vw';
-            popup.style.height = '100vh';
-            popup.style.backgroundColor = '#0d0620';
-            popup.style.display = 'flex';
-            popup.style.flexDirection = 'column';
-            popup.style.justifyContent = 'center';
-            popup.style.alignItems = 'center';
-            popup.style.zIndex = '9999';
-            popup.style.textAlign = 'center';
-            popup.style.color = '#333';
-
-            const style = document.createElement('style');
-            style.innerHTML = `
-                @keyframes pulse {
-                    0% {
-                        transform: scale(1);
-                    }
-                    50% {
-                        transform: scale(1.1);
-                    }
-                    100% {
-                        transform: scale(1);
-                    }
-                }
-                .pulse-animation {
-                    animation: pulse 1s infinite;
-                }
-            `;
-            document.head.appendChild(style);
-
-
-            popup.innerHTML = `
-                <img src="https://crimson-streaming.github.io/crimson/img/logo.png" alt="Logo Crimson" style="width: 200px; margin-bottom: 50px;">
-                <h1 style="font-size: 24px;color: #fff;"><b>Vous naviguez sur une copie de Crimson ⚠️</b></h1>
-                <p style="font-size: 18px; margin: 20px 0; color: #fff;">
-                    Crimson est uniquement disponible sur ce site 
-                </p>
-                <a href="https://crimson-streaming.github.io/crimson/" target="_blank" class="pulse-animation" style="background-color: #b81b0e; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; text-decoration: none; margin: 5px; display: inline-block;">
-                    Accéder au site Crimson
-                </a>
-    
-            `;
-
-            document.body.appendChild(popup);
-        }
-    });
-</script>
+  <link rel="icon" type="image/png" href="../img/favicon/favicon.png">
 
 
   <link rel="stylesheet" href="../css/bootstrap.min.css">
@@ -100,6 +24,7 @@
   <link rel="stylesheet" href="../css/search.css">
   <link rel="stylesheet" href="../css/validatesecurity.css">
   <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/popup-video.css">
 
   <!-- owl Carousel -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -113,7 +38,6 @@
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
-
 
 
 </head>
@@ -212,11 +136,13 @@
           <source src="https://matoc22140.cloudmatoc.com/files/aa/V0mhCgMrFf2AZC1PBHkMIcBVQzjuehl9hIq.m3u8" type="application/x-mpegURL">
           Nous travaillons activement pour vous offrir ce contenu. Merci de votre patience. ❤️
         </video>
-        <!-- Load Local JS -->
+       <!-- JS Imports -->
+
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
         <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
         <script src="../js/jquery-3.3.1.min.js"></script>
+        <script src="../js/suggestions.js"></script>
         <script src="../js/jquery.easing.min.js"></script>
         <script src="../js/bootstrap.min.js"></script>
         <script src="../js/owl.carousel.min.js"></script>
@@ -224,111 +150,28 @@
         <script src="../js/megamenu.js"></script>
         <script src="../js/splide.min.js"></script>
         <script src="../js/custom-main.js"></script>
-        <script src="../js/suggestions.js"></script>
         <script src="../js/jquery-eu-cookie-law-popup.js"></script>
+        <script src="../js/popup-video.js"></script>
+        <script src="../js/main.js"></script>
+        <script src="../js/recently-watched.js"></script>
         <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
- 
-        <script type="text/javascript">
-          document.addEventListener('DOMContentLoaded', () => {
-            const playerControls = ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
-            const player = new Plyr('#player', {
-                controls: playerControls,
-                quality: {
-                    default: 720,
-                    options: [720]
-                },
-                playsinline: true,
-                keyboard: { focused: true, global: true },
-                fullscreen: { enabled: true, fallback: true, iosNative: true },
-                disableContextMenu: true,
-                i18n: {
-                      restart: 'Recommencer',
-            rewind: 'Revenir de {seektime}s',
-            play: 'Play',
-            pause: 'Pause',
-            fastForward: 'Passer {seektime}s',
-            seek: 'Rechercher',
-            seekLabel: '{currentTime} de {duration}',
-            played: 'Lancé',
-            buffered: 'Buffered',
-            currentTime: 'Temps actuel',
-            duration: 'Durée',
-            volume: 'Volume',
-            mute: 'Silence',
-            unmute: 'Son activé',
-            enableCaptions: 'Activer les sous-titres',
-            disableCaptions: 'Désactiver les sous-titres',
-            download: 'Télécharger',
-            enterFullscreen: 'Plein écran',
-            exitFullscreen: 'Sortir du plein écran',
-            frameTitle: 'Lecteur pour {title}',
-            captions: 'Sous-titres',
-            settings: 'Réglages',
-            pip: 'Picture-In-Picture',
-            menuBack: 'Retour au menu précédent',
-            speed: 'Vitesse',
-            normal: 'Normal',
-            quality: 'Qualité',
-            loop: 'Boucle',
-            start: 'Début',
-            end: 'Fin',
-            all: 'Tous',
-            reset: 'Réinitialiser',
-            disabled: 'Désactivé',
-            enabled: 'Activé',
-            advertisement: 'Publicité',
-                },
-            });
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+  
 
-            const videoElement = document.getElementById('player');
-            const hlsSource = videoElement.querySelector('source').src;
+        
+      </div>
+    </div>
+  </div>
+</div>
 
-            // Utiliser l'URL comme clé unique pour la vidéo
-            const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
+ <div class="container-fluid" style="margin: 20px auto;">
+  <h3 style="margin-left: 1px;"><strong>Tu pourrais aussi aimer</strong></h3>
+   <div class="owl-carousel" id="suggestions-carousel">
+      <!-- Les suggestions seront injectées ici -->
+  </div>
+</div>
 
-            // Charger le temps de lecture
-            const loadVideoTime = () => {
-                const savedTime = localStorage.getItem(storageKey);
-                if (savedTime) {
-                    videoElement.currentTime = parseFloat(savedTime);
-                }
-            };
-
-            if (Hls.isSupported()) {
-                const hls = new Hls();
-                hls.loadSource(hlsSource);
-                hls.attachMedia(videoElement);
-
-                videoElement.addEventListener('ended', () => {
-                    hls.loadSource(hlsSource);
-                    videoElement.play(); // Replay video
-                });
-
-                // Sauvegarder le temps de lecture
-                videoElement.addEventListener('timeupdate', () => {
-                    localStorage.setItem(storageKey, videoElement.currentTime);
-                });
-
-                loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
-            } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-                // Fallback for native HLS support (Safari)
-                videoElement.src = hlsSource;
-                videoElement.addEventListener('ended', () => {
-                    videoElement.play(); // Replay video
-                });
-                loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
-            }
-        });
-     </script>
-      <div class="container-fluid" style="margin: 20px auto;">
-        <h3 style="margin-left: 1px;"><strong>Tu pourrais aussi aimer</strong></h3>
-         <div class="owl-carousel" id="suggestions-carousel">
-            <!-- Les suggestions seront injectées ici -->
-        </div>
-       </div>
-     </div>
-   </div>
- </div>
 
 <div id="popup1" class="popup-view popup-overlay">
   <div class="search">
@@ -343,54 +186,6 @@
 </div>     
 
 <div class="eupopup eupopup-bottom"></div>
-   <script>
-async function showSuggestions(query) {
-    const searchOutput = document.getElementById('search_output');
-    searchOutput.innerHTML = ''; // Réinitialiser les résultats
-  
-    if (!query) return; // Si la requête est vide, ne rien faire
-  
-    const response = await fetch('../search/d.json');
-    const movies = await response.json();
 
-    // Fonction pour normaliser les chaînes
-    function normalizeString(str) {
-        return str
-            .toLowerCase()
-            .replace(/['’]/g, ""); // Supprime les apostrophes simples et typographiques
-    }
-
-    const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
-
-    // Limiter les résultats à 48
-    const limitedMovies = filteredMovies.slice(0, 48);
-
-    if (limitedMovies.length > 0) {
-        limitedMovies.forEach(movie => {
-            const movieDiv = document.createElement('div');
-            movieDiv.classList.add('single-video');
-            movieDiv.innerHTML = `
-                <a href="${movie.emplacement}">
-                    <div class="video-img">
-                        <span class="video-item-content">${movie.nom}</span>
-                        <img src="${movie.affiche}" alt="${movie.nom}">
-                    </div>
-                </a>
-            `;
-            searchOutput.appendChild(movieDiv);
-        });
-    } else {
-        searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
-    }
-}
-
-</script>  
-<script>
-$(document).ready(function() {
-    $(document).bind("contextmenu", function() {
-        return false;
-    });
-});
-</script> 
 </body>
 </html>
