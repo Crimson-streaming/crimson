@@ -3985,6 +3985,41 @@
         "emplacement": "../film/divergente.html"
     },
     {
+        "nom": "Le Seigneur des Anneaux : La Guerre des Rohirrim",
+        "affiche": "https://media.themoviedb.org/t/p/original/bcDGIZKQ959tnMn0qLl6GxOkbO3.jpg",
+        "emplacement": "../film/le-seigneur-des-anneaux--la-guerre-des-rohirrim.html"
+    },
+    {
+        "nom": "Le Hobbit : La Bataille des cinq armées",
+        "affiche": "https://media.themoviedb.org/t/p/original/h4wjbuC61iMaCqrO3bmGQ3ibuJE.jpg",
+        "emplacement": "../film/le-hobbit--la-bataille-des-cinq-armées.html"
+    },
+    {
+        "nom": "Le Hobbit : La Désolation de Smaug",
+        "affiche": "https://media.themoviedb.org/t/p/original/9JPVtscMdWGmOoWxNmc1hGdkxtM.jpg",
+        "emplacement": "../film/le-hobbit--la-désolation-de-smaug.html"
+    },
+    {
+        "nom": "Le Hobbit : Un voyage inattendu",
+        "affiche": "https://media.themoviedb.org/t/p/original/mdy9mG31U7jSB8edfRELv53Yfjp.jpg",
+        "emplacement": "../film/le-hobbit--un-voyage-inattendu.html"
+    },
+    {
+        "nom": "Le Seigneur des anneaux : Le Retour du roi",
+        "affiche": "https://media.themoviedb.org/t/p/original/aqiFUqswXVM58Tamux1ilnNvVRs.jpg",
+        "emplacement": "../film/le-seigneur-des-anneaux--le-retour-du-roi.html"
+    },
+    {
+        "nom": "Le Seigneur des anneaux : Les Deux Tours",
+        "affiche": "https://media.themoviedb.org/t/p/original/qVHBqQYLDRs7ESjP9q6o9iPHLWj.jpg",
+        "emplacement": "../film/le-seigneur-des-anneaux--les-deux-tours.html"
+    },
+    {
+        "nom": "Le Seigneur des anneaux : La Communauté de l'anneau",
+        "affiche": "https://media.themoviedb.org/t/p/original/5OPg6M0yHr21Ovs1fni2H1xpKuF.jpg",
+        "emplacement": "../film/le-seigneur-des-anneaux--la-communauté-de-lanneau.html"
+    },
+    {
         "nom": "Pirates des Caraïbes : La Vengeance de Salazar",
         "affiche": "https://www.themoviedb.org/t/p/original/fVMudKQfhosujwgAKhfxNGfS9sL.jpg",
         "emplacement": "../film/pirates-des-caraïbes--la-vengeance-de-salazar.html"
@@ -4663,6 +4698,11 @@
         "nom": "Wicked Little Letters",
         "affiche": "https://media.themoviedb.org/t/p/original/scAU7YudKNVeZlOfgSEWntAUSJ.jpg",
         "emplacement": "../film/wicked-little-letters.html"
+    },
+    {
+        "nom": "Scandaleusement vôtre",
+        "affiche": "https://media.themoviedb.org/t/p/original/t2uzLdF5jQPKVCAz5OLxa1mO7LB.jpg",
+        "emplacement": "../film/scandaleusement-vôtre.html"
     },
     {
         "nom": "Le Club des miracles",
@@ -14883,6 +14923,11 @@
         "nom": "Marie",
         "affiche": "https://media.themoviedb.org/t/p/original/vNLsfo4QdVyp4DiNO0vZKxq0UlD.jpg",
         "emplacement": "../film/marie.html"
+    },
+    {
+        "nom": "Fêlés",
+        "affiche": "https://media.themoviedb.org/t/p/original/ucClmPlyDzO9SiEw8VBjIszseAs.jpg",
+        "emplacement": "../film/fêlés.html"
     },
     {
         "nom": "Une vie rêvée",

@@ -3990,6 +3990,41 @@
         "genre": "Action, Aventure, Science-Fiction"
     },
     {
+        "nom": "Le Seigneur des Anneaux : La Guerre des Rohirrim",
+        "affiche": "https://media.themoviedb.org/t/p/original/bcDGIZKQ959tnMn0qLl6GxOkbO3.jpg",
+        "genre": "Animation, Fantastique, Action, Aventure"
+    },
+    {
+        "nom": "Le Hobbit : La Bataille des cinq armées",
+        "affiche": "https://media.themoviedb.org/t/p/original/h4wjbuC61iMaCqrO3bmGQ3ibuJE.jpg",
+        "genre": "Action, Aventure, Fantastique"
+    },
+    {
+        "nom": "Le Hobbit : La Désolation de Smaug",
+        "affiche": "https://media.themoviedb.org/t/p/original/9JPVtscMdWGmOoWxNmc1hGdkxtM.jpg",
+        "genre": "Fantastique, Aventure, Action"
+    },
+    {
+        "nom": "Le Hobbit : Un voyage inattendu",
+        "affiche": "https://media.themoviedb.org/t/p/original/mdy9mG31U7jSB8edfRELv53Yfjp.jpg",
+        "genre": "Aventure, Fantastique, Action"
+    },
+    {
+        "nom": "Le Seigneur des anneaux : Le Retour du roi",
+        "affiche": "https://media.themoviedb.org/t/p/original/aqiFUqswXVM58Tamux1ilnNvVRs.jpg",
+        "genre": "Aventure, Fantastique, Action"
+    },
+    {
+        "nom": "Le Seigneur des anneaux : Les Deux Tours",
+        "affiche": "https://media.themoviedb.org/t/p/original/qVHBqQYLDRs7ESjP9q6o9iPHLWj.jpg",
+        "genre": "Aventure, Fantastique, Action"
+    },
+    {
+        "nom": "Le Seigneur des anneaux : La Communauté de l'anneau",
+        "affiche": "https://media.themoviedb.org/t/p/original/5OPg6M0yHr21Ovs1fni2H1xpKuF.jpg",
+        "genre": "Aventure, Fantastique, Action"
+    },
+    {
         "nom": "Pirates des Caraïbes : La Vengeance de Salazar",
         "affiche": "https://www.themoviedb.org/t/p/original/fVMudKQfhosujwgAKhfxNGfS9sL.jpg",
         "genre": "Aventure, Action, Fantastique"
@@ -4667,6 +4702,11 @@
     {
         "nom": "Wicked Little Letters",
         "affiche": "https://media.themoviedb.org/t/p/original/scAU7YudKNVeZlOfgSEWntAUSJ.jpg",
+        "genre": "Comédie, Drame, Mystère"
+    },
+    {
+        "nom": "Scandaleusement vôtre",
+        "affiche": "https://media.themoviedb.org/t/p/original/t2uzLdF5jQPKVCAz5OLxa1mO7LB.jpg",
         "genre": "Comédie, Drame, Mystère"
     },
     {
@@ -14973,6 +15013,11 @@
         "nom": "Marie",
         "affiche": "https://media.themoviedb.org/t/p/original/vNLsfo4QdVyp4DiNO0vZKxq0UlD.jpg",
         "genre": "Drame, Histoire, Action"
+    },
+    {
+        "nom": "Fêlés",
+        "affiche": "https://media.themoviedb.org/t/p/original/ucClmPlyDzO9SiEw8VBjIszseAs.jpg",
+        "genre": "Comédie"
     },
     {
         "nom": "Une vie rêvée",
