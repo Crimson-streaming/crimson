@@ -200,3 +200,9 @@ document.addEventListener('DOMContentLoaded', function() {
         document.body.appendChild(popup);
     }
 });
+
+window.dataLayer = window.dataLayer || [];
+function gtag(){dataLayer.push(arguments);}
+gtag('js', new Date());
+
+gtag('config', 'G-7QZGKN17QX');
