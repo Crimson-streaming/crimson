@@ -4,39 +4,59 @@ async function showSuggestions(query) {
   
     if (!query) return; // Si la requête est vide, ne rien faire
   
-    const response = await fetch('../search/d.json');
-    const movies = await response.json();
+    try {
+        const response = await fetch('../search/d.json');
+        if (!response.ok) {
+            throw new Error('Erreur réseau');
+        }
 
-    // Fonction pour normaliser les chaînes
-    function normalizeString(str) {
-        return str
-            .toLowerCase()
-            .replace(/['’]/g, ""); // Supprime les apostrophes simples et typographiques
-    }
+        const movies = await response.json();
 
-    const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
+        // Normaliser la requête
+        const normalizedQuery = normalizeString(query);
 
-    // Limiter les résultats à 48
-    const limitedMovies = filteredMovies.slice(0, 48);
+        // Filtrer les films en fonction de la requête normalisée
+        const filteredMovies = movies.filter(movie =>
+            normalizeString(movie.nom).includes(normalizedQuery)
+        );
 
-    if (limitedMovies.length > 0) {
-        limitedMovies.forEach(movie => {
-            const movieDiv = document.createElement('div');
-            movieDiv.classList.add('single-video');
-            movieDiv.innerHTML = `
-                <a href="${movie.emplacement}">
-                    <div class="video-img">
-                        <span class="video-item-content">${movie.nom}</span>
-                        <img src="${movie.affiche}" alt="${movie.nom}">
-                    </div>
-                </a>
-            `;
-            searchOutput.appendChild(movieDiv);
-        });
-    } else {
-        searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
+        // Limiter les résultats à 48
+        const limitedMovies = filteredMovies.slice(0, 48);
+
+        if (limitedMovies.length > 0) {
+            limitedMovies.forEach(movie => {
+                const movieDiv = document.createElement('div');
+                movieDiv.classList.add('single-video');
+                movieDiv.innerHTML = `
+                    <a href="${movie.emplacement}">
+                        <div class="video-img">
+                            <span class="video-item-content">${movie.nom}</span>
+                            <img src="${movie.affiche}" alt="${movie.nom}">
+                        </div>
+                    </a>
+                `;
+                searchOutput.appendChild(movieDiv);
+            });
+        } else {
+            searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
+        }
+    } catch (error) {
+        searchOutput.innerHTML = '<p>Une erreur est survenue lors du chargement des données.</p>';
+        console.error('Erreur de recherche:', error);
     }
 }
+
+// Fonction pour normaliser les chaînes (insensible aux accents, tirets, majuscules, etc.)
+function normalizeString(str) {
+    return str
+        .toLowerCase() // Convertir en minuscule
+        .normalize('NFD') // Séparer les caractères accentués
+        .replace(/[\u0300-\u036f]/g, '') // Supprimer les accents
+        .replace(/['’]/g, '') // Supprimer les apostrophes
+        .replace(/-/g, ' ') // Remplacer les tirets par des espaces
+        .trim(); // Supprimer les espaces inutiles
+}
+
 
 document.addEventListener('DOMContentLoaded', () => {
     const playerControls = ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
