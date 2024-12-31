@@ -5,6 +5,11 @@
         "emplacement": "film/gladiator-ii.html"
     },
     {
+        "nom": "Wicked",
+        "affiche": "https://media.themoviedb.org/t/p/original/kQkgPhj6sCuoMWzPKWQVOWUXzib.jpg",
+        "emplacement": "film/wicked.html"
+    },
+    {
         "nom": "Gladiator",
         "affiche": "https://media.themoviedb.org/t/p/original/3fDI4D5rWefyUs7kLcvyafwBEmZ.jpg",
         "emplacement": "film/gladiator.html"
@@ -188,6 +193,16 @@
         "nom": "The Clean Up Crew",
         "affiche": "https://media.themoviedb.org/t/p/original/zaZL3PVVQ5SXBAfEUv4nSVq20Ty.jpg",
         "emplacement": "film/the-clean-up-crew.html"
+    },
+    {
+        "nom": "Vivre, mourir, renaître",
+        "affiche": "https://media.themoviedb.org/t/p/original/464Rcy7cAFpr2jKZ22itBkx8zxj.jpg",
+        "emplacement": "film/vivre-mourir-renaître.html"
+    },
+    {
+        "nom": "La Prisonnière de Bordeaux",
+        "affiche": "https://media.themoviedb.org/t/p/original/7ES8HoWEVptqFEnbdIgiwrqsiNC.jpg",
+        "emplacement": "film/la-prisonnière-de-bordeaux.html"
     },
     {
         "nom": "Here : Les plus belles années de notre vie",
@@ -520,6 +535,11 @@
         "emplacement": "film/cocaine-bear.html"
     },
     {
+        "nom": "A Real Pain",
+        "affiche": "https://media.themoviedb.org/t/p/original/kvTnrwauFfWRDj7zwUun3E1JJa6.jpg",
+        "emplacement": "film/a-real-pain.html"
+    },
+    {
         "nom": "Le Pire voisin au monde",
         "affiche": "https://www.themoviedb.org/t/p/original/h1gVRidBFLLXZaHeY2NBbUvbot5.jpg",
         "emplacement": "film/le-pire-voisin-au-monde.html"
@@ -828,6 +848,11 @@
         "nom": "Un conte de Noël, ou presque",
         "affiche": "https://media.themoviedb.org/t/p/original/2B8C4ZF4N7Ie3vuENIFRFjSI9P6.jpg",
         "emplacement": "film/un-conte-de-noël-ou-presque.html"
+    },
+    {
+        "nom": "HAIKYÛ !! La Guerre des Poubelles",
+        "affiche": "https://media.themoviedb.org/t/p/original/vwE7e78QVIyoYxHA7FkHCdI9ugU.jpg",
+        "emplacement": "film/haikyû--la-guerre-des-poubelles.html"
     },
     {
         "nom": "Look Back",
@@ -12230,6 +12255,11 @@
         "emplacement": "film/captain-marvel.html"
     },
     {
+        "nom": "Omni Loop",
+        "affiche": "https://media.themoviedb.org/t/p/original/aKrwq3HeyFcl5MXb7tcsileoF9I.jpg",
+        "emplacement": "film/omni-loop.html"
+    },
+    {
         "nom": "Foe",
         "affiche": "https://www.themoviedb.org/t/p/original/eTPBizhkX6B9NgzPzkhVIOvwXxZ.jpg",
         "emplacement": "film/foe.html"
@@ -12298,6 +12328,11 @@
         "nom": "Fingernails",
         "affiche": "https://www.themoviedb.org/t/p/original/gC3vm9bqyrwFM4C3EhB25OpPukA.jpg",
         "emplacement": "film/fingernails.html"
+    },
+    {
+        "nom": "Identify",
+        "affiche": "https://media.themoviedb.org/t/p/original/nBEuVWhQhOqZ2TsUAeg0wDCBoY.jpg",
+        "emplacement": "film/identify.html"
     },
     {
         "nom": "Megaboa",
@@ -14358,6 +14393,11 @@
         "nom": "Gold",
         "affiche": "https://www.themoviedb.org/t/p/original/vogcwnaaJBFr8NxEMLbHdN8UfDN.jpg",
         "emplacement": "film/gold.html"
+    },
+    {
+        "nom": "Les Enquêtes du département V : Promesse",
+        "affiche": "https://i.imgur.com/Qfr2RFB.png",
+        "emplacement": "film/les-enquêtes-du-département-v--promesse.html"
     },
     {
         "nom": "Les Enquêtes du département V : L'Effet Papillon",
