@@ -111,10 +111,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const videoElement = document.getElementById('player');
     const hlsSource = videoElement.querySelector('source').src;
-
+    
     // Utiliser l'URL comme clé unique pour la vidéo
     const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
-
+    
     // Charger le temps de lecture
     const loadVideoTime = () => {
         const savedTime = localStorage.getItem(storageKey);
@@ -122,29 +122,56 @@ document.addEventListener('DOMContentLoaded', () => {
             videoElement.currentTime = parseFloat(savedTime);
         }
     };
-
+    
+    // Précharger la vidéo avant la lecture pour réduire le délai de démarrage
+    const preloadVideo = () => {
+        videoElement.load();
+    };
+    
     if (Hls.isSupported()) {
         const hls = new Hls();
         hls.loadSource(hlsSource);
         hls.attachMedia(videoElement);
-
+    
+        // Gestion des erreurs HLS
+        hls.on(Hls.Events.ERROR, (event, data) => {
+            if (data.fatal) {
+                console.error('Erreur HLS:', data);
+                // Vous pouvez également mettre en place une gestion de repli ici
+            }
+        });
+    
         videoElement.addEventListener('ended', () => {
             hls.loadSource(hlsSource);
             videoElement.play(); // Replay video
         });
-
+    
         // Sauvegarder le temps de lecture
         videoElement.addEventListener('timeupdate', () => {
             localStorage.setItem(storageKey, videoElement.currentTime);
         });
-
+    
+        // Précharger la vidéo
+        preloadVideo();
+    
         loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
     } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
         // Fallback for native HLS support (Safari)
         videoElement.src = hlsSource;
+    
+        // Gestion des erreurs de lecture vidéo
+        videoElement.onerror = () => {
+            console.error('Erreur de lecture vidéo');
+            // Vous pouvez ici mettre en place une gestion de l'erreur ou un repli
+        };
+    
         videoElement.addEventListener('ended', () => {
             videoElement.play(); // Replay video
         });
+    
+        // Précharger la vidéo pour les navigateurs avec prise en charge native HLS
+        preloadVideo();
+    
         loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
     }
 });
@@ -386,7 +413,6 @@ window.onload = loadWatchlist;
           element.onclick = () => toggleWatchlist(element, nom, affiche, emplacement);
       }
   }
-
 
 
 
