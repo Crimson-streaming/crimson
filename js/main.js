@@ -227,6 +227,144 @@ gtag('js', new Date());
 
 gtag('config', 'G-7QZGKN17QX');
 
+//list.html js 
+
+const itemsPerPage = 48; // Nombre de films par page
+let currentPage = 1; // Page actuelle
+
+// Fonction pour charger les films depuis le localStorage
+function loadWatchlist() {
+    const watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+    renderFilms(watchlist, currentPage);
+    renderPagination(watchlist);
+}
+
+// Afficher les films pour une page donnée
+function renderFilms(watchlist, page) {
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const moviesToShow = watchlist.slice(startIndex, endIndex);
+
+    const container = document.getElementById("movies-container");
+    container.innerHTML = ""; // Réinitialise le contenu
+
+    if (moviesToShow.length > 0) {
+        moviesToShow.forEach((movie, index) => {
+            const movieDiv = document.createElement('div');
+            movieDiv.classList.add('col-lg-2', 'col-md-3', 'col-sm-4', 'col-xs-12', 'col-6', 'single-video');
+            movieDiv.innerHTML = `
+                <div class="watchlist-item">
+                    <a href="#" title="Remove" onclick="removeFromWatchlist(${startIndex + index})">
+                        <i class="fa fa-times"></i> Retirer
+                    </a>
+                </div>
+                <a href="${movie.emplacement}" title="${movie.nom}">
+                    <div class="video-img">
+                        <span class="video-item-content">${movie.nom}</span>
+                        <img src="${movie.affiche}" alt="${movie.nom}" title="${movie.nom}">
+                    </div>
+                </a>
+            `;
+            container.appendChild(movieDiv);
+        });
+    } else {
+        container.innerHTML = "<p>Aucun film dans votre liste pour le moment.</p>";
+    }
+}
+
+// Gérer les liens de pagination avec un maximum de 11 pages visibles
+function renderPagination(watchlist) {
+    const totalPages = Math.ceil(watchlist.length / itemsPerPage);
+    const paginationContainer = document.getElementById("pagination-links");
+    paginationContainer.innerHTML = ""; // Vider les liens de pagination
+
+    const maxVisiblePages = 11; // Nombre maximum de pages affichées
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+    // Ajuster si on est au début ou à la fin
+    if (endPage - startPage < maxVisiblePages - 1) {
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+
+    if (totalPages > 1) {
+        // Bouton précédent
+        paginationContainer.innerHTML += `
+            <li class="${currentPage === 1 ? "disabled" : ""}">
+                <a class="prev page-numbers" href="#" onclick="changePage(${currentPage - 1})"><i class="fa fa-caret-left"></i></a>
+            </li>
+        `;
+
+        // Liens des pages
+        for (let i = startPage; i <= endPage; i++) {
+            paginationContainer.innerHTML += `
+                <li class="${i === currentPage ? "active" : ""}">
+                    <a class="page-numbers" href="#" onclick="changePage(${i})">${i}</a>
+                </li>
+            `;
+        }
+
+        // Bouton suivant
+        paginationContainer.innerHTML += `
+            <li class="${currentPage === totalPages ? "disabled" : ""}">
+                <a class="next page-numbers" href="#" onclick="changePage(${currentPage + 1})"><i class="fa fa-caret-right"></i></a>
+            </li>
+        `;
+    }
+}
+
+// Changer de page
+function changePage(page) {
+    const watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+    const totalPages = Math.ceil(watchlist.length / itemsPerPage);
+    if (page < 1 || page > totalPages) return; // Vérifie les limites
+
+    currentPage = page;
+    renderFilms(watchlist, currentPage);
+    renderPagination(watchlist);
+}
+
+// Fonction pour retirer un film de la liste
+function removeFromWatchlist(index) {
+    const watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+    watchlist.splice(index, 1); // Supprime l'élément à l'index donné
+    localStorage.setItem("watchlist", JSON.stringify(watchlist));
+    loadWatchlist(); // Recharge la liste mise à jour
+}
+
+// Charger la watchlist au chargement de la page
+window.onload = loadWatchlist;
+
+
+
+
+//list boutton js 
+
+
+  function toggleWatchlist(element, nom, affiche, emplacement) {
+      const movie = { nom, affiche, emplacement };
+      const watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+
+      // Vérifie si le film est déjà dans la liste
+      const movieIndex = watchlist.findIndex(item => item.nom === nom);
+
+      if (movieIndex === -1) {
+          // Ajouter à la liste
+          watchlist.push(movie);
+          localStorage.setItem("watchlist", JSON.stringify(watchlist));
+          element.innerHTML = '<i class="fa fa-check"></i>‎ Supprimer de ma liste';
+          element.onclick = () => toggleWatchlist(element, nom, affiche, emplacement);
+      } else {
+          // Supprimer de la liste
+          watchlist.splice(movieIndex, 1);
+          localStorage.setItem("watchlist", JSON.stringify(watchlist));
+          element.innerHTML = '<i class="fa fa-plus"></i>‎ Ajouter à ma liste';
+          element.onclick = () => toggleWatchlist(element, nom, affiche, emplacement);
+      }
+  }
+
+
+
 
 
 

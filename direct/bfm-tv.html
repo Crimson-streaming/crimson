@@ -154,7 +154,6 @@
    
 <!-- son pwa -->
   
-    <!-- LOAD LOCAL CSS -->
   <link rel="stylesheet" href="../css/bootstrap.min.css">
   <link rel="stylesheet" href="../css/megamenu.css">
   <link rel="stylesheet" href="../css/style-three.css" id="theme">
@@ -166,73 +165,77 @@
   <link rel="stylesheet" href="../css/jquery-eu-cookie-law-popup.css">
   <link rel="stylesheet" href="../css/search.css">
   <link rel="stylesheet" href="../css/validatesecurity.css">
- 
+  <link rel="stylesheet" href="../css/global.css">
+  <link rel="stylesheet" href="../css/popup-video.css">
 
-    <!-- Player -->
-    <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
-     
-    <!-- SweetAlert2 -->
-    <script src="../js/sweetalert2@11.js"></script>
+  <!-- owl Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
   
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
-  
-    <style type="text/css">
-        .search .search-input input[type=text]::placeholder, 
-        .search .search-input input[type=text].focus {
-            background: #0d071e !important; 
-        }
-    </style>
+  <!-- owl Carousel -->
+  <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
+
+  <!-- SweetAlert2 -->
+  <script src="../js/sweetalert2@11.js"></script>
+
+  <!-- Google Fonts -->
+  <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
 </head>
 <body>
     <!-- Start Header -->
-    <header>
-        <div class="main-menu"> 
-            <nav class="header-section pin-style">
-                <div class="container-fluid">
-                    <div class="mod-menu">
-                        <div class="row">
-                            <div class="col-2"> 
-                                <a href="../index.html" title="logo" class="logo">
-                                    <img src="../img/logo.png" alt="logo" title="logo">
-                                </a>
-                            </div>
-                            <div class="col-7 nav-order-last nopadding">
-                                <div class="main-nav leftnav">
-                                    <ul class="top-nav">
-                                        <li class="visible-this d-md-none menu-icon"> 
-                                            <a href="#" class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#menu" aria-expanded="false" title="menu-toggle">
-                                                <i class="fa fa-bars"></i>
-                                            </a> 
-                                        </li>
-                                    </ul>
-                                    <div id="menu" class="collapse header-menu">
-                                        <ul class="nav vfx-item-nav">
-                                            <li><a href="../index.html" title="Home">Home</a></li>
-                                            <li><a href="../films.html" class="Active" title="Films">Films</a></li>
-                                            <li style="border-bottom: 0px solid !important;">
-                                                <a href="../direct.html" title="En direct">En direct</a>
-                                                <ul class="dm-align-2 mega-list"></ul>
-                                            </li>
-                                        </ul>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-3"> 
-                                <div class="right-sub-item-area">
-                                  <div class="search-item-block">
-                                    <form class="navbar-form navbar-left">
-                                      <a type="submit" href="#popup1" class="btn btn-default open" title="search"><i class="fa fa-search"></i></a>
-                                    </form>
-                                  </div>
-                                </div>      
-                            </div>
-                        </div>
-                    </div>        
+<header>
+  <!-- Start Navigation Area -->
+  <div class="main-menu"> 
+    <nav class="header-section pin-style">
+      <div class="container-fluid">
+        <div class="mod-menu">
+          <div class="row">
+            <div class="col-2"> 
+              <a href="../index.html" title="logo" class="logo"><img src="../img/logo.png" alt="logo" title="logo"></a>
+            </div>
+            <div class="col-7 nav-order-last nopadding">
+              <div class="main-nav leftnav">
+                <ul class="top-nav">
+                  <li class="visible-this d-md-none menu-icon"> <a href="#" class="navbar-toggle collapsed" data-bs-toggle="collapse" data-bs-target="#menu" aria-expanded="false" title="menu-toggle"><i class="fa fa-bars"></i></a> </li>
+                </ul>
+                <div id="menu" class="collapse header-menu">
+                  <ul class="nav vfx-item-nav">
+                    <li><a href="../index.html" class="" title="home">Home</a></li>
+                    <li><a href="../films.html" class="" title="Films">Films</a></li>
+                    <li style="border-bottom: 0px solid !important;"><a href="#" class="" title="En direct">En direct</a>
+                    <ul class="dm-align-2 mega-list">
+                  </ul>
                 </div>
-            </nav>
+              </div>
+            </div>
+            <div class="col-3">
+              <div class="right-sub-item-area">
+                <div class="search-item-block">
+                  <form class="navbar-form navbar-left">
+                    <a type="submit" href="#popup1" class="btn btn-default open" title="search">
+                      <i class="fa fa-search"></i>
+                    </a>
+                  </form>
+                </div>
+            <div class="user-menu">
+              <div class="user-name">
+                <span class="profile-container">
+                    <img src="../img/assets/user-avatar.png" alt="profile_img" title="User" id="userPic">
+                    <ul class="content-user">
+                        <li>
+                            <a href="../liste.html" title="Ma liste">
+                                <i class="fa fa-list"></i> Ma liste
+                            </a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
         </div>
-    </header>
+    </div>
+</div>
+
+
+</header>
     <!-- End Header -->
 
     <!-- Start Page Content Area -->
@@ -376,52 +379,63 @@
 async function showSuggestions(query) {
     const searchOutput = document.getElementById('search_output');
     searchOutput.innerHTML = ''; // Réinitialiser les résultats
-
+  
     if (!query) return; // Si la requête est vide, ne rien faire
+  
+    try {
+        const response = await fetch('../search/d.direct.json');
+        if (!response.ok) {
+            throw new Error('Erreur réseau');
+        }
 
-    const response = await fetch('../search/d.direct.json');
-    const movies = await response.json();
+        const movies = await response.json();
 
-    const filteredMovies = movies.filter(movie => movie.nom.toLowerCase().includes(query.toLowerCase()));
+        // Normaliser la requête
+        const normalizedQuery = normalizeString(query);
 
-    if (filteredMovies.length > 0) {
-        filteredMovies.forEach(movie => {
-            const movieDiv = document.createElement('div');
-            movieDiv.classList.add('single-video');
-            movieDiv.innerHTML = `
-                <a href="${movie.emplacement}">
-                    <div class="video-img">
-                        <span class="video-item-content">${movie.nom}</span>
-                        <img src="${movie.affiche}" alt="${movie.nom}">
-                    </div>
-                </a>
-            `;
-            searchOutput.appendChild(movieDiv);
-        });
-    } else {
-        searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
+        // Filtrer les films en fonction de la requête normalisée
+        const filteredMovies = movies.filter(movie =>
+            normalizeString(movie.nom).includes(normalizedQuery)
+        );
+
+        // Limiter les résultats à 48
+        const limitedMovies = filteredMovies.slice(0, 48);
+
+        if (limitedMovies.length > 0) {
+            limitedMovies.forEach(movie => {
+                const movieDiv = document.createElement('div');
+                movieDiv.classList.add('single-video');
+                movieDiv.innerHTML = `
+                    <a href="${movie.emplacement}">
+                        <div class="video-img">
+                            <span class="video-item-content">${movie.nom}</span>
+                            <img src="${movie.affiche}" alt="${movie.nom}">
+                        </div>
+                    </a>
+                `;
+                searchOutput.appendChild(movieDiv);
+            });
+        } else {
+            searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
+        }
+    } catch (error) {
+        searchOutput.innerHTML = '<p>Une erreur est survenue lors du chargement des données.</p>';
+        console.error('Erreur de recherche:', error);
     }
 }
+
+// Fonction pour normaliser les chaînes (insensible aux accents, tirets, majuscules, etc.)
+function normalizeString(str) {
+    return str
+        .toLowerCase() // Convertir en minuscule
+        .normalize('NFD') // Séparer les caractères accentués
+        .replace(/[\u0300-\u036f]/g, '') // Supprimer les accents
+        .replace(/['’]/g, '') // Supprimer les apostrophes
+        .replace(/-/g, ' ') // Remplacer les tirets par des espaces
+        .trim(); // Supprimer les espaces inutiles
+}
 </script> 
-<script> 
-    document.addEventListener('keydown', function(event) {
-        // Ctrl + U
-        if (event.ctrlKey && event.key === 'u') {
-            event.preventDefault();
-        }
-    
-        // Ctrl + Maj + C
-        if (event.ctrlKey && event.shiftKey && event.key === 'C') {
-            event.preventDefault();
-        }
-    
-        // Ctrl + Maj + I
-        if (event.ctrlKey && event.shiftKey && event.key === 'I') {
-            event.preventDefault();
-        }
-    });
-    
-    </script> <script>
+<script>
     // Fonction exécutée lors de l'utilisation du clic droit.
     $(document).bind("contextmenu", function() {
         // On indique au navigateur de ne pas réagir en cas de clic droit.

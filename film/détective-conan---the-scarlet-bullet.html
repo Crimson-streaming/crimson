@@ -86,20 +86,33 @@
                 </div>
               </div>
             </div>
-            <div class="col-3"> 
-							<div class="right-sub-item-area">
-							  <div class="search-item-block">
-								<form class="navbar-form navbar-left">
-								  <a type="submit" href="#popup1" class="btn btn-default open" title="search"><i class="fa fa-search"></i></a>
-								</form>
-							  </div>
-							</div>      
-						</div>
-          </div>
-        </div>        
-      </div>
-    </nav>
-  </div>
+            <div class="col-3">
+              <div class="right-sub-item-area">
+                <div class="search-item-block">
+                  <form class="navbar-form navbar-left">
+                    <a type="submit" href="#popup1" class="btn btn-default open" title="search">
+                      <i class="fa fa-search"></i>
+                    </a>
+                  </form>
+                </div>
+            <div class="user-menu">
+              <div class="user-name">
+                <span class="profile-container">
+                    <img src="../img/assets/user-avatar.png" alt="profile_img" title="User" id="userPic">
+                    <ul class="content-user">
+                        <li>
+                            <a href="../liste.html" title="Ma liste">
+                                <i class="fa fa-list"></i> Ma liste
+                            </a>
+                        </li>
+                    </ul>
+                </span>
+            </div>
+        </div>
+    </div>
+</div>
+
+
 </header>
   <div class="page-content-area vfx-item-ptb pt-0">
     <div class="container-fluid">
@@ -128,6 +141,11 @@
                     <div id="movie-button-important-margin" class="video-watch-share-item" style="margin-top: 160px;"></div>
                     <div style="height: 5px;"></div>
                     <div style="margin: 0px !important; margin-right: 10px !important;">
+                    <span id="1111">
+                      <a href="#" title="watchlist" onclick="toggleWatchlist(this, 'Détective Conan - The Scarlet Bullet', 'https://www.themoviedb.org/t/p/original/oLkB1UGJk05ZNThnVsvDKDpBdfi.jpg', 'film/détective-conan---the-scarlet-bullet.html')">
+                          <i class="fa fa-plus"></i>‎ Ajouter à ma liste
+                      </a>
+                    </span>
                     <span>
                       <a id="2222" href="javascript:void(0);" title="Regarde la bande-annonce" data-video="https://www.youtube.com/embed/n9jwh1T_GbY">
                           <i class="fa fa-play-circle"></i> Regarde la bande-annonce
@@ -212,6 +230,56 @@
   </div>
 </div>
 
+<footer>
+  <div class="footer-area vfx-item-ptb">
+    <div class="footer-wrapper">
+      <div class="container-fluid">
+        <div class="row">
+          <!-- Section des liens et mentions légales -->
+          <div class="col-lg-8 col-md-8 col-sm-12">
+            <div class="footer-bottom">
+              <div class="footer-links">
+                <ul>
+                  <li><a href="../pages/signaler-un-problème.html" title="⚐ Signaler un Problème">⚐ Signaler un Problème</a></li>
+                  <li><a href="../pages/recrutement.html" title="⛭ Recrutement">⛭ Recrutement</a></li>
+                  <li><a href="../pages/dmca.html" title="DMCA">DMCA</a></li>
+                </ul>
+              </div>
+              <div class="copyright-text">
+                <p>
+                  <b>© 2024 Crimson ‎
+                    <svg class="mt-2" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" style="margin: 0px !important;">
+                      <path fill="#ED2939" d="M36 27a4 4 0 0 1-4 4h-8V5h8a4 4 0 0 1 4 4v18z"></path>
+                      <path fill="#034696" d="M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5H4z"></path>
+                      <path fill="#EEE" d="M12 5h12v26H12z"></path>
+                    </svg>
+                    ‎ Tous droits réservés.
+                  </b>
+                  <br><br>
+                  <i style="font-weight: 100; font-size: 80%;">
+                    Ce site ne stocke aucun fichier vidéo. Les films disponibles sont fournis par des plateformes de lecture externes et indépendantes de notre site. Nous ne possédons pas les droits d’auteur de ces films et ne sommes impliqués ni dans leur mise en ligne ni dans leur diffusion.
+                  </i>
+                </p>
+              </div>
+            </div>
+          </div>
+
+          <!-- Section du logo et du titre -->
+          <div class="col-lg-4 col-md-4 col-sm-12">
+            <div class="single-footer">
+              <div class="footer-heading-wrap">
+                <h3 class="footer-heading">
+                  Crimson
+                  <img src="../img/assets/popcorn.webp" alt="Logo Crimson" style="margin-top: -6px;">
+                </h3>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</footer>
 
 <div id="popup1" class="popup-view popup-overlay">
   <div class="search">
