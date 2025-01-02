@@ -228,7 +228,7 @@
     box-sizing: border-box !important;
     margin: 0 !important;
     width: 100% !important;
-    height: 19px !important;  /* Ajoutez cette ligne pour augmenter la hauteur */
+    height: 18px !important;  /* Ajoutez cette ligne pour augmenter la hauteur */
     position: absolute !important;
     top: 0 !important;
     left: 0 !important;

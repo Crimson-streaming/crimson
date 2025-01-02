@@ -112,33 +112,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoElement = document.getElementById('player');
     const hlsSource = videoElement.querySelector('source').src;
 
-    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent);
-    if (!isIOS) {
-
-        player.on('ready', () => {
-          const controlsBar = document.querySelector('.plyr__controls');
-          if (!controlsBar) return;
-
-          // 1) Crée ton bouton Cast
-          const castWrapper = document.createElement('div');
-          castWrapper.classList.add('plyr__controls__item');
-
-          const castButton = document.createElement('google-cast-launcher');
-          castButton.id = 'castButton';
-          castButton.style.width = '24px';
-          castButton.style.height = '24px';
-          // … etc.
-          castWrapper.appendChild(castButton);
-
-          // 2) Trouve le bouton "settings"
-          const settingsBtn = controlsBar.querySelector('[data-plyr="settings"]');
-          // 3) Insertion avant le bouton suivant (souvent 'captions' ou 'fullscreen')
-          const nextBtn = controlsBar.querySelector('[data-plyr="fullscreen"]');
-
-          // 4) Insert le castWrapper dans la barre, juste avant nextBtn
-          controlsBar.insertBefore(castWrapper, nextBtn);
-        });
-    }
+    
     
     // Utiliser l'URL comme clé unique pour la vidéo
     const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
