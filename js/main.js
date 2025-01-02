@@ -59,7 +59,7 @@ function normalizeString(str) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const playerControls = ['play-large' ,'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
+    const playerControls = ['play-large' , 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
     const player = new Plyr('#player', {
         controls: playerControls,
         quality: {
