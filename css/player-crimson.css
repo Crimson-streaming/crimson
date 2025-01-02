@@ -268,7 +268,7 @@
     color: inherit !important;
 }
 .plyr__control[data-plyr="rewind"] {
-    background-image: url(/img/assets/rewind.svg) !important;
+    background-image: url(https://crimson-streaming.github.io/crimson/img/assets/rewind.svg) !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -277,7 +277,7 @@
 }
 
 .plyr__control[data-plyr="rewind"]:hover {
-    background-image: url(/img/assets/rewind.svg) !important;
+    background-image: url(https://crimson-streaming.github.io/crimson/img/assets/rewind.svg) !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -285,7 +285,7 @@
     margin-left: 7px !important;
 }
 .plyr__control[data-plyr="fast-forward"] {
-    background-image: url(/img/assets/forward.svg) !important;
+    background-image: url(https://crimson-streaming.github.io/crimson/img/assets/forward.svg) !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
@@ -293,7 +293,7 @@
 }
 
 .plyr__control[data-plyr="fast-forward"]:hover {
-    background-image: url(/img/assets/forward.svg) !important;
+    background-image: url(https://crimson-streaming.github.io/crimson/img/assets/forward.svg) !important;
     background-size: contain !important;
     background-repeat: no-repeat !important;
     background-position: center !important;
