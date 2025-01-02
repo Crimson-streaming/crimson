@@ -59,7 +59,7 @@ function normalizeString(str) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const playerControls = ['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
+    const playerControls = ['play-large' ,'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
     const player = new Plyr('#player', {
         controls: playerControls,
         quality: {
@@ -331,7 +331,7 @@ function showCustomAlert(message) {
 
     // Ajout du contenu de l'alerte (icône + message)
     alertDiv.innerHTML = `
-        <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Success" class="icon">
+        <img src="img/assets/icon-sweetalert.png" alt="Success" class="icon">
         ${message}
     `;
 
