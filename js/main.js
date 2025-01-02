@@ -324,13 +324,37 @@ function changePage(page) {
     renderPagination(watchlist);
 }
 
-// Fonction pour retirer un film de la liste
+function showCustomAlert(message) {
+    // Création de l'élément d'alerte
+    const alertDiv = document.createElement('div');
+    alertDiv.classList.add('custom-alert');
+
+    // Ajout du contenu de l'alerte (icône + message)
+    alertDiv.innerHTML = `
+        <img src="https://cdn-icons-png.flaticon.com/512/845/845646.png" alt="Success" class="icon">
+        ${message}
+    `;
+
+    // Ajout de l'alerte au corps de la page
+    document.body.appendChild(alertDiv);
+
+    // Suppression de l'alerte après 3 secondes
+    setTimeout(() => {
+        alertDiv.remove();
+    }, 3000); // Temps en millisecondes
+}
+
+// Exemple d'utilisation après la suppression d'un film
 function removeFromWatchlist(index) {
     const watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
-    watchlist.splice(index, 1); // Supprime l'élément à l'index donné
+    const removedItem = watchlist.splice(index, 1); // Supprime l'élément
     localStorage.setItem("watchlist", JSON.stringify(watchlist));
     loadWatchlist(); // Recharge la liste mise à jour
+
+    // Affiche l'alerte
+    showCustomAlert('Supprimé avec succès de votre liste');
 }
+
 
 // Charger la watchlist au chargement de la page
 window.onload = loadWatchlist;

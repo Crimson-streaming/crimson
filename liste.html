@@ -87,6 +87,45 @@
             border-radius: 5px;
             z-index: 2;
         }
+        .custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background-color: #4b0076; /* Fond violet */
+    color: #ffffff; /* Couleur du texte */
+    padding: 15px 20px;
+    border-radius: 8px;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+    z-index: 1000;
+    font-size: 16px;
+    font-family: Arial, sans-serif;
+    animation: fadeInOut 3s ease-in-out; /* Animation d'apparition/disparition */
+}
+
+.custom-alert .icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 10px;
+}
+
+@keyframes fadeInOut {
+    0% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+    10%, 90% {
+        opacity: 1;
+        transform: translateY(0);
+    }
+    100% {
+        opacity: 0;
+        transform: translateY(-10px);
+    }
+}
+
+
     </style>
 </head>
 
