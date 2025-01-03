@@ -17,3 +17,11 @@
     background-color: #b81b0e !important;
     transform: scale(1.05);
 }
+#video-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none; /* Par défaut, l'animation est cachée */
+}

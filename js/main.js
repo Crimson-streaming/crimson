@@ -58,130 +58,128 @@ function normalizeString(str) {
 }
 
 
+
 document.addEventListener('DOMContentLoaded', () => {
     const screenIsLargeEnough = window.innerWidth >= 600;
 
-    const playerControls = screenIsLargeEnough ? 
-        ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'] : 
-        ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
+    const playerControls = screenIsLargeEnough
+        ? ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen']
+        : ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
 
-    const player = new Plyr('#player', { 
+    const player = new Plyr('#player', {
         controls: playerControls,
         quality: {
             default: 720,
-            options: [720]
+            options: [720],
         },
         playsinline: true,
         keyboard: { focused: true, global: true },
         fullscreen: { enabled: true, fallback: true, iosNative: true },
         disableContextMenu: true,
         i18n: {
-              restart: 'Recommencer',
-    rewind: 'Revenir de {seektime}s',
-    play: 'Play',
-    pause: 'Pause',
-    fastForward: 'Passer {seektime}s',
-    seek: 'Rechercher',
-    seekLabel: '{currentTime} de {duration}',
-    played: 'Lancé',
-    buffered: 'Buffered',
-    currentTime: 'Temps actuel',
-    duration: 'Durée',
-    volume: 'Volume',
-    mute: 'Silence',
-    unmute: 'Son activé',
-    enableCaptions: 'Activer les sous-titres',
-    disableCaptions: 'Désactiver les sous-titres',
-    download: 'Télécharger',
-    enterFullscreen: 'Plein écran',
-    exitFullscreen: 'Sortir du plein écran',
-    frameTitle: 'Lecteur pour {title}',
-    captions: 'Sous-titres',
-    settings: 'Réglages',
-    pip: 'Picture-In-Picture',
-    menuBack: 'Retour au menu précédent',
-    speed: 'Vitesse',
-    normal: 'Normal',
-    quality: 'Qualité',
-    loop: 'Boucle',
-    start: 'Début',
-    end: 'Fin',
-    all: 'Tous',
-    reset: 'Réinitialiser',
-    disabled: 'Désactivé',
-    enabled: 'Activé',
-    advertisement: 'Publicité',
+            restart: 'Recommencer',
+            rewind: 'Revenir de {seektime}s',
+            play: 'Lecture',
+            pause: 'Pause',
+            fastForward: 'Avancer de {seektime}s',
+            seek: 'Rechercher',
+            seekLabel: '{currentTime} de {duration}',
+            played: 'Lancé',
+            buffered: 'Mis en mémoire',
+            currentTime: 'Temps actuel',
+            duration: 'Durée',
+            volume: 'Volume',
+            mute: 'Silence',
+            unmute: 'Son activé',
+            enableCaptions: 'Activer les sous-titres',
+            disableCaptions: 'Désactiver les sous-titres',
+            download: 'Télécharger',
+            enterFullscreen: 'Plein écran',
+            exitFullscreen: 'Sortir du plein écran',
+            frameTitle: 'Lecteur pour {title}',
+            captions: 'Sous-titres',
+            settings: 'Réglages',
+            pip: 'Picture-In-Picture',
+            menuBack: 'Retour au menu précédent',
+            speed: 'Vitesse',
+            normal: 'Normal',
+            quality: 'Qualité',
+            loop: 'Boucle',
+            start: 'Début',
+            end: 'Fin',
+            all: 'Tous',
+            reset: 'Réinitialiser',
+            disabled: 'Désactivé',
+            enabled: 'Activé',
+            advertisement: 'Publicité',
         },
     });
 
     const videoElement = document.getElementById('player');
+    const loaderElement = document.getElementById('video-loader');
     const hlsSource = videoElement.querySelector('source').src;
 
-    
-    
-    // Utiliser l'URL comme clé unique pour la vidéo
     const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
-    
-    // Charger le temps de lecture
+
     const loadVideoTime = () => {
         const savedTime = localStorage.getItem(storageKey);
         if (savedTime) {
             videoElement.currentTime = parseFloat(savedTime);
         }
     };
-    
-    // Précharger la vidéo avant la lecture pour réduire le délai de démarrage
-    const preloadVideo = () => {
-        videoElement.load();
+
+    const toggleLoader = (show) => {
+        loaderElement.style.display = show ? 'block' : 'none';
     };
-    
+
+    // Ne pas afficher le loader au départ
+    toggleLoader(false);
+
+    // Cacher le loader lors de la mise en pause
+    videoElement.addEventListener('pause', () => {
+        toggleLoader(false); // Masquer le loader lors de la pause
+    });
+
+    // Lorsqu'on appuie sur play, afficher le loader si la vidéo se charge
+    videoElement.addEventListener('play', () => {
+        toggleLoader(true); // Afficher le loader lors de la lecture
+    });
+
+    // Charger la vidéo via HLS
     if (Hls.isSupported()) {
         const hls = new Hls();
         hls.loadSource(hlsSource);
         hls.attachMedia(videoElement);
-    
-        // Gestion des erreurs HLS
-        hls.on(Hls.Events.ERROR, (event, data) => {
-            if (data.fatal) {
-                console.error('Erreur HLS:', data);
-                // Vous pouvez également mettre en place une gestion de repli ici
-            }
-        });
-    
-        videoElement.addEventListener('ended', () => {
-            hls.loadSource(hlsSource);
-            videoElement.play(); // Replay video
-        });
-    
-        // Sauvegarder le temps de lecture
+
+        hls.on(Hls.Events.MANIFEST_PARSED, () => toggleLoader(false));
+        hls.on(Hls.Events.BUFFER_STALLED, () => toggleLoader(true));
+
         videoElement.addEventListener('timeupdate', () => {
             localStorage.setItem(storageKey, videoElement.currentTime);
         });
-    
-        // Précharger la vidéo
-        preloadVideo();
-    
-        loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+
+        videoElement.addEventListener('waiting', () => toggleLoader(true)); // Quand la vidéo est en train de se charger
+        videoElement.addEventListener('playing', () => toggleLoader(false)); // Quand la vidéo commence à jouer, le loader disparaît
+
+        loadVideoTime();
     } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-        // Fallback for native HLS support (Safari)
         videoElement.src = hlsSource;
-    
-        // Gestion des erreurs de lecture vidéo
-        videoElement.onerror = () => {
-            console.error('Erreur de lecture vidéo');
-            // Vous pouvez ici mettre en place une gestion de l'erreur ou un repli
-        };
-    
-        videoElement.addEventListener('ended', () => {
-            videoElement.play(); // Replay video
+
+        videoElement.addEventListener('loadeddata', () => toggleLoader(false)); // Dès que la vidéo est prête
+        videoElement.addEventListener('waiting', () => toggleLoader(true)); // Quand la vidéo est en train de se charger
+        videoElement.addEventListener('timeupdate', () => {
+            localStorage.setItem(storageKey, videoElement.currentTime);
         });
-    
-        // Précharger la vidéo pour les navigateurs avec prise en charge native HLS
-        preloadVideo();
-    
-        loadVideoTime(); // Charger le temps de lecture à la fin de la configuration
+
+        loadVideoTime();
+    } else {
+        console.error('HLS non supporté, ou aucun fallback compatible disponible.');
+        toggleLoader(false); // Masquer le loader en cas d'erreur
     }
 });
+
+        
+
 
 function isInWebIntoApp() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;

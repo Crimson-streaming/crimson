@@ -192,13 +192,19 @@
         </div>
       </div>
       <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4 mb-5">
+        <div style="position: relative; width: 100%; margin: 0 auto;">
 
- <div style="position: relative; width: 100%; margin: 0 auto;">
+      <div id="video-loader" style="position: absolute; top: 50%; left: 50%; transform: translate(-50%, -50%); z-index: 97; display: none;">
+         <div class="spinner"></div>
+      </div>
+
       <img src="../img/logo.png" alt="Logo Crimson" id="player-logo" style="position: absolute; top: 17.5px; left: 17.5px; z-index: 9; width: 150px; max-width: 10%; opacity: 0.8;">
       <video id="player" playsinline controls preload="auto" poster="https://image.tmdb.org/t/p/original/hyvDUr0OK3JSSU27KcnU2Mvpnuw.jpg">
           <source src="https://share22147.sharecloudy.com/files/aa/DmgAohm59CwpjSrlwpX7xsU4pnDazu4dRlN.m3u8" type="application/x-mpegURL">
           Nous travaillons activement pour vous offrir ce contenu. Merci de votre patience. ❤️
         </video>
+        </div>
+      </div>
        <!-- JS Imports -->
 
         <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
