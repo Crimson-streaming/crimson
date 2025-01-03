@@ -1302,3 +1302,14 @@ ul.nav > li a.active, ul.nav > li:hover > a{
 	display: block !important;
 }
 }
+.logo-container {
+    position: fixed; /* Changez de absolute à fixed */
+    top: 20px;
+    left: 20px;
+    z-index: 100; /* S'assurer qu'il est au-dessus du lecteur */
+}
+
+.logo {
+    max-width: 100px;
+    height: auto;
+}
