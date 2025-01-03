@@ -59,8 +59,13 @@ function normalizeString(str) {
 
 
 document.addEventListener('DOMContentLoaded', () => {
-    const playerControls = ['play-large' ,'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'captions', 'pip', 'airplay', 'settings', 'fullscreen', 'cast'];
-    const player = new Plyr('#player', {
+    const screenIsLargeEnough = window.innerWidth >= 600;
+
+    const playerControls = screenIsLargeEnough ? 
+        ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'] : 
+        ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
+
+    const player = new Plyr('#player', { 
         controls: playerControls,
         quality: {
             default: 720,
