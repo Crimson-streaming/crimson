@@ -23,7 +23,7 @@
 
 
 	<meta name="apple-mobile-web-app-capable" content="yes">
-    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="apple-mobile-web-app-status-bar-style" content="default">
     <meta name="mobile-web-app-capable" content="yes">
     <link rel="manifest" href="pwa/manifest.json">
     <link rel="icon" href="img/logo-mobile.png" type="image/png">
@@ -149,30 +149,36 @@
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
 
 	<style type="text/css">
-		.search .search-input input[type=text]::placeholder,
-		.search .search-input input[type=text].focus {
-			background: #0d071e !important;
-		}
-
-/* Applique le padding en haut pour les appareils avec encoche */
-header {
-  padding-top: env(safe-area-inset-top); /* Ajuste dynamiquement le padding pour tenir compte de l'encoche */
-}
-
-/* Si vous voulez ajuster uniquement la navigation principale */
-.main-menu {
-  padding-top: env(safe-area-inset-top); /* Ajuste le padding pour le contenu sous l'en-tête */
-}
-
-/* Ajustement pour les autres éléments du site qui pourraient être affectés */
+		/* Applique un padding en haut pour tous les appareils avec encoche */
 body {
-  padding-top: env(safe-area-inset-top); /* Ajuste la hauteur du corps pour éviter tout chevauchement */
+  padding-top: env(safe-area-inset-top);
 }
 
-/* Si vous avez d'autres éléments en haut de la page qui sont concernés, vous pouvez aussi les ajuster */
+/* Pour l'en-tête, ajouter du padding en haut pour éviter l'encoche */
+header {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Si vous voulez ajuster uniquement la navigation principale sous l'en-tête */
+.main-menu {
+  padding-top: env(safe-area-inset-top);
+}
+
+/* Si vous avez un autre élément spécifique à ajuster, vous pouvez appliquer le padding aussi */
 .navbar {
   padding-top: env(safe-area-inset-top);
 }
+
+/* Optionnel : Si vous souhaitez un fond spécifique pour la zone safe area */
+body {
+  background-color: #fff; /* Fond du site */
+}
+
+/* Exemple pour la couleur de la barre de statut : */
+html, body {
+  background-color: #fff;
+}
+
 	
 </style>
 </head>
