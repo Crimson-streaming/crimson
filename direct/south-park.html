@@ -308,59 +308,108 @@
 
 <!-- Player Script -->
 <script type="text/javascript">
-  document.addEventListener('DOMContentLoaded', () => {
-      const player = new Plyr('#player', {
-         controls:['play-large', 'play', 'progress', 'current-time', 'mute', 'volume', 'airplay', 'pip', 'fullscreen', 'cast'],
-          quality: { default: 720, options: [720] },
-          playsinline: true,
-          disableContextMenu: true,
-          keyboard: { focused: true, global: true }
-      });
-
-      const videoElement = document.getElementById('player');
-      const hlsSource = videoElement.querySelector('source').src;
-
-      if (Hls.isSupported()) {
-          const hls = new Hls();
-          hls.loadSource(hlsSource);
-          hls.attachMedia(videoElement);
-
-          // Reload video when it ends
-          videoElement.addEventListener('ended', () => {
-              hls.loadSource(hlsSource);
-              videoElement.play();  // Replay video
-          });
-
-          // Handle HLS errors
-          hls.on(Hls.Events.ERROR, (event, data) => {
-              if (data.fatal) {
-                  switch (data.type) {
-                      case Hls.ErrorTypes.NETWORK_ERROR:
-                          console.log("Erreur réseau, tentative de récupération...");
-                          hls.startLoad();
-                          break;
-                      case Hls.ErrorTypes.MEDIA_ERROR:
-                          console.log("Erreur média, tentative de récupération...");
-                          hls.recoverMediaError();
-                          break;
-                      default:
-                          console.log("Erreur fatale, rechargement...");
-                          hls.destroy();
-                          hls.loadSource(hlsSource);
-                          hls.attachMedia(videoElement);
-                          break;
-                  }
-              }
-          });
-      } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-          // Fallback for native HLS support (Safari)
-          videoElement.src = hlsSource;
-          videoElement.addEventListener('ended', () => {
-              videoElement.play(); // Replay video
-          });
-      }
-  });
- </script>
+    document.addEventListener('DOMContentLoaded', () => {
+        const screenIsLargeEnough = window.innerWidth >= 600;
+    
+        const playerControls = screenIsLargeEnough
+            ? ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'pip', 'airplay', 'fullscreen']
+            : ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'pip', 'airplay', 'fullscreen'];
+    
+        const player = new Plyr('#player', {
+            controls: playerControls,
+            settings: ["captions", "quality", "speed"],
+            playsinline: true,
+            keyboard: { focused: true, global: true },
+            fullscreen: { enabled: true, fallback: true, iosNative: true },
+            storage: { enabled: true, key: "player" },
+            invertTime: false,
+            disableContextMenu: true,
+            ratio: "16:9",
+            i18n: {
+                restart: 'Recommencer',
+                rewind: 'Revenir de {seektime}s',
+                play: 'Lecture',
+                pause: 'Pause',
+                fastForward: 'Avancer de {seektime}s',
+                seek: 'Rechercher',
+                seekLabel: '{currentTime} de {duration}',
+                played: 'Lancé',
+                buffered: 'Mis en mémoire',
+                currentTime: 'Temps actuel',
+                duration: 'Durée',
+                volume: 'Volume',
+                mute: 'Silence',
+                unmute: 'Son activé',
+                enableCaptions: 'Activer les sous-titres',
+                disableCaptions: 'Désactiver les sous-titres',
+                download: 'Télécharger',
+                enterFullscreen: 'Plein écran',
+                exitFullscreen: 'Sortir du plein écran',
+                frameTitle: 'Lecteur pour {title}',
+                captions: 'Sous-titres',
+                settings: 'Réglages',
+                pip: 'Picture-In-Picture',
+                menuBack: 'Retour au menu précédent',
+                speed: 'Vitesse',
+                normal: 'Normal',
+                quality: 'Qualité',
+                loop: 'Boucle',
+                start: 'Début',
+                end: 'Fin',
+                all: 'Tous',
+                reset: 'Réinitialiser',
+                disabled: 'Désactivé',
+                enabled: 'Activé',
+                advertisement: 'Publicité',
+            },
+            volume: 1,
+            muted: false
+        });
+    
+            const videoElement = document.getElementById('player');
+            const hlsSource = videoElement.querySelector('source').src;
+    
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(hlsSource);
+                hls.attachMedia(videoElement);
+    
+                // Reload video when it ends
+                videoElement.addEventListener('ended', () => {
+                    hls.loadSource(hlsSource);
+                    videoElement.play();  // Replay video
+                });
+    
+                // Handle HLS errors
+                hls.on(Hls.Events.ERROR, (event, data) => {
+                    if (data.fatal) {
+                        switch (data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                console.log("Erreur réseau, tentative de récupération...");
+                                hls.startLoad();
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                console.log("Erreur média, tentative de récupération...");
+                                hls.recoverMediaError();
+                                break;
+                            default:
+                                console.log("Erreur fatale, rechargement...");
+                                hls.destroy();
+                                hls.loadSource(hlsSource);
+                                hls.attachMedia(videoElement);
+                                break;
+                        }
+                    }
+                });
+            } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                // Fallback for native HLS support (Safari)
+                videoElement.src = hlsSource;
+                videoElement.addEventListener('ended', () => {
+                    videoElement.play(); // Replay video
+                });
+            }
+        });
+       </script>
  <div id="popup1" class="popup-view popup-overlay">
   <div class="search">
     <div class="search-container has-results"><span class="title">Rechercher</span>
