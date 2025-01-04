@@ -1,0 +1,16 @@
+{
+    "name": "Crimson",
+    "short_name": "Crimson",
+    "description": "Crimson - LE site de streaming",
+    "start_url": "../index.html",
+    "display": "standalone",
+    "background_color": "#000000",
+    "theme_color": "#b81b0e",
+    "icons": [
+      {
+        "src": "img/logo-mobile.png",  
+        "sizes": "500x500",
+        "type": "image/png"
+      }
+    ]
+}

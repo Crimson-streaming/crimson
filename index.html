@@ -22,6 +22,14 @@
     <link rel="image_src" href="https://crimson-streaming.github.io/crimson/img/assets/og-image.png" />
 
 
+	<meta name="apple-mobile-web-app-capable" content="yes">
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+    <meta name="mobile-web-app-capable" content="yes">
+    <link rel="manifest" href="pwa/manifest.json">
+    <link rel="icon" href="img/logo-mobile.png" type="image/png">
+    <link rel="apple-touch-icon" href="img/logo-mobile.png">
+
+
 <!-- Favicon -->
 <link rel="icon" type="image/png" href="img/favicon/favicon.png">
 	
@@ -145,7 +153,27 @@
 		.search .search-input input[type=text].focus {
 			background: #0d071e !important;
 		}
-		
+
+/* Applique le padding en haut pour les appareils avec encoche */
+header {
+  padding-top: env(safe-area-inset-top); /* Ajuste dynamiquement le padding pour tenir compte de l'encoche */
+}
+
+/* Si vous voulez ajuster uniquement la navigation principale */
+.main-menu {
+  padding-top: env(safe-area-inset-top); /* Ajuste le padding pour le contenu sous l'en-tête */
+}
+
+/* Ajustement pour les autres éléments du site qui pourraient être affectés */
+body {
+  padding-top: env(safe-area-inset-top); /* Ajuste la hauteur du corps pour éviter tout chevauchement */
+}
+
+/* Si vous avez d'autres éléments en haut de la page qui sont concernés, vous pouvez aussi les ajuster */
+.navbar {
+  padding-top: env(safe-area-inset-top);
+}
+	
 </style>
 </head>
 <!-- Start Header -->
