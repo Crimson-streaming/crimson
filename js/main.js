@@ -76,6 +76,7 @@ document.addEventListener('DOMContentLoaded', () => {
         keyboard: { focused: true, global: true },
         fullscreen: { enabled: true, fallback: true, iosNative: true },
         disableContextMenu: true,
+        ratio: "16:9",
         i18n: {
             restart: 'Recommencer',
             rewind: 'Revenir de {seektime}s',
