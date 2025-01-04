@@ -68,13 +68,12 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const player = new Plyr('#player', {
         controls: playerControls,
-        quality: {
-            default: 720,
-            options: [720],
-        },
+        settings: ["captions", "quality", "speed"],
         playsinline: true,
         keyboard: { focused: true, global: true },
         fullscreen: { enabled: true, fallback: true, iosNative: true },
+        storage: { enabled: true, key: "player" },
+        invertTime: false,
         disableContextMenu: true,
         ratio: "16:9",
         i18n: {
@@ -114,6 +113,8 @@ document.addEventListener('DOMContentLoaded', () => {
             enabled: 'Activé',
             advertisement: 'Publicité',
         },
+        volume: 1,
+        muted: false
     });
 
     const videoElement = document.getElementById('player');
