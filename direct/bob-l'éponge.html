@@ -366,49 +366,41 @@
         });
     
         const videoElement = document.getElementById('player');
-        const hlsSource = videoElement.querySelector('source').src;
-    
-        if (Hls.isSupported()) {
-            const hls = new Hls();
-            hls.loadSource(hlsSource);
-            hls.attachMedia(videoElement);
-    
-            // Reload video when it ends
-            videoElement.addEventListener('ended', () => {
-                hls.loadSource(hlsSource);
-                videoElement.play();  // Replay video
-            });
-    
-            // Handle HLS errors
-            hls.on(Hls.Events.ERROR, (event, data) => {
-                if (data.fatal) {
-                    switch (data.type) {
-                        case Hls.ErrorTypes.NETWORK_ERROR:
-                            console.log("Erreur réseau, tentative de récupération...");
-                            hls.startLoad();
-                            break;
-                        case Hls.ErrorTypes.MEDIA_ERROR:
-                            console.log("Erreur média, tentative de récupération...");
-                            hls.recoverMediaError();
-                            break;
-                        default:
-                            console.log("Erreur fatale, rechargement...");
-                            hls.destroy();
-                            hls.loadSource(hlsSource);
-                            hls.attachMedia(videoElement);
-                            break;
-                    }
+    const hlsSource = videoElement.querySelector('source').src;
+
+    if (Hls.isSupported()) {
+        // Utilisation de Hls.js pour les navigateurs compatibles
+        const hls = new Hls();
+        hls.loadSource(hlsSource);
+        hls.attachMedia(videoElement);
+
+        hls.on(Hls.Events.ERROR, (event, data) => {
+            if (data.fatal) {
+                switch (data.type) {
+                    case Hls.ErrorTypes.NETWORK_ERROR:
+                        console.error("Erreur réseau : tentative de récupération...");
+                        hls.startLoad();
+                        break;
+                    case Hls.ErrorTypes.MEDIA_ERROR:
+                        console.error("Erreur média : tentative de récupération...");
+                        hls.recoverMediaError();
+                        break;
+                    default:
+                        console.error("Erreur fatale, arrêt du lecteur...");
+                        hls.destroy();
+                        break;
                 }
-            });
-        } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-            // Fallback for native HLS support (Safari)
-            videoElement.src = hlsSource;
-            videoElement.addEventListener('ended', () => {
-                videoElement.play(); // Replay video
-            });
-        } else {
-            console.error('HLS non supporté sur ce navigateur.');
-        }
+            }
+        });
+    } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+        // Support natif iOS
+        videoElement.src = hlsSource;
+        videoElement.addEventListener('loadedmetadata', () => {
+            videoElement.play();
+        });
+    } else {
+        console.error("HLS non pris en charge sur ce navigateur.");
+    }
     });
     </script>    
        <footer>
