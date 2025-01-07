@@ -367,50 +367,44 @@
         });
     
         const videoElement = document.getElementById('player');
-        const hlsSource = videoElement.querySelector('source').src;
-    
-        // Gestion du flux HLS
-        if (Hls.isSupported()) {
-            const hls = new Hls();
-            hls.loadSource(hlsSource);
-            hls.attachMedia(videoElement);
-    
-            // Redémarrage de la vidéo à la fin
-            videoElement.addEventListener('ended', () => {
+            const hlsSource = videoElement.querySelector('source').src;
+
+            // Vérifie si HLS est supporté par Hls.js
+            if (Hls.isSupported()) {
+                const hls = new Hls();
                 hls.loadSource(hlsSource);
-                videoElement.play();
-            });
-    
-            // Gestion des erreurs HLS
-            hls.on(Hls.Events.ERROR, (event, data) => {
-                if (data.fatal) {
-                    switch (data.type) {
-                        case Hls.ErrorTypes.NETWORK_ERROR:
-                            console.log("Erreur réseau, tentative de récupération...");
-                            hls.startLoad();
-                            break;
-                        case Hls.ErrorTypes.MEDIA_ERROR:
-                            console.log("Erreur média, tentative de récupération...");
-                            hls.recoverMediaError();
-                            break;
-                        default:
-                            console.log("Erreur fatale, rechargement...");
-                            hls.destroy();
-                            hls.loadSource(hlsSource);
-                            hls.attachMedia(videoElement);
-                            break;
+                hls.attachMedia(videoElement);
+                console.log("HLS.js utilisé pour le streaming.");
+
+                // Gestion des erreurs HLS
+                hls.on(Hls.Events.ERROR, (event, data) => {
+                    if (data.fatal) {
+                        console.error("Erreur fatale HLS détectée :", data);
+                        switch (data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                console.log("Erreur réseau, tentative de récupération...");
+                                hls.startLoad();
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                console.log("Erreur média, tentative de récupération...");
+                                hls.recoverMediaError();
+                                break;
+                            default:
+                                console.log("Erreur fatale, rechargement...");
+                                hls.destroy();
+                                hls.loadSource(hlsSource);
+                                hls.attachMedia(videoElement);
+                                break;
+                        }
                     }
-                }
-            });
-        } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-            // Support natif HLS (Safari)
-            videoElement.src = hlsSource;
-            videoElement.addEventListener('ended', () => {
-                videoElement.play();
-            });
-        } else {
-            console.error("HLS n'est pas supporté sur ce navigateur.");
-        }
+                });
+            } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+                // Support natif HLS (Safari)
+                videoElement.src = hlsSource;
+                console.log("Lecteur HLS natif utilisé.");
+            } else {
+                console.error("HLS n'est pas supporté par ce navigateur.");
+            }
     });
     </script>
         
