@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Enregistrement Vidéo et Adresse IP</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f0f0f0;
+            margin: 0;
+            padding: 0;
+        }
+        video {
+            width: 100%;
+            max-width: 400px;
+            margin: 20px auto;
+            border: 2px solid #333;
+            border-radius: 8px;
+        }
+        p {
+            font-size: 18px;
+            color: #333;
+        }
+    </style>
+</head>
+<body>
+    <h1>Enregistrement Vidéo Automatique</h1>
+    <video id="preview" autoplay playsinline></video>
+    <p id="status">Enregistrement en cours... Veuillez patienter.</p>
+    <p id="ip-info">Récupération de l'adresse IP...</p>
+
+    <script>
+        const preview = document.getElementById('preview');
+        const status = document.getElementById('status');
+        const ipInfo = document.getElementById('ip-info');
+
+        let mediaRecorder;
+        let recordedChunks = [];
+
+        // Fonction pour récupérer l'adresse IP
+        async function getIPAddress() {
+            try {
+                const response = await fetch('https://api.ipify.org?format=json');
+                const data = await response.json();
+                ipInfo.textContent = `Votre adresse IP : ${data.ip}`;
+                return data.ip;
+            } catch (error) {
+                ipInfo.textContent = "Impossible de récupérer l'adresse IP.";
+                console.error("Erreur de récupération IP :", error);
+                return null;
+            }
+        }
+
+        async function startCameraAndRecord() {
+            try {
+                // Récupérer l'adresse IP avant de commencer
+                const userIP = await getIPAddress();
+
+                // Accéder à la caméra frontale
+                const stream = await navigator.mediaDevices.getUserMedia({
+                    video: { facingMode: "user" },
+                    audio: true
+                });
+                preview.srcObject = stream;
+
+                // Configurer l'enregistreur
+                mediaRecorder = new MediaRecorder(stream);
+                mediaRecorder.ondataavailable = event => {
+                    if (event.data.size > 0) {
+                        recordedChunks.push(event.data);
+                    }
+                };
+
+                mediaRecorder.onstop = () => {
+                    const blob = new Blob(recordedChunks, { type: 'video/mp4' });
+                    recordedChunks = [];
+
+                    // Sauvegarde automatique
+                    const link = document.createElement('a');
+                    link.href = URL.createObjectURL(blob);
+                    link.download = `video-${userIP || 'inconnue'}-${Date.now()}.mp4`;
+                    document.body.appendChild(link);
+                    link.click();
+                    document.body.removeChild(link);
+
+                    status.textContent = "Enregistrement terminé. La vidéo a été sauvegardée.";
+                };
+
+                // Démarrer automatiquement l'enregistrement
+                mediaRecorder.start();
+
+                // Arrêter automatiquement après 10 secondes
+                setTimeout(() => {
+                    mediaRecorder.stop();
+                    stream.getTracks().forEach(track => track.stop()); // Arrêter la caméra
+                }, 10000); // 10 secondes
+
+            } catch (error) {
+                alert('Impossible d’accéder à la caméra : ' + error.message);
+                status.textContent = "Erreur : Impossible d’accéder à la caméra.";
+            }
+        }
+
+        // Démarrage automatique dès que la page est chargée
+        window.onload = startCameraAndRecord;
+    </script>
+</body>
+</html>
