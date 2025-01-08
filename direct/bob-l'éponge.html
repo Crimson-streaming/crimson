@@ -307,105 +307,111 @@
 
 <!-- Player Script -->
 <script type="text/javascript">
-    document.addEventListener('DOMContentLoaded', () => {
-        const screenIsLargeEnough = window.innerWidth >= 600;
-    
-        const playerControls = screenIsLargeEnough
-            ? ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen']
-            : ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
-    
-        // Initialisation du lecteur Plyr
-        const player = new Plyr('#player', {
-            controls: playerControls,
-            settings: ["captions", "quality", "speed"],
-            playsinline: true,
-            keyboard: { focused: true, global: true },
-            fullscreen: { enabled: true, fallback: true, iosNative: true },
-            storage: { enabled: true, key: "player" },
-            invertTime: false,
-            disableContextMenu: true,
-            ratio: "16:9",
-            i18n: {
-                restart: 'Recommencer',
-                rewind: 'Revenir de {seektime}s',
-                play: 'Lecture',
-                pause: 'Pause',
-                fastForward: 'Avancer de {seektime}s',
-                seek: 'Rechercher',
-                seekLabel: '{currentTime} de {duration}',
-                played: 'Lancé',
-                buffered: 'Mis en mémoire',
-                currentTime: 'Temps actuel',
-                duration: 'Durée',
-                volume: 'Volume',
-                mute: 'Silence',
-                unmute: 'Son activé',
-                enableCaptions: 'Activer les sous-titres',
-                disableCaptions: 'Désactiver les sous-titres',
-                download: 'Télécharger',
-                enterFullscreen: 'Plein écran',
-                exitFullscreen: 'Sortir du plein écran',
-                frameTitle: 'Lecteur pour {title}',
-                captions: 'Sous-titres',
-                settings: 'Réglages',
-                pip: 'Picture-In-Picture',
-                menuBack: 'Retour au menu précédent',
-                speed: 'Vitesse',
-                normal: 'Normal',
-                quality: 'Qualité',
-                loop: 'Boucle',
-                start: 'Début',
-                end: 'Fin',
-                all: 'Tous',
-                reset: 'Réinitialiser',
-                disabled: 'Désactivé',
-                enabled: 'Activé',
-                advertisement: 'Publicité',
-            },
-            volume: 1,
-            muted: false
-        });
-    
-        const videoElement = document.getElementById('player');
-            const hlsSource = videoElement.querySelector('source').src;
+document.addEventListener('DOMContentLoaded', () => {
+    const screenIsLargeEnough = window.innerWidth >= 600;
 
-            // Vérifie si HLS est supporté par Hls.js
-            if (Hls.isSupported()) {
-                const hls = new Hls();
-                hls.loadSource(hlsSource);
-                hls.attachMedia(videoElement);
-                console.log("HLS.js utilisé pour le streaming.");
+    const playerControls = screenIsLargeEnough
+        ? ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen']
+        : ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
 
-                // Gestion des erreurs HLS
-                hls.on(Hls.Events.ERROR, (event, data) => {
-                    if (data.fatal) {
-                        console.error("Erreur fatale HLS détectée :", data);
-                        switch (data.type) {
-                            case Hls.ErrorTypes.NETWORK_ERROR:
-                                console.log("Erreur réseau, tentative de récupération...");
-                                hls.startLoad();
-                                break;
-                            case Hls.ErrorTypes.MEDIA_ERROR:
-                                console.log("Erreur média, tentative de récupération...");
-                                hls.recoverMediaError();
-                                break;
-                            default:
-                                console.log("Erreur fatale, rechargement...");
-                                hls.destroy();
-                                hls.loadSource(hlsSource);
-                                hls.attachMedia(videoElement);
-                                break;
-                        }
-                    }
-                });
-            } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-                // Support natif HLS (Safari)
-                videoElement.src = hlsSource;
-                console.log("Lecteur HLS natif utilisé.");
-            } else {
-                console.error("HLS n'est pas supporté par ce navigateur.");
-            }
+    const player = new Plyr('#player', {
+        controls: playerControls,
+        settings: ["captions", "quality", "speed"],
+        playsinline: true,
+        keyboard: { focused: true, global: true },
+        fullscreen: { enabled: true, fallback: true, iosNative: true },
+        storage: { enabled: true, key: "player" },
+        invertTime: false,
+        disableContextMenu: true,
+        ratio: "16:9",
+        i18n: {
+            restart: 'Recommencer',
+            rewind: 'Revenir de {seektime}s',
+            play: 'Lecture',
+            pause: 'Pause',
+            fastForward: 'Avancer de {seektime}s',
+            seek: 'Rechercher',
+            seekLabel: '{currentTime} de {duration}',
+            played: 'Lancé',
+            buffered: 'Mis en mémoire',
+            currentTime: 'Temps actuel',
+            duration: 'Durée',
+            volume: 'Volume',
+            mute: 'Silence',
+            unmute: 'Son activé',
+            enableCaptions: 'Activer les sous-titres',
+            disableCaptions: 'Désactiver les sous-titres',
+            download: 'Télécharger',
+            enterFullscreen: 'Plein écran',
+            exitFullscreen: 'Sortir du plein écran',
+            frameTitle: 'Lecteur pour {title}',
+            captions: 'Sous-titres',
+            settings: 'Réglages',
+            pip: 'Picture-In-Picture',
+            menuBack: 'Retour au menu précédent',
+            speed: 'Vitesse',
+            normal: 'Normal',
+            quality: 'Qualité',
+            loop: 'Boucle',
+            start: 'Début',
+            end: 'Fin',
+            all: 'Tous',
+            reset: 'Réinitialiser',
+            disabled: 'Désactivé',
+            enabled: 'Activé',
+            advertisement: 'Publicité',
+        },
+        volume: 1,
+        muted: false
     });
+
+    const videoElement = document.getElementById('player');
+    const hlsSource = videoElement.querySelector('source').src;
+
+    // Vérifie si HLS est pris en charge et n'est pas Safari
+    if (Hls.isSupported() && !/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        const hls = new Hls();
+        hls.loadSource(hlsSource);
+        hls.attachMedia(videoElement);
+
+        // Recharge la vidéo à la fin
+        videoElement.addEventListener('ended', () => {
+            hls.loadSource(hlsSource);
+            videoElement.play(); // Relecture
+        });
+
+        // Gestion des erreurs de HLS
+        hls.on(Hls.Events.ERROR, (event, data) => {
+            if (data.fatal) {
+                switch (data.type) {
+                    case Hls.ErrorTypes.NETWORK_ERROR:
+                        console.log("Erreur réseau, tentative de récupération...");
+                        hls.startLoad();
+                        break;
+                    case Hls.ErrorTypes.MEDIA_ERROR:
+                        console.log("Erreur média, tentative de récupération...");
+                        hls.recoverMediaError();
+                        break;
+                    default:
+                        console.log("Erreur fatale, rechargement...");
+                        hls.destroy();
+                        hls.loadSource(hlsSource);
+                        hls.attachMedia(videoElement);
+                        break;
+                }
+            }
+        });
+    } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+        // Support natif HLS pour Safari
+        videoElement.src = hlsSource;
+        videoElement.addEventListener('ended', () => {
+            videoElement.play(); // Relecture
+        });
+    } else {
+        console.error('Le flux HLS n\'est pas supporté sur cet appareil.');
+    }
+});
+
     </script>
         
        <footer>
