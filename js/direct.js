@@ -14,6 +14,9 @@ document.addEventListener('DOMContentLoaded', () => {
         storage: { enabled: true, key: "player" },
         invertTime: false,
         disableContextMenu: true,
+        hls: {
+            enable: true,
+        },
         ratio: "16:9",
         i18n: {
             restart: 'Recommencer',
@@ -59,49 +62,29 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoElement = document.getElementById('player');
     const hlsSource = videoElement.querySelector('source').src;
 
-    // Vérifie si HLS est pris en charge et n'est pas Safari
-    if (Hls.isSupported() && !/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-        const hls = new Hls();
-        hls.loadSource(hlsSource);
-        hls.attachMedia(videoElement);
+    player.on('ready', function(event) {
+        var instance = event.detail.plyr;
 
-        // Recharge la vidéo à la fin
-        videoElement.addEventListener('ended', () => {
-            hls.loadSource(hlsSource);
-            videoElement.play(); // Relecture
-        });
-
-        // Gestion des erreurs de HLS
-        hls.on(Hls.Events.ERROR, (event, data) => {
-            if (data.fatal) {
-                switch (data.type) {
-                    case Hls.ErrorTypes.NETWORK_ERROR:
-                        console.log("Erreur réseau, tentative de récupération...");
-                        hls.startLoad();
-                        break;
-                    case Hls.ErrorTypes.MEDIA_ERROR:
-                        console.log("Erreur média, tentative de récupération...");
-                        hls.recoverMediaError();
-                        break;
-                    default:
-                        console.log("Erreur fatale, rechargement...");
-                        hls.destroy();
-                        hls.loadSource(hlsSource);
-                        hls.attachMedia(videoElement);
-                        break;
-                }
+        var hlsSource = null;
+        var sources = instance.media.querySelectorAll('source');
+        for (let i = 0; i < sources.length; ++i) {
+            if (sources[i].src.indexOf('.m3u8') > -1 || sources[i].src.indexOf('.txt') > -1 || sources[i].src.indexOf('.ts') > -1) {
+                hlsSource = sources[i].src;
+                break;
             }
-        });
-    } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-        // Support natif HLS pour Safari
-        videoElement.src = hlsSource;
-        videoElement.addEventListener('ended', () => {
-            videoElement.play(); // Relecture
-        });
-    } else {
-        console.error('Le flux HLS n\'est pas supporté sur cet appareil.');
-    }
+        }
+
+        if (hlsSource !== null && Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(hlsSource);
+            hls.attachMedia(instance.media);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+                // Vous pouvez ajouter des actions ici lorsque le manifeste est analysé
+            });
+        }
+    });
 });
+
 
 async function showSuggestions(query) {
     const searchOutput = document.getElementById('search_output');
