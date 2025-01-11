@@ -56,7 +56,9 @@
 		.search .search-input input[type=text].focus {
 			background: #0d071e !important;
 		}
-
+    .minimal-alert {
+    border-radius: 8px !important;
+}
 	</style>
 
 </head>
@@ -297,7 +299,22 @@
 <script src="https://crimson-streaming.github.io/crimson/js/custom-main.js"></script>
 <script src="https://crimson-streaming.github.io/crimson/js/jquery-eu-cookie-law-popup.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-
+<script>
+  function showMinimalAlert() {
+      Swal.fire({
+          text: 'Bientôt disponible',
+          icon: 'info', // Icône d'information
+          background: '#0d071e',
+          color: '#ffffff',
+          showConfirmButton: false,
+          timer: 1500, // Fermeture automatique après 1,5 seconde
+          width: '300px', // Réduit la largeur de la popup
+          customClass: {
+              popup: 'minimal-alert'
+          }
+      });
+  }
+  </script>
 
 </body>
 </html>
