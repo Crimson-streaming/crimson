@@ -148,49 +148,7 @@
 		.search .search-input input[type=text].focus {
 			background: #0d071e !important;
 		}
-    @media not all and (min-resolution: 0.001dpcm) {
-  @supports (-webkit-appearance: none) {
-    .votre-classe-section-saison {
-      display: block !important;
-    }
-  }
-}
-.video-img img {
-    width: 100%;
-    height: auto;
-    object-fit: cover; /* S'assure que les images remplissent leur conteneur */
-    display: block; /* Évite les marges blanches ou les sauts inattendus */
-}
-.season-item-related {
-    display: flex;
-    flex-wrap: nowrap; /* Garde les éléments alignés horizontalement */
-    overflow-x: auto; /* Ajoute un défilement horizontal si nécessaire */
-    scroll-snap-type: x mandatory; /* Active un défilement fluide */
-}
-
-.season-item-related .single-video {
-    flex: 0 0 auto; /* Chaque élément garde sa largeur */
-    scroll-snap-align: start; /* Alignement parfait des éléments au défilement */
-    margin-right: 10px; /* Espacement entre les items */
-}
-.season-item-related {
-    -webkit-overflow-scrolling: touch; /* Permet un défilement fluide sur iOS */
-    overflow-x: scroll; /* Active le défilement horizontal */
-    scrollbar-width: none; /* Cache la barre de défilement pour Firefox */
-}
-
-.season-item-related::-webkit-scrollbar {
-    display: none; /* Cache la barre de défilement pour Webkit */
-}
-@supports (-webkit-touch-callout: none) {
-    .season-item-related {
-        display: block !important;
-    }
-    .single-video {
-        margin-bottom: 20px;
-    }
-}
-
+  
 	</style>
 
 </head>
