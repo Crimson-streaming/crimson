@@ -118,12 +118,6 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoElement = document.getElementById('player');
     const loaderElement = document.getElementById('video-loader');
     
-    // Vérifie si le lecteur vidéo existe
-    if (!videoElement || !loaderElement) {
-        console.error('Éléments vidéo ou loader non trouvés');
-        return;
-    }
-
     // Obtenir la source MP4
     const mp4Source = videoElement.querySelector('source') ? videoElement.querySelector('source').src : '';
     const storageKey = `videoCurrentTime_${encodeURIComponent(mp4Source)}`;
@@ -138,10 +132,13 @@ document.addEventListener('DOMContentLoaded', () => {
     const toggleLoader = (show) => {
         loaderElement.style.display = show ? 'block' : 'none';
     };
-
+    
+    // Optimiser le préchargement de la vidéo
+    videoElement.preload = "auto"; // Précharge la vidéo pour que la lecture démarre rapidement
+    
     // Initialiser le loader
     toggleLoader(false);
-
+    
     // Gestion des événements du lecteur
     videoElement.addEventListener('loadeddata', () => toggleLoader(false)); // Vidéo prête
     videoElement.addEventListener('canplay', () => toggleLoader(false)); // Vidéo peut être lue
@@ -155,9 +152,13 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Erreur de lecture vidéo', e);
         toggleLoader(false); // Masque le loader en cas d'erreur
     });
-
+    
     // Charger le temps de lecture sauvegardé
     loadVideoTime();
+    
+    // Cacher le loader quand la vidéo commence à charger
+    videoElement.addEventListener('loadstart', () => toggleLoader(true)); // Début du chargement
+    
 });
 
 function isInWebIntoApp() {
