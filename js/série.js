@@ -117,15 +117,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const videoElement = document.getElementById('player');
     const loaderElement = document.getElementById('video-loader');
+    const mp4Source = videoElement.querySelector('source').src;
 
-    // Charger une vidéo basse qualité initialement
-    const lowQualitySource = "video_low.mp4"; // Version basse qualité
-    const highQualitySource = "video_high.mp4"; // Version haute qualité
-    videoElement.querySelector('source').src = lowQualitySource;
+    const storageKey = `videoCurrentTime_${encodeURIComponent(mp4Source)}`;
 
-    const storageKey = `videoCurrentTime_${encodeURIComponent(lowQualitySource)}`;
-
-    // Charger le temps de lecture sauvegardé
     const loadVideoTime = () => {
         const savedTime = localStorage.getItem(storageKey);
         if (savedTime) {
@@ -137,40 +132,41 @@ document.addEventListener('DOMContentLoaded', () => {
         loaderElement.style.display = show ? 'block' : 'none';
     };
 
-    // Précharger la vidéo basse qualité
-    videoElement.preload = "auto";
-    toggleLoader(true); // Affiche le loader pendant le préchargement
+    // Ne pas afficher le loader au départ
+    toggleLoader(false);
 
-    videoElement.addEventListener('loadeddata', () => toggleLoader(false)); // Vidéo prête
-    videoElement.addEventListener('waiting', () => toggleLoader(true)); // Vidéo en chargement
-    videoElement.addEventListener('playing', () => toggleLoader(false)); // Lecture démarrée
+    // Cacher le loader lors de la mise en pause
+    videoElement.addEventListener('pause', () => {
+        toggleLoader(false); // Masquer le loader lors de la pause
+    });
+
+    // Lorsqu'on appuie sur play, afficher le loader si la vidéo se charge
+    videoElement.addEventListener('play', () => {
+        toggleLoader(true); // Afficher le loader lors de la lecture
+    });
+
+    // Charger la vidéo MP4 directement
+    videoElement.src = mp4Source;
+
+    // Événements liés au chargement de la vidéo
+    videoElement.addEventListener('loadeddata', () => {
+        toggleLoader(false); // Dès que la vidéo est prête
+    });
+
+    videoElement.addEventListener('waiting', () => {
+        toggleLoader(true); // Quand la vidéo est en train de se charger
+    });
+
+    videoElement.addEventListener('playing', () => {
+        toggleLoader(false); // Quand la vidéo commence à jouer, le loader disparaît
+    });
+
+    // Sauvegarder le temps de lecture dans le localStorage
     videoElement.addEventListener('timeupdate', () => {
         localStorage.setItem(storageKey, videoElement.currentTime);
     });
-    videoElement.addEventListener('error', (e) => {
-        console.error('Erreur de lecture vidéo', e);
-        toggleLoader(false); // Masque le loader en cas d'erreur
-    });
 
-    // Charger le temps de lecture sauvegardé
     loadVideoTime();
-
-    // Passer à la haute qualité après un court délai
-    videoElement.addEventListener('canplay', () => {
-        console.log("Version basse qualité prête.");
-        setTimeout(() => {
-            console.log("Chargement de la version haute qualité...");
-            const currentTime = videoElement.currentTime;
-
-            // Basculer vers la version haute qualité
-            videoElement.querySelector('source').src = highQualitySource;
-            videoElement.load();
-            videoElement.currentTime = currentTime; // Reprendre au même endroit
-            videoElement.play();
-        }, 5000); // Attendez 5 secondes avant de basculer
-    });
-
-    videoElement.addEventListener('loadstart', () => toggleLoader(true)); // Début du chargement
 });
 
 function isInWebIntoApp() {
