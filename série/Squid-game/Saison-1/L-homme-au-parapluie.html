@@ -54,15 +54,16 @@
     <!-- Google Fonts -->
 	<link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
 
+<!-- Load Local JS -->
+<script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
 	<style type="text/css">
 		.search .search-input input[type=text]::placeholder,
 		.search .search-input input[type=text].focus {
 			background: #0d071e !important;
 		}
-    
-
-
-
+ .minimal-alert {
+    border-radius: 8px !important;
+}
 </style>
  <!-- Player css -->
  <style> 
@@ -391,7 +392,7 @@
            
                
            <div class="single-video portrait">
-           <a href="saison-2.html" title="Saison 2">
+           <a href="javascript:void(0);" title="Saison 2" onclick="showMinimalAlert()">
               <div class="video-img" style="padding-bottom: 0px !important;">  
    
                <img src="https://image.tmdb.org/t/p/original/caq0z9C2vvKdDhGe1EX6nerswV5.jpg" alt="Saison 2" title="Saison 2">         
@@ -403,7 +404,7 @@
            </div>
  
            <div class="single-video portrait">
-             <a href="sason-3.html" title="Saison 3">
+             <a href="javascript:void(0);" title="Saison 3" onclick="showMinimalAlert()">
                 <div class="video-img" style="padding-bottom: 0px !important;">  
      
                  <img src="https://image.tmdb.org/t/p/original/pqBRu6Ae8tYTjcnFtDC4ZyIsRUi.jpg" alt="Saison 3" title="Saison 3">         
@@ -423,6 +424,7 @@
    </div>
   </div>
 </div>
+
 
 <footer>
   <div class="footer-area vfx-item-ptb">
@@ -493,7 +495,22 @@
 <script src="https://crimson-streaming.github.io/crimson/js/custom-main.js"></script>
 <script src="https://crimson-streaming.github.io/crimson/js/jquery-eu-cookie-law-popup.js"></script>
 <script src="https://crimson-streaming.github.io/crimson/js/série.js"></script>
-<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">     <script>
+function showMinimalAlert() {
+    Swal.fire({
+        text: 'Bientôt disponible',
+        icon: 'info', // Icône d'information
+        background: '#0d071e',
+        color: '#ffffff',
+        showConfirmButton: false,
+        timer: 1500, // Fermeture automatique après 1,5 seconde
+        width: '300px', // Réduit la largeur de la popup
+        customClass: {
+            popup: 'minimal-alert'
+        }
+    });
+}
+</script>
 
 
 </body>
