@@ -115,58 +115,26 @@ document.addEventListener('DOMContentLoaded', () => {
         muted: false
     });
 
-    const videoElement = document.getElementById('player');
-    const loaderElement = document.getElementById('video-loader');
-    const mp4Source = videoElement.querySelector('source').src;
+    player.on('ready', function(event) {
+        var instance = event.detail.plyr;
 
-    const storageKey = `videoCurrentTime_${encodeURIComponent(mp4Source)}`;
-
-    const loadVideoTime = () => {
-        const savedTime = localStorage.getItem(storageKey);
-        if (savedTime) {
-            videoElement.currentTime = parseFloat(savedTime);
+        var hslSource = null;
+        var sources = instance.media.querySelectorAll('source'),
+            i;
+        for (i = 0; i < sources.length; ++i) {
+            if (sources[i].src.indexOf('.m3u8') > -1 || sources[i].src.indexOf('.txt') > -1 || sources[i].src.indexOf('.ts') > -1) {
+                hslSource = sources[i].src;
+            }
         }
-    };
 
-    const toggleLoader = (show) => {
-        loaderElement.style.display = show ? 'block' : 'none';
-    };
-
-    // Ne pas afficher le loader au départ
-    toggleLoader(false);
-
-    // Cacher le loader lors de la mise en pause
-    videoElement.addEventListener('pause', () => {
-        toggleLoader(false); // Masquer le loader lors de la pause
+        if (hslSource !== null && Hls.isSupported()) {
+            var hls = new Hls();
+            hls.loadSource(hslSource);
+            hls.attachMedia(instance.media);
+            hls.on(Hls.Events.MANIFEST_PARSED, function() {
+            });
+        }
     });
-
-    // Lorsqu'on appuie sur play, afficher le loader si la vidéo se charge
-    videoElement.addEventListener('play', () => {
-        toggleLoader(true); // Afficher le loader lors de la lecture
-    });
-
-    // Charger la vidéo MP4 directement
-    videoElement.src = mp4Source;
-
-    // Événements liés au chargement de la vidéo
-    videoElement.addEventListener('loadeddata', () => {
-        toggleLoader(false); // Dès que la vidéo est prête
-    });
-
-    videoElement.addEventListener('waiting', () => {
-        toggleLoader(true); // Quand la vidéo est en train de se charger
-    });
-
-    videoElement.addEventListener('playing', () => {
-        toggleLoader(false); // Quand la vidéo commence à jouer, le loader disparaît
-    });
-
-    // Sauvegarder le temps de lecture dans le localStorage
-    videoElement.addEventListener('timeupdate', () => {
-        localStorage.setItem(storageKey, videoElement.currentTime);
-    });
-
-    loadVideoTime();
 });
 
 function isInWebIntoApp() {
