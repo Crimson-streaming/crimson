@@ -114,82 +114,14 @@ document.addEventListener('DOMContentLoaded', () => {
         volume: 1,
         muted: false
     });
+});
+
+
 
     
-    const videoElement = document.getElementById('player');
-    const loaderElement = document.getElementById('video-loader');
 
-    // URL de la vidéo
-    const videoUrl = videoElement.querySelector('source').src;
 
-    // Clé pour stocker le temps de lecture
-    const storageKey = `videoCurrentTime_${encodeURIComponent(videoUrl)}`;
 
-    // Charger le temps de lecture précédent
-    const loadVideoTime = () => {
-        const savedTime = localStorage.getItem(storageKey);
-        if (savedTime) {
-            videoElement.currentTime = parseFloat(savedTime);
-        }
-    };
-
-    // Afficher ou masquer le loader
-    const toggleLoader = (show) => {
-        loaderElement.style.display = show ? 'block' : 'none';
-    };
-
-    // Charger uniquement les premières minutes
-    const loadFirstMinutes = async () => {
-        toggleLoader(true);
-
-        try {
-            const range = "bytes=0-" + 1024 * 1024 * 6 * 3; // Charger 3 minutes (approx. 18 Mo à 6 Mbps)
-            const response = await fetch(videoUrl, {
-                headers: { Range: range },
-            });
-
-            const blob = await response.blob();
-            const objectUrl = URL.createObjectURL(blob);
-
-            videoElement.src = objectUrl;
-            videoElement.load();
-
-            toggleLoader(false);
-        } catch (error) {
-            console.error("Erreur de chargement des premières minutes :", error);
-            toggleLoader(false);
-        }
-    };
-
-    // Précharger le reste de la vidéo
-    const preloadRemainingVideo = async () => {
-        try {
-            const response = await fetch(videoUrl);
-            const blob = await response.blob();
-            const objectUrl = URL.createObjectURL(blob);
-
-            // Remplacer la source par la vidéo complète
-            videoElement.src = objectUrl;
-            videoElement.load();
-        } catch (error) {
-            console.error("Erreur de préchargement :", error);
-        }
-    };
-
-    // Sauvegarder le temps de lecture
-    videoElement.addEventListener('timeupdate', () => {
-        localStorage.setItem(storageKey, videoElement.currentTime);
-    });
-
-    // Charger les premières minutes au chargement
-    loadFirstMinutes();
-
-    // Précharger le reste pendant la lecture
-    videoElement.addEventListener('play', preloadRemainingVideo);
-
-    // Charger le temps de lecture précédent
-    loadVideoTime();
-});
 
 function isInWebIntoApp() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
