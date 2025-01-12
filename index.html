@@ -152,6 +152,11 @@
 		.search .search-input input[type=text].focus {
 			background: #0d071e !important;
 		}
+		.custom-swal {
+        border-radius: 8px;
+        width: 80%;
+        max-width: 400px;
+    }
 	</style>
 
 </head>
@@ -400,7 +405,7 @@
 		  </div>
   
 		  <div class="video-shows-carousel owl-carousel" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
-			<div class="single-video" style="flex: 0 0 22%; box-sizing: border-box; padding: 10px;">
+			<div class="single-video" style="flex: 0 0 22%; box-sizing: border-box; padding: 1px;">
 			  <a href="série/Squid-game/Squid-game.html" title="Squid Game">
 				<div class="video-img" style="position: relative; width: 100%; height: auto;">
 				  <img src="https://image.tmdb.org/t/p/original/hdgpeJ6xM1vjHxOFLHRNaBuoYRN.jpg" alt="Squid Game" title="Shows-Squid Game" style="width: 100%; height: auto; object-fit: cover;">
@@ -409,7 +414,7 @@
 			  </a>
 			</div>
   
-			<div class="single-video" style="flex: 0 0 22%; box-sizing: border-box; padding: 10px;">
+			<div class="single-video" style="flex: 0 0 22%; box-sizing: border-box; padding: 1px;">
 			  <a href="série/Fallout/Fallout.html" title="Fallout">
 				<div class="video-img" style="position: relative; width: 100%; height: auto;">
 				  <img src="https://image.tmdb.org/t/p/original/90xkPbXRHIy9SlgBLHp6A7dVt8s.jpg" alt="Fallout" title="Shows-Squid Game" style="width: 100%; height: auto; object-fit: cover;">
@@ -971,40 +976,8 @@ function normalizeString(str) {
         });
         localStorage.setItem('popupDisplayed', 'true');
     }
-	$(document).ready(function () {
-    $(".video-shows-carousel").owlCarousel({
-        loop: false,  // Pas de défilement infini
-        margin: 10,   // Espacement entre les éléments
-        nav: true,    // Affichage des flèches de navigation
-        dots: true,   // Affichage des points de navigation
-        navText: [
-            "<i class='fas fa-angle-left'></i>", 
-            "<i class='fas fa-angle-right'></i>"
-        ],
-        responsive: {
-            0: {       // Pour les petits écrans
-                items: 1
-            },
-            600: {     // Pour les écrans moyens
-                items: 2
-            },
-            1000: {    // Pour les écrans larges
-                items: ""
-            }
-        }
-    });
-});
-
+	$(document).ready(function(){$(".video-shows-carousel").owlCarousel({loop:!1,margin:10,nav:!0,dots:!0,navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],responsive:{0:{items:1},600:{items:2},1e3:{items:""}}})});
 </script>
-
-<style>
-    .custom-swal {
-        border-radius: 8px;
-        width: 80%;
-        max-width: 400px;
-    }
-</style>
-
 
 </body>
 </html>
