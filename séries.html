@@ -156,6 +156,21 @@
                 </a>
               </div>
                  </div>
+                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12">
+                  <div class="single-video">
+                    <a href="#" title="One piece Live-Action" onclick="showMinimalAlert()">
+                        <div class="video-img" style="padding-bottom: 0px !important;">     
+            
+                                     
+        
+                        <img src="https://image.tmdb.org/t/p/original/bXhzP2I6K7I3LxXyhbCTeh8q6vJ.jpg" alt="One piece Live-Action" title="One piece Live-Action">         
+                       </div>
+                       <div class="season-title-item" style="margin-top: 10px;">
+                        <h3>One piece Live-Action</h3>
+                       </div> 
+                    </a>
+                  </div>
+                     </div>
              
 
                                 
@@ -238,6 +253,23 @@
   <script src="js/custom-main.js"></script>
   <script src="js/jquery-eu-cookie-law-popup.js"></script>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+
+  <script>
+    function showMinimalAlert() {
+        Swal.fire({
+            text: 'Bientôt disponible',
+            icon: 'info', // Icône d'information
+            background: '#0d071e',
+            color: '#ffffff',
+            showConfirmButton: false,
+            timer: 1500, // Fermeture automatique après 1,5 seconde
+            width: '300px', // Réduit la largeur de la popup
+            customClass: {
+                popup: 'minimal-alert'
+            }
+        });
+    }
+    </script>
   
   
   </body>

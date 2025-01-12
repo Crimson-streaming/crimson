@@ -416,11 +416,20 @@
 			<div class="single-video" style="flex: 0 0 22%; box-sizing: border-box; padding: 1px;">
 			  <a href="série/Fallout/Fallout.html" title="Fallout">
 				<div class="video-img" style="position: relative; width: 100%; height: auto;">
-				  <img src="https://image.tmdb.org/t/p/original/90xkPbXRHIy9SlgBLHp6A7dVt8s.jpg" alt="Fallout" title="Shows-Squid Game" style="width: 100%; height: auto; object-fit: cover;">
+				  <img src="https://image.tmdb.org/t/p/original/90xkPbXRHIy9SlgBLHp6A7dVt8s.jpg" alt="Fallout" title="Shows-Fallout" style="width: 100%; height: auto; object-fit: cover;">
 				  <span class="video-item-content" style="font-size: 12px; text-align: center;">Fallout</span>
 				</div>
 			  </a>
 			</div>
+
+			<div class="single-video" style="flex: 0 0 22%; box-sizing: border-box; padding: 1px;">
+				<a href="#" title="One piece Live-Action" onclick="showMinimalAlert()">
+				  <div class="video-img" style="position: relative; width: 100%; height: auto;">
+					<img src="https://image.tmdb.org/t/p/original/bXhzP2I6K7I3LxXyhbCTeh8q6vJ.jpg" alt="One piece Live-Action" title="Shows-One piece Live-Action" style="width: 100%; height: auto; object-fit: cover;">
+					<span class="video-item-content" style="font-size: 12px; text-align: center;">One piece Live-Action</span>
+				  </div>
+				</a>
+			  </div>
   
 		  </div>
 		</div>
@@ -977,6 +986,22 @@
     }
 	$(document).ready(function(){$(".video-shows-carousel").owlCarousel({loop:!1,margin:10,nav:!0,dots:!0,navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],responsive:{0:{items:1},600:{items:2},1e3:{items:""}}})});
 </script>
+<script>
+	function showMinimalAlert() {
+		Swal.fire({
+			text: 'Bientôt disponible',
+			icon: 'info', // Icône d'information
+			background: '#0d071e',
+			color: '#ffffff',
+			showConfirmButton: false,
+			timer: 1500, // Fermeture automatique après 1,5 seconde
+			width: '300px', // Réduit la largeur de la popup
+			customClass: {
+				popup: 'minimal-alert'
+			}
+		});
+	}
+	</script>
 
 </body>
 </html>
