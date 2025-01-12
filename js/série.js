@@ -117,57 +117,93 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const videoElement = document.getElementById('player');
     const loaderElement = document.getElementById('video-loader');
-    const mp4Source = videoElement.querySelector('source').src;
-    
-    const storageKey = `videoCurrentTime_${encodeURIComponent(mp4Source)}`;
-    
+
+    // Récupérer automatiquement la source de la balise <source>
+    const sourceElement = videoElement.querySelector('source');
+    const videoUrl = sourceElement ? sourceElement.src : null;
+
+    if (!videoUrl) {
+        console.error("Aucune URL source trouvée pour la vidéo.");
+        return;
+    }
+
+    const storageKey = `videoCurrentTime_${encodeURIComponent(videoUrl)}`;
+
     const loadVideoTime = () => {
         const savedTime = localStorage.getItem(storageKey);
         if (savedTime) {
             videoElement.currentTime = parseFloat(savedTime);
         }
     };
-    
+
     const toggleLoader = (show) => {
         loaderElement.style.display = show ? 'block' : 'none';
     };
-    
-    // Ne pas afficher le loader au départ
-    toggleLoader(false);
-    
-    // Cacher le loader lors de la mise en pause
-    videoElement.addEventListener('pause', () => {
-        toggleLoader(false); // Masquer le loader lors de la pause
-    });
-    
-    // Lorsqu'on appuie sur play, afficher le loader si la vidéo se charge
-    videoElement.addEventListener('play', () => {
-        toggleLoader(true); // Afficher le loader lors de la lecture
-    });
-    
-    // Charger la vidéo MP4 directement
-    videoElement.src = mp4Source;
-    
-    // Événements liés au chargement de la vidéo
-    videoElement.addEventListener('loadeddata', () => {
-        toggleLoader(false); // Dès que la vidéo est prête
-    });
-    
-    videoElement.addEventListener('waiting', () => {
-        toggleLoader(true); // Quand la vidéo est en train de se charger
-    });
-    
-    videoElement.addEventListener('playing', () => {
-        toggleLoader(false); // Quand la vidéo commence à jouer, le loader disparaît
-    });
-    
-    // Sauvegarder le temps de lecture dans le localStorage
+
+    const initializeVideo = async () => {
+        try {
+            const mediaSource = new MediaSource();
+            videoElement.src = URL.createObjectURL(mediaSource);
+
+            mediaSource.addEventListener("sourceopen", async () => {
+                const sourceBuffer = mediaSource.addSourceBuffer('video/mp4; codecs="avc1.42E01E, mp4a.40.2"');
+
+                toggleLoader(true);
+
+                // Charger les 3 premières minutes (3 minutes * 60 secondes = 180 secondes)
+                const startByte = 0;
+                const endByte = Math.floor(3 * 60 * 1024 * 1024); // Approximation de 1 Mo/s pour une vidéo MP4
+                const initialChunk = await fetchRange(videoUrl, startByte, endByte);
+                sourceBuffer.appendBuffer(initialChunk);
+
+                sourceBuffer.addEventListener("updateend", () => {
+                    if (!sourceBuffer.updating && mediaSource.readyState === "open") {
+                        mediaSource.endOfStream();
+                        toggleLoader(false);
+
+                        // Charger le reste de la vidéo en arrière-plan
+                        loadRemainingVideo(sourceBuffer, endByte + 1);
+                    }
+                });
+            });
+
+        } catch (error) {
+            console.error("Erreur lors de l'initialisation de la vidéo :", error);
+        }
+    };
+
+    const fetchRange = async (url, start, end) => {
+        const response = await fetch(url, {
+            headers: {
+                Range: `bytes=${start}-${end}`
+            }
+        });
+
+        if (!response.ok) {
+            throw new Error(`Erreur réseau : ${response.status}`);
+        }
+
+        return await response.arrayBuffer();
+    };
+
+    const loadRemainingVideo = async (sourceBuffer, startByte) => {
+        try {
+            const remainingChunk = await fetchRange(videoUrl, startByte, "");
+            sourceBuffer.appendBuffer(remainingChunk);
+        } catch (error) {
+            console.error("Erreur lors du chargement du reste de la vidéo :", error);
+        }
+    };
+
+    // Sauvegarder le temps de lecture
     videoElement.addEventListener('timeupdate', () => {
         localStorage.setItem(storageKey, videoElement.currentTime);
     });
-    
+
     loadVideoTime();
-    });
+    initializeVideo();
+
+});
 
 function isInWebIntoApp() {
     var userAgent = navigator.userAgent || navigator.vendor || window.opera;
