@@ -385,6 +385,47 @@
 		</div>
 	</div>
 </div>
+
+<div class="video-shows-section vfx-item-ptb">
+	<div class="container-fluid">
+	  <div class="row">
+		<div class="col-md-12">
+		  <div class="vfx-item-section">
+			<a href="séries.html" title="Séries en tendance">
+			  <h3>Séries en tendance</h3>
+			</a>
+			<span class="view-more">
+			  <a href="séries.html" title="view-more">Voir tout</a>
+			</span>
+		  </div>
+  
+		  <div class="video-shows-carousel owl-carousel" style="display: flex; justify-content: space-between; flex-wrap: wrap;">
+			<div class="single-video" style="flex: 0 0 22%; box-sizing: border-box; padding: 10px;">
+			  <a href="série/Squid-game/Squid-game.html" title="Squid Game">
+				<div class="video-img" style="position: relative; width: 100%; height: auto;">
+				  <img src="https://image.tmdb.org/t/p/original/hdgpeJ6xM1vjHxOFLHRNaBuoYRN.jpg" alt="Squid Game" title="Shows-Squid Game" style="width: 100%; height: auto; object-fit: cover;">
+				  <span class="video-item-content" style="font-size: 12px; text-align: center;">Squid Game</span>
+				</div>
+			  </a>
+			</div>
+  
+			<div class="single-video" style="flex: 0 0 22%; box-sizing: border-box; padding: 10px;">
+			  <a href="série/Fallout/Fallout.html" title="Fallout">
+				<div class="video-img" style="position: relative; width: 100%; height: auto;">
+				  <img src="https://image.tmdb.org/t/p/original/90xkPbXRHIy9SlgBLHp6A7dVt8s.jpg" alt="Fallout" title="Shows-Squid Game" style="width: 100%; height: auto; object-fit: cover;">
+				  <span class="video-item-content" style="font-size: 12px; text-align: center;">Fallout</span>
+				</div>
+			  </a>
+			</div>
+  
+		  </div>
+		</div>
+	  </div>
+	</div>
+  </div>
+  
+  
+
 <!-- End Latest Movies Video Carousel -->
 <!-- Start Movies Video Carousel -->
 <div class="video-carousel-area vfx-item-ptb">
@@ -913,14 +954,7 @@ function normalizeString(str) {
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-<script>
-	// Fonction exécutée lors de l'utilisation du clic droit.
-	$(document).bind("contextmenu", function() {
-		// On indique au navigateur de ne pas réagir en cas de clic droit.
-		return false;
-	});
 
-</script>
 <script>
     if (!localStorage.getItem('popupDisplayed')) {
         Swal.fire({
@@ -937,6 +971,30 @@ function normalizeString(str) {
         });
         localStorage.setItem('popupDisplayed', 'true');
     }
+	$(document).ready(function () {
+    $(".video-shows-carousel").owlCarousel({
+        loop: false,  // Pas de défilement infini
+        margin: 10,   // Espacement entre les éléments
+        nav: true,    // Affichage des flèches de navigation
+        dots: true,   // Affichage des points de navigation
+        navText: [
+            "<i class='fas fa-angle-left'></i>", 
+            "<i class='fas fa-angle-right'></i>"
+        ],
+        responsive: {
+            0: {       // Pour les petits écrans
+                items: 1
+            },
+            600: {     // Pour les écrans moyens
+                items: 2
+            },
+            1000: {    // Pour les écrans larges
+                items: ""
+            }
+        }
+    });
+});
+
 </script>
 
 <style>

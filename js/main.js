@@ -523,3 +523,32 @@ setTimeout(function () {
     }
 }, 1e3);
 //}
+
+	// Fonction exécutée lors de l'utilisation du clic droit.
+	$(document).bind("contextmenu", function() {
+		// On indique au navigateur de ne pas réagir en cas de clic droit.
+		return false;
+	});
+	$(document).ready(function () {
+    $(".video-shows-carousel").owlCarousel({
+        loop: false,  // Pas de défilement infini
+        margin: 10,   // Espacement entre les éléments
+        nav: true,    // Affichage des flèches de navigation
+        dots: true,   // Affichage des points de navigation
+        navText: [
+            "<i class='fas fa-angle-left'></i>", 
+            "<i class='fas fa-angle-right'></i>"
+        ],
+        responsive: {
+            0: {       // Pour les petits écrans
+                items: 1
+            },
+            600: {     // Pour les écrans moyens
+                items: 2
+            },
+            1000: {    // Pour les écrans larges
+                items: ""
+            }
+        }
+    });
+});
