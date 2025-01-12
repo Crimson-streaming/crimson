@@ -5,7 +5,7 @@ async function showSuggestions(query) {
     if (!query) return; // Si la requête est vide, ne rien faire
   
     try {
-        const response = await fetch('https://crimson-streaming.github.io/crimson/search/séries.json');
+        const response = await fetch('https://crimson-streaming.github.io/crimson/search/s.json');
         if (!response.ok) {
             throw new Error('Erreur réseau');
         }
