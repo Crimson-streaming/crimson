@@ -114,10 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         volume: 1,
         muted: false
     });
-});
-
-
-
+});    
     
 
 
