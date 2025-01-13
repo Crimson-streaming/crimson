@@ -268,10 +268,12 @@ let currentPage = 1; // Page actuelle
 
 // Fonction pour charger les films depuis le localStorage
 function loadWatchlist() {
-    const watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+    let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+    watchlist.reverse(); // Inverse l'ordre pour afficher les nouveaux films en premier
     renderFilms(watchlist, currentPage);
     renderPagination(watchlist);
 }
+
 
 // Afficher les films pour une page donnée
 function renderFilms(watchlist, page) {
@@ -380,9 +382,15 @@ function showCustomAlert(message) {
 
 // Exemple d'utilisation après la suppression d'un film
 function removeFromWatchlist(index) {
-    const watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
-    const removedItem = watchlist.splice(index, 1); // Supprime l'élément
+    let watchlist = JSON.parse(localStorage.getItem("watchlist")) || [];
+    
+    // Recalcul de l'indice réel en fonction de l'inversion
+    const actualIndex = watchlist.length - 1 - index;
+    
+    // Supprime l'élément à l'indice recalculé
+    const removedItem = watchlist.splice(actualIndex, 1); 
     localStorage.setItem("watchlist", JSON.stringify(watchlist));
+    
     loadWatchlist(); // Recharge la liste mise à jour
 
     // Affiche l'alerte
@@ -390,8 +398,10 @@ function removeFromWatchlist(index) {
 }
 
 
+
 // Charger la watchlist au chargement de la page
 window.onload = loadWatchlist;
+
 
 
 
