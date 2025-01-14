@@ -1,0 +1,92 @@
+
+/* Style de l'alerte personnalisée */
+.custom-alert {
+    position: fixed;
+    top: 20px;
+    right: 20px;
+    background: #4b0076;
+    color: #fff;
+    padding: 15px 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    font-size: 14px;
+    z-index: 1000;
+}
+
+.custom-alert .icon {
+    width: 24px;
+    height: 24px;
+}
+
+.custom-alert span {
+    font-size: 16px;
+}
+/* Style de la popup */
+.custom-popup {
+    border-radius: 18px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    width: 400px !important;
+    max-width: 90%;
+    background-color: #4b0076 !important;
+    color: #ffffff !important;
+}
+
+/* Style pour le bouton de confirmation */
+.custom-confirm-btn {
+    background-color: #b81b0e !important;
+    color: #ffffff !important;
+    border: none !important;
+    padding: 10px 20px !important;
+    border-radius: 5px !important;
+    font-weight: bold !important;
+}
+
+/* Style pour l'input */
+.custom-input {
+    background-color: #4b0076 !important;
+    color: #ffffff !important;
+    border: 1px solid #ffffff !important;
+    border-radius: 5px !important;
+    padding: 10px !important;
+    box-shadow: none !important;
+}
+
+/* Bordure rouge en cas d'erreur */
+.error-border {
+    border: 2px solid red !important;
+}
+
+/* Animation de vibration */
+@keyframes shake {
+    0% { transform: translateX(0); }
+    25% { transform: translateX(-5px); }
+    50% { transform: translateX(5px); }
+    75% { transform: translateX(-5px); }
+    100% { transform: translateX(5px); }
+}
+
+.shake {
+    animation: shake 0.5s ease;
+    animation-iteration-count: 1;
+}
+.profile-section .col-lg-3, .profile-section .col-md-4 {
+    display: flex;
+    flex-direction: column; /* Aligne les éléments en colonne */
+    align-items: center; /* Centrer les éléments horizontalement */
+    justify-content: flex-start;
+}
+
+.profile_title_item {
+    margin-top: 10px; /* Ajoute de l'espace entre l'image et le titre */
+}
+
+.vfx-item-btn-danger {
+    display: flex;
+    align-items: center;
+    gap: 5px; /* Ajoute de l'espace entre l'icône et le texte du bouton */
+    margin-top: 10px; /* Ajoute un espace entre le nom et le bouton */
+}
+
