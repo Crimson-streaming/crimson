@@ -1057,7 +1057,7 @@ h2.form-title-item::before {
 .user-menu .user-name i {
 	padding-left: 5px;
 }
-.user-name span::after {
+/* .user-name span::after {
 	position: absolute;
 	content: "";
 	height: 12px;
@@ -1069,7 +1069,7 @@ h2.form-title-item::before {
 	border: 2px solid #fff;
 	box-shadow: 0 2px 3px rgba(0,0,0,.2);
 	border-radius: 50%;
-}
+} */
 .user-name span img {
 	width: 36px;
 	height: 36px;
