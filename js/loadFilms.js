@@ -93,108 +93,138 @@ loadFilms();
 
 
 
-    // Charger les films depuis le fichier JSON
-    async function loadFilms() {
-        try {
-            const response = await fetch('search/data.json'); // Chemin vers le fichier JSON
-            films = await response.json();
-            filteredFilms = films; // Initialement, tous les films sont affichés
+ // Liste complète des films
+let filteredFilms = []; // Films filtrés par genre
+
+
+// Charger les films depuis le fichier JSON
+async function loadFilms() {
+    try {
+        const response = await fetch('search/data.json'); // Chemin vers le fichier JSON
+        films = await response.json();
+        filteredFilms = films; // Initialement, tous les films sont affichés
+
+        // Vérifier si un genre est spécifié dans l'URL
+        const genreFromURL = getURLParameter("genre");
+        if (genreFromURL) {
+            filterByGenre(genreFromURL);
+        } else {
             renderFilms(currentPage);
             renderPagination();
-        } catch (error) {
-            console.error("Erreur lors du chargement des films :", error);
         }
+    } catch (error) {
+        console.error("Erreur lors du chargement des films :", error);
     }
-    
-    // Afficher les films pour une page donnée
-    function renderFilms(page) {
-        const startIndex = (page - 1) * itemsPerPage;
-        const endIndex = startIndex + itemsPerPage;
-        const filmsToShow = filteredFilms.slice(startIndex, endIndex);
-    
-        const container = document.getElementById("movies-container");
-        container.innerHTML = ""; // Vider le conteneur avant d'ajouter les films
-    
-        filmsToShow.forEach(film => {
-            container.innerHTML += `
-                <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 col-6">
-                    <div class="single-video">
-                        <a href="${film.emplacement}" title="${film.nom}">
-                            <div class="video-img">
-                                <span class="video-item-content">${film.nom}</span>
-                                <img src="${film.affiche}" alt="${film.nom}">
-                            </div>
-                        </a>
-                    </div>
+}
+
+// Fonction pour récupérer les paramètres de l'URL
+function getURLParameter(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+// Afficher les films pour une page donnée
+function renderFilms(page) {
+    const startIndex = (page - 1) * itemsPerPage;
+    const endIndex = startIndex + itemsPerPage;
+    const filmsToShow = filteredFilms.slice(startIndex, endIndex);
+
+    const container = document.getElementById("movies-container");
+    container.innerHTML = ""; // Vider le conteneur avant d'ajouter les films
+
+    filmsToShow.forEach(film => {
+        container.innerHTML += `
+            <div class="col-lg-2 col-md-3 col-sm-4 col-xs-12 col-6">
+                <div class="single-video">
+                    <a href="${film.emplacement}" title="${film.nom}">
+                        <div class="video-img">
+                            <span class="video-item-content">${film.nom}</span>
+                            <img src="${film.affiche}" alt="${film.nom}">
+                        </div>
+                    </a>
                 </div>
-            `;
+            </div>
+        `;
+    });
+}
+
+// Gérer les liens de pagination
+function renderPagination() {
+    const totalPages = Math.ceil(filteredFilms.length / itemsPerPage);
+    const paginationContainer = document.getElementById("pagination-links");
+    paginationContainer.innerHTML = ""; // Vider les liens de pagination
+
+    const maxVisiblePages = 11;
+    let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
+    let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
+
+    if (endPage - startPage < maxVisiblePages - 1) {
+        startPage = Math.max(1, endPage - maxVisiblePages + 1);
+    }
+
+    // Bouton précédent
+    paginationContainer.innerHTML += `
+        <li class="${currentPage === 1 ? "disabled" : ""}">
+            <a class="prev page-numbers" href="#" onclick="changePage(${currentPage - 1})"><i class="fa fa-caret-left"></i></a>
+        </li>
+    `;
+
+    // Liens des pages visibles
+    for (let i = startPage; i <= endPage; i++) {
+        paginationContainer.innerHTML += `
+            <li class="${i === currentPage ? "active" : ""}">
+                <a class="page-numbers" href="#" onclick="changePage(${i})">${i}</a>
+            </li>
+        `;
+    }
+
+    // Bouton suivant
+    paginationContainer.innerHTML += `
+        <li class="${currentPage === totalPages ? "disabled" : ""}">
+            <a class="next page-numbers" href="#" onclick="changePage(${currentPage + 1})"><i class="fa fa-caret-right"></i></a>
+        </li>
+    `;
+}
+
+// Changer de page
+function changePage(page) {
+    const totalPages = Math.ceil(filteredFilms.length / itemsPerPage);
+    if (page < 1 || page > totalPages) return;
+
+    currentPage = page;
+    renderFilms(currentPage);
+    renderPagination();
+}
+
+// Filtrer les films par genre
+function filterByGenre(genre) {
+    if (genre === "all") {
+        filteredFilms = films; // Afficher tous les films si "Tous les genres" est sélectionné
+    } else {
+        const normalizedGenre = normalizeGenre(genre);
+        filteredFilms = films.filter(film => {
+            return film.genre.split(', ').map(normalizeGenre).includes(normalizedGenre);
         });
     }
-    
-    // Gérer les liens de pagination
-    function renderPagination() {
-        const totalPages = Math.ceil(filteredFilms.length / itemsPerPage);
-        const paginationContainer = document.getElementById("pagination-links");
-        paginationContainer.innerHTML = ""; // Vider les liens de pagination
-    
-        const maxVisiblePages = 11;
-        let startPage = Math.max(1, currentPage - Math.floor(maxVisiblePages / 2));
-        let endPage = Math.min(totalPages, startPage + maxVisiblePages - 1);
-    
-        if (endPage - startPage < maxVisiblePages - 1) {
-            startPage = Math.max(1, endPage - maxVisiblePages + 1);
-        }
-    
-        // Bouton précédent
-        paginationContainer.innerHTML += `
-            <li class="${currentPage === 1 ? "disabled" : ""}">
-                <a class="prev page-numbers" href="#" onclick="changePage(${currentPage - 1})"><i class="fa fa-caret-left"></i></a>
-            </li>
-        `;
-    
-        // Liens des pages visibles
-        for (let i = startPage; i <= endPage; i++) {
-            paginationContainer.innerHTML += `
-                <li class="${i === currentPage ? "active" : ""}">
-                    <a class="page-numbers" href="#" onclick="changePage(${i})">${i}</a>
-                </li>
-            `;
-        }
-    
-        // Bouton suivant
-        paginationContainer.innerHTML += `
-            <li class="${currentPage === totalPages ? "disabled" : ""}">
-                <a class="next page-numbers" href="#" onclick="changePage(${currentPage + 1})"><i class="fa fa-caret-right"></i></a>
-            </li>
-        `;
+    currentPage = 1; // Réinitialiser à la première page
+    renderFilms(currentPage);
+    renderPagination();
+}
+
+function getQueryParam(param) {
+    const urlParams = new URLSearchParams(window.location.search);
+    return urlParams.get(param);
+}
+
+function setSelectedGenre() {
+    const genre = getQueryParam("genre");
+    if (genre) {
+        const genreFilter = document.getElementById("genre-filter");
+        genreFilter.value = genre;
+        filterByGenre(genre); // Filtrer les films automatiquement
     }
-    
-    // Changer de page
-    function changePage(page) {
-        const totalPages = Math.ceil(filteredFilms.length / itemsPerPage);
-        if (page < 1 || page > totalPages) return;
-    
-        currentPage = page;
-        renderFilms(currentPage);
-        renderPagination();
-    }
-    
-    // Filtrer les films par genre
-    function filterByGenre(genre) {
-        if (genre === "all") {
-            filteredFilms = films; // Afficher tous les films si "Tous les genres" est sélectionné
-        } else {
-            // Normaliser les genres pour éviter les doublons (par exemple, "Science Fiction" et "Science-Fiction")
-            const normalizedGenre = normalizeGenre(genre);
-            filteredFilms = films.filter(film => {
-                return film.genre.split(', ').map(normalizeGenre).includes(normalizedGenre);
-            });
-        }
-        currentPage = 1; // Réinitialiser à la première page
-        renderFilms(currentPage);
-        renderPagination();
-    }
-    
+}
+
 // Normaliser les genres pour les rendre identiques
 function normalizeGenre(genre) {
     const genreMap = {
@@ -215,8 +245,8 @@ function normalizeGenre(genre) {
     return genreMap[genre] || genre; // Si le genre n'a pas de correspondance dans le genreMap, renvoyer le genre original
 }
 
-    
-    // Initialisation
-    document.addEventListener("DOMContentLoaded", () => {
-        loadFilms();
-    });
+// Initialisation
+document.addEventListener("DOMContentLoaded", () => {
+    setSelectedGenre();
+    loadFilms(); // Charger les films
+});
