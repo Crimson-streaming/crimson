@@ -135,6 +135,7 @@
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/validatesecurity.css">
     <link rel="stylesheet" href="css/search.css">
+	<link rel="stylesheet" href="css/global.css">
 	<link rel="stylesheet" href="css/recently-watched.css">
 
 	<!-- owl Carousel -->
@@ -157,7 +158,6 @@
         width: 80%;
         max-width: 400px;
     }
-
 
 	</style>
 
@@ -837,6 +837,36 @@
 		</div>
 	  </div>
 	</div>
+	<div class="video-shows-section vfx-item-ptb suggestion-film-footer">
+		<div class="container-fluid">
+			<div class="rubrique-container">
+				<a href="films.html" class="rubrique-button">
+					<img src="img/assets/pop-corn.svg" class="icon">
+					<div class="content">
+						<p class="text">Voir tous les films</p>
+						<div class="link">
+							Trouvez le contenu qui vous correspond
+							<svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="m9 18 6-6-6-6"></path>
+							</svg>
+						</div>
+					</div>
+				</a>
+				<a href="/random-movie" id="spin-the-wheel-link" class="rubrique-button">
+					<img src="img/assets/film.svg" class="icon">
+					<div class="content">
+						<p class="text">Tourner la roue de la chance</p>
+						<div class="link">
+							Tentez votre chance pour trouver un contenu qui pourrait vous plaire
+							<svg class="arrow-icon" xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+								<path d="m9 18 6-6-6-6"></path>
+							</svg>
+						</div>
+					</div>
+				</a>
+			</div>
+		</div>
+	  </div>
 	<div class="scroll-top">
 		<div class="scroll-icon"> <i class="fa fa-angle-up"></i> </div>
 	  </div>
@@ -987,6 +1017,7 @@
         localStorage.setItem('popupDisplayed', 'true');
     }
 	$(document).ready(function(){$(".video-shows-carousel").owlCarousel({loop:!1,margin:10,nav:!0,dots:!0,navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],responsive:{0:{items:1},600:{items:2},1e3:{items:""}}})});
+	document.getElementById("spin-the-wheel-link").addEventListener("click",async function(e){e.preventDefault();try{let r=await fetch("/search/f.json"),n=await r.json(),t=Array.isArray(n)?n:[n],a=t[Math.floor(Math.random()*t.length)];a&&a.emplacement?window.location.href=`/${a.emplacement}`:(console.error("Entr\xe9e invalide dans le JSON :",a),alert("Une erreur est survenue, veuillez r\xe9essayer."))}catch(l){console.error("Erreur lors du chargement ou du traitement du JSON :",l),alert("Impossible de charger les donn\xe9es. Veuillez r\xe9essayer plus tard.")}});
 </script>
 
 </body>
