@@ -2119,8 +2119,8 @@ ul.nav > li a.active, ul.nav > li:hover > a {
 	font-size: 15px;
 	text-transform: uppercase;
 	text-align: center;
-	padding: 9px 15px 8px 15px;
 	font-weight: 700;
+	padding: 9px 15px 8px 15px;
 	border-radius: 4px;
 	margin:5px 0;
 	display:inline-block;
