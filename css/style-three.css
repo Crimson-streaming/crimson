@@ -1190,10 +1190,13 @@ h2.form-title-item::before {
 }
 @media (max-width: 1000px) {
 .header-section #menu > ul li a:hover, .header-section #menu > ul li a.active {
-    color: #b81b0e;
+    background-color: #b81b0e;
+	color: #ffffff !important; 
     font-size: 110%;
+	border-bottom: 2px solid #b81b0e;
 }
 }
+
 @media (max-width: 991px) {
 .fl-table td, .fl-table th {
 	box-sizing: border-box;
