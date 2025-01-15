@@ -88,12 +88,7 @@ function changePage(page) {
     renderPagination();
 }
 
-// Charger les films à l'initialisation
-loadFilms();
-
-
-
- // Liste complète des films
+// Liste complète des films
 let filteredFilms = []; // Films filtrés par genre
 
 
@@ -225,6 +220,29 @@ function setSelectedGenre() {
     }
 }
 
+// Appliquer le filtre (ordre de tri ou genre)
+function applyFilter() {
+    const filterValue = document.getElementById('filter_list').value;
+
+    if (filterValue === "###") {
+        // Trier les films par ordre alphabétique
+        filteredFilms = [...films].sort((a, b) => a.nom.localeCompare(b.nom));
+    } else if (filterValue === "##") {
+        // Trier les films de manière aléatoire
+        filteredFilms = [...films].sort(() => Math.random() - 0.5);
+    } else {
+        // "Le Plus Récent" : Remettre tous les films dans leur ordre d'origine (sans tri)
+        filteredFilms = [...films]; // Remet tous les films sans tri
+    }
+
+    // Réafficher les films avec les nouveaux filtres
+    renderFilms(currentPage);
+    renderPagination();
+}
+
+
+
+
 // Normaliser les genres pour les rendre identiques
 function normalizeGenre(genre) {
     const genreMap = {
@@ -249,4 +267,8 @@ function normalizeGenre(genre) {
 document.addEventListener("DOMContentLoaded", () => {
     setSelectedGenre();
     loadFilms(); // Charger les films
+
+    // Ajouter un écouteur d'événements pour la sélection du filtre
+    document.getElementById('filter_list').addEventListener('change', applyFilter);
+
 });
