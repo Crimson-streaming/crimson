@@ -10,7 +10,7 @@ function melangerTableau(tableau) {
 // Fonction pour charger les films sous une catégorie donnée
 async function chargerCategorie(categorie, conteneur) {
     try {
-        const response = await fetch('https://crimson-streaming.github.io/crimson/search/data.json'); // Chemin vers le fichier JSON
+        const response = await fetch('search/data.json'); // Chemin vers le fichier JSON
         const films = await response.json();
 
         // Mélanger les films pour les parcourir de manière aléatoire
@@ -32,7 +32,7 @@ async function chargerCategorie(categorie, conteneur) {
                     <a href="${film.emplacement}" title="${film.nom}">
                         <div class="video-img">
                             <span class="video-item-content">${film.nom}</span>
-                            <img src="${film.affiche}" alt="${film.nom}" title="${film.nom}" loading="lazy">
+                            <img src="${film.affiche}" alt="${film.nom}" title="${film.nom}">
                         </div>
                     </a>
                 </div>
