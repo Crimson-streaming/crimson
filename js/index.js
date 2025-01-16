@@ -1,33 +1,11 @@
-// Fonction pour mélanger un tableau
-function melangerTableau(tableau) {
-    for (let i = tableau.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
-        [tableau[i], tableau[j]] = [tableau[j], tableau[i]];
-    }
-    return tableau;
-}
-
-// Fonction pour charger les films sous une catégorie donnée
-async function chargerCategorie(categorie, conteneur) {
+ // Fonction pour charger les films sous une catégorie donnée
+ async function chargerCategorie(categorie, conteneur) {
     try {
-        // Vérifier si les films sont déjà stockés en sessionStorage
-        const stockageCle = `films-${categorie}`;
-        let filmsFiltres = JSON.parse(sessionStorage.getItem(stockageCle));
+        const response = await fetch('search/data.json'); // Chemin vers le fichier JSON
+        const films = await response.json();
 
-        // Si aucune donnée n'existe en sessionStorage, charger et mélanger les films
-        if (!filmsFiltres) {
-            const response = await fetch('search/data.json'); // Chemin vers le fichier JSON
-            const films = await response.json();
-
-            // Mélanger les films pour les parcourir de manière aléatoire
-            const filmsMelanges = melangerTableau(films);
-
-            // Filtrer les films selon la catégorie et limiter à 28 films
-            filmsFiltres = filmsMelanges.filter(film => film.genre.includes(categorie)).slice(0, 28);
-
-            // Stocker les films dans sessionStorage
-            sessionStorage.setItem(stockageCle, JSON.stringify(filmsFiltres));
-        }
+        // Filtrer les films selon la catégorie et limiter à 28 films
+        const filmsFiltres = films.filter(film => film.genre.includes(categorie)).slice(0, 28);
 
         // Sélectionner le conteneur carousel spécifique
         const carousel = document.querySelector(conteneur);
