@@ -1,82 +1,82 @@
 [
     {
         "title": "Venom : The Last Dance",
-        "emplacement": "film/venom--the-last-dance.html",
+        "link": "film/venom--the-last-dance.html",
         "img": "img/film/Venom-the-last-dance/Venom-the-last-dance-affiche.jpg"
     },
     {
         "title": "Joker : Folie à deux",
-        "emplacement": "film/joker--folie-à-deux.html",
+        "link": "film/joker--folie-à-deux.html",
         "img": "img/film/joker-folie-à-deux/joker-folie-à-deux-affiche.jpg"
     },
     {
         "title": "Beetlejuice Beetlejuice",
-        "emplacement": "film/beetlejuice-beetlejuice.html",
+        "link": "film/beetlejuice-beetlejuice.html",
         "img": "img/film/Beetlejuice-Beetlejuice/Beetlejuice-Beetlejuice-affiche.webp"
     },
     {
         "title": "À contre-sens 2",
-        "emplacement": "film/à-contre-sens-2.html",
+        "link": "film/à-contre-sens-2.html",
         "img": "https://media.themoviedb.org/t/p/original/bn4qZZO5nSN48D5pXVypf4MF2wg.jpg"
     },
     {
         "title": "Moi, moche et méchant 4",
-        "emplacement": "film/moi-moche-et-méchant-4.html",
+        "link": "film/moi-moche-et-méchant-4.html",
         "img": "img/film/moi-moche-et-mechant-4/moi-moche-et-mechant-affiche.webp"
     },
     {
         "title": "La Planète des Singes : Le Nouveau Royaume",
-        "emplacement": "film/la-planète-des-singes--le-nouveau-royaume.html",
+        "link": "film/la-planète-des-singes--le-nouveau-royaume.html",
         "img": "img/film/la-planet-des-singes/la-planet-des-singes-affiche.webp"
     },
     {
         "title": "Furiosa : Une saga Mad Max",
-        "emplacement": "film/furiosa--une-saga-mad-max.html",
+        "link": "film/furiosa--une-saga-mad-max.html",
         "img": "img/film/Furiosa-Une-saga-Mad-Max/Furiosa-Une-saga-Mad-Max-affiche.webp"
     },
     {
         "title": "Vice Versa 2",
-        "emplacement": "film/vice-versa-2.html",
+        "link": "film/vice-versa-2.html",
         "img": "img/film/vice-versa-2/vice-versa-2-affiche.webp"
+    },
+    {
+        "title": "The Substance",
+        "img": "https://media.themoviedb.org/t/p/original/p2lAkYKFIwhgg0ivO6Z90ZluAPt.jpg",
+        "link": "film/the-substance.html"
     },
     {
         "title": "Sous la seine",
         "img": "img/film/sous-la-seine/sous-la-seine-affiche.webp",
-        "emplacement": "film/sous-la-seine.html"
+        "link": "film/sous-la-seine.html"
     },
     {
         "title": "Gladiator II",
         "img": "https://media.themoviedb.org/t/p/original/7R1EXkBAKunoG0UhZToFrnlStcp.jpg",
-        "emplacement": "film/gladiator-ii.html"
+        "link": "film/gladiator-ii.html"
     },
     {
         "title": "Wicked",
         "img": "https://media.themoviedb.org/t/p/original/kQkgPhj6sCuoMWzPKWQVOWUXzib.jpg",
-        "emplacement": "film/wicked.html"
-    },
-    {
-        "title": "Venom : The Last Dance",
-        "img": "img/film/venom-the-last-dance/venom-the-last-dance-affiche.jpg",
-        "emplacement": "film/venom--the-last-dance.html"
+        "link": "film/wicked.html"
     },
     {
         "title": "Napoléon",
         "img": "https://www.themoviedb.org/t/p/original/lnCoPFCcg6vRv8M2RbNotUkEMAN.jpg",
-        "emplacement": "film/napoléon.html"
+        "link": "film/napoléon.html"
     },
     {
         "title": "Godzilla x Kong : Le Nouvel Empire",
         "img": "https://media.themoviedb.org/t/p/original/knvU3WPJlkhk5xsUZRN4Xpp59tQ.jpg",
-        "emplacement": "film/godzilla-x-kong--le-nouvel-empire.html"
+        "link": "film/godzilla-x-kong--le-nouvel-empire.html"
     },
     {
         "title": "Back to Black",
         "img": "https://media.themoviedb.org/t/p/original/zZMw9HJr0Bf9KSVLIpZwksjaPhi.jpg",
-        "emplacement": "film/back-to-black.html"
+        "link": "film/back-to-black.html"
     },
     {
         "title": "Dune : Deuxième Partie",
         "img": "https://media.themoviedb.org/t/p/original/iRNbRAIGQQr5diGnjpwJFm0dgt4.jpg",
-        "emplacement": "film/dune--deuxième-partie.html"
+        "link": "film/dune--deuxième-partie.html"
     }
 ]
