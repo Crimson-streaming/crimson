@@ -1,7 +1,7 @@
 // Fonction pour mélanger un tableau
 function melangerTableau(tableau) {
     for (let i = tableau.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+        const j = Math.floor(crypto.getRandomValues(new Uint32Array(1))[0] / (0xFFFFFFFF + 1) * (i + 1));
         [tableau[i], tableau[j]] = [tableau[j], tableau[i]];
     }
     return tableau;
@@ -13,8 +13,14 @@ let filmsData = null;
 // Fonction pour charger les données des films une seule fois
 async function chargerFilms() {
     if (!filmsData) {
-        const response = await fetch('search/data.json'); // Chemin vers le fichier JSON
-        filmsData = await response.json();
+        try {
+            const response = await fetch('search/data.json'); // Chemin vers le fichier JSON
+            if (!response.ok) throw new Error(`Erreur HTTP : ${response.status}`);
+            filmsData = await response.json();
+        } catch (error) {
+            console.error('Erreur lors du chargement des données des films :', error);
+            filmsData = []; // Définit une valeur par défaut pour éviter des erreurs ultérieures
+        }
     }
     return filmsData;
 }
@@ -31,35 +37,35 @@ async function chargerCategorie(categorie, conteneur) {
 
         // Sélectionner le conteneur carousel spécifique
         const carousel = document.querySelector(conteneur);
-        carousel.innerHTML = ''; // Vider le contenu existant
-
-        // Générer le contenu dynamique pour chaque film
-        filmsFiltres.forEach(film => {
-            const filmHTML = `
+        carousel.innerHTML = filmsFiltres.length
+            ? filmsFiltres.map(film => `
                 <div class="single-video">
                     <a href="${film.emplacement}" title="${film.nom}">
                         <div class="video-img">
                             <span class="video-item-content">${film.nom}</span>
-                            <img src="${film.affiche}" alt="${film.nom}" title="${film.nom}">
+                            <img src="${film.affiche}" alt="${film.nom}">
                         </div>
                     </a>
                 </div>
-            `;
-            carousel.insertAdjacentHTML('beforeend', filmHTML);
-        });
+            `).join('')
+            : '<p>Aucun film trouvé.</p>';
 
         // Réinitialiser Owl Carousel après ajout des éléments
         reinitialiserOwlCarousel(conteneur);
 
     } catch (error) {
         console.error(`Erreur lors du chargement des films pour la catégorie "${categorie}" :`, error);
+        document.querySelector(conteneur).innerHTML = '<p>Erreur de chargement.</p>';
     }
 }
 
 // Fonction pour réinitialiser Owl Carousel
 function reinitialiserOwlCarousel(conteneur) {
-    $(conteneur).owlCarousel('destroy'); // Détruire l'instance existante
-    $(conteneur).owlCarousel({
+    const $conteneur = $(conteneur);
+    if ($conteneur.hasClass('owl-carousel')) {
+        $conteneur.owlCarousel('destroy'); // Détruire l'instance existante si elle existe
+    }
+    $conteneur.owlCarousel({
         loop: false,
         margin: 10,
         nav: true,
@@ -73,27 +79,32 @@ function reinitialiserOwlCarousel(conteneur) {
     });
 }
 
+// Liste des catégories et leurs conteneurs
+const CATEGORIES = [
+    { name: 'Action', container: '.video-carousel-action' },
+    { name: 'Drame', container: '.video-carousel-drame' },
+    { name: 'Horreur', container: '.video-carousel-horreur' },
+    { name: 'Animation', container: '.video-carousel-animation' },
+    { name: 'Crime', container: '.video-carousel-policier' },
+    { name: 'Guerre', container: '.video-carousel-guerre' },
+    { name: 'Comédie', container: '.video-carousel-comedie' },
+    { name: 'Histoire', container: '.video-carousel-histoire' },
+    { name: 'Romance', container: '.video-carousel-romance' },
+    { name: 'Aventure', container: '.video-carousel-aventure' },
+    { name: 'Fantastique', container: '.video-carousel-fantastique' },
+    { name: 'Familial', container: '.video-carousel-famille' },
+    { name: 'Mystère', container: '.video-carousel-mystère' },
+    { name: 'Thriller', container: '.video-carousel-thriller' },
+    { name: 'Science-Fiction', container: '.video-carousel-science-fiction' }
+];
+
 // Charger les films après le chargement de la page
 document.addEventListener('DOMContentLoaded', async () => {
-    const categories = [
-        { name: 'Action', container: '.video-carousel-action' },
-        { name: 'Drame', container: '.video-carousel-drame' },
-        { name: 'Horreur', container: '.video-carousel-horreur' },
-        { name: 'Animation', container: '.video-carousel-animation' },
-        { name: 'Crime', container: '.video-carousel-policier' },
-        { name: 'Guerre', container: '.video-carousel-guerre' },
-        { name: 'Comédie', container: '.video-carousel-comedie' },
-        { name: 'Histoire', container: '.video-carousel-histoire' },
-        { name: 'Romance', container: '.video-carousel-romance' },
-        { name: 'Aventure', container: '.video-carousel-aventure' },
-        { name: 'Fantastique', container: '.video-carousel-fantastique' },
-        { name: 'Familial', container: '.video-carousel-famille' },
-        { name: 'Mystère', container: '.video-carousel-mystère' },
-        { name: 'Thriller', container: '.video-carousel-thriller' },
-        { name: 'Science-Fiction', container: '.video-carousel-science-fiction' }
-    ];
-
-    for (const { name, container } of categories) {
-        await chargerCategorie(name, container);
+    try {
+        // Chargement parallèle des catégories
+        await Promise.all(CATEGORIES.map(({ name, container }) => chargerCategorie(name, container)));
+        console.log('Toutes les catégories ont été chargées avec succès.');
+    } catch (error) {
+        console.error('Erreur lors du chargement des catégories :', error);
     }
 });
