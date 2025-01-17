@@ -17,7 +17,7 @@ async function chargerCategorie(categorie, conteneur) {
         const filmsMelanges = melangerTableau(films);
 
         // Filtrer les films selon la catégorie et limiter à 28 films
-        const filmsFiltres = filmsMelanges.filter(film => film.genre.includes(categorie)).slice(0, 28);
+        const filmsFiltres = filmsMelanges.filter(film => film.genre.includes(categorie)).slice(0, 12);
 
         // Sélectionner le conteneur carousel spécifique
         const carousel = document.querySelector(conteneur);
