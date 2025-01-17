@@ -122,3 +122,78 @@ document.addEventListener('DOMContentLoaded', chargerToutesLesCategories);
 
 // Recharger les films si vous naviguez sans rechargement complet
 window.addEventListener('popstate', chargerToutesLesCategories);
+
+
+
+
+
+// Initialisation du carousel
+const videoCarousel = document.getElementById('videoCarousel');
+
+// Ajouter les éléments au carousel
+fetch('search/films-en-tendance.json')
+    .then(response => response.json())
+    .then(movies => {
+        movies.forEach(movie => {
+            const videoDiv = document.createElement('div');
+            videoDiv.classList.add('single-video');
+            videoDiv.innerHTML = `
+                <a href="${movie.link}" title="${movie.title}">
+                    <div class="video-img">
+                        <span class="video-item-content">${movie.title}</span>
+                        <img src="${movie.img}" alt="${movie.title}" title="${movie.title}">
+                    </div>
+                </a>
+            `;
+            videoCarousel.appendChild(videoDiv);
+        });
+        // Initialiser Owl Carousel après ajout des films
+        reinitialiserOwlCarousel('#videoCarousel');
+    })
+    .catch(error => console.error('Erreur lors du chargement des films :', error));
+
+// Fonction pour réinitialiser Owl Carousel
+function reinitialiserOwlCarousel(conteneur) {
+    const $conteneur = $(conteneur);
+    if ($conteneur.hasClass('owl-carousel')) {
+        $conteneur.owlCarousel('destroy'); // Détruire l'instance existante si elle existe
+    }
+    $conteneur.owlCarousel({
+        loop: false,
+        margin: 10,
+        nav: true,
+        dots: true,
+        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+        responsive: {
+            0: { items: 2 },      // Petits écrans
+            600: { items: 4 },    // Écrans moyens
+            1000: { items: 7 }    // Grands écrans
+        }
+    });
+}
+
+// Initialisation du carousel après chargement
+$(document).ready(function () {
+    reinitialiserOwlCarousel('#videoCarousel');
+});
+
+fetch('search/films-en-tendance.json')
+    .then(response => response.json())
+    .then(movies => {
+        const videoContainer = document.querySelector('.view-all-video-area .row');
+        movies.forEach(movie => {
+            const videoDiv = document.createElement('div');
+            videoDiv.classList.add('col-lg-2', 'col-md-3', 'col-sm-4', 'col-xs-12', 'col-6');
+            videoDiv.innerHTML = `
+                <div class="single-video">
+                    <a href="${movie.link}" title="${movie.title}">
+                        <div class="video-img">
+                            <span class="video-item-content">${movie.title}</span>
+                            <img src="${movie.img}" alt="${movie.title}" title="${movie.title}">
+                        </div>
+                    </a>
+                </div>
+            `;
+            videoContainer.appendChild(videoDiv);
+        });
+    })
