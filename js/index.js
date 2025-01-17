@@ -10,11 +10,11 @@ function melangerTableau(tableau) {
 // Variable globale pour stocker les données des films
 let filmsData = null;
 
-// Fonction pour charger les données des films une seule fois
+// Fonction pour charger les données des films
 async function chargerFilms() {
     if (!filmsData) {
         try {
-            const response = await fetch('search/data.json'); // Chemin vers le fichier JSON
+            const response = await fetch(`search/data.json?nocache=${Date.now()}`); // Ajout de nocache
             if (!response.ok) throw new Error(`Erreur HTTP : ${response.status}`);
             filmsData = await response.json();
         } catch (error) {
@@ -38,16 +38,16 @@ async function chargerCategorie(categorie, conteneur) {
         // Sélectionner le conteneur carousel spécifique
         const carousel = document.querySelector(conteneur);
         carousel.innerHTML = filmsFiltres.length
-            ? filmsFiltres.map(film => `
-                <div class="single-video">
+            ? filmsFiltres.map(film => 
+                `<div class="single-video">
                     <a href="${film.emplacement}" title="${film.nom}">
                         <div class="video-img">
                             <span class="video-item-content">${film.nom}</span>
-                            <img src="${film.affiche}" alt="${film.nom}"  loading="lazy">
+                            <img src="${film.affiche}" alt="${film.nom}" loading="lazy">
                         </div>
                     </a>
-                </div>
-            `).join('')
+                </div>`
+            ).join('')
             : '<p>Aucun film trouvé.</p>';
 
         // Réinitialiser Owl Carousel après ajout des éléments
@@ -98,13 +98,18 @@ const CATEGORIES = [
     { name: 'Science-Fiction', container: '.video-carousel-science-fiction' }
 ];
 
-// Charger les films après le chargement de la page
-document.addEventListener('DOMContentLoaded', async () => {
+// Fonction pour charger toutes les catégories
+async function chargerToutesLesCategories() {
     try {
-        // Chargement parallèle des catégories
         await Promise.all(CATEGORIES.map(({ name, container }) => chargerCategorie(name, container)));
         console.log('Toutes les catégories ont été chargées avec succès.');
     } catch (error) {
         console.error('Erreur lors du chargement des catégories :', error);
     }
-});
+}
+
+// Charger les films après le chargement de la page
+document.addEventListener('DOMContentLoaded', chargerToutesLesCategories);
+
+// Recharger les films si vous naviguez sans rechargement complet
+window.addEventListener('popstate', chargerToutesLesCategories);

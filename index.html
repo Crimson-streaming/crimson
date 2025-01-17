@@ -986,36 +986,7 @@
         localStorage.setItem('popupDisplayed', 'true');
     }
 	$(document).ready(function(){$(".video-shows-carousel").owlCarousel({loop:!1,margin:10,nav:!0,dots:!0,navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],responsive:{0:{items:1},600:{items:2},1e3:{items:""}}})});
-	document.getElementById("spin-the-wheel-link").addEventListener("click", async function (event) {
-    event.preventDefault(); // Empêche le comportement par défaut du lien
-
-    try {
-        // Charger le fichier JSON
-        const response = await fetch('search/f.json');
-        const data = await response.json();
-
-        // Vérifier si data est un tableau ou un objet
-        const entries = Array.isArray(data) ? data : [data];
-
-        // Sélectionner une entrée aléatoire
-        const randomEntry = entries[Math.floor(Math.random() * entries.length)];
-
-        // Rediriger vers l'emplacement spécifié
-        if (randomEntry && randomEntry.emplacement) {
-            window.location.href = `${randomEntry.emplacement}`; // Correction du template string
-        } else {
-            console.error("Entrée invalide dans le JSON :", randomEntry);
-            alert("Une erreur est survenue, veuillez réessayer.");
-        }
-    } catch (error) {
-        console.error("Erreur lors du chargement ou du traitement du JSON :", error);
-        alert("Impossible de charger les données. Veuillez réessayer plus tard.");
-    }
-});
-
-
-
-
+	document.getElementById("spin-the-wheel-link").addEventListener("click",async function(e){e.preventDefault();try{let r=await fetch("search/f.json"),n=await r.json(),t=Array.isArray(n)?n:[n],a=t[Math.floor(Math.random()*t.length)];a&&a.emplacement?window.location.href=`${a.emplacement}`:(console.error("Entr\xe9e invalide dans le JSON :",a),alert("Une erreur est survenue, veuillez r\xe9essayer."))}catch(l){console.error("Erreur lors du chargement ou du traitement du JSON :",l),alert("Impossible de charger les donn\xe9es. Veuillez r\xe9essayer plus tard.")}});
 </script>
 
 </body>
