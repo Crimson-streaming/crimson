@@ -7,23 +7,31 @@ function melangerTableau(tableau) {
     return tableau;
 }
 
-// Fonction pour charger les films sous une catégorie donnée
+// Variable globale pour stocker les données des films
+let filmsData = null;
+
+// Fonction pour charger les données des films une seule fois
+async function chargerFilms() {
+    if (!filmsData) {
+        const response = await fetch('search/data.json'); // Chemin vers le fichier JSON
+        filmsData = await response.json();
+    }
+    return filmsData;
+}
+
+// Fonction pour charger les films d'une catégorie donnée
 async function chargerCategorie(categorie, conteneur) {
     try {
-        const response = await fetch('search/data.json'); // Chemin vers le fichier JSON
-        const films = await response.json();
+        const films = await chargerFilms();
 
-        // Mélanger les films pour les parcourir de manière aléatoire
-        const filmsMelanges = melangerTableau(films);
-
-        // Filtrer les films selon la catégorie et limiter à 28 films
-        const filmsFiltres = filmsMelanges.filter(film => film.genre.includes(categorie)).slice(0, 12);
+        // Mélanger et filtrer les films selon la catégorie
+        const filmsFiltres = melangerTableau(films)
+            .filter(film => film.genre.includes(categorie))
+            .slice(0, 12);
 
         // Sélectionner le conteneur carousel spécifique
         const carousel = document.querySelector(conteneur);
-
-        // Vider le contenu existant
-        carousel.innerHTML = '';
+        carousel.innerHTML = ''; // Vider le contenu existant
 
         // Générer le contenu dynamique pour chaque film
         filmsFiltres.forEach(film => {
@@ -41,40 +49,51 @@ async function chargerCategorie(categorie, conteneur) {
         });
 
         // Réinitialiser Owl Carousel après ajout des éléments
-        $(conteneur).owlCarousel('destroy'); // Détruire l'instance existante
-        $(conteneur).owlCarousel({
-            loop: false,
-            margin: 10,
-            nav: true,
-            dots: true,
-            navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
-            responsive: {
-                0: { items: 2 },      // Petits écrans
-                600: { items: 4 },    // Écrans moyens
-                1000: { items: 7 }    // Grands écrans
-            }
-        });
+        reinitialiserOwlCarousel(conteneur);
 
     } catch (error) {
         console.error(`Erreur lors du chargement des films pour la catégorie "${categorie}" :`, error);
     }
 }
 
+// Fonction pour réinitialiser Owl Carousel
+function reinitialiserOwlCarousel(conteneur) {
+    $(conteneur).owlCarousel('destroy'); // Détruire l'instance existante
+    $(conteneur).owlCarousel({
+        loop: false,
+        margin: 10,
+        nav: true,
+        dots: true,
+        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+        responsive: {
+            0: { items: 2 },      // Petits écrans
+            600: { items: 4 },    // Écrans moyens
+            1000: { items: 7 }    // Grands écrans
+        }
+    });
+}
+
 // Charger les films après le chargement de la page
-document.addEventListener('DOMContentLoaded', () => {
-    chargerCategorie('Action', '.video-carousel-action');
-    chargerCategorie('Drame', '.video-carousel-drame');
-    chargerCategorie('Horreur', '.video-carousel-horreur');
-    chargerCategorie('Animation', '.video-carousel-animation');
-    chargerCategorie('Crime', '.video-carousel-policier');
-    chargerCategorie('Guerre', '.video-carousel-guerre');
-    chargerCategorie('Comédie', '.video-carousel-comedie');
-    chargerCategorie('Histoire', '.video-carousel-histoire');
-    chargerCategorie('Romance', '.video-carousel-romance');
-    chargerCategorie('Aventure', '.video-carousel-aventure');
-    chargerCategorie('Fantastique', '.video-carousel-fantastique');
-    chargerCategorie('Familial', '.video-carousel-famille');
-    chargerCategorie('Mystère', '.video-carousel-mystère');
-    chargerCategorie('Thriller', '.video-carousel-thriller');
-    chargerCategorie('Science-Fiction', '.video-carousel-science-fiction');
+document.addEventListener('DOMContentLoaded', async () => {
+    const categories = [
+        { name: 'Action', container: '.video-carousel-action' },
+        { name: 'Drame', container: '.video-carousel-drame' },
+        { name: 'Horreur', container: '.video-carousel-horreur' },
+        { name: 'Animation', container: '.video-carousel-animation' },
+        { name: 'Crime', container: '.video-carousel-policier' },
+        { name: 'Guerre', container: '.video-carousel-guerre' },
+        { name: 'Comédie', container: '.video-carousel-comedie' },
+        { name: 'Histoire', container: '.video-carousel-histoire' },
+        { name: 'Romance', container: '.video-carousel-romance' },
+        { name: 'Aventure', container: '.video-carousel-aventure' },
+        { name: 'Fantastique', container: '.video-carousel-fantastique' },
+        { name: 'Familial', container: '.video-carousel-famille' },
+        { name: 'Mystère', container: '.video-carousel-mystère' },
+        { name: 'Thriller', container: '.video-carousel-thriller' },
+        { name: 'Science-Fiction', container: '.video-carousel-science-fiction' }
+    ];
+
+    for (const { name, container } of categories) {
+        await chargerCategorie(name, container);
+    }
 });
