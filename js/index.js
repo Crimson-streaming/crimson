@@ -25,6 +25,15 @@ async function chargerFilms() {
     return filmsData;
 }
 
+async function chargerFilmsAvecMelange() {
+    if (!filmsData) {
+        filmsData = await chargerFilms();
+        filmsData = melangerTableau(filmsData); // Mélanger une seule fois
+    }
+    return filmsData;
+}
+
+
 // Fonction pour charger les films d'une catégorie donnée
 async function chargerCategorie(categorie, conteneur) {
     try {
