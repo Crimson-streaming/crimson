@@ -200,7 +200,22 @@
     background-color: #b81b0e; /* Couleur de la barre de progression */
     transition: width 3s linear; /* Animation fluide sur 3 secondes */
     border-radius: 4px; /* Coins arrondis par défaut */
+    position: relative; /* Important pour le positionnement de la boule */
 }
+
+/* Ajouter une boule blanche à l'extrémité de la barre de progression */
+#progress-bar::after {
+    content: '';
+    position: absolute;
+    right: 0; /* Positionne la boule à la fin de la barre */
+    top: 50%;
+    transform: translateY(-50%) translateX(10px); /* Décalage de la boule vers la droite */
+    width: 16px;
+    height: 16px;
+    background-color: white;
+    border-radius: 50%; /* Faire une boule */
+}
+
 
 /* Masquer le contenu de la page jusqu'à ce que l'écran de chargement disparaisse */
 #content {
@@ -221,7 +236,7 @@
     color: white; /* Couleur de l'icône */
     cursor: pointer;
     position: absolute; /* Positionnement absolu pour le placer à gauche de la barre */
-    left: -35px; /* Ajustement de la position du bouton à gauche */
+    left: -40px; /* Ajustement de la position du bouton à gauche */
     top: -14.3px; /* Ajuste la position verticale pour centrer le bouton par rapport à la barre */
 }
 
@@ -233,10 +248,6 @@
 #play-button i {
     font-size: 25px; /* Taille de l'icône */
 }
-
-
-
-
 
 	</style>
 
