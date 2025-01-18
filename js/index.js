@@ -59,7 +59,7 @@ async function chargerCategorie(categorie, conteneur) {
         // Mélanger et filtrer les films selon la catégorie et les restrictions de genre
         const filmsFiltres = melangerTableau(films)
             .filter(film => film.genre.includes(categorie) && estGenreAutorise(film))
-            .slice(0, 12);
+            .slice(0, 28);
 
         // Sélectionner le conteneur carousel spécifique
         const carousel = document.querySelector(conteneur);
