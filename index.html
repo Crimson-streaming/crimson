@@ -165,44 +165,50 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #0d071e;
+    background-color: #0d071e; /* Couleur de fond de l'écran de chargement */
     display: flex;
+    flex-direction: column; /* Organise le logo et la barre verticalement */
     justify-content: center;
     align-items: center;
-    z-index: 9999; /* Assure-toi que cet élément reste au-dessus de tout */
+    z-index: 9999; /* Assure que l'écran de chargement reste au-dessus */
     opacity: 1;
-    transition: opacity 1s ease-out; /* Transition fluide de l'écran */
+    transition: opacity 1s ease-out; /* Transition fluide pour masquer l'écran */
 }
 
+/* Style pour le logo */
 #logo {
-    width: 200px; /* Ajuste la taille du logo selon ton besoin */
+    width: 200px; /* Ajuste la largeur du logo */
     height: auto;
-    opacity: 1; /* Assure-toi que le logo est visible au début */
-    animation: fadeOut 3s forwards; /* Animation pour faire disparaître le logo */
+    margin-bottom: 10px; /* Espacement entre le logo et la barre */
 }
 
-/* Animation pour faire disparaître le logo après 3 secondes */
-@keyframes fadeOut {
-    0% {
-        opacity: 1;
-    }
-    100% {
-        opacity: 0;
-    }
+/* Conteneur pour la barre de chargement */
+#progress-bar-container {
+    width: 200px; /* Correspond exactement à la largeur du logo */
+    height: 8px; /* Hauteur de la barre de chargement */
+    background-color: #333; /* Couleur de fond du conteneur */
+    border-radius: 4px; /* Coins arrondis */
+    overflow: hidden; /* Cache tout dépassement */
 }
 
-/* Cacher le contenu de la page jusqu'à ce que l'écran de chargement disparaisse */
+/* Barre de progression */
+#progress-bar {
+    width: 0; /* La barre commence vide */
+    height: 100%; /* Prend toute la hauteur du conteneur */
+    background-color: #b81b0e; /* Couleur de la barre de progression */
+    transition: width 3s linear; /* Animation fluide sur 3 secondes */
+}
+
+/* Masquer le contenu de la page jusqu'à ce que l'écran de chargement disparaisse */
 #content {
-    display: none;
+    display: none; /* Contenu caché au départ */
 }
 
-/* Style pour l'effet de transition fluide de l'écran de chargement */
+/* Transition fluide pour masquer l'écran de chargement */
 #loading-screen.hidden {
-    opacity: 0;
-    pointer-events: none; /* Empêche l'interaction avec l'écran de chargement lorsqu'il est caché */
+    opacity: 0; /* Rendre l'écran invisible */
+    pointer-events: none; /* Désactive l'interaction avec l'écran de chargement */
 }
-
-
 
 	</style>
 
@@ -261,7 +267,10 @@
 </header>
 
 <div id="loading-screen">
-	<img src="img/logo.png" alt="Logo Crimson" id="logo">
+    <img src="img/logo.png" alt="Logo Crimson" id="logo">
+    <div id="progress-bar-container">
+        <div id="progress-bar"></div>
+    </div>
 </div>
 <!-- End Header -->
 <!-- Start Slider Area -->
@@ -974,13 +983,23 @@
     }
 	$(document).ready(function(){$(".video-shows-carousel").owlCarousel({loop:!1,margin:10,nav:!0,dots:!0,navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],responsive:{0:{items:1},600:{items:2},1e3:{items:""}}})});
 	document.getElementById("spin-the-wheel-link").addEventListener("click",async function(e){e.preventDefault();try{let r=await fetch("search/f.json"),n=await r.json(),t=Array.isArray(n)?n:[n],a=t[Math.floor(Math.random()*t.length)];a&&a.emplacement?window.location.href=`${a.emplacement}`:(console.error("Entr\xe9e invalide dans le JSON :",a),alert("Une erreur est survenue, veuillez r\xe9essayer."))}catch(l){console.error("Erreur lors du chargement ou du traitement du JSON :",l),alert("Impossible de charger les donn\xe9es. Veuillez r\xe9essayer plus tard.")}});
-	// Attendre que l'animation du logo soit terminée (3 secondes) et afficher le contenu
-window.onload = function () {
-    setTimeout(function () {
-        document.getElementById('loading-screen').classList.add('hidden'); // Applique la classe 'hidden' pour faire disparaître l'écran de chargement
-        document.getElementById('content').style.display = 'block'; // Afficher le contenu de la page
-    }, 3000); // 3 secondes
-};
+	document.addEventListener("DOMContentLoaded", () => {
+    const progressBar = document.getElementById("progress-bar");
+    const loadingScreen = document.getElementById("loading-screen");
+
+    // Démarrage de l'animation de la barre de progression
+    setTimeout(() => {
+        progressBar.style.width = "100%"; // La barre atteint 100%
+    }, 100);
+
+    // Masquer l'écran de chargement après 3 secondes
+    setTimeout(() => {
+        loadingScreen.classList.add("hidden");
+        document.getElementById("content").style.display = "block"; // Afficher le contenu
+    }, 3000);
+});
+
+
 
 
 </script>
