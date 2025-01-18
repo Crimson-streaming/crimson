@@ -177,14 +177,16 @@
 
 /* Style pour le logo */
 #logo {
-    width: 200px; /* Ajuste la largeur du logo */
+    width: 20vw; /* Utilisation de la largeur de la fenêtre */
+    max-width: 200px; /* Limite la largeur maximale */
     height: auto;
     margin-bottom: 20px; /* Espacement entre le logo et la barre */
 }
 
 /* Conteneur pour la barre de chargement */
 #progress-bar-container {
-    width: 200px; /* Correspond exactement à la largeur du logo */
+    width: 20vw; /* Utilisation de la largeur de la fenêtre */
+    max-width: 200px; /* Limite la largeur maximale */
     height: 8px; /* Hauteur de la barre de chargement */
     background-color: #333; /* Couleur de fond du conteneur */
     border-radius: 4px; /* Coins arrondis par défaut */
@@ -216,7 +218,6 @@
     border-radius: 50%; /* Faire une boule */
 }
 
-
 /* Masquer le contenu de la page jusqu'à ce que l'écran de chargement disparaisse */
 #content {
     display: none; /* Contenu caché au départ */
@@ -236,8 +237,8 @@
     color: white; /* Couleur de l'icône */
     cursor: pointer;
     position: absolute; /* Positionnement absolu pour le placer à gauche de la barre */
-    left: -40px; /* Ajustement de la position du bouton à gauche */
-    top: -14.3px; /* Ajuste la position verticale pour centrer le bouton par rapport à la barre */
+    left: -50px; /* Ajustement de la position du bouton à gauche */
+    top: -14.5px; /* Ajuste la position verticale pour centrer le bouton par rapport à la barre */
 }
 
 /* Enlever l'effet de hover sur le bouton */
@@ -247,6 +248,35 @@
 
 #play-button i {
     font-size: 25px; /* Taille de l'icône */
+}
+
+/* Media Queries pour rendre responsive */
+@media (max-width: 768px) {
+    /* Pour les écrans moyens (tablettes et petits écrans) */
+    #logo {
+        width: 30vw;
+        max-width: 150px;
+    }
+    #progress-bar-container {
+        width: 30vw;
+        max-width: 150px;
+    }
+}
+
+@media (max-width: 480px) {
+    /* Pour les petits écrans (smartphones) */
+    #logo {
+        width: 40vw;
+        max-width: 100px;
+    }
+    #progress-bar-container {
+        width: 40vw;
+        max-width: 100px;
+    }
+    #play-button {
+        left: -40px;
+        font-size: 20px; /* Réduction de la taille du bouton */
+    }
 }
 
 	</style>
