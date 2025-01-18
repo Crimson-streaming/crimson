@@ -158,6 +158,50 @@
         width: 80%;
         max-width: 400px;
     }
+/* Styles pour l'écran de chargement */
+#loading-screen {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: #0d071e;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 9999; /* Assure-toi que cet élément reste au-dessus de tout */
+    opacity: 1;
+    transition: opacity 1s ease-out; /* Transition fluide de l'écran */
+}
+
+#logo {
+    width: 200px; /* Ajuste la taille du logo selon ton besoin */
+    height: auto;
+    opacity: 1; /* Assure-toi que le logo est visible au début */
+    animation: fadeOut 3s forwards; /* Animation pour faire disparaître le logo */
+}
+
+/* Animation pour faire disparaître le logo après 3 secondes */
+@keyframes fadeOut {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+
+/* Cacher le contenu de la page jusqu'à ce que l'écran de chargement disparaisse */
+#content {
+    display: none;
+}
+
+/* Style pour l'effet de transition fluide de l'écran de chargement */
+#loading-screen.hidden {
+    opacity: 0;
+    pointer-events: none; /* Empêche l'interaction avec l'écran de chargement lorsqu'il est caché */
+}
+
 
 
 	</style>
@@ -215,6 +259,10 @@
     
 	<!-- End Navigation Area -->
 </header>
+
+<div id="loading-screen">
+	<img src="img/logo.png" alt="Logo Crimson" id="logo">
+</div>
 <!-- End Header -->
 <!-- Start Slider Area -->
 <div class="slider-area pt-3">
@@ -926,6 +974,15 @@
     }
 	$(document).ready(function(){$(".video-shows-carousel").owlCarousel({loop:!1,margin:10,nav:!0,dots:!0,navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],responsive:{0:{items:1},600:{items:2},1e3:{items:""}}})});
 	document.getElementById("spin-the-wheel-link").addEventListener("click",async function(e){e.preventDefault();try{let r=await fetch("search/f.json"),n=await r.json(),t=Array.isArray(n)?n:[n],a=t[Math.floor(Math.random()*t.length)];a&&a.emplacement?window.location.href=`${a.emplacement}`:(console.error("Entr\xe9e invalide dans le JSON :",a),alert("Une erreur est survenue, veuillez r\xe9essayer."))}catch(l){console.error("Erreur lors du chargement ou du traitement du JSON :",l),alert("Impossible de charger les donn\xe9es. Veuillez r\xe9essayer plus tard.")}});
+	// Attendre que l'animation du logo soit terminée (3 secondes) et afficher le contenu
+window.onload = function () {
+    setTimeout(function () {
+        document.getElementById('loading-screen').classList.add('hidden'); // Applique la classe 'hidden' pour faire disparaître l'écran de chargement
+        document.getElementById('content').style.display = 'block'; // Afficher le contenu de la page
+    }, 3000); // 3 secondes
+};
+
+
 </script>
 
 
