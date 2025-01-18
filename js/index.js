@@ -1,7 +1,7 @@
 // Fonction pour mélanger un tableau
 function melangerTableau(tableau) {
     for (let i = tableau.length - 1; i > 0; i--) {
-        const j = Math.floor(Math.random() * (i + 1));
+        const j = Math.floor(crypto.getRandomValues(new Uint32Array(1))[0] / (0xFFFFFFFF + 1) * (i + 1));
         [tableau[i], tableau[j]] = [tableau[j], tableau[i]];
     }
     return tableau;
@@ -20,6 +20,7 @@ const COMBINAISONS_INTERDITES = [
     ['Mystère', 'Animation']
 ];
 
+
 // Fonction pour vérifier si un film respecte les restrictions de genre
 function estGenreAutorise(film) {
     return !COMBINAISONS_INTERDITES.some(combinaison =>
@@ -27,12 +28,11 @@ function estGenreAutorise(film) {
     );
 }
 
-// Fonction pour charger les données des films avec cache
-// Fonction pour charger les données des films sans les enregistrer
+// Fonction pour charger les données des films
 async function chargerFilms() {
     if (!filmsData) {
         try {
-            const response = await fetch(`search/p.json?nocache=${Date.now()}`);
+            const response = await fetch(`search/p.json?nocache=${Date.now()}`); // Ajout de nocache
             if (!response.ok) throw new Error(`Erreur HTTP : ${response.status}`);
             filmsData = await response.json();
         } catch (error) {
@@ -43,8 +43,6 @@ async function chargerFilms() {
     return filmsData;
 }
 
-
-// Fonction pour charger les films avec mélange
 async function chargerFilmsAvecMelange() {
     if (!filmsData) {
         filmsData = await chargerFilms();
@@ -65,22 +63,18 @@ async function chargerCategorie(categorie, conteneur) {
 
         // Sélectionner le conteneur carousel spécifique
         const carousel = document.querySelector(conteneur);
-        carousel.innerHTML = '';
-        const fragment = document.createDocumentFragment();
-
-        filmsFiltres.forEach(film => {
-            const div = document.createElement('div');
-            div.classList.add('single-video');
-            div.innerHTML = `
-                <a href="${film.emplacement}" title="${film.nom}">
-                    <div class="video-img">
-                        <span class="video-item-content">${film.nom}</span>
-                        <img src="${film.affiche}" alt="${film.nom}" loading="lazy">
-                    </div>
-                </a>`;
-            fragment.appendChild(div);
-        });
-        carousel.appendChild(fragment);
+        carousel.innerHTML = filmsFiltres.length
+            ? filmsFiltres.map(film => 
+                `<div class="single-video">
+                    <a href="${film.emplacement}" title="${film.nom}">
+                        <div class="video-img">
+                            <span class="video-item-content">${film.nom}</span>
+                            <img src="${film.affiche}" alt="${film.nom}" loading="lazy">
+                        </div>
+                    </a>
+                </div>`
+            ).join('')
+            : '<p>Aucun film trouvé.</p>';
 
         // Réinitialiser Owl Carousel après ajout des éléments
         reinitialiserOwlCarousel(conteneur);
@@ -94,9 +88,9 @@ async function chargerCategorie(categorie, conteneur) {
 // Fonction pour réinitialiser Owl Carousel
 function reinitialiserOwlCarousel(conteneur) {
     const $conteneur = $(conteneur);
-    if (!$conteneur.hasClass('owl-carousel')) return;
-    const instance = $conteneur.data('owl.carousel');
-    if (instance) $conteneur.owlCarousel('destroy');
+    if ($conteneur.hasClass('owl-carousel')) {
+        $conteneur.owlCarousel('destroy'); // Détruire l'instance existante si elle existe
+    }
     $conteneur.owlCarousel({
         loop: false,
         margin: 10,
@@ -145,23 +139,6 @@ document.addEventListener('DOMContentLoaded', chargerToutesLesCategories);
 
 // Recharger les films si vous naviguez sans rechargement complet
 window.addEventListener('popstate', chargerToutesLesCategories);
-
-// Fonction d'observateur pour charger les catégories lorsque visibles
-const observer = new IntersectionObserver((entries, observer) => {
-    entries.forEach(entry => {
-        if (entry.isIntersecting) {
-            const { name, container } = CATEGORIES.find(c => c.container === `.${entry.target.classList[1]}`);
-            chargerCategorie(name, container);
-            observer.unobserve(entry.target); // Ne plus observer cette catégorie
-        }
-    });
-});
-
-document.querySelectorAll('.video-carousel').forEach(carousel => {
-    observer.observe(carousel);
-});
-
-
 
 
 
