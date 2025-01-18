@@ -158,136 +158,6 @@
         width: 80%;
         max-width: 400px;
 		}
-/* Styles pour l'écran de chargement */
-#loading-screen {
-    position: fixed;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
-    background-color: #0d071e; /* Couleur de fond de l'écran de chargement */
-    display: flex;
-    flex-direction: column; /* Organise le logo et la barre verticalement */
-    justify-content: center;
-    align-items: center;
-    z-index: 9999; /* Assure que l'écran de chargement reste au-dessus */
-    opacity: 1;
-    transition: opacity 1s ease-out; /* Transition fluide pour masquer l'écran */
-}
-
-/* Logo */
-#logo {
-    width: 240px; /* Aligné avec la largeur de la barre */
-    height: auto;
-    margin-bottom: 20px; /* Espacement entre le logo et la barre */
-    display: block; /* Assure que le logo est centré */
-    margin-left: auto; 
-    margin-right: auto;
-}
-
-/* Conteneur pour la barre de chargement */
-#progress-bar-container {
-    width: 240px; /* Aligné avec la largeur du logo */
-    height: 8px; /* Hauteur de la barre de chargement */
-    background-color: #333; /* Couleur de fond du conteneur */
-    border-radius: 4px; /* Coins arrondis */
-    display: flex;
-    align-items: center; /* Centrer le bouton Play et la barre */
-    justify-content: flex-start; /* Aligne le bouton et la barre */
-    position: relative;
-    margin: 0 auto; /* Centre horizontalement */
-}
-
-/* Barre de progression */
-#progress-bar {
-    width: 0%; /* La barre commence vide */
-    height: 100%; /* Prend toute la hauteur du conteneur */
-    background-color: #b81b0e; /* Couleur de la barre de progression */
-    transition: width 3s linear; /* Animation fluide sur 3 secondes */
-    border-radius: 4px; /* Coins arrondis */
-    position: relative; /* Important pour le positionnement de la boule */
-}
-
-/* Ajouter une boule blanche à l'extrémité de la barre de progression */
-#progress-bar::after {
-    content: '';
-    position: absolute;
-    right: 0; /* Positionne la boule à la fin de la barre */
-    top: 50%;
-    transform: translate(50%, -50%); /* Décalage pour centrer */
-    width: 16px;
-    height: 16px;
-    background-color: white;
-    border-radius: 50%; /* Faire une boule */
-}
-
-/* Bouton Play pour démarrer le chargement */
-#play-button {
-    background-color: transparent; /* Pas de fond */
-    border: none;
-    font-size: 25px; /* Taille de l'icône */
-    color: white; /* Couleur de l'icône */
-    cursor: pointer;
-    position: absolute;
-    left: -45px; /* Ajustement de la position du bouton à gauche */
-    transform: translateY(-50%); /* Centrage vertical */
-    top: 50%; /* Aligne le bouton verticalement */
-}
-
-#play-button i {
-    font-size: 25px; /* Taille de l'icône */
-}
-
-/* Masquer le contenu de la page jusqu'à ce que l'écran de chargement disparaisse */
-#content {
-    display: none; /* Contenu caché au départ */
-}
-
-/* Transition fluide pour masquer l'écran de chargement */
-#loading-screen.hidden {
-    opacity: 0; /* Rendre l'écran invisible */
-    pointer-events: none; /* Désactive l'interaction avec l'écran de chargement */
-}
-
-/* Media queries pour les appareils plus petits */
-@media (max-width: 768px) {
-    #logo, #progress-bar-container {
-        width: 200px; /* Réduit la largeur sur mobile */
-    }
-    #play-button {
-        left: -35px; /* Réajuste la position du bouton */
-    }
-}
-
-@media (max-width: 480px) {
-    #logo, #progress-bar-container {
-        width: 180px; /* Réduit encore plus pour les petits écrans */
-    }
-    #play-button {
-        left: -30px;
-    }
-}
-
-/* Pour les tablettes (portrait et paysage) */
-@media (max-width: 1024px) {
-    #play-button {
-        right: -45px; /* Ajustement pour les tablettes */
-    }
-}
-
-/* Pour les écrans plus petits, comme les tablettes en mode portrait ou petits écrans */
-@media (max-width: 768px) {
-    #play-button {
-        right: -50px; /* Ajustement pour les petits écrans */
-    }
-}
-
-/* Pour les très petits écrans, comme les téléphones mobiles */
-@media (max-width: 480px) {
-    #play-button {
-        right: -60px; /* Ajustement pour les très petits écrans */
-    }
-}
 
 	</style>
 
@@ -354,11 +224,6 @@
     <div id="progress-bar-container">
         <!-- Barre de progression -->
         <div id="progress-bar"></div>
-
-        <!-- Bouton Play qui va se transformer après le délai -->
-        <button id="play-button">
-            <i class="fa-solid fa-play"></i> <!-- Icône Play -->
-        </button>
 
     </div>
 </div>
@@ -1079,36 +944,7 @@
     }
 	$(document).ready(function(){$(".video-shows-carousel").owlCarousel({loop:!1,margin:10,nav:!0,dots:!0,navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],responsive:{0:{items:1},600:{items:2},1e3:{items:""}}})});
 	document.getElementById("spin-the-wheel-link").addEventListener("click",async function(e){e.preventDefault();try{let r=await fetch("search/f.json"),n=await r.json(),t=Array.isArray(n)?n:[n],a=t[Math.floor(Math.random()*t.length)];a&&a.emplacement?window.location.href=`${a.emplacement}`:(console.error("Entr\xe9e invalide dans le JSON :",a),alert("Une erreur est survenue, veuillez r\xe9essayer."))}catch(l){console.error("Erreur lors du chargement ou du traitement du JSON :",l),alert("Impossible de charger les donn\xe9es. Veuillez r\xe9essayer plus tard.")}});
-// Sélectionne le bouton et la barre de progression
-const playButton = document.getElementById('play-button');
-const progressBar = document.getElementById('progress-bar');
-const loadingScreen = document.getElementById('loading-screen'); // Sélectionne l'écran de chargement
-
-// Fonction pour démarrer le chargement et changer l'icône du bouton
-function startLoading() {
-    // Change l'icône du bouton à "Pause" après un délai
-    setTimeout(() => {
-        const icon = playButton.querySelector('i');
-        icon.classList.remove('fa-play'); // Enlève l'icône "Play"
-        icon.classList.add('fa-pause');  // Ajoute l'icône "Pause"
-        
-        // Lance la barre de progression
-        progressBar.style.width = '100%'; // Remplir la barre de progression
-    }, 1000); // Délai de 1 seconde (1000 ms) avant de commencer
-}
-
-// Fonction pour masquer l'écran de chargement
-function hideLoadingScreen() {
-    loadingScreen.classList.add('hidden'); // Cache l'écran de chargement
-}
-
-// Déclencher la fonction de démarrage du chargement après un court délai
-setTimeout(startLoading, 1); // Délai avant de commencer (1 seconde)
-
-// Surveille la fin de l'animation de la barre de progression
-progressBar.addEventListener('transitionend', () => {
-    hideLoadingScreen(); // Masque l'écran de chargement lorsque la barre est pleine
-});
+	const progressBar=document.getElementById("progress-bar"),loadingScreen=document.getElementById("loading-screen");function startLoading(){setTimeout(()=>{progressBar.style.width="100%"},1e3)}function hideLoadingScreen(){loadingScreen.classList.add("hidden")}setTimeout(startLoading,1),progressBar.addEventListener("transitionend",()=>{hideLoadingScreen()});
 
 </script>
 
