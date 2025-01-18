@@ -249,21 +249,24 @@
     font-size: 25px; /* Taille de l'icône */
 }
 
+/* Pour les tablettes (portrait et paysage) */
+@media (max-width: 1024px) {
+    #play-button {
+        left: -45px; /* Ajustement pour les tablettes */
+    }
+}
+
+/* Pour les écrans plus petits, comme les tablettes en mode portrait ou petits écrans */
+@media (max-width: 768px) {
+    #play-button {
+        left: -50px; /* Ajustement pour les petits écrans */
+    }
+}
+
+/* Pour les très petits écrans, comme les téléphones mobiles */
 @media (max-width: 480px) {
     #play-button {
         left: -60px; /* Ajustement pour les très petits écrans */
-    }
-}
-
-@media (max-width: 600px) {
-    #play-button {
-        left: -45px; /* Ajustement pour les petits écrans */
-    }
-}
-
-@media (max-width: 1000px) {
-    #play-button {
-        left: -35px; /* Ajustement pour les écrans moyens */
     }
 }
 
