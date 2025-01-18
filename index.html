@@ -157,7 +157,7 @@
         border-radius: 18px;
         width: 80%;
         max-width: 400px;
-    }
+		}
 /* Styles pour l'écran de chargement */
 #loading-screen {
     position: fixed;
@@ -180,13 +180,11 @@
     width: 240px; /* Ajuste la largeur du logo */
     height: auto;
     margin-bottom: 20px; /* Espacement entre le logo et la barre */
-    margin-left: -46.5px; /* Décale le logo de 50px vers la gauche */
 }
-
 
 /* Conteneur pour la barre de chargement */
 #progress-bar-container {
-    width: 200px; /* Correspond exactement à la largeur du logo */
+    width: 240px; /* Aligné avec la largeur du logo */
     height: 8px; /* Hauteur de la barre de chargement */
     background-color: #333; /* Couleur de fond du conteneur */
     border-radius: 4px; /* Coins arrondis */
@@ -211,7 +209,7 @@
     position: absolute;
     right: 0; /* Positionne la boule à la fin de la barre */
     top: 50%;
-    transform: translate(20%, -50%); /* Décalage vers la droite (20%) et centrage vertical (-50%) */
+    transform: translate(50%, -50%); /* Décalage pour centrer */
     width: 16px;
     height: 16px;
     background-color: white;
@@ -251,24 +249,6 @@
     font-size: 25px; /* Taille de l'icône */
 }
 
-/* Media queries pour les appareils plus petits */
-@media (max-width: 1024px) {
-    #play-button {
-        left: -45px;
-    }
-}
-
-@media (max-width: 768px) {
-    #play-button {
-        left: -50px;
-    }
-}
-
-@media (max-width: 480px) {
-    #play-button {
-        left: -60px;
-    }
-}
 
 
 	</style>
