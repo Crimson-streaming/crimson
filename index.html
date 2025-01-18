@@ -175,12 +175,14 @@
     transition: opacity 1s ease-out; /* Transition fluide pour masquer l'écran */
 }
 
-/* Style pour le logo */
+/* Logo */
 #logo {
-    width: 270px; /* Ajuste la largeur du logo */
+    width: 240px; /* Aligné avec la largeur de la barre */
     height: auto;
     margin-bottom: 20px; /* Espacement entre le logo et la barre */
-    margin-left: -48.5px; /* Décale le logo de 50px vers la gauche */
+    display: block; /* Assure que le logo est centré */
+    margin-left: auto; 
+    margin-right: auto;
 }
 
 /* Conteneur pour la barre de chargement */
@@ -191,7 +193,9 @@
     border-radius: 4px; /* Coins arrondis */
     display: flex;
     align-items: center; /* Centrer le bouton Play et la barre */
+    justify-content: flex-start; /* Aligne le bouton et la barre */
     position: relative;
+    margin: 0 auto; /* Centre horizontalement */
 }
 
 /* Barre de progression */
@@ -217,6 +221,23 @@
     border-radius: 50%; /* Faire une boule */
 }
 
+/* Bouton Play pour démarrer le chargement */
+#play-button {
+    background-color: transparent; /* Pas de fond */
+    border: none;
+    font-size: 25px; /* Taille de l'icône */
+    color: white; /* Couleur de l'icône */
+    cursor: pointer;
+    position: absolute;
+    left: -45px; /* Ajustement de la position du bouton à gauche */
+    transform: translateY(-50%); /* Centrage vertical */
+    top: 50%; /* Aligne le bouton verticalement */
+}
+
+#play-button i {
+    font-size: 25px; /* Taille de l'icône */
+}
+
 /* Masquer le contenu de la page jusqu'à ce que l'écran de chargement disparaisse */
 #content {
     display: none; /* Contenu caché au départ */
@@ -228,44 +249,43 @@
     pointer-events: none; /* Désactive l'interaction avec l'écran de chargement */
 }
 
-/* Bouton Play pour démarrer le chargement */
-#play-button {
-    background-color: transparent; /* Pas de fond */
-    border: none;
-    font-size: 25px; /* Taille de l'icône */
-    color: white; /* Couleur de l'icône */
-    cursor: pointer;
-    position: absolute;
-    left: -40px; /* Ajustement de la position du bouton à gauche */
-    top: 50%;
-    transform: translateY(-50%); /* Centrage vertical */
-}
-
-/* Enlever l'effet de hover sur le bouton */
-#play-button:hover {
-    color: white; /* Maintient la couleur d'origine */
-}
-
-#play-button i {
-    font-size: 25px; /* Taille de l'icône */
-}
-
 /* Media queries pour les appareils plus petits */
-@media (max-width: 1024px) {
-    #play-button {
-        left: -45px;
-    }
-}
-
 @media (max-width: 768px) {
+    #logo, #progress-bar-container {
+        width: 200px; /* Réduit la largeur sur mobile */
+    }
     #play-button {
-        left: -50px;
+        left: -35px; /* Réajuste la position du bouton */
     }
 }
 
 @media (max-width: 480px) {
+    #logo, #progress-bar-container {
+        width: 180px; /* Réduit encore plus pour les petits écrans */
+    }
     #play-button {
-        left: -60px;
+        left: -30px;
+    }
+}
+
+/* Pour les tablettes (portrait et paysage) */
+@media (max-width: 1024px) {
+    #play-button {
+        right: -45px; /* Ajustement pour les tablettes */
+    }
+}
+
+/* Pour les écrans plus petits, comme les tablettes en mode portrait ou petits écrans */
+@media (max-width: 768px) {
+    #play-button {
+        right: -50px; /* Ajustement pour les petits écrans */
+    }
+}
+
+/* Pour les très petits écrans, comme les téléphones mobiles */
+@media (max-width: 480px) {
+    #play-button {
+        right: -60px; /* Ajustement pour les très petits écrans */
     }
 }
 
