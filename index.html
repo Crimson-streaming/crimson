@@ -179,7 +179,7 @@
 #logo {
     width: 200px; /* Ajuste la largeur du logo */
     height: auto;
-    margin-bottom: 10px; /* Espacement entre le logo et la barre */
+    margin-bottom: 20px; /* Espacement entre le logo et la barre */
 }
 
 /* Conteneur pour la barre de chargement */
@@ -187,16 +187,19 @@
     width: 200px; /* Correspond exactement à la largeur du logo */
     height: 8px; /* Hauteur de la barre de chargement */
     background-color: #333; /* Couleur de fond du conteneur */
-    border-radius: 4px; /* Coins arrondis */
-    overflow: hidden; /* Cache tout dépassement */
+    border-radius: 4px; /* Coins arrondis par défaut */
+    display: flex;
+    align-items: center; /* Centrer le bouton Play à gauche de la barre */
+    position: relative;
 }
 
 /* Barre de progression */
 #progress-bar {
-    width: 0; /* La barre commence vide */
+    width: 0%; /* La barre commence vide */
     height: 100%; /* Prend toute la hauteur du conteneur */
     background-color: #b81b0e; /* Couleur de la barre de progression */
     transition: width 3s linear; /* Animation fluide sur 3 secondes */
+    border-radius: 4px; /* Coins arrondis par défaut */
 }
 
 /* Masquer le contenu de la page jusqu'à ce que l'écran de chargement disparaisse */
@@ -209,6 +212,31 @@
     opacity: 0; /* Rendre l'écran invisible */
     pointer-events: none; /* Désactive l'interaction avec l'écran de chargement */
 }
+
+/* Bouton Play pour démarrer le chargement */
+#play-button {
+    background-color: transparent; /* Pas de fond */
+    border: none;
+    font-size: 25px; /* Taille de l'icône */
+    color: white; /* Couleur de l'icône */
+    cursor: pointer;
+    position: absolute; /* Positionnement absolu pour le placer à gauche de la barre */
+    left: -35px; /* Ajustement de la position du bouton à gauche */
+    top: -14.3px; /* Ajuste la position verticale pour centrer le bouton par rapport à la barre */
+}
+
+/* Enlever l'effet de hover sur le bouton */
+#play-button:hover {
+    color: white; /* Maintient la couleur d'origine */
+}
+
+#play-button i {
+    font-size: 25px; /* Taille de l'icône */
+}
+
+
+
+
 
 	</style>
 
@@ -266,12 +294,29 @@
 	<!-- End Navigation Area -->
 </header>
 
+<!-- Écran de chargement -->
 <div id="loading-screen">
-    <img src="img/logo.png" alt="Logo Crimson" id="logo">
+    <!-- Logo -->
+    <img id="logo" src="img/logo.png" alt="Logo">
+
+    <!-- Conteneur de la barre de progression -->
     <div id="progress-bar-container">
+        <!-- Barre de progression -->
         <div id="progress-bar"></div>
+
+        <!-- Bouton Play qui va se transformer après le délai -->
+        <button id="play-button">
+            <i class="fa-solid fa-play"></i> <!-- Icône Play -->
+        </button>
+
     </div>
 </div>
+
+
+
+
+
+
 <!-- End Header -->
 <!-- Start Slider Area -->
 <div class="slider-area pt-3">
@@ -983,24 +1028,36 @@
     }
 	$(document).ready(function(){$(".video-shows-carousel").owlCarousel({loop:!1,margin:10,nav:!0,dots:!0,navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],responsive:{0:{items:1},600:{items:2},1e3:{items:""}}})});
 	document.getElementById("spin-the-wheel-link").addEventListener("click",async function(e){e.preventDefault();try{let r=await fetch("search/f.json"),n=await r.json(),t=Array.isArray(n)?n:[n],a=t[Math.floor(Math.random()*t.length)];a&&a.emplacement?window.location.href=`${a.emplacement}`:(console.error("Entr\xe9e invalide dans le JSON :",a),alert("Une erreur est survenue, veuillez r\xe9essayer."))}catch(l){console.error("Erreur lors du chargement ou du traitement du JSON :",l),alert("Impossible de charger les donn\xe9es. Veuillez r\xe9essayer plus tard.")}});
-	document.addEventListener("DOMContentLoaded", () => {
-    const progressBar = document.getElementById("progress-bar");
-    const loadingScreen = document.getElementById("loading-screen");
+// Sélectionne le bouton et la barre de progression
+const playButton = document.getElementById('play-button');
+const progressBar = document.getElementById('progress-bar');
+const loadingScreen = document.getElementById('loading-screen'); // Sélectionne l'écran de chargement
 
-    // Démarrage de l'animation de la barre de progression
+// Fonction pour démarrer le chargement et changer l'icône du bouton
+function startLoading() {
+    // Change l'icône du bouton à "Pause" après un délai
     setTimeout(() => {
-        progressBar.style.width = "100%"; // La barre atteint 100%
-    }, 100);
+        const icon = playButton.querySelector('i');
+        icon.classList.remove('fa-play'); // Enlève l'icône "Play"
+        icon.classList.add('fa-pause');  // Ajoute l'icône "Pause"
+        
+        // Lance la barre de progression
+        progressBar.style.width = '100%'; // Remplir la barre de progression
+    }, 1000); // Délai de 1 seconde (1000 ms) avant de commencer
+}
 
-    // Masquer l'écran de chargement après 3 secondes
-    setTimeout(() => {
-        loadingScreen.classList.add("hidden");
-        document.getElementById("content").style.display = "block"; // Afficher le contenu
-    }, 3000);
+// Fonction pour masquer l'écran de chargement
+function hideLoadingScreen() {
+    loadingScreen.classList.add('hidden'); // Cache l'écran de chargement
+}
+
+// Déclencher la fonction de démarrage du chargement après un court délai
+setTimeout(startLoading, 1); // Délai avant de commencer (1 seconde)
+
+// Surveille la fin de l'animation de la barre de progression
+progressBar.addEventListener('transitionend', () => {
+    hideLoadingScreen(); // Masque l'écran de chargement lorsque la barre est pleine
 });
-
-
-
 
 </script>
 
