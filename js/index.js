@@ -10,6 +10,24 @@ function melangerTableau(tableau) {
 // Variable globale pour stocker les données des films
 let filmsData = null;
 
+// Liste des combinaisons interdites
+const COMBINAISONS_INTERDITES = [
+    ['Action', 'Romance'],
+    ['Horreur', 'Familial'],
+    ['Science-Fiction', 'Histoire'], 
+    ['Guerre', 'Comédie'],          
+    ['Drame', 'Fantastique'],
+    ['Mystère', 'Animation']
+];
+
+
+// Fonction pour vérifier si un film respecte les restrictions de genre
+function estGenreAutorise(film) {
+    return !COMBINAISONS_INTERDITES.some(combinaison =>
+        combinaison.every(genre => film.genre.includes(genre))
+    );
+}
+
 // Fonction pour charger les données des films
 async function chargerFilms() {
     if (!filmsData) {
@@ -33,15 +51,14 @@ async function chargerFilmsAvecMelange() {
     return filmsData;
 }
 
-
 // Fonction pour charger les films d'une catégorie donnée
 async function chargerCategorie(categorie, conteneur) {
     try {
         const films = await chargerFilms();
 
-        // Mélanger et filtrer les films selon la catégorie
+        // Mélanger et filtrer les films selon la catégorie et les restrictions de genre
         const filmsFiltres = melangerTableau(films)
-            .filter(film => film.genre.includes(categorie))
+            .filter(film => film.genre.includes(categorie) && estGenreAutorise(film))
             .slice(0, 12);
 
         // Sélectionner le conteneur carousel spécifique
@@ -122,6 +139,7 @@ document.addEventListener('DOMContentLoaded', chargerToutesLesCategories);
 
 // Recharger les films si vous naviguez sans rechargement complet
 window.addEventListener('popstate', chargerToutesLesCategories);
+
 
 
 
