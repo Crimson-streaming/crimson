@@ -158,8 +158,7 @@
         width: 80%;
         max-width: 400px;
     }
-
-/* Styles pour l'écran de chargement */ 
+/* Styles pour l'écran de chargement */
 #loading-screen {
     position: fixed;
     top: 0;
@@ -181,17 +180,18 @@
     width: 240px; /* Ajuste la largeur du logo */
     height: auto;
     margin-bottom: 20px; /* Espacement entre le logo et la barre */
-	margin-left: -32px;
+    margin-left: -46.5px; /* Décale le logo de 50px vers la gauche */
 }
+
 
 /* Conteneur pour la barre de chargement */
 #progress-bar-container {
     width: 200px; /* Correspond exactement à la largeur du logo */
     height: 8px; /* Hauteur de la barre de chargement */
     background-color: #333; /* Couleur de fond du conteneur */
-    border-radius: 4px; /* Coins arrondis par défaut */
+    border-radius: 4px; /* Coins arrondis */
     display: flex;
-    align-items: center; /* Centrer le bouton Play à gauche de la barre */
+    align-items: center; /* Centrer le bouton Play et la barre */
     position: relative;
 }
 
@@ -201,7 +201,7 @@
     height: 100%; /* Prend toute la hauteur du conteneur */
     background-color: #b81b0e; /* Couleur de la barre de progression */
     transition: width 3s linear; /* Animation fluide sur 3 secondes */
-    border-radius: 4px; /* Coins arrondis par défaut */
+    border-radius: 4px; /* Coins arrondis */
     position: relative; /* Important pour le positionnement de la boule */
 }
 
@@ -211,13 +211,12 @@
     position: absolute;
     right: 0; /* Positionne la boule à la fin de la barre */
     top: 50%;
-    transform: translateY(-50%) translateX(10px); /* Décalage de la boule vers la droite */
+    transform: translate(20%, -50%); /* Décalage vers la droite (20%) et centrage vertical (-50%) */
     width: 16px;
     height: 16px;
     background-color: white;
     border-radius: 50%; /* Faire une boule */
 }
-
 
 /* Masquer le contenu de la page jusqu'à ce que l'écran de chargement disparaisse */
 #content {
@@ -237,9 +236,10 @@
     font-size: 25px; /* Taille de l'icône */
     color: white; /* Couleur de l'icône */
     cursor: pointer;
-    position: absolute; /* Positionnement absolu pour le placer à gauche de la barre */
+    position: absolute;
     left: -40px; /* Ajustement de la position du bouton à gauche */
-    top: -14.5px; /* Ajuste la position verticale pour centrer le bouton par rapport à la barre */
+    top: 50%;
+    transform: translateY(-50%); /* Centrage vertical */
 }
 
 /* Enlever l'effet de hover sur le bouton */
@@ -251,26 +251,25 @@
     font-size: 25px; /* Taille de l'icône */
 }
 
-/* Pour les tablettes (portrait et paysage) */
+/* Media queries pour les appareils plus petits */
 @media (max-width: 1024px) {
     #play-button {
-        left: -45px; /* Ajustement pour les tablettes */
+        left: -45px;
     }
 }
 
-/* Pour les écrans plus petits, comme les tablettes en mode portrait ou petits écrans */
 @media (max-width: 768px) {
     #play-button {
-        left: -50px; /* Ajustement pour les petits écrans */
+        left: -50px;
     }
 }
 
-/* Pour les très petits écrans, comme les téléphones mobiles */
 @media (max-width: 480px) {
     #play-button {
-        left: -60px; /* Ajustement pour les très petits écrans */
+        left: -60px;
     }
 }
+
 
 	</style>
 
