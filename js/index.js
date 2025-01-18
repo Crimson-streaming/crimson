@@ -28,25 +28,21 @@ function estGenreAutorise(film) {
 }
 
 // Fonction pour charger les données des films avec cache
+// Fonction pour charger les données des films sans les enregistrer
 async function chargerFilms() {
     if (!filmsData) {
-        const cachedFilms = sessionStorage.getItem('filmsData');
-        if (cachedFilms) {
-            filmsData = JSON.parse(cachedFilms);
-        } else {
-            try {
-                const response = await fetch(`search/data.json?nocache=${Date.now()}`);
-                if (!response.ok) throw new Error(`Erreur HTTP : ${response.status}`);
-                filmsData = await response.json();
-                sessionStorage.setItem('filmsData', JSON.stringify(filmsData));
-            } catch (error) {
-                console.error('Erreur lors du chargement des données des films :', error);
-                filmsData = []; // Définit une valeur par défaut pour éviter des erreurs ultérieures
-            }
+        try {
+            const response = await fetch(`search/p.json?nocache=${Date.now()}`);
+            if (!response.ok) throw new Error(`Erreur HTTP : ${response.status}`);
+            filmsData = await response.json();
+        } catch (error) {
+            console.error('Erreur lors du chargement des données des films :', error);
+            filmsData = []; // Définit une valeur par défaut pour éviter des erreurs ultérieures
         }
     }
     return filmsData;
 }
+
 
 // Fonction pour charger les films avec mélange
 async function chargerFilmsAvecMelange() {
