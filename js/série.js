@@ -58,13 +58,12 @@ function normalizeString(str) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    // Configuration des contrôles selon la taille de l'écran
     const screenIsLargeEnough = window.innerWidth >= 600;
+
     const playerControls = screenIsLargeEnough
         ? ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen']
         : ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
 
-    // Initialisation du lecteur Plyr
     const player = new Plyr('#player', {
         controls: playerControls,
         settings: ["captions", "quality", "speed"],
@@ -115,30 +114,7 @@ document.addEventListener('DOMContentLoaded', () => {
         volume: 1,
         muted: false
     });
-
-    // Préchargement de la vidéo pour les 3 premières minutes
-    const video = document.querySelector('#player');
-    video.preload = 'metadata'; // Charger uniquement les métadonnées pour débuter rapidement
-    video.addEventListener('loadedmetadata', () => {
-        const threeMinutesInSeconds = 3 * 60; // Durée en secondes
-        if (video.duration > threeMinutesInSeconds) {
-            video.currentTime = threeMinutesInSeconds; // Charger jusqu'à 3 minutes
-        }
-    });
-
-    // Chargement progressif en arrière-plan
-    video.addEventListener('timeupdate', () => {
-        if (video.buffered.length > 0) {
-            const bufferedEnd = video.buffered.end(video.buffered.length - 1);
-            const currentTime = video.currentTime;
-            // Si l'utilisateur approche de la fin de la zone tampon, précharger davantage
-            if (bufferedEnd - currentTime < 30) {
-                video.load(); // Charger les segments suivants
-            }
-        }
-    });
-});
-
+}); 
     
 
 
