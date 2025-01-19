@@ -1313,3 +1313,23 @@ ul.nav > li a.active, ul.nav > li:hover > a{
     max-width: 100px;
     height: auto;
 }
+		/* Applique un padding en haut pour tous les appareils avec encoche */
+		body {
+			padding-top: env(safe-area-inset-top);
+		  }
+		  
+		  /* Pour l'en-tête, ajouter du padding en haut pour éviter l'encoche */
+		  header {
+			padding-top: env(safe-area-inset-top);
+		  }
+		  
+		  /* Si vous voulez ajuster uniquement la navigation principale sous l'en-tête */
+		  .main-menu {
+			padding-top: env(safe-area-inset-top);
+		  }
+		  
+		  /* Si vous avez un autre élément spécifique à ajuster, vous pouvez appliquer le padding aussi */
+		  .navbar {
+			padding-top: env(safe-area-inset-top);
+		  }
+		  
