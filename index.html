@@ -377,8 +377,17 @@
 				</div>
 			  </a>
 			</div>
-  
+
 			<div class="single-video" style="flex: 0 0 22%; box-sizing: border-box; ">
+				<a href="javascript:void(0)" title="Prison Break" onclick="showMinimalAlert()">
+				  <div class="video-img" style="position: relative; width: 100%; height: auto;">
+					<img src="https://image.tmdb.org/t/p/original/hMh1mR2kNl8kHjpIuPh4TICTwjo.jpg" alt="Prison Break" title="Shows-Prison Break" style="width: 100%; height: auto; object-fit: cover;" >
+					<span class="video-item-content" style="font-size: 12px; text-align: center;">Prison Break</span>
+				  </div>
+				</a>
+			  </div>
+  
+			  <div class="single-video" style="flex: 0 0 22%; box-sizing: border-box; ">
 			  <a href="série/Fallout/Fallout.html" title="Fallout">
 				<div class="video-img" style="position: relative; width: 100%; height: auto;">
 				  <img src="https://image.tmdb.org/t/p/original/90xkPbXRHIy9SlgBLHp6A7dVt8s.jpg" alt="Fallout" title="Shows-Fallout" style="width: 100%; height: auto; object-fit: cover;" >
@@ -946,10 +955,26 @@
         });
         localStorage.setItem('popupDisplayed', 'true');
     }
-	$(document).ready(function(){$(".video-shows-carousel").owlCarousel({loop:!1,margin:10,nav:!0,dots:!0,navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],responsive:{0:{items:1},600:{items:2},1e3:{items:""}}})});
+	$(document).ready(function(){$(".video-shows-carousel").owlCarousel({loop:!1,margin:10,nav:!0,dots:!0,navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],responsive:{0:{items:1},600:{items:2},1e3:{items:3}}})});
 	document.getElementById("spin-the-wheel-link").addEventListener("click",async function(e){e.preventDefault();try{let r=await fetch("search/f.json"),n=await r.json(),t=Array.isArray(n)?n:[n],a=t[Math.floor(Math.random()*t.length)];a&&a.emplacement?window.location.href=`${a.emplacement}`:(console.error("Entr\xe9e invalide dans le JSON :",a),alert("Une erreur est survenue, veuillez r\xe9essayer."))}catch(l){console.error("Erreur lors du chargement ou du traitement du JSON :",l),alert("Impossible de charger les donn\xe9es. Veuillez r\xe9essayer plus tard.")}});
 	const progressBar=document.getElementById("progress-bar"),loadingScreen=document.getElementById("loading-screen");function startLoading(){progressBar.style.width="100%"}function hideLoadingScreen(){loadingScreen.classList.add("hidden")}startLoading(),progressBar.addEventListener("transitionend",()=>{hideLoadingScreen()});
 </script>
+<script>
+	function showMinimalAlert() {
+	  Swal.fire({
+		  text: 'Bientôt disponible',
+		  icon: 'info', // Icône d'information
+		  background: '#0d071e',
+		  color: '#ffffff',
+		  showConfirmButton: false,
+		  timer: 1500, // Fermeture automatique après 1,5 seconde
+		  width: '300px', // Réduit la largeur de la popup
+		  customClass: {
+			  popup: 'minimal-alert'
+		  }
+	  });
+  }
+  </script>
 
 
 
