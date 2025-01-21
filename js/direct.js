@@ -16,6 +16,7 @@ document.addEventListener('DOMContentLoaded', () => {
         disableContextMenu: true,
         ratio: "16:9",
         autoplay: true,
+        muted: true,
         i18n: {
             restart: 'Recommencer',
             rewind: 'Revenir de {seektime}s',
