@@ -54,84 +54,55 @@ document.addEventListener('DOMContentLoaded', () => {
             advertisement: 'Publicité',
         },
         volume: 1,
-        muted: true
+        muted: false
     });
 
-    
-            const videoElement = document.getElementById('player');
-            const hlsSource = videoElement.querySelector('source').src;
-        
-            // Ajout des attributs playsinline et muted pour une compatibilité maximale
-            videoElement.setAttribute('playsinline', ''); // iOS: lecture inline
-            videoElement.muted = true; // Nécessaire pour l'autoplay
-            videoElement.controls = true; // Afficher les contrôles natifs
-        
-            // Vérifie si HLS est pris en charge par la bibliothèque HLS.js
-            if (Hls.isSupported() && !/iPad|iPhone|iPod/.test(navigator.userAgent)) {
-                const hls = new Hls();
-                hls.loadSource(hlsSource);
-                hls.attachMedia(videoElement);
-        
-                // Lecture automatique lorsque les médias sont attachés
-                hls.on(Hls.Events.MEDIA_ATTACHED, () => {
-                    videoElement.play().catch((error) => {
-                        console.warn('Lecture automatique bloquée :', error);
-                    });
-                });
-        
-                // Recharge la vidéo à la fin
-                videoElement.addEventListener('ended', () => {
-                    hls.loadSource(hlsSource);
-                    videoElement.play().catch((error) => {
-                        console.warn('Lecture automatique après fin bloquée :', error);
-                    });
-                });
-        
-                // Gestion des erreurs HLS
-                hls.on(Hls.Events.ERROR, (event, data) => {
-                    if (data.fatal) {
-                        switch (data.type) {
-                            case Hls.ErrorTypes.NETWORK_ERROR:
-                                console.log("Erreur réseau, tentative de récupération...");
-                                hls.startLoad();
-                                break;
-                            case Hls.ErrorTypes.MEDIA_ERROR:
-                                console.log("Erreur média, tentative de récupération...");
-                                hls.recoverMediaError();
-                                break;
-                            default:
-                                console.log("Erreur fatale, rechargement...");
-                                hls.destroy();
-                                hls.loadSource(hlsSource);
-                                hls.attachMedia(videoElement);
-                                break;
-                        }
-                    }
-                });
-            }
-            // Support natif HLS (Safari)
-            else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
-                videoElement.src = hlsSource;
-        
-                // Lecture automatique
-                videoElement.addEventListener('canplay', () => {
-                    videoElement.play().catch((error) => {
-                        console.warn('Lecture automatique bloquée sur Safari :', error);
-                    });
-                });
-        
-                // Recharge la vidéo à la fin
-                videoElement.addEventListener('ended', () => {
-                    videoElement.play().catch((error) => {
-                        console.warn('Lecture automatique après fin bloquée :', error);
-                    });
-                });
-            } else {
-                console.error("Le flux HLS n'est pas supporté sur cet appareil.");
+    const videoElement = document.getElementById('player');
+    const hlsSource = videoElement.querySelector('source').src;
+
+    // Vérifie si HLS est pris en charge et n'est pas Safari
+    if (Hls.isSupported() && !/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        const hls = new Hls();
+        hls.loadSource(hlsSource);
+        hls.attachMedia(videoElement);
+
+        // Recharge la vidéo à la fin
+        videoElement.addEventListener('ended', () => {
+            hls.loadSource(hlsSource);
+            videoElement.play(); // Relecture
+        });
+
+        // Gestion des erreurs de HLS
+        hls.on(Hls.Events.ERROR, (event, data) => {
+            if (data.fatal) {
+                switch (data.type) {
+                    case Hls.ErrorTypes.NETWORK_ERROR:
+                        console.log("Erreur réseau, tentative de récupération...");
+                        hls.startLoad();
+                        break;
+                    case Hls.ErrorTypes.MEDIA_ERROR:
+                        console.log("Erreur média, tentative de récupération...");
+                        hls.recoverMediaError();
+                        break;
+                    default:
+                        console.log("Erreur fatale, rechargement...");
+                        hls.destroy();
+                        hls.loadSource(hlsSource);
+                        hls.attachMedia(videoElement);
+                        break;
+                }
             }
         });
-        
-    
+    } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+        // Support natif HLS pour Safari
+        videoElement.src = hlsSource;
+        videoElement.addEventListener('ended', () => {
+            videoElement.play(); // Relecture
+        });
+    } else {
+        console.error('Le flux HLS n\'est pas supporté sur cet appareil.');
+    }
+});
 
 
 
