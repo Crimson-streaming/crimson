@@ -15,6 +15,7 @@ document.addEventListener('DOMContentLoaded', () => {
         invertTime: false,
         disableContextMenu: true,
         ratio: "16:9",
+        autoplay: true,
         i18n: {
             restart: 'Recommencer',
             rewind: 'Revenir de {seektime}s',
@@ -102,6 +103,8 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('Le flux HLS n\'est pas supporté sur cet appareil.');
     }
 });
+
+
 
 async function showSuggestions(query) {
     const searchOutput = document.getElementById('search_output');
