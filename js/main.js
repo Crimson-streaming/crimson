@@ -465,7 +465,9 @@ const video = document.getElementById('player');
 const ambilight = document.getElementById('ambilight');
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
+let updateInterval = 500; // Intervalle en millisecondes
 let animationFrameId = null;
+let lastUpdateTime = 0;
 
 /**
  * Calcul de la couleur moyenne de l'image
@@ -494,7 +496,12 @@ const calculateAverageColor = (frame) => {
  * Met à jour l'effet Ambilight
  */
 const updateAmbilight = () => {
-    if (!video.paused && !video.ended) {
+    const currentTime = Date.now();
+
+    // Met à jour seulement si l'intervalle spécifié est écoulé
+    if (currentTime - lastUpdateTime >= updateInterval) {
+        lastUpdateTime = currentTime;
+
         // Ajuste la hauteur du conteneur Ambilight à celle de la vidéo
         ambilight.style.height = `${video.offsetHeight}px`;
 
@@ -512,10 +519,10 @@ const updateAmbilight = () => {
         // Ajoute une transition fluide pour l'effet visuel
         ambilight.style.transition = 'background 0.1s ease-in-out';
         ambilight.style.background = `radial-gradient(circle, rgba(${r},${g},${b},0.8) 50%, transparent 100%)`;
-
-        // Planifie la prochaine mise à jour
-        animationFrameId = requestAnimationFrame(updateAmbilight);
     }
+
+    // Planifie la prochaine mise à jour
+    animationFrameId = requestAnimationFrame(updateAmbilight);
 };
 
 /**
@@ -523,6 +530,7 @@ const updateAmbilight = () => {
  */
 const startAmbilight = () => {
     if (!animationFrameId) {
+        lastUpdateTime = Date.now(); // Initialisation du temps
         updateAmbilight();
     }
 };
