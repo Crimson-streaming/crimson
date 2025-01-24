@@ -192,7 +192,7 @@
 							<div class="right-sub-item-area">
 							  <div class="search-item-block">
 								<form class="navbar-form navbar-left">
-								  <a type="submit" href="#popup1" class="btn btn-default open" title="search"><i class="fa fa-search"></i></a>
+								  <a type="submit" href="#popup1" class="btn btn-default open" title="search" onclick="openPopup(event)"><i class="fa fa-search"></i></a>
 								</form>
 							  </div>
 							  <div class="user-menu">
@@ -881,19 +881,22 @@
 <!-- End Latest Movies Video Carousel -->
 <!-- End Live TV Section -->
 <!-- Banner -->
-<div id="popup1" class="popup-view popup-overlay">
+<div id="popup1" class="popup-view popup-overlay" style="display: none;">
 	<div class="search">
-	  <div class="search-container has-results"><span class="title">Rechercher</span>
+	  <div class="search-container has-results">
+		<span class="title">Rechercher</span>
 		<div class="search-input">
-		  <input type="text" name="s" id="search_box" class="search-container-input" placeholder="Titre" onkeyup="showSuggestions(this.value)" style="background: #0d071e;" autocomplete="off">
+		  <input type="text" name="s" id="search_box" class="search-container-input" placeholder="Titre" 
+				 onkeyup="showSuggestions(this.value)" style="background: #0d071e;" autocomplete="off">
 		</div>
 	  </div>
-	  <div class="search-results mt-4" id="search_output">
-		</div>
+	  <div class="search-results mt-4" id="search_output"></div>
 	</div>
-	<a class="close" href="#" title="close"><i class="fas fa-times"></i></a>
-  </div>     
-<div class="eupopup eupopup-bottom"></div>
+	<a class="close" href="#" title="close" onclick="closePopup(event)">
+	  <i class="fas fa-times"></i>
+	</a>
+  </div>
+  <div class="eupopup eupopup-bottom"></div>
 
 <script>
 	async function showSuggestions(query) {
@@ -1013,6 +1016,17 @@
 		  }
 	  });
   }
+  </script>
+  <script>
+	function openPopup(event) {
+	  event.preventDefault(); // Empêche le comportement par défaut du lien
+	  document.getElementById('popup1').style.display = 'block'; // Affiche la popup
+	}
+  
+	function closePopup(event) {
+	  event.preventDefault(); // Empêche le comportement par défaut du lien
+	  document.getElementById('popup1').style.display = 'none'; // Cache la popup
+	}
   </script>
 
 
