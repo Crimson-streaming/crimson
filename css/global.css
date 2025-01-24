@@ -242,11 +242,11 @@ body {
     top: 0;
     left: 0;
     width: 100%; /* Couvre toute la largeur du lecteur vidéo */
-    height: auto; /* S'ajuste à la hauteur du lecteur vidéo */
+    height: 90%; /* S'ajuste à la hauteur du lecteur vidéo */
     z-index: 0; /* Derrière tout le reste */
     filter: blur(80px); /* Flou optimisé pour un effet subtil */
     transform: scale(1.1); /* Légère échelle pour éviter les bordures visibles */
-    opacity: 0.6; /* Transparence pour un effet moins prononcé */
+    opacity: 0.7; /* Transparence pour un effet moins prononcé */
     pointer-events: none; /* Rend l'Ambilight insensible aux interactions */
     will-change: transform, opacity; /* Améliore les performances */
 }
