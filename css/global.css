@@ -234,8 +234,6 @@ span::after, span.warning-icon::after {
 /* Empêche les débordements horizontaux */
 body {
     overflow-x: hidden;
-    
-    
 }
 
 /* Effet Ambilight */
