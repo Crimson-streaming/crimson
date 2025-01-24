@@ -241,10 +241,10 @@ body {
         top: 7%; /* Ajuste la hauteur pour ne pas dépasser sur le texte */
         left: -15%; /* Garde un débordement horizontal suffisant */
         width: 130%; /* Maintient une largeur suffisante */
-        height: 98%; /* Réduit la hauteur pour éviter les interférences */
+        height: 100%; /* Réduit la hauteur pour éviter les interférences */
         z-index: 0; /* Derrière tout le reste */
         filter: blur(100px); /* Flou légèrement réduit */
-        transform: scale(1.1); /* Ajuste l'échelle générale */
+        transform: scale(1.3); /* Ajuste l'échelle générale */
         opacity: 0.8; /* Moins prononcé */
         pointer-events: none;
         
