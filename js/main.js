@@ -465,7 +465,7 @@ const video = document.getElementById('player');
 const ambilight = document.getElementById('ambilight');
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
-let updateInterval = 500; // Intervalle en millisecondes
+let updateInterval = 1000;
 let animationFrameId = null;
 let lastUpdateTime = 0;
 
