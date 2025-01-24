@@ -228,3 +228,58 @@ span::after, span.warning-icon::after {
     }
     
 }
+
+
+
+/* Empêche les débordements horizontaux */
+body {
+    overflow-x: hidden;
+} 
+    /* Effet Ambilight */
+    #ambilight {
+        position: absolute;
+        top: 7%; /* Ajuste la hauteur pour ne pas dépasser sur le texte */
+        left: -15%; /* Garde un débordement horizontal suffisant */
+        width: 130%; /* Maintient une largeur suffisante */
+        height: 98%; /* Réduit la hauteur pour éviter les interférences */
+        z-index: 0; /* Derrière tout le reste */
+        filter: blur(100px); /* Flou légèrement réduit */
+        transform: scale(1.1); /* Ajuste l'échelle générale */
+        opacity: 0.8; /* Moins prononcé */
+        pointer-events: none;
+        background: radial-gradient(circle, rgba(255,0,0,0.5), rgba(0,0,255,0.2)); /* Lumière équilibrée */
+    }
+
+    /* Lecteur vidéo */
+    #player {
+        position: relative;
+        z-index: 2; /* Au-dessus de l'Ambilight */
+        display: block;
+        width: 100%;
+        max-width: 100%;
+    }
+
+    /* Conteneur principal pour gérer correctement les enfants */
+.col-lg-12 {
+    position: relative;
+    
+    z-index: 1;
+}
+
+
+    /* Logo */
+    #player-logo {
+        position: absolute;
+        top: 17.5px;
+        left: 17.5px;
+        z-index: 9;
+        width: 150px;
+        max-width: 10%;
+        opacity: 0.8;
+    }
+
+    /* Conteneur de suggestions */
+    .container-fluid {
+        position: relative;
+        z-index: 1; /* Garde les suggestions au-dessus de l'Ambilight */
+    }

@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
             advertisement: 'Publicité',
         },
         volume: 1,
-        muted: true
+        muted: false
     });
 
     const videoElement = document.getElementById('player');

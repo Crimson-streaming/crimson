@@ -459,3 +459,37 @@ window.onload = loadWatchlist;
         }
     });
 });
+
+const video = document.getElementById('player');
+const ambilight = document.getElementById('ambilight');
+
+video.addEventListener('play', () => {
+    const canvas = document.createElement('canvas');
+    const ctx = canvas.getContext('2d');
+
+    const updateAmbilight = () => {
+        if (!video.paused && !video.ended) {
+            canvas.width = video.videoWidth / 10;
+            canvas.height = video.videoHeight / 10;
+            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+            const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+            const length = frame.data.length;
+            let r = 0, g = 0, b = 0;
+
+            // Average the colors of the frame
+            for (let i = 0; i < length; i += 4) {
+                r += frame.data[i];
+                g += frame.data[i + 1];
+                b += frame.data[i + 2];
+            }
+            r = Math.floor(r / (length / 4));
+            g = Math.floor(g / (length / 4));
+            b = Math.floor(b / (length / 4));
+
+            ambilight.style.background = `radial-gradient(circle, rgba(${r},${g},${b},0.8) 50%, transparent 100%)`;
+            requestAnimationFrame(updateAmbilight);
+        }
+    };
+
+    updateAmbilight();
+});
