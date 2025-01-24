@@ -498,9 +498,9 @@ const updateAmbilight = () => {
         // Ajuste la hauteur du conteneur Ambilight à celle de la vidéo
         ambilight.style.height = `${video.offsetHeight}px`;
 
-        // Réduit la résolution pour améliorer les performances
-        canvas.width = video.videoWidth / 8;
-        canvas.height = video.videoHeight / 8;
+        // Taille légèrement réduite pour de meilleures performances
+        canvas.width = Math.max(32, video.videoWidth / 4);
+        canvas.height = Math.max(32, video.videoHeight / 4);
 
         // Dessine l'image de la vidéo sur le canvas
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
@@ -509,7 +509,8 @@ const updateAmbilight = () => {
         const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
         const { r, g, b } = calculateAverageColor(frame);
 
-        // Applique un dégradé radial basé sur la couleur moyenne
+        // Ajoute une transition fluide pour l'effet visuel
+        ambilight.style.transition = 'background 0.1s ease-in-out';
         ambilight.style.background = `radial-gradient(circle, rgba(${r},${g},${b},0.8) 50%, transparent 100%)`;
 
         // Planifie la prochaine mise à jour
@@ -533,6 +534,8 @@ const stopAmbilight = () => {
     if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
         animationFrameId = null;
+        // Réinitialise le flou pour éviter un effet figé
+        ambilight.style.background = 'transparent';
     }
 };
 
