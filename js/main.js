@@ -460,36 +460,37 @@ window.onload = loadWatchlist;
     });
 });
 
-const video = document.getElementById('player');
+const video = document.getElementById('player'); 
 const ambilight = document.getElementById('ambilight');
 const canvas = document.createElement('canvas');
 const ctx = canvas.getContext('2d');
 let animationFrameId = null;
 
-// Calcule la couleur moyenne d'un frame
 const calculateAverageColor = (frame) => {
     const length = frame.data.length;
     let r = 0, g = 0, b = 0;
 
     for (let i = 0; i < length; i += 4) {
-        r += frame.data[i];       // Rouge
-        g += frame.data[i + 1];   // Vert
-        b += frame.data[i + 2];   // Bleu
+        r += frame.data[i];       // Red
+        g += frame.data[i + 1];   // Green
+        b += frame.data[i + 2];   // Blue
     }
 
-    const pixels = length / 4; // Nombre total de pixels
+    const pixels = length / 4; // Total number of pixels
     return {
         r: Math.floor(r / pixels),
         g: Math.floor(g / pixels),
-        b: Math.floor(b / pixels),
+        b: Math.floor(b / pixels)
     };
 };
 
-// Met à jour l'effet Ambilight
 const updateAmbilight = () => {
     if (!video.paused && !video.ended) {
-        canvas.width = video.videoWidth / 10; // Résolution réduite pour optimiser
-        canvas.height = video.videoHeight / 10;
+        // Ajuste la hauteur du conteneur Ambilight
+        ambilight.style.height = `${video.offsetHeight}px`;
+
+        canvas.width = video.videoWidth / 8; // Reduce resolution further
+        canvas.height = video.videoHeight / 8;
 
         ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
         const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
@@ -497,19 +498,17 @@ const updateAmbilight = () => {
 
         ambilight.style.background = `radial-gradient(circle, rgba(${r},${g},${b},0.8) 50%, transparent 100%)`;
 
-        // Prochaine mise à jour
+        // Schedule next frame update
         animationFrameId = requestAnimationFrame(updateAmbilight);
     }
 };
 
-// Démarre l'Ambilight
 const startAmbilight = () => {
     if (!animationFrameId) {
         updateAmbilight();
     }
 };
 
-// Arrête l'Ambilight
 const stopAmbilight = () => {
     if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
@@ -517,7 +516,7 @@ const stopAmbilight = () => {
     }
 };
 
-// Événements pour le lecteur vidéo
+// Add event listeners
 video.addEventListener('play', startAmbilight);
 video.addEventListener('pause', stopAmbilight);
 video.addEventListener('ended', stopAmbilight);

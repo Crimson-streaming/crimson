@@ -241,8 +241,8 @@ body {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100vw; /* Couvre toute la largeur de l'écran */
-    height: 100vh; /* Couvre toute la hauteur de l'écran */
+    width: 100%; /* Couvre toute la largeur du lecteur vidéo */
+    height: auto; /* S'ajuste à la hauteur du lecteur vidéo */
     z-index: 0; /* Derrière tout le reste */
     filter: blur(80px); /* Flou optimisé pour un effet subtil */
     transform: scale(1.1); /* Légère échelle pour éviter les bordures visibles */
@@ -271,13 +271,17 @@ body {
     display: block;
     width: 100%;
     max-width: 100%; /* S'adapte à la largeur disponible */
-    margin: 0 auto; /* Centré dans le conteneur */
+    
 }
 
-/* Conteneur principal pour gérer correctement les enfants */
-.col-lg-12 {
+/* Ajuste la hauteur d'Ambilight pour correspondre au lecteur vidéo */
+#player-container {
     position: relative;
-    z-index: 1; /* Position relative pour gérer l'empilement */
+    width: 100%;
+}
+
+#ambilight {
+    height: 100%; /* Correspondra à la hauteur du conteneur vidéo */
 }
 
 /* Logo */
@@ -305,8 +309,5 @@ body {
         opacity: 0.7; /* Légère augmentation de l'opacité pour plus de visibilité */
     }
 
-    #player-logo {
-        width: 100px; /* Logo réduit sur mobile */
-        max-width: 15%;
-    }
+   
 }
