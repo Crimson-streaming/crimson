@@ -462,34 +462,58 @@ window.onload = loadWatchlist;
 
 const video = document.getElementById('player');
 const ambilight = document.getElementById('ambilight');
+const canvas = document.createElement('canvas');
+const ctx = canvas.getContext('2d');
+let animationFrameId = null;
 
-video.addEventListener('play', () => {
-    const canvas = document.createElement('canvas');
-    const ctx = canvas.getContext('2d');
+const calculateAverageColor = (frame) => {
+    const length = frame.data.length;
+    let r = 0, g = 0, b = 0;
 
-    const updateAmbilight = () => {
-        if (!video.paused && !video.ended) {
-            canvas.width = video.videoWidth / 10;
-            canvas.height = video.videoHeight / 10;
-            ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-            const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
-            const length = frame.data.length;
-            let r = 0, g = 0, b = 0;
+    for (let i = 0; i < length; i += 4) {
+        r += frame.data[i];       // Red
+        g += frame.data[i + 1];   // Green
+        b += frame.data[i + 2];   // Blue
+    }
 
-            // Average the colors of the frame
-            for (let i = 0; i < length; i += 4) {
-                r += frame.data[i];
-                g += frame.data[i + 1];
-                b += frame.data[i + 2];
-            }
-            r = Math.floor(r / (length / 4));
-            g = Math.floor(g / (length / 4));
-            b = Math.floor(b / (length / 4));
-
-            ambilight.style.background = `radial-gradient(circle, rgba(${r},${g},${b},0.8) 50%, transparent 100%)`;
-            requestAnimationFrame(updateAmbilight);
-        }
+    const pixels = length / 4; // Total number of pixels
+    return {
+        r: Math.floor(r / pixels),
+        g: Math.floor(g / pixels),
+        b: Math.floor(b / pixels)
     };
+};
 
-    updateAmbilight();
-});
+const updateAmbilight = () => {
+    if (!video.paused && !video.ended) {
+        canvas.width = video.videoWidth / 8; // Reduce resolution further
+        canvas.height = video.videoHeight / 8;
+
+        ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
+        const frame = ctx.getImageData(0, 0, canvas.width, canvas.height);
+        const { r, g, b } = calculateAverageColor(frame);
+
+        ambilight.style.background = `radial-gradient(circle, rgba(${r},${g},${b},0.8) 50%, transparent 100%)`;
+
+        // Schedule next frame update
+        animationFrameId = requestAnimationFrame(updateAmbilight);
+    }
+};
+
+const startAmbilight = () => {
+    if (!animationFrameId) {
+        updateAmbilight();
+    }
+};
+
+const stopAmbilight = () => {
+    if (animationFrameId) {
+        cancelAnimationFrame(animationFrameId);
+        animationFrameId = null;
+    }
+};
+
+// Add event listeners
+video.addEventListener('play', startAmbilight);
+video.addEventListener('pause', stopAmbilight);
+video.addEventListener('ended', stopAmbilight);
