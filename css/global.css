@@ -229,29 +229,26 @@ span::after, span.warning-icon::after {
     
 }
 
+/*
 
-
-/* Empêche les débordements horizontaux */
 body {
     overflow-x: hidden;
 }
 
-/* Effet Ambilight */
 #ambilight {
     position: absolute;
     top: 0;
     left: 0;
-    width: 100%; /* Couvre toute la largeur du lecteur vidéo */
-    height: 90%; /* S'ajuste à la hauteur du lecteur vidéo */
-    z-index: 0; /* Derrière tout le reste */
-    filter: blur(80px); /* Flou optimisé pour un effet subtil */
-    transform: scale(1.1); /* Légère échelle pour éviter les bordures visibles */
-    opacity: 0.7; /* Transparence pour un effet moins prononcé */
-    pointer-events: none; /* Rend l'Ambilight insensible aux interactions */
-    will-change: transform, opacity; /* Améliore les performances */
+    width: 100%; 
+    height: 90%;
+    z-index: 0;
+    filter: blur(80px);
+    transform: scale(1.1);
+    opacity: 0.7;
+    pointer-events: none;
+    will-change: transform, opacity;
 }
 
-/* Dégradé uniforme pour homogénéiser les couleurs */
 #ambilight::before {
     content: '';
     position: absolute;
@@ -260,54 +257,47 @@ body {
     width: 100%;
     height: 100%;
     background: radial-gradient(circle, rgba(0, 0, 0, 0.5), transparent);
-    z-index: 1; /* Superposé pour atténuer les couleurs aux bords */
+    z-index: 1;
     pointer-events: none;
 }
 
-/* Lecteur vidéo */
 #player {
     position: relative;
-    z-index: 2; /* Vidéo au-dessus de l'Ambilight */
+    z-index: 2;
     display: block;
     width: 100%;
-    max-width: 100%; /* S'adapte à la largeur disponible */
-    
+    max-width: 100%;
 }
 
-/* Ajuste la hauteur d'Ambilight pour correspondre au lecteur vidéo */
 #player-container {
     position: relative;
     width: 100%;
 }
 
 #ambilight {
-    height: 100%; /* Correspondra à la hauteur du conteneur vidéo */
+    height: 100%;
 }
 
-/* Logo */
 #player-logo {
     position: absolute;
     top: 17.5px;
     left: 17.5px;
-    z-index: 9; /* Au-dessus de la vidéo */
+    z-index: 9;
     width: 150px;
-    max-width: 10%; /* Ajustement responsive */
+    max-width: 10%;
     opacity: 0.8;
 }
 
-/* Conteneur de suggestions */
 .container-fluid {
     position: relative;
-    z-index: 1; /* Garde les suggestions au-dessus de l'Ambilight */
+    z-index: 1;
 }
 
-/* Adaptations pour les mobiles */
 @media (max-width: 768px) {
     #ambilight {
-        filter: blur(50px); /* Réduit le flou sur les petits écrans */
-        transform: scale(1.2); /* Ajuste l'échelle pour éviter les bordures */
-        opacity: 0.7; /* Légère augmentation de l'opacité pour plus de visibilité */
+        filter: blur(50px);
+        transform: scale(1.2);
+        opacity: 0.7;
     }
-
-   
 }
+*/
