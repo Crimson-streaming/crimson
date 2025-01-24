@@ -247,7 +247,7 @@ body {
         transform: scale(1.1); /* Ajuste l'échelle générale */
         opacity: 0.8; /* Moins prononcé */
         pointer-events: none;
-        background: radial-gradient(circle, rgba(255,0,0,0.5), rgba(0,0,255,0.2)); /* Lumière équilibrée */
+        
     }
 
     /* Lecteur vidéo */
