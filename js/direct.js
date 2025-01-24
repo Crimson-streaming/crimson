@@ -57,14 +57,22 @@ document.addEventListener('DOMContentLoaded', () => {
         muted: false
     });
 
+    const progressBar = document.querySelector('.plyr__progress');
+    if (progressBar) {
+        progressBar.addEventListener('mousedown', (event) => {
+            event.stopPropagation(); // Empêche la propagation de l'événement
+            event.preventDefault(); // Empêche l'action par défaut
+        });
+
+        progressBar.addEventListener('touchstart', (event) => {
+            event.stopPropagation(); // Empêche la propagation de l'événement
+            event.preventDefault(); // Empêche l'action par défaut
+        });
+    }
+
     const videoElement = document.getElementById('player');
     const hlsSource = videoElement.querySelector('source').src;
 
-    // Désactiver l'interaction avec la barre de progression
-    const progressBar = document.querySelector('.plyr__progress');
-    if (progressBar) {
-        progressBar.style.pointerEvents = 'none'; // Désactive les interactions
-    }
 
 
     // Vérifie si HLS est pris en charge et n'est pas Safari

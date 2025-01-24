@@ -301,3 +301,35 @@ body {
     }
 }
 */
+
+
+/* Style pour l'ambilight */
+#ambilight {
+    position: absolute; /* Place l'ambilight par rapport au conteneur du lecteur */
+    top: -10%; /* Dépasse légèrement au-dessus */
+    left: -10%; /* Dépasse légèrement sur la gauche */
+    width: 120%; /* Plus large que le lecteur */
+    height: 120%; /* Plus haut que le lecteur */
+    z-index: -1; /* Derrière le lecteur vidéo */
+    pointer-events: none; /* Empêche toute interaction avec l'utilisateur */
+    filter: blur(50px); /* Effet de lumière floue */
+    transition: background-color 0.2s ease; /* Transition fluide pour le changement de couleur */
+  }
+  
+  /* Conteneur du lecteur vidéo */
+  #video-container {
+    position: relative; /* Nécessaire pour placer correctement l'ambilight */
+    width: 100%; /* Largeur du conteneur */
+    max-width: 800px; /* Exemple de largeur maximale */
+    margin: 0 auto; /* Centrage */
+    overflow: visible; /* Permet à l'ambilight de dépasser */
+    z-index: 10; /* Place le conteneur devant l'ambilight */
+  }
+  
+  /* Style pour le lecteur vidéo */
+  #player {
+    position: relative;
+    z-index: 5; /* Devant l'ambilight */
+    border-radius: 15px; /* Coins arrondis du lecteur vidéo */
+    overflow: hidden;
+  }
