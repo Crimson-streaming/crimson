@@ -240,3 +240,36 @@ if (window.self !== window.top) {
 });
 
 
+
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("player");
+    const source = document.getElementById("video-source").src;
+    const infoSection = document.getElementById("info-section");
+
+    // Fonction pour ajouter le message d'erreur
+    function showError() {
+        const errorMessage = document.createElement("p");
+        errorMessage.innerHTML = `<strong id="warning-video-cam-sd">[⚠️ Programme en direct temporairement indisponible ⚠️]</strong>`;
+        infoSection.querySelector(".tab1").prepend(errorMessage);
+    }
+
+    // Vérifie si le flux .m3u8 fonctionne
+    fetch(source)
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Flux indisponible");
+            }
+        })
+        .catch(() => {
+            // Si le flux est indisponible, ajouter le message
+            showError();
+        });
+
+    // Gestion des erreurs vidéo directement
+    video.addEventListener("error", function () {
+        const error = video.error;
+        if (error && error.code === MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED) {
+            showError();
+        }
+    });
+});
