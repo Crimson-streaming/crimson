@@ -60,6 +60,12 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoElement = document.getElementById('player');
     const hlsSource = videoElement.querySelector('source').src;
 
+    // Désactiver l'interaction avec la barre de progression
+    const progressBar = document.querySelector('.plyr__progress');
+    if (progressBar) {
+        progressBar.style.pointerEvents = 'none'; // Désactive les interactions
+    }
+
 
     // Vérifie si HLS est pris en charge et n'est pas Safari
     if (Hls.isSupported() && !/iPad|iPhone|iPod/.test(navigator.userAgent)) {
