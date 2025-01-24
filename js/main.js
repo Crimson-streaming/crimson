@@ -460,6 +460,7 @@ window.onload = loadWatchlist;
     });
 });
 
+/**
 // Récupération des éléments
 const video = document.getElementById('player'); 
 const ambilight = document.getElementById('ambilight');
@@ -469,11 +470,10 @@ let updateInterval = 1000;
 let animationFrameId = null;
 let lastUpdateTime = 0;
 
-/**
- * Calcul de la couleur moyenne de l'image
- * @param {ImageData} frame - Les données de l'image capturée
- * @returns {Object} Couleur moyenne { r, g, b }
- */
+
+ /** @param {ImageData} frame
+  /** @returns {Object} 
+
 const calculateAverageColor = (frame) => {
     const length = frame.data.length;
     let r = 0, g = 0, b = 0;
@@ -492,9 +492,7 @@ const calculateAverageColor = (frame) => {
     };
 };
 
-/**
- * Met à jour l'effet Ambilight
- */
+
 const updateAmbilight = () => {
     const currentTime = Date.now();
 
@@ -525,9 +523,7 @@ const updateAmbilight = () => {
     animationFrameId = requestAnimationFrame(updateAmbilight);
 };
 
-/**
- * Démarre l'effet Ambilight
- */
+
 const startAmbilight = () => {
     if (!animationFrameId) {
         lastUpdateTime = Date.now(); // Initialisation du temps
@@ -535,9 +531,7 @@ const startAmbilight = () => {
     }
 };
 
-/**
- * Arrête l'effet Ambilight
- */
+
 const stopAmbilight = () => {
     if (animationFrameId) {
         cancelAnimationFrame(animationFrameId);
@@ -551,3 +545,5 @@ const stopAmbilight = () => {
 video.addEventListener('play', startAmbilight);
 video.addEventListener('pause', stopAmbilight);
 video.addEventListener('ended', stopAmbilight);
+
+**/
