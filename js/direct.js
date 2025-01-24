@@ -60,6 +60,11 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoElement = document.getElementById('player');
     const hlsSource = videoElement.querySelector('source').src;
 
+    const progressBar = document.querySelector('.plyr__progress');
+    if (progressBar) {
+        progressBar.style.pointerEvents = 'none'; // Désactiver les interactions utilisateur
+    }
+
     // Vérifie si HLS est pris en charge et n'est pas Safari
     if (Hls.isSupported() && !/iPad|iPhone|iPod/.test(navigator.userAgent)) {
         const hls = new Hls();
