@@ -262,9 +262,12 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // Fonction pour ajouter le message d'erreur
     function showError() {
-        const errorMessage = document.createElement("p");
-        errorMessage.innerHTML = `<strong id="warning-video-cam-sd">[⚠️ Programme en direct temporairement indisponible ⚠️]</strong>`;
-        infoSection.querySelector(".tab1").prepend(errorMessage);
+        // Vérifie si le message existe déjà
+        if (!document.getElementById("warning-video-cam-sd")) {
+            const errorMessage = document.createElement("p");
+            errorMessage.innerHTML = `<strong id="warning-video-cam-sd">[⚠️ Programme en direct temporairement indisponible ⚠️]</strong>`;
+            infoSection.querySelector(".tab1").prepend(errorMessage);
+        }
     }
 
     // Vérifie si le flux .m3u8 fonctionne
@@ -287,6 +290,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 
 document.querySelector('.play-icon-item .icon').addEventListener('click', function (e) {
     var lecteur = document.querySelector('#player');
