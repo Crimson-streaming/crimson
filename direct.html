@@ -192,7 +192,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="single-video">
                         <a href="direct/bein-sport-1.html" title="beIN Sport 1">
                             <div class="video-img">          
-                                <img src="img/direct/bein-sports-1-logo.png" title="beIN Sport 1" alt="beIN Sport 1">         
+                                <img src="img/direct/bein-sport-1-logo.png" title="beIN Sport 1" alt="beIN Sport 1">         
                             </div>
                             <div class="season-title-item">
                                 <h3 class="mb-0">beIN Sport 1</h3>
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="single-video">
                         <a href="direct/bein-sport-2.html" title="beIN Sport 2">
                             <div class="video-img">          
-                                <img src="img/direct/bein-sports-2-logo.png" title="beIN Sport 2" alt="beIN Sport 2">         
+                                <img src="img/direct/bein-sport-2-logo.png" title="beIN Sport 2" alt="beIN Sport 2">         
                             </div>
                             <div class="season-title-item">
                                 <h3 class="mb-0">beIN Sport 2</h3>
@@ -216,7 +216,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     <div class="single-video">
                         <a href="direct/bein-sport-3.html" title="beIN Sport 3">
                             <div class="video-img">          
-                                <img src="img/direct/bein-sports-3-logo.png" title="beIN Sport 3" alt="beIN Sport 3">         
+                                <img src="img/direct/bein-sport-3-logo.png" title="beIN Sport 3" alt="beIN Sport 3">         
                             </div>
                             <div class="season-title-item">
                                 <h3 class="mb-0">beIN Sport 3</h3>
@@ -687,7 +687,7 @@ async function showSuggestions(query) {
     if (!query) return; // Si la requête est vide, ne rien faire
 
     try {
-        const response = await fetch('search/f.json');
+        const response = await fetch('search/d.json');
         if (!response.ok) {
             throw new Error('Erreur réseau');
         }

@@ -120,5 +120,80 @@
         "nom": "C NEWS",
         "affiche": "img/direct/cnews.png",
         "emplacement": "direct/c-news.html"
+    },
+    {
+        "nom": "CANAL+",
+        "affiche": "img/direct/canal-plus.png",
+        "emplacement": "direct/canal-plus.html"
+    },
+    {
+        "nom": "ADN",
+        "affiche": "img/direct/adn-logo.png",
+        "emplacement": "direct/adn.html"
+    },
+    {
+        "nom": "Syfy",
+        "affiche": "img/direct/syfy-logo.png",
+        "emplacement": "direct/syfy.html"
+    },
+    {
+        "nom": "Eurosport 1",
+        "affiche": "img/direct/eurosport-1-logo.png",
+        "emplacement": "direct/eurosport-1.html"
+    },
+    {
+        "nom": "Eurosport 2",
+        "affiche": "img/direct/eurosport-2-logo.png",
+        "emplacement": "direct/eurosport-2.html"
+    },
+    {
+        "nom": "Eurosport 2",
+        "affiche": "img/direct/eurosport-2-logo.png",
+        "emplacement": "direct/eurosport-2.html"
+    },
+    {
+        "nom": "RMC Sport 1",
+        "affiche": "img/direct/rmc-sport-1-logo.png",
+        "emplacement": "direct/rmc-sport-1.html"
+    },
+    {
+        "nom": "RMC Sport 2",
+        "affiche": "img/direct/rmc-sport-2-logo.png",
+        "emplacement": "direct/rmc-sport-2.html"
+    },
+    {
+        "nom": "RMC Sport 3",
+        "affiche": "img/direct/rmc-sport-3-logo.png",
+        "emplacement": "direct/rmc-sport-3.html"
+    },
+    {
+        "nom": "CANAL + SPORT HD",
+        "affiche": "img/direct/canal-plus-sport-hd-logo.png",
+        "emplacement": "direct/canal-plus-sport-hd.html"
+    },
+    {
+        "nom": "CANAL + SPORT 360",
+        "affiche": "img/direct/canal-plus-sport-360-logo.png",
+        "emplacement": "direct/canal-plus-sport-360.html"
+    },
+    {
+        "nom": "CANAL + Foot",
+        "affiche": "img/direct/canal-plus-foot.png",
+        "emplacement": "direct/canal-plus-foot.html"
+    },
+    {
+        "nom": "beIN Sport 1",
+        "affiche": "img/direct/bein-sport-1-logo.png",
+        "emplacement": "direct/bein-sport-1.html"
+    },
+    {
+        "nom": "beIN Sport 2",
+        "affiche": "img/direct/bein-sports-2-logo.png",
+        "emplacement": "direct/bein-sport-2.html"
+    },
+    {
+        "nom": "beIN Sport 3",
+        "affiche": "img/direct/bein-sports-3-logo.png",
+        "emplacement": "direct/bein-sport-3.html"
     }
 ]
