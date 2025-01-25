@@ -277,6 +277,11 @@ document.querySelector('.play-icon-item .icon').addEventListener('click', functi
 });
 
 document.addEventListener("DOMContentLoaded", function () {
+    // Vérifie si le script doit être désactivé pour cette page
+    if (window.disableVideoCheck) {
+        return; // Quitte le script si la désactivation est demandée
+    }
+
     const video = document.getElementById("player");
     const source = document.getElementById("video-source").src;
     const infoSection = document.getElementById("info-section");
