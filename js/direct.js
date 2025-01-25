@@ -255,54 +255,6 @@ if (window.self !== window.top) {
 
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const video = document.getElementById("player");
-    const source = document.getElementById("video-source").src;
-    const infoSection = document.getElementById("info-section");
-
-    // Liste des liens à exclure de la vérification
-    const excludedLinks = [
-        "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f8ed0f17564a300082b676a/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=8e052a64-1f2c-11ef-86d8-5d587df108c6&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=aaa3f7a8-585d-4916-bff9-f90769b38333",
-        "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f8ed2d1c34c2300073bf02c/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=8e055172-1f2c-11ef-86d8-5d587df108c6&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=4bf0c406-dfcb-4037-8de6-bd12c393c6a5"
-    ];
-
-// Fonction pour ajouter le message d'erreur
-function showError() {
-    // Vérifie si le message existe déjà
-    if (!document.getElementById("warning-video-cam-sd")) {
-        const errorMessage = document.createElement("p");
-        errorMessage.innerHTML = `<strong id="warning-video-cam-sd">[⚠️ Programme en direct temporairement indisponible ⚠️]</strong>`;
-        infoSection.querySelector(".tab1").prepend(errorMessage);
-    }
-}
-
-// Vérifie si le flux est exclu, sinon, on tente de le charger
-if (!excludedLinks.includes(source)) {
-    fetch(source, { method: 'HEAD' })  // Utilise 'HEAD' pour une vérification plus rapide sans télécharger tout le contenu
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Flux indisponible");
-            }
-        })
-        .catch(() => {
-            // Si le flux est indisponible, ajouter le message
-            showError();
-        });
-} else {
-    console.log("Le flux est exclu de la vérification.");
-}
-
-// Gestion des erreurs vidéo directement
-video.addEventListener("error", function () {
-    const error = video.error;
-    if (error && error.code === MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED) {
-        showError();
-    }
-});
-});
-
-
-
 document.querySelector('.play-icon-item .icon').addEventListener('click', function (e) {
     var lecteur = document.querySelector('#player');
 
@@ -322,4 +274,50 @@ document.querySelector('.play-icon-item .icon').addEventListener('click', functi
             console.error('Le lecteur Plyr n’est pas détecté ou n’a pas été initialisé correctement.');
         }
     }, 500);
+});
+
+document.addEventListener("DOMContentLoaded", function () {
+    const video = document.getElementById("player");
+    const source = document.getElementById("video-source").src;
+    const infoSection = document.getElementById("info-section");
+
+    // Fonction pour ajouter le message d'erreur
+    function showError() {
+        if (!document.getElementById("warning-video-cam-sd")) {
+            const errorMessage = document.createElement("p");
+            errorMessage.innerHTML = `<strong id="warning-video-cam-sd">[⚠️ Programme en direct temporairement indisponible ⚠️]</strong>`;
+            infoSection.querySelector(".tab1").prepend(errorMessage);
+        }
+    }
+
+    // Vérifie si le flux est fonctionnel
+    function checkStream() {
+        fetch(source)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Flux indisponible");
+                }
+                // Vérifie si le contenu est un fichier M3U8
+                return response.text();
+            })
+            .then(text => {
+                if (!text.startsWith("#EXTM3U")) {
+                    throw new Error("Contenu non valide pour un flux M3U8");
+                }
+            })
+            .catch(() => {
+                showError();
+            });
+    }
+
+    // Vérification initiale du flux
+    checkStream();
+
+    // Gestion des erreurs vidéo directement
+    video.addEventListener("error", function () {
+        const error = video.error;
+        if (error && error.code === MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED) {
+            showError();
+        }
+    });
 });
