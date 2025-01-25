@@ -266,37 +266,39 @@ document.addEventListener("DOMContentLoaded", function () {
         "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f8ed2d1c34c2300073bf02c/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=8e055172-1f2c-11ef-86d8-5d587df108c6&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=4bf0c406-dfcb-4037-8de6-bd12c393c6a5"
     ];
 
-    // Fonction pour ajouter le message d'erreur
-    function showError() {
-        // Vérifie si le message existe déjà
-        if (!document.getElementById("warning-video-cam-sd")) {
-            const errorMessage = document.createElement("p");
-            errorMessage.innerHTML = `<strong id="warning-video-cam-sd">[⚠️ Programme en direct temporairement indisponible ⚠️]</strong>`;
-            infoSection.querySelector(".tab1").prepend(errorMessage);
-        }
+// Fonction pour ajouter le message d'erreur
+function showError() {
+    // Vérifie si le message existe déjà
+    if (!document.getElementById("warning-video-cam-sd")) {
+        const errorMessage = document.createElement("p");
+        errorMessage.innerHTML = `<strong id="warning-video-cam-sd">[⚠️ Programme en direct temporairement indisponible ⚠️]</strong>`;
+        infoSection.querySelector(".tab1").prepend(errorMessage);
     }
+}
 
-    // Vérifie si le flux .m3u8 fonctionne, sauf pour les liens exclus
-    if (!excludedLinks.includes(source)) {
-        fetch(source)
-            .then(response => {
-                if (!response.ok) {
-                    throw new Error("Flux indisponible");
-                }
-            })
-            .catch(() => {
-                // Si le flux est indisponible, ajouter le message
-                showError();
-            });
-    }
-
-    // Gestion des erreurs vidéo directement
-    video.addEventListener("error", function () {
-        const error = video.error;
-        if (error && error.code === MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED) {
+// Vérifie si le flux est exclu, sinon, on tente de le charger
+if (!excludedLinks.includes(source)) {
+    fetch(source, { method: 'HEAD' })  // Utilise 'HEAD' pour une vérification plus rapide sans télécharger tout le contenu
+        .then(response => {
+            if (!response.ok) {
+                throw new Error("Flux indisponible");
+            }
+        })
+        .catch(() => {
+            // Si le flux est indisponible, ajouter le message
             showError();
-        }
-    });
+        });
+} else {
+    console.log("Le flux est exclu de la vérification.");
+}
+
+// Gestion des erreurs vidéo directement
+video.addEventListener("error", function () {
+    const error = video.error;
+    if (error && error.code === MediaError.MEDIA_ERR_SRC_NOT_SUPPORTED) {
+        showError();
+    }
+});
 });
 
 
