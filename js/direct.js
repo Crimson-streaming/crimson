@@ -260,6 +260,12 @@ document.addEventListener("DOMContentLoaded", function () {
     const source = document.getElementById("video-source").src;
     const infoSection = document.getElementById("info-section");
 
+    // Liste des liens à exclure de la vérification
+    const excludedLinks = [
+        "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f8ed0f17564a300082b676a/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=8e052a64-1f2c-11ef-86d8-5d587df108c6&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=aaa3f7a8-585d-4916-bff9-f90769b38333",
+        "http://cfd-v4-service-channel-stitcher-use1-1.prd.pluto.tv/stitch/hls/channel/5f8ed2d1c34c2300073bf02c/master.m3u8?appName=web&appVersion=unknown&clientTime=0&deviceDNT=0&deviceId=8e055172-1f2c-11ef-86d8-5d587df108c6&deviceMake=Chrome&deviceModel=web&deviceType=web&deviceVersion=unknown&includeExtendedEvents=false&serverSideAds=false&sid=4bf0c406-dfcb-4037-8de6-bd12c393c6a5"
+    ];
+
     // Fonction pour ajouter le message d'erreur
     function showError() {
         // Vérifie si le message existe déjà
@@ -270,17 +276,19 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     }
 
-    // Vérifie si le flux .m3u8 fonctionne
-    fetch(source)
-        .then(response => {
-            if (!response.ok) {
-                throw new Error("Flux indisponible");
-            }
-        })
-        .catch(() => {
-            // Si le flux est indisponible, ajouter le message
-            showError();
-        });
+    // Vérifie si le flux .m3u8 fonctionne, sauf pour les liens exclus
+    if (!excludedLinks.includes(source)) {
+        fetch(source)
+            .then(response => {
+                if (!response.ok) {
+                    throw new Error("Flux indisponible");
+                }
+            })
+            .catch(() => {
+                // Si le flux est indisponible, ajouter le message
+                showError();
+            });
+    }
 
     // Gestion des erreurs vidéo directement
     video.addEventListener("error", function () {
@@ -290,6 +298,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
     });
 });
+
 
 
 document.querySelector('.play-icon-item .icon').addEventListener('click', function (e) {
