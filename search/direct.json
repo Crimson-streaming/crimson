@@ -122,9 +122,9 @@
         "emplacement": "direct/c-news.html"
     },
     {
-        "nom": "CANAL+",
+        "nom": "CANAL +",
         "affiche": "img/direct/canal-plus.png",
-        "emplacement": "direct/canal-plus.html"
+        "emplacement": "direct/Canal-plus.html"
     },
     {
         "nom": "ADN",
@@ -140,11 +140,6 @@
         "nom": "Eurosport 1",
         "affiche": "img/direct/eurosport-1-logo.png",
         "emplacement": "direct/eurosport-1.html"
-    },
-    {
-        "nom": "Eurosport 2",
-        "affiche": "img/direct/eurosport-2-logo.png",
-        "emplacement": "direct/eurosport-2.html"
     },
     {
         "nom": "Eurosport 2",
