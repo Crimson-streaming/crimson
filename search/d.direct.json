@@ -188,12 +188,12 @@
     },
     {
         "nom": "beIN Sport 2",
-        "affiche": "../img/direct/bein-sports-2-logo.png",
+        "affiche": "../img/direct/bein-sport-2-logo.png",
         "emplacement": "../direct/bein-sport-2.html"
     },
     {
         "nom": "beIN Sport 3",
-        "affiche": "../img/direct/bein-sports-3-logo.png",
+        "affiche": "../img/direct/bein-sport-3-logo.png",
         "emplacement": "../direct/bein-sport-3.html"
     }
 ]
