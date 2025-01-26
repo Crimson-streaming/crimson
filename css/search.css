@@ -51,3 +51,8 @@
         margin-bottom: 15px;
     }
 }
+
+.search .search-input input[type=text]::placeholder,
+		.search .search-input input[type=text].focus {
+			background: #0d071e !important;
+		}

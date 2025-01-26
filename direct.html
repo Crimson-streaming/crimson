@@ -454,9 +454,9 @@ document.addEventListener('DOMContentLoaded', function() {
                 </div>
                 <div class="col-lg-3 col-md-4 col-sm-6 col-xs-12 col-6">
                     <div class="single-video">
-                        <a href="direct/les-lapin-cretin-invaion.html" title="Les Lapins Crétins: Invasion">
+                        <a href="direct/les-lapins-cretins-invaion.html" title="Les Lapins Crétins: Invasion">
                             <div class="video-img">          
-                                <img src="img/direct/les-lapin-cretin-invaion.png" title="Les Lapins Crétins: Invasion" alt="Les Lapins Crétins: Invasion">         
+                                <img src="img/direct/les-lapins-cretins-invaion.png" title="Les Lapins Crétins: Invasion" alt="Les Lapins Crétins: Invasion">         
                             </div>
                             <div class="season-title-item">
                                 <h3 class="mb-0">Les Lapins Crétins: Invasion</h3>
@@ -699,7 +699,7 @@ async function showSuggestions(query) {
     if (!query) return; // Si la requête est vide, ne rien faire
 
     try {
-        const response = await fetch('search/d.json');
+        const response = await fetch('search/direct.json');
         if (!response.ok) {
             throw new Error('Erreur réseau');
         }

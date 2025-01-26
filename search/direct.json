@@ -25,9 +25,9 @@
         "emplacement": "direct/xilam.html"
     },
     {
-        "nom": "Tortue Ninja",
-        "affiche": "img/direct/Tortues-Ninja.png",
-        "emplacement": "direct/tortue-ninja.html"
+        "nom": "Les Lapins Crétins: Invasion",
+        "affiche": "img/direct/les-lapins-cretins-invaion.png",
+        "emplacement": "direct/les-lapins-cretins-invaion.html"
     },
     {
         "nom": "Les Schtroumpfs",
@@ -35,14 +35,14 @@
         "emplacement": "direct/les-schtroumpfs.html"
     },
     {
-        "nom": "South Park",
-        "affiche": "img/direct/South-Park.png",
-        "emplacement": "direct/south-park.html"
+        "nom": "Mr Bean Animated",
+        "affiche": "img/direct/mr-Bean-animated.png",
+        "emplacement": "direct/mr-Bean-animated.html"
     },
     {
-        "nom": "Dora L'exploratrice",
-        "affiche": "img/direct/Dora-L'exploratrice.png",
-        "emplacement": "direct/Dora-L'exploratrice.html"
+        "nom": "Yu-Gi-Oh!",
+        "affiche": "img/direct/yu-gi-oh.png",
+        "emplacement": "direct/yu-gi-oh.html"
     },
     {
         "nom": "Super Nanny",
@@ -70,9 +70,9 @@
         "emplacement": "direct/Pluto-Tv-Series.html"
     },
     {
-        "nom": "Pluto Tv Kids",
-        "affiche": "img/direct/Pluto-Tv-Kids.png",
-        "emplacement": "direct/pluto-tv-kids.html"
+        "nom": "Jellytoon",
+        "affiche": "img/direct/jelly-toon.png",
+        "emplacement": "direct/jelly-toon.html"
     },
     {
         "nom": "Arte",
