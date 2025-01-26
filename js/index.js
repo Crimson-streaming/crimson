@@ -59,7 +59,7 @@ async function chargerCategorie(categorie, conteneur) {
         // Mélanger et filtrer les films selon la catégorie et les restrictions de genre
         const filmsFiltres = melangerTableau(films)
             .filter(film => film.genre.includes(categorie) && estGenreAutorise(film))
-            .slice(0, 28);
+            .slice(0, 16);
 
         // Sélectionner le conteneur carousel spécifique
         const carousel = document.querySelector(conteneur);
@@ -69,7 +69,7 @@ async function chargerCategorie(categorie, conteneur) {
                     <a href="${film.emplacement}" title="${film.nom}">
                         <div class="video-img">
                             <span class="video-item-content">${film.nom}</span>
-                            <img src="${film.affiche}" alt="${film.nom}">
+                            <img src="${film.affiche}" alt="${film.nom}" loading="lazy">
                         </div>
                     </a>
                 </div>`
