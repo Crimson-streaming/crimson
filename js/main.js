@@ -59,20 +59,31 @@ function normalizeString(str) {
 
 
 
+// Initialiser le lecteur Plyr
 document.addEventListener('DOMContentLoaded', () => {
     const screenIsLargeEnough = window.innerWidth >= 600;
 
-    const playerControls = screenIsLargeEnough
-        ? ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen']
-        : ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
+    const playerControls = screenIsLargeEnough ?
+        ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'] :
+        ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
 
     const player = new Plyr('#player', {
         controls: playerControls,
         settings: ["captions", "quality", "speed"],
         playsinline: true,
-        keyboard: { focused: true, global: true },
-        fullscreen: { enabled: true, fallback: true, iosNative: true },
-        storage: { enabled: true, key: "player" },
+        keyboard: {
+            focused: true,
+            global: true
+        },
+        fullscreen: {
+            enabled: true,
+            fallback: true,
+            iosNative: true
+        },
+        storage: {
+            enabled: true,
+            key: "player"
+        },
         invertTime: false,
         disableContextMenu: true,
         ratio: "16:9",
@@ -117,11 +128,55 @@ document.addEventListener('DOMContentLoaded', () => {
         muted: false
     });
 
+    // Charger la vidéo via HLS et gérer le stockage du temps de lecture
     const videoElement = document.getElementById('player');
     const loaderElement = document.getElementById('video-loader');
     const hlsSource = videoElement.querySelector('source').src;
 
     const storageKey = `videoCurrentTime_${encodeURIComponent(hlsSource)}`;
+
+
+    // Détection des appareils iOS
+    const isIOS = /iPad|iPhone|iPod/.test(navigator.userAgent) && !window.MSStream;
+
+    // Ajout d'un bouton de diffusion AirPlay pour les appareils non iOS
+    if (!isIOS) {
+        player.on('ready', () => {
+            const container = document.querySelector('.plyr__controls');
+            if (!container) return;
+
+            const airplayButton = document.createElement('button');
+            airplayButton.classList.add('plyr__control');
+            airplayButton.id = 'castButton';
+
+            // Insertion du code SVG dans le bouton de diffusion
+            airplayButton.innerHTML = `
+            <svg fill="#000000" width="800px" height="800px" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+              <path fill-rule="evenodd" d="M1,21 L1,19 C2.1045695,19 3,19.8954305 3,21 L1,21 Z M7,21 L5,21 C5,18.790861 3.209139,17 1,17 L1,15 C4.3137085,15 7,17.6862915 7,21 Z M11,21 L9,21 C9,16.581722 5.418278,13 1,13 L1,11 C6.5228475,11 11,15.4771525 11,21 Z M3,9 L1,9 L1,5 C1,3.8954305 1.8954305,3 3,3 L21,3 C22.1045695,3 23,3.8954305 23,5 L23,19 C23,20.1045695 22.1045695,21 21,21 L13,21 L13,19 L21,19 L21,5 L3,5 L3,9 Z"/>
+            </svg>
+        `;
+
+            // Ajout du bouton de diffusion à la barre de contrôle du lecteur
+            container.appendChild(airplayButton);
+
+            // Vérifier si le bouton est bien présent avant d'ajouter l'événement
+            const castButton = document.getElementById("castButton");
+            if (castButton) {
+                castButton.addEventListener("click", () => {
+                    const castState = cast.framework.CastContext.getInstance().getCastState();
+                    if (castState === cast.framework.CastState.CONNECTING || castState === cast.framework.CastState.CONNECTED) {
+                        startCasting();
+                    } else {
+                        // Initialiser la session de Cast avec les options avant de commencer
+                        cast.framework.CastContext.getInstance().requestSession();
+                    }
+                });
+            } else {
+                console.error("Le bouton Cast n'a pas été trouvé.");
+            }
+        });
+    }
+
 
     const loadVideoTime = () => {
         const savedTime = localStorage.getItem(storageKey);
@@ -178,6 +233,64 @@ document.addEventListener('DOMContentLoaded', () => {
         console.error('HLS non supporté, ou aucun fallback compatible disponible.');
         toggleLoader(false); // Masquer le loader en cas d'erreur
     }
+
+    // Initialisation de l'API Google Cast
+    function initializeCastApi() {
+        if (typeof cast === 'undefined' || !cast.framework) {
+            console.error("Google Cast Framework non disponible.");
+            return;
+        }
+
+        const castContext = cast.framework.CastContext.getInstance();
+
+        // Configuration des options Cast
+        castContext.setOptions({
+            receiverApplicationId: chrome.cast.media.DEFAULT_MEDIA_RECEIVER_APP_ID, // Assurez-vous que l'ID est correct
+            autoJoinPolicy: chrome.cast.AutoJoinPolicy.ORIGIN_SCOPED,
+        });
+
+        // Écoute les changements d'état de session
+        castContext.addEventListener(cast.framework.CastContextEventType.SESSION_STATE_CHANGED, (event) => {
+            if (event.sessionState === cast.framework.SessionState.SESSION_STARTED ||
+                event.sessionState === cast.framework.SessionState.SESSION_RESUMED) {
+                startCasting();
+            }
+        });
+    }
+
+    // Fonction pour démarrer la diffusion
+    function startCasting() {
+        const castContext = cast.framework.CastContext.getInstance();
+        const castSession = castContext.getCurrentSession();
+
+        if (castSession) {
+            const videoElement = document.querySelector("#player source");
+            const videoSource = videoElement ? videoElement.src : null;
+
+            if (videoSource) {
+                // Crée un MediaInfo pour la vidéo
+                const mediaInfo = new chrome.cast.media.MediaInfo(videoSource, "application/x-mpegURL");
+                mediaInfo.metadata = new chrome.cast.media.GenericMediaMetadata();
+                mediaInfo.metadata.title = "CAST | Crimson";
+
+                // Charge la vidéo sur le périphérique Cast
+                const loadRequest = new chrome.cast.media.LoadRequest(mediaInfo);
+                castSession
+                    .loadMedia(loadRequest)
+                    .then(() => console.log("Vidéo diffusée avec succès."))
+                    .catch((error) => console.error("Erreur de diffusion :", error));
+            }
+        }
+    }
+
+    // Vérifie la disponibilité de l'API Cast et initialise
+    window['__onGCastApiAvailable'] = function(isAvailable) {
+        if (isAvailable) {
+            initializeCastApi();
+        } else {
+            console.error("API Google Cast non disponible.");
+        }
+    };
 });
 
         
