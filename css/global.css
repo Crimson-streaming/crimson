@@ -232,22 +232,20 @@ span::after, span.warning-icon::after {
 #castButton {
     cursor: pointer;
     border: none;
-
-
-    font-size: 23px;
-    /* Augmente la taille du texte */
+    font-size: 23px; /* Taille du texte */
     display: flex;
     align-items: center;
     justify-content: center;
-
+    padding: 6px; /* Réduit la zone d'effet autour de l'icône */
+    
 }
 
 #castButton svg {
-    width: 21.5px;
-    /* Taille du SVG (icône) */
-    height: 21.5px;
-    /* Taille du SVG (icône) */
+    width: 21.5px; /* Taille du SVG (icône) */
+    height: 21.5px; /* Taille du SVG (icône) */
 }
+
+
 
 /*
 
