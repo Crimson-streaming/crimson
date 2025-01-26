@@ -1,215 +1,24 @@
-// Fonction pour mélanger un tableau
-function melangerTableau(tableau) {
-    for (let i = tableau.length - 1; i > 0; i--) {
-        const j = Math.floor(crypto.getRandomValues(new Uint32Array(1))[0] / (0xFFFFFFFF + 1) * (i + 1));
-        [tableau[i], tableau[j]] = [tableau[j], tableau[i]];
-    }
-    return tableau;
-}
-
-// Variable globale pour stocker les données des films
-let filmsData = null;
-
-// Liste des combinaisons interdites
-const COMBINAISONS_INTERDITES = [
-    ['Action', 'Romance'],
-    ['Horreur', 'Familial'],
-    ['Science-Fiction', 'Histoire'], 
-    ['Guerre', 'Comédie'],          
-    ['Drame', 'Fantastique'],
-    ['Mystère', 'Animation']
-];
-
-
-// Fonction pour vérifier si un film respecte les restrictions de genre
-function estGenreAutorise(film) {
-    return !COMBINAISONS_INTERDITES.some(combinaison =>
-        combinaison.every(genre => film.genre.includes(genre))
-    );
-}
-
-// Fonction pour charger les données des films
-async function chargerFilms() {
-    if (!filmsData) {
-        try {
-            const response = await fetch(`search/p.json?nocache=${Date.now()}`); // Ajout de nocache
-            if (!response.ok) throw new Error(`Erreur HTTP : ${response.status}`);
-            filmsData = await response.json();
-        } catch (error) {
-            console.error('Erreur lors du chargement des données des films :', error);
-            filmsData = []; // Définit une valeur par défaut pour éviter des erreurs ultérieures
-        }
-    }
-    return filmsData;
-}
-
-async function chargerFilmsAvecMelange() {
-    if (!filmsData) {
-        filmsData = await chargerFilms();
-        filmsData = melangerTableau(filmsData); // Mélanger une seule fois
-    }
-    return filmsData;
-}
-
-// Fonction pour charger les films d'une catégorie donnée
-async function chargerCategorie(categorie, conteneur) {
-    try {
-        const films = await chargerFilms();
-
-        // Mélanger et filtrer les films selon la catégorie et les restrictions de genre
-        const filmsFiltres = melangerTableau(films)
-            .filter(film => film.genre.includes(categorie) && estGenreAutorise(film))
-            .slice(0, 16);
-
-        // Sélectionner le conteneur carousel spécifique
-        const carousel = document.querySelector(conteneur);
-        carousel.innerHTML = filmsFiltres.length
-            ? filmsFiltres.map(film => 
-                `<div class="single-video">
-                    <a href="${film.emplacement}" title="${film.nom}">
-                        <div class="video-img">
-                            <span class="video-item-content">${film.nom}</span>
-                            <img src="${film.affiche}" alt="${film.nom}" loading="lazy">
-                        </div>
-                    </a>
-                </div>`
-            ).join('')
-            : '<p>Aucun film trouvé.</p>';
-
-        // Réinitialiser Owl Carousel après ajout des éléments
-        reinitialiserOwlCarousel(conteneur);
-
-    } catch (error) {
-        console.error(`Erreur lors du chargement des films pour la catégorie "${categorie}" :`, error);
-        document.querySelector(conteneur).innerHTML = '<p>Erreur de chargement.</p>';
-    }
-}
-
-// Fonction pour réinitialiser Owl Carousel
-function reinitialiserOwlCarousel(conteneur) {
-    const $conteneur = $(conteneur);
-    if ($conteneur.hasClass('owl-carousel')) {
-        $conteneur.owlCarousel('destroy'); // Détruire l'instance existante si elle existe
-    }
-    $conteneur.owlCarousel({
-        loop: false,
-        margin: 10,
-        nav: true,
-        dots: true,
-        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
-        responsive: {
-            0: { items: 2 },      // Petits écrans
-            600: { items: 4 },    // Écrans moyens
-            1000: { items: 7 }    // Grands écrans
-        }
-    });
-}
-
-// Liste des catégories et leurs conteneurs
-const CATEGORIES = [
-    { name: 'Action', container: '.video-carousel-action' },
-    { name: 'Drame', container: '.video-carousel-drame' },
-    { name: 'Horreur', container: '.video-carousel-horreur' },
-    { name: 'Animation', container: '.video-carousel-animation' },
-    { name: 'Crime', container: '.video-carousel-policier' },
-    { name: 'Guerre', container: '.video-carousel-guerre' },
-    { name: 'Comédie', container: '.video-carousel-comedie' },
-    { name: 'Histoire', container: '.video-carousel-histoire' },
-    { name: 'Romance', container: '.video-carousel-romance' },
-    { name: 'Aventure', container: '.video-carousel-aventure' },
-    { name: 'Fantastique', container: '.video-carousel-fantastique' },
-    { name: 'Familial', container: '.video-carousel-famille' },
-    { name: 'Mystère', container: '.video-carousel-mystère' },
-    { name: 'Thriller', container: '.video-carousel-thriller' },
-    { name: 'Science-Fiction', container: '.video-carousel-science-fiction' }
-];
-
-// Fonction pour charger toutes les catégories
-async function chargerToutesLesCategories() {
-    try {
-        await Promise.all(CATEGORIES.map(({ name, container }) => chargerCategorie(name, container)));
-        console.log('Toutes les catégories ont été chargées avec succès.');
-    } catch (error) {
-        console.error('Erreur lors du chargement des catégories :', error);
-    }
-}
-
-// Charger les films après le chargement de la page
-document.addEventListener('DOMContentLoaded', chargerToutesLesCategories);
-
-// Recharger les films si vous naviguez sans rechargement complet
-window.addEventListener('popstate', chargerToutesLesCategories);
-
-
-
-
-// Initialisation du carousel
-const videoCarousel = document.getElementById('videoCarousel');
-
-// Ajouter les éléments au carousel
-fetch('search/films-en-tendance.json')
-    .then(response => response.json())
-    .then(movies => {
-        movies.forEach(movie => {
-            const videoDiv = document.createElement('div');
-            videoDiv.classList.add('single-video');
-            videoDiv.innerHTML = `
-                <a href="${movie.link}" title="${movie.title}">
-                    <div class="video-img">
-                        <span class="video-item-content">${movie.title}</span>
-                        <img src="${movie.img}" alt="${movie.title}" title="${movie.title}">
-                    </div>
-                </a>
-            `;
-            videoCarousel.appendChild(videoDiv);
-        });
-        // Initialiser Owl Carousel après ajout des films
-        reinitialiserOwlCarousel('#videoCarousel');
-    })
-    .catch(error => console.error('Erreur lors du chargement des films :', error));
-
-// Fonction pour réinitialiser Owl Carousel
-function reinitialiserOwlCarousel(conteneur) {
-    const $conteneur = $(conteneur);
-    if ($conteneur.hasClass('owl-carousel')) {
-        $conteneur.owlCarousel('destroy'); // Détruire l'instance existante si elle existe
-    }
-    $conteneur.owlCarousel({
-        loop: false,
-        margin: 10,
-        nav: true,
-        dots: true,
-        navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
-        responsive: {
-            0: { items: 2 },      // Petits écrans
-            600: { items: 4 },    // Écrans moyens
-            1000: { items: 7 }    // Grands écrans
-        }
-    });
-}
-
-// Initialisation du carousel après chargement
-$(document).ready(function () {
-    reinitialiserOwlCarousel('#videoCarousel');
-});
-
-fetch('search/films-en-tendance.json')
-    .then(response => response.json())
-    .then(movies => {
-        const videoContainer = document.querySelector('.view-all-video-area .row');
-        movies.forEach(movie => {
-            const videoDiv = document.createElement('div');
-            videoDiv.classList.add('col-lg-2', 'col-md-3', 'col-sm-4', 'col-xs-12', 'col-6');
-            videoDiv.innerHTML = `
-                <div class="single-video">
-                    <a href="${movie.link}" title="${movie.title}">
-                        <div class="video-img">
-                            <span class="video-item-content">${movie.title}</span>
-                            <img src="${movie.img}" alt="${movie.title}" title="${movie.title}">
-                        </div>
-                    </a>
-                </div>
-            `;
-            videoContainer.appendChild(videoDiv);
-        });
-    })
+function melangerTableau(e){for(let a=e.length-1;a>0;a--){let i=Math.floor(crypto.getRandomValues(new Uint32Array(1))[0]/4294967296*(a+1));[e[a],e[i]]=[e[i],e[a]]}return e}let filmsData=null;const COMBINAISONS_INTERDITES=[["Action","Romance"],["Horreur","Familial"],["Science-Fiction","Histoire"],["Guerre","Com\xe9die"],["Drame","Fantastique"],["Myst\xe8re","Animation"]];function estGenreAutorise(e){return!COMBINAISONS_INTERDITES.some(a=>a.every(a=>e.genre.includes(a)))}async function chargerFilms(){if(!filmsData)try{let e=await fetch(`search/p.json?nocache=${Date.now()}`);if(!e.ok)throw Error(`Erreur HTTP : ${e.status}`);filmsData=await e.json()}catch(a){console.error("Erreur lors du chargement des donn\xe9es des films :",a),filmsData=[]}return filmsData}async function chargerFilmsAvecMelange(){return filmsData||(filmsData=await chargerFilms(),filmsData=melangerTableau(filmsData)),filmsData}async function chargerCategorie(e,a){try{let i=await chargerFilms(),r=melangerTableau(i).filter(a=>a.genre.includes(e)&&estGenreAutorise(a)).slice(0,16),t=document.querySelector(a);t.innerHTML=r.length?r.map(e=>`<div class="single-video">
+    <a href="${e.emplacement}" title="${e.nom}">
+        <div class="video-img">
+            <span class="video-item-content">${e.nom}</span>
+            <img src="${e.affiche}" alt="${e.nom}" loading="lazy">
+        </div>
+    </a>
+</div>`).join(""):"<p>Aucun film trouv\xe9.</p>",reinitialiserOwlCarousel(a)}catch(n){console.error(`Erreur lors du chargement des films pour la cat\xe9gorie "${e}" :`,n),document.querySelector(a).innerHTML="<p>Erreur de chargement.</p>"}}function reinitialiserOwlCarousel(e){let a=$(e);a.hasClass("owl-carousel")&&a.owlCarousel("destroy"),a.owlCarousel({loop:!1,margin:10,nav:!0,dots:!0,navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],responsive:{0:{items:2},600:{items:4},1e3:{items:7}}})}const CATEGORIES=[{name:"Action",container:".video-carousel-action"},{name:"Drame",container:".video-carousel-drame"},{name:"Horreur",container:".video-carousel-horreur"},{name:"Animation",container:".video-carousel-animation"},{name:"Crime",container:".video-carousel-policier"},{name:"Guerre",container:".video-carousel-guerre"},{name:"Com\xe9die",container:".video-carousel-comedie"},{name:"Histoire",container:".video-carousel-histoire"},{name:"Romance",container:".video-carousel-romance"},{name:"Aventure",container:".video-carousel-aventure"},{name:"Fantastique",container:".video-carousel-fantastique"},{name:"Familial",container:".video-carousel-famille"},{name:"Myst\xe8re",container:".video-carousel-myst\xe8re"},{name:"Thriller",container:".video-carousel-thriller"},{name:"Science-Fiction",container:".video-carousel-science-fiction"}];async function chargerToutesLesCategories(){try{await Promise.all(CATEGORIES.map(({name:e,container:a})=>chargerCategorie(e,a))),console.log("Toutes les cat\xe9gories ont \xe9t\xe9 charg\xe9es avec succ\xe8s.")}catch(e){console.error("Erreur lors du chargement des cat\xe9gories :",e)}}document.addEventListener("DOMContentLoaded",chargerToutesLesCategories),window.addEventListener("popstate",chargerToutesLesCategories);const videoCarousel=document.getElementById("videoCarousel");function reinitialiserOwlCarousel(e){let a=$(e);a.hasClass("owl-carousel")&&a.owlCarousel("destroy"),a.owlCarousel({loop:!1,margin:10,nav:!0,dots:!0,navText:["<i class='fas fa-angle-left'></i>","<i class='fas fa-angle-right'></i>"],responsive:{0:{items:2},600:{items:4},1e3:{items:7}}})}fetch("search/films-en-tendance.json").then(e=>e.json()).then(e=>{e.forEach(e=>{let a=document.createElement("div");a.classList.add("single-video"),a.innerHTML=`
+<a href="${e.link}" title="${e.title}">
+    <div class="video-img">
+        <span class="video-item-content">${e.title}</span>
+        <img src="${e.img}" alt="${e.title}" title="${e.title}">
+    </div>
+</a>
+`,videoCarousel.appendChild(a)}),reinitialiserOwlCarousel("#videoCarousel")}).catch(e=>console.error("Erreur lors du chargement des films :",e)),$(document).ready(function(){reinitialiserOwlCarousel("#videoCarousel")}),fetch("search/films-en-tendance.json").then(e=>e.json()).then(e=>{let a=document.querySelector(".view-all-video-area .row");e.forEach(e=>{let i=document.createElement("div");i.classList.add("col-lg-2","col-md-3","col-sm-4","col-xs-12","col-6"),i.innerHTML=`
+<div class="single-video">
+    <a href="${e.link}" title="${e.title}">
+        <div class="video-img">
+            <span class="video-item-content">${e.title}</span>
+            <img src="${e.img}" alt="${e.title}" title="${e.title}">
+        </div>
+    </a>
+</div>
+`,a.appendChild(i)})});
