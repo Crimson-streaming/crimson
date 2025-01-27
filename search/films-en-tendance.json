@@ -1,5 +1,10 @@
 [
     {
+        "title": "Vaiana 2",
+        "img": "https://media.themoviedb.org/t/p/original/usdwoEwm68cdeMOvGFPwSk9nLTr.jpg",
+        "link": "film/vaiana-2.html"
+    },
+    {
         "title": "Sonic 3, le film",
         "link": "film/sonic-3-le-film.html",
         "img": "img/film/Sonic-3-le-film/sonic-3-le-film-affiche.jpg"
@@ -48,11 +53,6 @@
         "title": "The Substance",
         "img": "https://media.themoviedb.org/t/p/original/p2lAkYKFIwhgg0ivO6Z90ZluAPt.jpg",
         "link": "film/the-substance.html"
-    },
-    {
-        "title": "Sous la seine",
-        "img": "img/film/sous-la-seine/sous-la-seine-affiche.webp",
-        "link": "film/sous-la-seine.html"
     },
     {
         "title": "Gladiator II",
