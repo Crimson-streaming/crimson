@@ -99,24 +99,3 @@ document.addEventListener("DOMContentLoaded", async function () {
     }
 });
 
-//smoth scroll
-document.querySelector('#regarder').addEventListener('click', function (e) {
-    var lecteur = document.querySelector('#player');
-
-    lecteur.scrollIntoView({
-      behavior: 'smooth',
-      block: 'center'    
-    });
-
-    setTimeout(function () {
-      if (lecteur && typeof Plyr !== 'undefined') {
-        var plyrInstance = new Plyr(lecteur);
-
-        plyrInstance.play().catch(error => {
-          console.error('Erreur lors de la tentative de lecture automatique :', error);
-        });
-      } else {
-        console.error('Le lecteur Plyr n’est pas détecté ou n’a pas été initialisé correctement.');
-      }
-    }, 500);
-  });
