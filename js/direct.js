@@ -252,67 +252,62 @@ if (window.self !== window.top) {
     document.body.appendChild(popup);
 }
 });
-document.querySelector('.play-icon-item .icon').addEventListener('click', function (e) {
-    var lecteur = document.querySelector('#player');
 
-    lecteur.scrollIntoView({
-        behavior: 'smooth',
-        block: 'center'
-    });
 
-    setTimeout(function () {
-        if (lecteur && typeof Plyr !== 'undefined') {
-            var plyrInstance = new Plyr(lecteur);
-
-            plyrInstance.play().catch(error => {
-                console.error('Erreur lors de la tentative de lecture automatique :', error);
-            });
-        } else {
-            console.error('Le lecteur Plyr n’est pas détecté ou n’a pas été initialisé correctement.');
-        }
-    }, 500);
-});
 fetch('../search/direct.json')
-      .then(response => response.json())
-      .then(data => {
-        // Récupérer le genre de la page
-        let genreElement = document.querySelector('.dtl-list-link li a');
-        if (!genreElement) return;
-        let genre = genreElement.textContent.trim();
-    
-        // Filtrer les programmes par genre
-        let programmesFiltres = data.filter(item => item.genre === genre);
-    
-        // Sélectionner la zone d'affichage
-        let container = document.querySelector('#suggestions-carousel');
-        if (!container) return;
-    
-        // Ajouter les programmes filtrés
-        programmesFiltres.forEach(programme => {
-          let programmeHTML = `
-            <div class=\"single-video\">
-              <a href=\"../${programme.emplacement}\" title=\"${programme.nom}\">\n            <div class=\"video-img\"> \n              <span class=\"video-item-content\">${programme.nom}</span>         \n              <img src=\"../${programme.affiche}\" title=\"${programme.nom}\" alt=\"${programme.nom}\" style=\"padding-top: 23px !important; padding-bottom: 12px !important;\">         \n            </div>       \n          </a>
-            </div>`;
-          
-          container.insertAdjacentHTML('beforeend', programmeHTML);
+    .then(response => {
+      if (!response.ok) {
+        throw new Error(`HTTP error! Status: ${response.status}`);
+      }
+      return response.json();
+    })
+    .then(data => {
+      // Récupérer le genre depuis la balise <meta genre="...">
+      let genreMeta = document.querySelector('meta[genre]');
+      if (!genreMeta) {
+        console.error("Balise <meta genre='...'> non trouvée !");
+        return;
+      }
+      let genre = genreMeta.getAttribute('genre').trim();
+  
+      // Filtrer les programmes par genre
+      let programmesFiltres = data.filter(item => item.genre === genre);
+  
+      // Sélectionner la zone d'affichage
+      let container = document.querySelector('#suggestions-carousel');
+      if (!container) return;
+  
+      // Ajouter les programmes filtrés
+      programmesFiltres.forEach(programme => {
+        let programmeHTML = `
+          <div class="single-video">
+            <a href="../${programme.emplacement}" title="${programme.nom}">
+              <div class="video-img"> 
+                <span class="video-item-content">${programme.nom}</span>         
+                <img src="../${programme.affiche}" title="${programme.nom}" alt="${programme.nom}" style="padding-top: 23px !important; padding-bottom: 12px !important;">         
+              </div>       
+            </a>
+          </div>`;
+        
+        container.insertAdjacentHTML('beforeend', programmeHTML);
+      });
+  
+      // Vérifier si Owl Carousel est bien chargé
+      if (typeof $.fn.owlCarousel === 'function') {
+        $("#suggestions-carousel").owlCarousel({
+          loop: false,
+          margin: 10,
+          nav: true,
+          dots: true,
+          navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+          responsive: {
+            0: { items: 2 },
+            600: { items: 3 },
+            1000: { items: 5 }
+          }
         });
-    
-        // Vérifier si Owl Carousel est bien chargé
-        if (typeof $.fn.owlCarousel === 'function') {
-          $("#suggestions-carousel").owlCarousel({
-            loop: false,
-            margin: 10,
-            nav: true,
-            dots: true,
-            navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
-            responsive: {
-              0: { items: 2 },
-              600: { items: 3 },
-              1000: { items: 5 }
-            }
-          });
-        } else {
-          console.error("Owl Carousel n'est pas chargé correctement.");
-        }
-      })
-      .catch(error => console.error('Erreur lors de la récupération des programmes:', error));
+      } else {
+        console.error("Owl Carousel n'est pas chargé correctement.");
+      }
+    })
+    .catch(error => console.error('Erreur lors de la récupération des programmes:', error));
