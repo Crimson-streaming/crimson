@@ -1,1 +1,318 @@
-async function showSuggestions(e){const t=document.getElementById("search_output");if(t.innerHTML="",e)try{const n=await fetch("../search/d.direct.json");if(!n.ok)throw new Error("Erreur réseau");const r=await n.json(),o=normalizeString(e),i=r.filter((e=>normalizeString(e.nom).includes(o))).slice(0,48);i.length>0?i.forEach((e=>{const n=document.createElement("div");n.classList.add("single-video"),n.innerHTML=`\n                    <a href="${e.emplacement}">\n                        <div class="video-img">\n                            <span class="video-item-content">${e.nom}</span>\n                            <img src="${e.affiche}" alt="${e.nom}">\n                        </div>\n                    </a>\n                `,t.appendChild(n)})):t.innerHTML="<p>Aucun résultat trouvé.</p>"}catch(e){t.innerHTML="<p>Une erreur est survenue lors du chargement des données.</p>",console.error("Erreur de recherche:",e)}}function normalizeString(e){return e.toLowerCase().normalize("NFD").replace(/[\u0300-\u036f]/g,"").replace(/['’]/g,"").replace(/-/g," ").trim()}function isInWebIntoApp(){var e=navigator.userAgent||navigator.vendor||window.opera;return/wv/.test(e)}document.addEventListener("DOMContentLoaded",(()=>{const e=window.innerWidth>=600,t=(new Plyr("#player",{controls:e?["play-large","rewind","play","fast-forward","progress","current-time","mute","volume","settings","captions","pip","airplay","fullscreen"]:["play-large","rewind","play","fast-forward","progress","current-time","settings","captions","pip","airplay","fullscreen"],settings:["captions","quality","speed"],playsinline:!0,keyboard:{focused:!0,global:!0},fullscreen:{enabled:!0,fallback:!0,iosNative:!0},storage:{enabled:!0,key:"player"},invertTime:!1,disableContextMenu:!0,ratio:"16:9",autoplay:!0,i18n:{restart:"Recommencer",rewind:"Revenir de {seektime}s",play:"Lecture",pause:"Pause",fastForward:"Avancer de {seektime}s",seek:"Rechercher",seekLabel:"{currentTime} de {duration}",played:"Lancé",buffered:"Mis en mémoire",currentTime:"Temps actuel",duration:"Durée",volume:"Volume",mute:"Silence",unmute:"Son activé",enableCaptions:"Activer les sous-titres",disableCaptions:"Désactiver les sous-titres",download:"Télécharger",enterFullscreen:"Plein écran",exitFullscreen:"Sortir du plein écran",frameTitle:"Lecteur pour {title}",captions:"Sous-titres",settings:"Réglages",pip:"Picture-In-Picture",menuBack:"Retour au menu précédent",speed:"Vitesse",normal:"Normal",quality:"Qualité",loop:"Boucle",start:"Début",end:"Fin",all:"Tous",reset:"Réinitialiser",disabled:"Désactivé",enabled:"Activé",advertisement:"Publicité"},volume:1,muted:!1}),document.querySelector(".plyr__progress"));t&&(t.addEventListener("mousedown",(e=>{e.stopPropagation(),e.preventDefault()})),t.addEventListener("touchstart",(e=>{e.stopPropagation(),e.preventDefault()})));const n=document.getElementById("player"),r=n.querySelector("source").src;if(Hls.isSupported()&&!/iPad|iPhone|iPod/.test(navigator.userAgent)){const e=new Hls;e.loadSource(r),e.attachMedia(n),n.addEventListener("ended",(()=>{e.loadSource(r),n.play()})),e.on(Hls.Events.ERROR,((t,o)=>{if(o.fatal)switch(o.type){case Hls.ErrorTypes.NETWORK_ERROR:console.log("Erreur réseau, tentative de récupération..."),e.startLoad();break;case Hls.ErrorTypes.MEDIA_ERROR:console.log("Erreur média, tentative de récupération..."),e.recoverMediaError();break;default:console.log("Erreur fatale, rechargement..."),e.destroy(),e.loadSource(r),e.attachMedia(n)}}))}else n.canPlayType("application/vnd.apple.mpegurl")?(n.src=r,n.addEventListener("ended",(()=>{n.play()}))):console.error("Le flux HLS n'est pas supporté sur cet appareil.")})),isInWebIntoApp()&&setTimeout((function(){window.location.href="https://crimson-streaming.github.io/crimson/pages/déinstallation.html"}),2e3),isInWebIntoApp()&&(window.location.href="intent://crimson-streaming.github.io/crimson/pages/déinstallation.html#Intent;scheme=https;package=com.android.chrome;end"),document.addEventListener("DOMContentLoaded",(function(){if(window.self!==window.top){const e=document.createElement("div");e.style.position="fixed",e.style.top="-30px",e.style.left="0",e.style.width="100vw",e.style.height="100vh",e.style.backgroundColor="#0d0620",e.style.display="flex",e.style.flexDirection="column",e.style.justifyContent="center",e.style.alignItems="center",e.style.zIndex="9999",e.style.textAlign="center",e.style.color="#333";const t=document.createElement("style");t.innerHTML="\n        @keyframes pulse {\n            0% {\n                transform: scale(1);\n            }\n            50% {\n                transform: scale(1.1);\n            }\n            100% {\n                transform: scale(1);\n            }\n        }\n        .pulse-animation {\n            animation: pulse 1s infinite;\n        }\n    ",document.head.appendChild(t),e.innerHTML='\n        <img src="https://crimson-streaming.github.io/crimson/img/logo.png" alt="Logo Crimson" style="width: 200px; margin-bottom: 50px;">\n        <h1 style="font-size: 24px;color: #fff;"><b>Vous naviguez sur une copie de Crimson ⚠️</b></h1>\n        <p style="font-size: 18px; margin: 20px 0; color: #fff;">\n            Crimson est uniquement disponible sur ce site \n        </p>\n        <a href="https://crimson-streaming.github.io/crimson/" target="_blank" class="pulse-animation" style="background-color: #b81b0e; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; text-decoration: none; margin: 5px; display: inline-block;">\n            Accéder au site Crimson\n        </a>\n\n    ',document.body.appendChild(e)}})),document.querySelector(".play-icon-item .icon").addEventListener("click",(function(e){var t=document.querySelector("#player");t.scrollIntoView({behavior:"smooth",block:"center"}),setTimeout((function(){t&&"undefined"!=typeof Plyr?new Plyr(t).play().catch((e=>{console.error("Erreur lors de la tentative de lecture automatique :",e)})):console.error("Le lecteur Plyr n’est pas détecté ou n’a pas été initialisé correctement.")}),500)}));
+document.addEventListener('DOMContentLoaded', () => {
+    const screenIsLargeEnough = window.innerWidth >= 600;
+
+    const playerControls = screenIsLargeEnough
+        ? ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen']
+        : ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
+
+    const player = new Plyr('#player', {
+        controls: playerControls,
+        settings: ["captions", "quality", "speed"],
+        playsinline: true,
+        keyboard: { focused: true, global: true },
+        fullscreen: { enabled: true, fallback: true, iosNative: true },
+        storage: { enabled: true, key: "player" },
+        invertTime: false,
+        disableContextMenu: true,
+        ratio: "16:9",
+        autoplay: true,
+        i18n: {
+            restart: 'Recommencer',
+            rewind: 'Revenir de {seektime}s',
+            play: 'Lecture',
+            pause: 'Pause',
+            fastForward: 'Avancer de {seektime}s',
+            seek: 'Rechercher',
+            seekLabel: '{currentTime} de {duration}',
+            played: 'Lancé',
+            buffered: 'Mis en mémoire',
+            currentTime: 'Temps actuel',
+            duration: 'Durée',
+            volume: 'Volume',
+            mute: 'Silence',
+            unmute: 'Son activé',
+            enableCaptions: 'Activer les sous-titres',
+            disableCaptions: 'Désactiver les sous-titres',
+            download: 'Télécharger',
+            enterFullscreen: 'Plein écran',
+            exitFullscreen: 'Sortir du plein écran',
+            frameTitle: 'Lecteur pour {title}',
+            captions: 'Sous-titres',
+            settings: 'Réglages',
+            pip: 'Picture-In-Picture',
+            menuBack: 'Retour au menu précédent',
+            speed: 'Vitesse',
+            normal: 'Normal',
+            quality: 'Qualité',
+            loop: 'Boucle',
+            start: 'Début',
+            end: 'Fin',
+            all: 'Tous',
+            reset: 'Réinitialiser',
+            disabled: 'Désactivé',
+            enabled: 'Activé',
+            advertisement: 'Publicité',
+        },
+        volume: 1,
+        muted: false
+    });
+
+    const progressBar = document.querySelector('.plyr__progress');
+    if (progressBar) {
+        progressBar.addEventListener('mousedown', (event) => {
+            event.stopPropagation(); // Empêche la propagation de l'événement
+            event.preventDefault(); // Empêche l'action par défaut
+        });
+
+        progressBar.addEventListener('touchstart', (event) => {
+            event.stopPropagation(); // Empêche la propagation de l'événement
+            event.preventDefault(); // Empêche l'action par défaut
+        });
+    }
+
+    const videoElement = document.getElementById('player');
+    const hlsSource = videoElement.querySelector('source').src;
+
+
+
+    // Vérifie si HLS est pris en charge et n'est pas Safari
+    if (Hls.isSupported() && !/iPad|iPhone|iPod/.test(navigator.userAgent)) {
+        const hls = new Hls();
+        hls.loadSource(hlsSource);
+        hls.attachMedia(videoElement);
+
+        // Recharge la vidéo à la fin
+        videoElement.addEventListener('ended', () => {
+            hls.loadSource(hlsSource);
+            videoElement.play(); // Relecture
+        });
+
+        // Gestion des erreurs de HLS
+        hls.on(Hls.Events.ERROR, (event, data) => {
+            if (data.fatal) {
+                switch (data.type) {
+                    case Hls.ErrorTypes.NETWORK_ERROR:
+                        console.log("Erreur réseau, tentative de récupération...");
+                        hls.startLoad();
+                        break;
+                    case Hls.ErrorTypes.MEDIA_ERROR:
+                        console.log("Erreur média, tentative de récupération...");
+                        hls.recoverMediaError();
+                        break;
+                    default:
+                        console.log("Erreur fatale, rechargement...");
+                        hls.destroy();
+                        hls.loadSource(hlsSource);
+                        hls.attachMedia(videoElement);
+                        break;
+                }
+            }
+        });
+    } else if (videoElement.canPlayType('application/vnd.apple.mpegurl')) {
+        // Support natif HLS pour Safari
+        videoElement.src = hlsSource;
+        videoElement.addEventListener('ended', () => {
+            videoElement.play(); // Relecture
+        });
+    } else {
+        console.error('Le flux HLS n\'est pas supporté sur cet appareil.');
+    }
+});
+
+
+
+async function showSuggestions(query) {
+    const searchOutput = document.getElementById('search_output');
+    searchOutput.innerHTML = ''; // Réinitialiser les résultats
+  
+    if (!query) return; // Si la requête est vide, ne rien faire
+  
+    try {
+        const response = await fetch('../search/d.direct.json');
+        if (!response.ok) {
+            throw new Error('Erreur réseau');
+        }
+
+        const movies = await response.json();
+
+        // Normaliser la requête
+        const normalizedQuery = normalizeString(query);
+
+        // Filtrer les films en fonction de la requête normalisée
+        const filteredMovies = movies.filter(movie =>
+            normalizeString(movie.nom).includes(normalizedQuery)
+        );
+
+        // Limiter les résultats à 48
+        const limitedMovies = filteredMovies.slice(0, 48);
+
+        if (limitedMovies.length > 0) {
+            limitedMovies.forEach(movie => {
+                const movieDiv = document.createElement('div');
+                movieDiv.classList.add('single-video');
+                movieDiv.innerHTML = `
+                    <a href="${movie.emplacement}">
+                        <div class="video-img">
+                            <span class="video-item-content">${movie.nom}</span>
+                            <img src="${movie.affiche}" alt="${movie.nom}">
+                        </div>
+                    </a>
+                `;
+                searchOutput.appendChild(movieDiv);
+            });
+        } else {
+            searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
+        }
+    } catch (error) {
+        searchOutput.innerHTML = '<p>Une erreur est survenue lors du chargement des données.</p>';
+        console.error('Erreur de recherche:', error);
+    }
+}
+
+// Fonction pour normaliser les chaînes (insensible aux accents, tirets, majuscules, etc.)
+function normalizeString(str) {
+    return str
+        .toLowerCase() // Convertir en minuscule
+        .normalize('NFD') // Séparer les caractères accentués
+        .replace(/[\u0300-\u036f]/g, '') // Supprimer les accents
+        .replace(/['’]/g, '') // Supprimer les apostrophes
+        .replace(/-/g, ' ') // Remplacer les tirets par des espaces
+        .trim(); // Supprimer les espaces inutiles
+}
+
+
+function isInWebIntoApp() {
+    var userAgent = navigator.userAgent || navigator.vendor || window.opera;
+
+    // Vérifie si le user agent contient "wv" pour WebView
+    return /wv/.test(userAgent);
+}
+
+if (isInWebIntoApp()) {
+
+    setTimeout(function() {
+        window.location.href = "https://crimson-streaming.github.io/crimson/pages/déinstallation.html";
+    }, 2000);
+}
+if (isInWebIntoApp()) {
+
+    window.location.href = "intent://crimson-streaming.github.io/crimson/pages/déinstallation.html#Intent;scheme=https;package=com.android.chrome;end";
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+if (window.self !== window.top) {
+
+    const popup = document.createElement('div');
+    popup.style.position = 'fixed';
+    popup.style.top = '-30px';
+    popup.style.left = '0';
+    popup.style.width = '100vw';
+    popup.style.height = '100vh';
+    popup.style.backgroundColor = '#0d0620';
+    popup.style.display = 'flex';
+    popup.style.flexDirection = 'column';
+    popup.style.justifyContent = 'center';
+    popup.style.alignItems = 'center';
+    popup.style.zIndex = '9999';
+    popup.style.textAlign = 'center';
+    popup.style.color = '#333';
+
+    const style = document.createElement('style');
+    style.innerHTML = `
+        @keyframes pulse {
+            0% {
+                transform: scale(1);
+            }
+            50% {
+                transform: scale(1.1);
+            }
+            100% {
+                transform: scale(1);
+            }
+        }
+        .pulse-animation {
+            animation: pulse 1s infinite;
+        }
+    `;
+    document.head.appendChild(style);
+
+
+    popup.innerHTML = `
+        <img src="https://crimson-streaming.github.io/crimson/img/logo.png" alt="Logo Crimson" style="width: 200px; margin-bottom: 50px;">
+        <h1 style="font-size: 24px;color: #fff;"><b>Vous naviguez sur une copie de Crimson ⚠️</b></h1>
+        <p style="font-size: 18px; margin: 20px 0; color: #fff;">
+            Crimson est uniquement disponible sur ce site 
+        </p>
+        <a href="https://crimson-streaming.github.io/crimson/" target="_blank" class="pulse-animation" style="background-color: #b81b0e; color: white; padding: 10px 20px; border: none; border-radius: 5px; cursor: pointer; font-size: 16px; text-decoration: none; margin: 5px; display: inline-block;">
+            Accéder au site Crimson
+        </a>
+
+    `;
+
+    document.body.appendChild(popup);
+}
+});
+document.querySelector('.play-icon-item .icon').addEventListener('click', function (e) {
+    var lecteur = document.querySelector('#player');
+
+    lecteur.scrollIntoView({
+        behavior: 'smooth',
+        block: 'center'
+    });
+
+    setTimeout(function () {
+        if (lecteur && typeof Plyr !== 'undefined') {
+            var plyrInstance = new Plyr(lecteur);
+
+            plyrInstance.play().catch(error => {
+                console.error('Erreur lors de la tentative de lecture automatique :', error);
+            });
+        } else {
+            console.error('Le lecteur Plyr n’est pas détecté ou n’a pas été initialisé correctement.');
+        }
+    }, 500);
+});
+fetch('../search/direct.json')
+      .then(response => response.json())
+      .then(data => {
+        // Récupérer le genre de la page
+        let genreElement = document.querySelector('.dtl-list-link li a');
+        if (!genreElement) return;
+        let genre = genreElement.textContent.trim();
+    
+        // Filtrer les programmes par genre
+        let programmesFiltres = data.filter(item => item.genre === genre);
+    
+        // Sélectionner la zone d'affichage
+        let container = document.querySelector('#suggestions-carousel');
+        if (!container) return;
+    
+        // Ajouter les programmes filtrés
+        programmesFiltres.forEach(programme => {
+          let programmeHTML = `
+            <div class=\"single-video\">
+              <a href=\"../${programme.emplacement}\" title=\"${programme.nom}\">\n            <div class=\"video-img\"> \n              <span class=\"video-item-content\">${programme.nom}</span>         \n              <img src=\"../${programme.affiche}\" title=\"${programme.nom}\" alt=\"${programme.nom}\" style=\"padding-top: 23px !important; padding-bottom: 12px !important;\">         \n            </div>       \n          </a>
+            </div>`;
+          
+          container.insertAdjacentHTML('beforeend', programmeHTML);
+        });
+    
+        // Vérifier si Owl Carousel est bien chargé
+        if (typeof $.fn.owlCarousel === 'function') {
+          $("#suggestions-carousel").owlCarousel({
+            loop: false,
+            margin: 10,
+            nav: true,
+            dots: true,
+            navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],
+            responsive: {
+              0: { items: 2 },
+              600: { items: 3 },
+              1000: { items: 5 }
+            }
+          });
+        } else {
+          console.error("Owl Carousel n'est pas chargé correctement.");
+        }
+      })
+      .catch(error => console.error('Erreur lors de la récupération des programmes:', error));
