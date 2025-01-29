@@ -98,4 +98,3 @@ document.addEventListener("DOMContentLoaded", async function () {
         console.error("Erreur lors du traitement :", error);
     }
 });
-

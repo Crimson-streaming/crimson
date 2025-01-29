@@ -77,24 +77,35 @@ function displayRecentlyWatchedMovies() {
 
     $(document).ready(function(){
         $(".owl-carousel").owlCarousel({
-            loop: false,  // Activer le défilement infini
-            margin: 10,  // Espacement entre les éléments
-            nav: true, 
-            dots: true, // Points de navigation
-            navText: ["<i class='fas fa-angle-left'></i>", "<i class='fas fa-angle-right'></i>"],  // Afficher les flèches de navigation
+            nav: true,
+            margin: 20,
+            navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
             responsive: {
-                0: {      // Pour les petits écrans (mobile)
-                    items: 2  // Afficher 2 éléments à la fois
+                0: {
+                    items: 2,
+                    slideBy: 2,
+                    margin: 15
                 },
-                600: {    // Pour les écrans de plus de 600px de large (tablette)
-                    items: 3  // Afficher 4 éléments à la fois
+                640: {
+                    items: 3,
+                    slideBy: 3
                 },
-                1000: {   // Pour les écrans de plus de 1000px de large (bureau)
-                    items: 6  // Afficher 6 éléments à la fois
+                768: {
+                    items: 4,
+                    slideBy: 4
+                },
+                991: {
+                    items: 5,
+                    slideBy: 5
+                },
+                1198: {
+                    items: 6,
+                    slideBy: 6
                 }
-            }
-        });
+            } // Correction : Fermeture de l'objet responsive
+        }); // Correction : Fermeture de la fonction owlCarousel
     });
+    
     
 }
 
