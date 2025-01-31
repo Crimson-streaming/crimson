@@ -88,12 +88,29 @@ document.addEventListener("DOMContentLoaded", async function () {
                 '<i class="fas fa-angle-right"></i>' // Icône droite
             ],
             responsive: {
-                0: { items: 2 }, // 2 items sur petits écrans
-                600: { items: 4 }, // 3 items sur écrans moyens
-                1000: { items: 7 } // 6 items sur écrans larges
+                0: {
+                    items: 2,
+                    slideBy: 2,
+                    margin: 15
+                },
+                480: {
+                    items: 3,
+                    slideBy: 3
+                },
+                768: {
+                    items: 4,
+                    slideBy: 4
+                },
+                991: {
+                    items: 5,
+                    slideBy: 5
+                },
+                1198: {
+                    items: 7,
+                    slideBy: 7
+                }
             }
         });
-
     } catch (error) {
         console.error("Erreur lors du traitement :", error);
     }
