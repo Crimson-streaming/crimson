@@ -44,12 +44,13 @@
             navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
             responsive: { 0: { items: 2, slideBy: 2, margin: 15 }, 480: { items: 3, slideBy: 3 }, 768: { items: 4, slideBy: 4 }, 991: { items: 5, slideBy: 5 }, 1198: { items: 7, slideBy: 7 } },
         }),
-        e(".video-shows-carousel").owlCarousel({
-            nav: !0,
-            margin: 20,
-            navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
-            responsive: { 0: { items: 1, slideBy: 1 }, 640: { items: 2, slideBy: 2 }, 768: { items: 2, slideBy: 2 }, 991: { items: 3, slideBy: 3 }, 1198: { items: 3, slideBy: 3 } },
-        }),
+        $(document).ready(function(){
+            $(".video-shows-carousel").owlCarousel({
+                nav: !0,
+                margin: 20,
+                navText: ['<i class="fas fa-angle-left"></i>', '<i class="fas fa-angle-right"></i>'],
+                responsive: { 0: { items: 1, slideBy: 1, }, 640: { items: 2, slideBy: 2}, 768: { items: 2, slideBy: 2 }, 991: { items: 3, slideBy: 3 }, 1198: { items: 3, slideBy: 3 } } }); 
+        });
         e(".tv-season-video-carousel").owlCarousel({
             nav: !0,
             margin: 20,
