@@ -162,10 +162,8 @@
    <script src="../js/custom-main.js"></script>
    <script src="../js/direct.js"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
-   <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-
- 
-       <footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <footer>
         <div class="footer-area vfx-item-ptb">
           <div class="footer-wrapper">
             <div class="container-fluid">
@@ -215,32 +213,30 @@
           </div>
         </div>
       </footer>
-   <div id="popup1" class="popup-view popup-overlay">
-    <div class="search">
-      <div class="search-container has-results"><span class="title">Rechercher</span>
-        <div class="search-input">
-          <input type="text" name="s" id="search_box" class="search-container-input" placeholder="Titre" onkeyup="showSuggestions(this.value)" style="background: #0d071e;" autocomplete="off" ">
+    <div id="popup1" class="popup-view popup-overlay">
+        <div class="search">
+          <div class="search-container has-results"><span class="title">Rechercher</span>
+            <div class="search-input">
+              <input type="text" name="s" id="search_box" class="search-container-input" placeholder="Titre" onkeyup="showSuggestions(this.value)" style="background: #0d071e;" autocomplete="off" ">
+            </div>
+          </div>
+          <div class="search-results mt-4" id="search_output">
+              
+       
+          </div>
         </div>
-      </div>
-      <div class="search-results mt-4" id="search_output">
-          
-   
-      </div>
-    </div>
-    <a class="close" href="#" title="close"><i class="fas fa-times"></i></a>
-  </div>     
-   
-<div class="eupopup eupopup-bottom"></div>
+        <a class="close" href="#" title="close"><i class="fas fa-times"></i></a>
+      </div>     
+       
+    <div class="eupopup eupopup-bottom"></div>
 
-
-<script>
-    // Fonction exécutée lors de l'utilisation du clic droit.
-    $(document).bind("contextmenu", function() {
-        // On indique au navigateur de ne pas réagir en cas de clic droit.
-        return false;
-    });
-    window.disableVideoCheck = true;
-</script>
- <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>  
-</body>
+ <script>
+        // Fonction exécutée lors de l'utilisation du clic droit.
+        $(document).bind("contextmenu", function() {
+            // On indique au navigateur de ne pas réagir en cas de clic droit.
+            return false;
+        });
+    </script>
+   <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>
+  
 </html>

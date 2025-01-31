@@ -157,38 +157,3 @@
 .no-csspointerevents .nice-select.open .list {
 	display: block;
 }
-
-
-.pagination li.active a {
-    background-color: #b81b0e;
-    color: #ffffff; 
-    border-radius: 50%; 
-    width: 40px; 
-    height: 40px; 
-    line-height: 40px; 
-    text-align: center; 
-    display: inline-block; 
-    transition: all 0.3s ease;
-}
-
-.pagination li a {
-    text-decoration: none;
-    color: inherit; 
-    width: 40px;
-    height: 40px;
-    line-height: 40px;
-    text-align: center;
-    border-radius: 50%; 
-    display: inline-block;
-    transition: all 0.3s ease; 
-}
-
-.pagination li a:hover {
-    background-color: #ff6b5a; 
-    color: #ffffff; 
-}
-
-.pagination li.disabled a {
-    pointer-events: none; 
-    opacity: 0.5; 
-}
