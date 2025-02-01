@@ -77,18 +77,16 @@ window.dataLayer = window.dataLayer || [];
   <style> 
 #ambilight {
     position: absolute;
-    top: 0;
-    left: 0;
-    width: 100%;
-    height: 100%;
+    top: -10px;
+    left: -10px;
+    right: 0px;
+    bottom: -10px;
+    background: black;
     z-index: -1;
-    transition: background 1.5s ease-in-out;
-    pointer-events: none;
-
-    /* Dégradé radial simulant une extension naturelle de la lumière */
-    background: radial-gradient(circle, rgba(0,0,0,0) 40%, rgba(0,0,0,0.5) 80%);
     filter: blur(50px);
+    transition: background 0.2s ease-in-out;
 }
+
 
 
 
@@ -342,42 +340,37 @@ window.dataLayer = window.dataLayer || [];
 <div class="eupopup eupopup-bottom"></div>
 
 <script>
-const video = document.getElementById('player');
-const ambilight = document.getElementById('ambilight');
-const canvas = document.createElement('canvas');
-const ctx = canvas.getContext('2d');
+const video = document.getElementById("player");
+const ambilight = document.getElementById("ambilight");
 
 function updateAmbilight() {
-    if (!video || video.paused || video.ended) return;
+    if (!video) return;
 
-    // Capture une miniature réduite de la vidéo (optimisation)
-    canvas.width = Math.max(1, video.videoWidth / 15);
-    canvas.height = Math.max(1, video.videoHeight / 15);
+    const canvas = document.createElement("canvas");
+    const ctx = canvas.getContext("2d");
+    canvas.width = 10;
+    canvas.height = 10;
     
-    ctx.drawImage(video, 0, 0, canvas.width, canvas.height);
-    const frame = ctx.getImageData(0, 0, canvas.width, canvas.height).data;
+    ctx.drawImage(video, 0, 0, 10, 10);
+    const frame = ctx.getImageData(0, 0, 10, 10);
+    let r = 0, g = 0, b = 0;
 
-    let r = 0, g = 0, b = 0, count = 0;
-    for (let i = 0; i < frame.length; i += 4 * 3) { // Échantillonnage 1 pixel sur 3
-        r += frame[i];      
-        g += frame[i + 1];  
-        b += frame[i + 2];  
-        count++;
+    for (let i = 0; i < frame.data.length; i += 4) {
+        r += frame.data[i];
+        g += frame.data[i + 1];
+        b += frame.data[i + 2];
     }
 
-    if (count > 0) {
-        r = Math.floor(r / count);
-        g = Math.floor(g / count);
-        b = Math.floor(b / count);
-    }
+    const pixelCount = frame.data.length / 4;
+    r = Math.floor(r / pixelCount);
+    g = Math.floor(g / pixelCount);
+    b = Math.floor(b / pixelCount);
 
-    // Appliquer une transition fluide à l'effet Ambilight
-    ambilight.style.background = `radial-gradient(circle, rgba(${r}, ${g}, ${b}, 0.3) 30%, rgba(0,0,0,0.8) 90%)`;
+    ambilight.style.background = `rgb(${r}, ${g}, ${b})`;
 }
 
-// Démarrer la mise à jour seulement si la vidéo est en lecture
-video.addEventListener('play', () => {
-    setInterval(updateAmbilight, 2000);
+video.addEventListener("play", () => {
+    setInterval(updateAmbilight, 500);
 });
 
   </script>
