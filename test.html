@@ -77,17 +77,16 @@ window.dataLayer = window.dataLayer || [];
   <style> 
 #ambilight {
     position: absolute;
-    top: -20px;
-    left: -20px;
-    right: 0px;
-    bottom: -20px;
-    background: black;
+    top: -30%;
+    left: -30%;
+    width: 100%;
+    height: 160%;
+    background: #0d071e;
     z-index: -1;
-    filter: blur(80px);
+    filter: blur(100px);
     transition: background-color 1s ease-in-out;
+    pointer-events: none;
 }
-
-
 
 
 
@@ -344,13 +343,14 @@ window.dataLayer = window.dataLayer || [];
 const video = document.getElementById("player");
 const ambilight = document.getElementById("ambilight");
 
-let currentColor = { r: 0, g: 0, b: 0 }; // Couleur actuelle de l'effet
-let targetColor = { r: 0, g: 0, b: 0 };  // Nouvelle couleur cible
+let currentColor = { r: 0, g: 0, b: 0 };
+let targetColor = { r: 0, g: 0, b: 0 };
 
 function lerp(a, b, t) {
     return a + (b - a) * t;
 }
 
+// Fonction pour récupérer la couleur moyenne de l’image vidéo
 function updateAmbilight() {
     if (!video) return;
 
@@ -375,11 +375,11 @@ function updateAmbilight() {
     targetColor.b = Math.floor(b / pixelCount);
 }
 
-// Animation fluide de l'Ambilight
+// Animation pour faire une transition douce entre les couleurs
 function animateAmbilight() {
-    currentColor.r = lerp(currentColor.r, targetColor.r, 0.05);
-    currentColor.g = lerp(currentColor.g, targetColor.g, 0.05);
-    currentColor.b = lerp(currentColor.b, targetColor.b, 0.05);
+    currentColor.r = lerp(currentColor.r, targetColor.r, 0.01);
+    currentColor.g = lerp(currentColor.g, targetColor.g, 0.01);
+    currentColor.b = lerp(currentColor.b, targetColor.b, 0.01);
 
     ambilight.style.backgroundColor = `rgb(${Math.floor(currentColor.r)}, ${Math.floor(currentColor.g)}, ${Math.floor(currentColor.b)})`;
 
@@ -387,8 +387,8 @@ function animateAmbilight() {
 }
 
 video.addEventListener("play", () => {
-    setInterval(updateAmbilight, 1000); // Met à jour la couleur toutes les secondes
-    animateAmbilight(); // Lance l'animation continue
+    setInterval(updateAmbilight, 2500); // Moins de mises à jour pour un changement lent
+    animateAmbilight();
 });
 
   </script>
