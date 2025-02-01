@@ -144,6 +144,12 @@
         "genre":"Général"
     },
     {
+        "nom": "Cartoon Network",
+        "affiche": "../img/direct/cartoon-network-logo.png",
+        "emplacement": "../direct/cartoon-network.html",
+        "genre":"Jeunesse"
+    },
+    {
         "nom": "Inazuma Eleven",
         "affiche": "../img/direct/inazuma-eleven.png",
         "emplacement": "../direct/inazuma-eleven.html",
