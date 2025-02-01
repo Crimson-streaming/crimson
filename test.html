@@ -77,15 +77,16 @@ window.dataLayer = window.dataLayer || [];
   <style> 
 #ambilight {
     position: absolute;
-    top: -10px;
-    left: -10px;
+    top: -20px;
+    left: -20px;
     right: 0px;
-    bottom: -10px;
+    bottom: -20px;
     background: black;
     z-index: -1;
-    filter: blur(50px);
-    transition: background 0.2s ease-in-out;
+    filter: blur(80px);
+    transition: background-color 1s ease-in-out;
 }
+
 
 
 
@@ -343,6 +344,13 @@ window.dataLayer = window.dataLayer || [];
 const video = document.getElementById("player");
 const ambilight = document.getElementById("ambilight");
 
+let currentColor = { r: 0, g: 0, b: 0 }; // Couleur actuelle de l'effet
+let targetColor = { r: 0, g: 0, b: 0 };  // Nouvelle couleur cible
+
+function lerp(a, b, t) {
+    return a + (b - a) * t;
+}
+
 function updateAmbilight() {
     if (!video) return;
 
@@ -350,7 +358,7 @@ function updateAmbilight() {
     const ctx = canvas.getContext("2d");
     canvas.width = 10;
     canvas.height = 10;
-    
+
     ctx.drawImage(video, 0, 0, 10, 10);
     const frame = ctx.getImageData(0, 0, 10, 10);
     let r = 0, g = 0, b = 0;
@@ -362,15 +370,25 @@ function updateAmbilight() {
     }
 
     const pixelCount = frame.data.length / 4;
-    r = Math.floor(r / pixelCount);
-    g = Math.floor(g / pixelCount);
-    b = Math.floor(b / pixelCount);
+    targetColor.r = Math.floor(r / pixelCount);
+    targetColor.g = Math.floor(g / pixelCount);
+    targetColor.b = Math.floor(b / pixelCount);
+}
 
-    ambilight.style.background = `rgb(${r}, ${g}, ${b})`;
+// Animation fluide de l'Ambilight
+function animateAmbilight() {
+    currentColor.r = lerp(currentColor.r, targetColor.r, 0.05);
+    currentColor.g = lerp(currentColor.g, targetColor.g, 0.05);
+    currentColor.b = lerp(currentColor.b, targetColor.b, 0.05);
+
+    ambilight.style.backgroundColor = `rgb(${Math.floor(currentColor.r)}, ${Math.floor(currentColor.g)}, ${Math.floor(currentColor.b)})`;
+
+    requestAnimationFrame(animateAmbilight);
 }
 
 video.addEventListener("play", () => {
-    setInterval(updateAmbilight, 500);
+    setInterval(updateAmbilight, 1000); // Met à jour la couleur toutes les secondes
+    animateAmbilight(); // Lance l'animation continue
 });
 
   </script>
