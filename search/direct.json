@@ -92,7 +92,7 @@
     {
         "nom": "Arte",
         "affiche": "img/direct/Arte.png",
-        "emplacement": "direct/arte.html",
+        "emplacement": "direct/Arte.html",
         "genre":"Général"
     },
     {
