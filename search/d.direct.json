@@ -282,6 +282,12 @@
         "genre":"Général"
     },
     {
+        "nom": "Doctor Who",
+        "affiche": "img/direct/doctor-who-logo.png",
+        "emplacement": "direct/doctor-who.html",
+        "genre":"Cinéma"
+    },
+    {
         "nom": "Pluto Tv Film",
         "affiche": "../img/direct/Pluto-Tv-Film.png",
         "emplacement": "../direct/pluto-tv-films.html",
