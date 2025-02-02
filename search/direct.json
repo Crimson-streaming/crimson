@@ -192,6 +192,12 @@
         "genre":"Général"
     },
     {
+        "nom": "France info",
+        "affiche": "img/direct/france-info-logo.png",
+        "emplacement": "direct/france-info.html",
+        "genre":"Général"
+    },
+    {
         "nom": "Cartoon Network",
         "affiche": "img/direct/cartoon-network-logo.png",
         "emplacement": "direct/cartoon-network.html",
