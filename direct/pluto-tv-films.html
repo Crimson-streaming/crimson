@@ -40,6 +40,10 @@
        <link rel="stylesheet" href="../css/jquery-eu-cookie-law-popup.css">
        <link rel="stylesheet" href="../css/search.css">
        <link rel="stylesheet" href="../css/validatesecurity.css">
+
+         <!-- owl Carousel -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
  
 
     <!-- Player -->
@@ -150,92 +154,93 @@
         <!-- Les suggestions seront injectées ici -->
       </div>
     </div>
-  <!-- JS Imports -->
-  <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
-  <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
-  <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-  <script src="../js/FWDEVPlayer.js"></script>
-  <script src="../js/bootstrap.min.js"></script>
-  <script src="../js/jquery.nice-select.min.js"></script>  
-  <script src="../js/megamenu.js"></script> 
-  <script src="../js/custom-main.js"></script>
-  <script src="../js/direct.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
- <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-   <footer>
-       <div class="footer-area vfx-item-ptb">
-         <div class="footer-wrapper">
-           <div class="container-fluid">
-             <div class="row">
-               <!-- Section des liens et mentions légales -->
-               <div class="col-lg-8 col-md-8 col-sm-12">
-                 <div class="footer-bottom">
-                   <div class="footer-links">
-                     <ul>
-                       <li><a href="../pages/signaler-un-problème.html" title="⚐ Signaler un Problème">⚐ Signaler un Problème</a></li>
-                       <li><a href="../pages/recrutement.html" title="⛭ Recrutement">⛭ Recrutement</a></li>
-                       <li><a href="../pages/dmca.html" title="DMCA">DMCA</a></li>
-                     </ul>
-                   </div>
-                   <div class="copyright-text">
-                     <p>
-                       <b>© 2024 Crimson ‎
-                         <svg class="mt-2" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" style="margin: 0px !important;">
-                           <path fill="#ED2939" d="M36 27a4 4 0 0 1-4 4h-8V5h8a4 4 0 0 1 4 4v18z"></path>
-                           <path fill="#034696" d="M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5H4z"></path>
-                           <path fill="#EEE" d="M12 5h12v26H12z"></path>
-                         </svg>
-                         ‎ Tous droits réservés.
-                       </b>
-                       <br><br>
-                       <i style="font-weight: 100; font-size: 80%;">
-                         Ce site ne stocke aucun fichier vidéo. Les films disponibles sont fournis par des plateformes de lecture externes et indépendantes de notre site. Nous ne possédons pas les droits d’auteur de ces films et ne sommes impliqués ni dans leur mise en ligne ni dans leur diffusion.
-                       </i>
-                     </p>
-                   </div>
-                 </div>
-               </div>
-     
-               <!-- Section du logo et du titre -->
-               <div class="col-lg-4 col-md-4 col-sm-12">
-                 <div class="single-footer">
-                   <div class="footer-heading-wrap">
-                     <h3 class="footer-heading">
-                       Crimson
-                       <img src="../img/assets/popcorn.webp" alt="Logo Crimson" style="margin-top: -6px;">
-                     </h3>
-                   </div>
-                 </div>
-               </div>
-             </div>
-           </div>
-         </div>
-       </div>
-     </footer>
-   <div id="popup1" class="popup-view popup-overlay">
-       <div class="search">
-         <div class="search-container has-results"><span class="title">Rechercher</span>
-           <div class="search-input">
-             <input type="text" name="s" id="search_box" class="search-container-input" placeholder="Titre" onkeyup="showSuggestions(this.value)" style="background: #0d071e;" autocomplete="off" ">
-           </div>
-         </div>
-         <div class="search-results mt-4" id="search_output">
-             
+<!-- JS Imports -->
+   <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
+   <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
+   <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
+   <script src="../js/FWDEVPlayer.js"></script>
+   <script src="../js/bootstrap.min.js"></script>
+   <script src="../js/jquery.nice-select.min.js"></script>  
+   <script src="../js/megamenu.js"></script> 
+   <script src="../js/custom-main.js"></script>
+   <script src="../js/direct.js"></script>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <footer>
+        <div class="footer-area vfx-item-ptb">
+          <div class="footer-wrapper">
+            <div class="container-fluid">
+              <div class="row">
+                <!-- Section des liens et mentions légales -->
+                <div class="col-lg-8 col-md-8 col-sm-12">
+                  <div class="footer-bottom">
+                    <div class="footer-links">
+                      <ul>
+                        <li><a href="../pages/signaler-un-problème.html" title="⚐ Signaler un Problème">⚐ Signaler un Problème</a></li>
+                        <li><a href="../pages/recrutement.html" title="⛭ Recrutement">⛭ Recrutement</a></li>
+                        <li><a href="../pages/dmca.html" title="DMCA">DMCA</a></li>
+                      </ul>
+                    </div>
+                    <div class="copyright-text">
+                      <p>
+                        <b>© 2024 Crimson ‎
+                          <svg class="mt-2" width="20px" height="20px" viewBox="0 0 36 36" xmlns="http://www.w3.org/2000/svg" style="margin: 0px !important;">
+                            <path fill="#ED2939" d="M36 27a4 4 0 0 1-4 4h-8V5h8a4 4 0 0 1 4 4v18z"></path>
+                            <path fill="#034696" d="M4 5a4 4 0 0 0-4 4v18a4 4 0 0 0 4 4h8V5H4z"></path>
+                            <path fill="#EEE" d="M12 5h12v26H12z"></path>
+                          </svg>
+                          ‎ Tous droits réservés.
+                        </b>
+                        <br><br>
+                        <i style="font-weight: 100; font-size: 80%;">
+                          Ce site ne stocke aucun fichier vidéo. Les films disponibles sont fournis par des plateformes de lecture externes et indépendantes de notre site. Nous ne possédons pas les droits d’auteur de ces films et ne sommes impliqués ni dans leur mise en ligne ni dans leur diffusion.
+                        </i>
+                      </p>
+                    </div>
+                  </div>
+                </div>
       
-         </div>
-       </div>
-       <a class="close" href="#" title="close"><i class="fas fa-times"></i></a>
-     </div>     
-      
-   <div class="eupopup eupopup-bottom"></div>
+                <!-- Section du logo et du titre -->
+                <div class="col-lg-4 col-md-4 col-sm-12">
+                  <div class="single-footer">
+                    <div class="footer-heading-wrap">
+                      <h3 class="footer-heading">
+                        Crimson
+                        <img src="../img/assets/popcorn.webp" alt="Logo Crimson" style="margin-top: -6px;">
+                      </h3>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </footer>
+    <div id="popup1" class="popup-view popup-overlay">
+        <div class="search">
+          <div class="search-container has-results"><span class="title">Rechercher</span>
+            <div class="search-input">
+              <input type="text" name="s" id="search_box" class="search-container-input" placeholder="Titre" onkeyup="showSuggestions(this.value)" style="background: #0d071e;" autocomplete="off" ">
+            </div>
+          </div>
+          <div class="search-results mt-4" id="search_output">
+              
+       
+          </div>
+        </div>
+        <a class="close" href="#" title="close"><i class="fas fa-times"></i></a>
+      </div>     
+       
+    <div class="eupopup eupopup-bottom"></div>
 
-<script>
-       // Fonction exécutée lors de l'utilisation du clic droit.
-       $(document).bind("contextmenu", function() {
-           // On indique au navigateur de ne pas réagir en cas de clic droit.
-           return false;
-       });
-   </script>
-  <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>
- 
+ <script>
+        // Fonction exécutée lors de l'utilisation du clic droit.
+        $(document).bind("contextmenu", function() {
+            // On indique au navigateur de ne pas réagir en cas de clic droit.
+            return false;
+        });
+    </script>
+   <script disable-devtool-auto src='https://cdn.jsdelivr.net/npm/disable-devtool@latest/disable-devtool.min.js'></script>
+   
+</body>
 </html>
