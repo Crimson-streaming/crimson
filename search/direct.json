@@ -288,6 +288,12 @@
         "genre":"Cinéma"
     },
     {
+        "nom": "MTV",
+        "affiche": "img/direct/mtv-logo.png",
+        "emplacement": "direct/mtv.html",
+        "genre":"Cinéma"
+    },
+    {
         "nom": "Pluto Tv Series",
         "affiche": "img/direct/Pluto-Tv-Series.png",
         "emplacement": "direct/Pluto-Tv-Series.html",
