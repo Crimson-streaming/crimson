@@ -96,9 +96,9 @@
         "genre":"Cinéma"
     },
     {
-        "nom": "Bfm TV",
-        "affiche": "img/direct/BFM-TV.png",
-        "emplacement": "direct/bfm-tv.html",
+        "nom": "TF1",
+        "affiche": "img/direct/TF1.png",
+        "emplacement": "direct/tf1.html",
         "genre":"Général"
     },
     {
@@ -138,6 +138,12 @@
         "genre":"Général"
     },
     {
+        "nom": "W9",
+        "affiche": "img/direct/w9-logo.png",
+        "emplacement": "direct/w9.html",
+        "genre":"Général"
+    },
+    {
         "nom": "TMC",
         "affiche": "img/direct/tmc.png",
         "emplacement": "direct/tmc.html",
@@ -150,9 +156,39 @@
         "genre":"Général"
     },
     {
+        "nom": "Bfm TV",
+        "affiche": "img/direct/BFM-TV.png",
+        "emplacement": "direct/bfm-tv.html",
+        "genre":"Général"
+    },
+    {
         "nom": "C NEWS",
         "affiche": "img/direct/cnews.png",
         "emplacement": "direct/c-news.html",
+        "genre":"Général"
+    },
+    {
+        "nom": "Gulli",
+        "affiche": "img/direct/gulli-logo.png",
+        "emplacement": "direct/gulli.html",
+        "genre":"Général"
+    },
+    {
+        "nom": "L'Équipe - La chaine",
+        "affiche": "img/direct/L-equipe-logo.png",
+        "emplacement": "direct/L-equipe.html",
+        "genre":"Général"
+    },
+    {
+        "nom": "RMC Découverte",
+        "affiche": "img/direct/rmc-decouverte-logo.png",
+        "emplacement": "direct/rmc-decouverte.html",
+        "genre":"Général"
+    },
+    {
+        "nom": "LCI",
+        "affiche": "img/direct/lci-logo.png",
+        "emplacement": "direct/lci.html",
         "genre":"Général"
     },
     {
