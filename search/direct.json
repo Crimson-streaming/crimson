@@ -24,6 +24,12 @@
         "genre":"Sport"
     },
     {
+        "nom": "DAZN 2",
+        "affiche": "img/direct/dazn-2-logo.png",
+        "emplacement": "direct/dazn-2.html",
+        "genre":"Sport"
+    },
+    {
         "nom": "CANAL +",
         "affiche": "img/direct/canal-plus.png",
         "emplacement": "direct/Canal-plus.html",
@@ -90,12 +96,6 @@
         "genre":"Cinéma"
     },
     {
-        "nom": "Arte",
-        "affiche": "img/direct/Arte.png",
-        "emplacement": "direct/Arte.html",
-        "genre":"Général"
-    },
-    {
         "nom": "Bfm TV",
         "affiche": "img/direct/BFM-TV.png",
         "emplacement": "direct/bfm-tv.html",
@@ -123,6 +123,18 @@
         "nom": "France 5",
         "affiche": "img/direct/france-5.png",
         "emplacement": "direct/France-5.html",
+        "genre":"Général"
+    },
+    {
+        "nom": "M6",
+        "affiche": "img/direct/m6-logo.png",
+        "emplacement": "direct/m6.html",
+        "genre":"Général"
+    },
+    {
+        "nom": "Arte",
+        "affiche": "img/direct/Arte.png",
+        "emplacement": "direct/Arte.html",
         "genre":"Général"
     },
     {
