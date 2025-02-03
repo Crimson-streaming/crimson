@@ -4796,3 +4796,36 @@ ul.nav > li a.active {
 ul.nav > li:hover > a {
     color: #b81b0e; /* Couleur du texte au survol (bleu par exemple) */
 }
+
+.ranking-badge {
+	position: absolute;
+	top: -45px;
+	right: 5px;
+	font-family: 'Inter', sans-serif;
+	line-height: 1;
+	z-index: 9999;
+	-webkit-background-clip: text;
+	background-clip: text;
+	background-image: linear-gradient(to right, #e3baff, #960ef3);
+	color: #00000000;
+	-webkit-text-stroke-color: transparent;
+	-webkit-text-stroke-width: var(--stroke-width);
+	letter-spacing: -2px;
+	font-weight: 1000;
+	font-size: 120px;
+	text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);
+	text-shadow: 0px 0px 25px #710eb4;
+  }
+  
+  @media (min-width: 640px) {
+	  .ranking-badge {
+  
+	  }
+  }
+  
+  .carousel-top-10 .owl-stage-outer{
+	padding: 50px 0px 0px 0px;
+  }
+  .home-carousel-top-10 .vfx-item-section{
+	margin-bottom: -35px;
+  }

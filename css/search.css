@@ -1,19 +1,19 @@
-/* Style pour le conteneur des résultats de recherche */
+/* Style pour le conteneur des résultats de recherche */ 
 #search_output {
     display: flex;
     flex-wrap: wrap; /* Pour faire passer les éléments à la ligne si nécessaire */
-    justify-content: flex-start; /* Aligne les éléments à gauche */
+    justify-content: center; /* Centrage des éléments */
     gap: 15px; /* Espacement entre les éléments */
     margin-top: 20px; /* Ajustement de la marge supérieure */
-    padding: 0 20px; /* Espace sur les côtés */
+    padding: 0 5vw; /* Padding fixe de 5vw sur les côtés */
 }
 
 /* Style pour chaque résultat (affiche de film) */
 #search_output .single-video {
-    flex: 0 0 calc(16% - 15px); /* Réduit la taille des vidéos à environ 16% de la largeur sur grands écrans (6 vidéos par ligne) */
-    margin-bottom: 20px;
     background-color: #1b1b1b; /* Optionnel : couleur de fond pour l'esthétique */
     border-radius: 8px;
+    margin-bottom: 20px;
+    flex: 0 0 calc(16.66% - 15px); /* 6 vidéos par ligne par défaut */
 }
 
 /* Style pour l'image et le texte */
@@ -29,30 +29,45 @@
     margin-top: 5px;
 }
 
-/* Media query pour les écrans moyens (tablettes) */
-@media (max-width: 1024px) {
+/* Responsive design ajusté */
+@media (max-width: 1198px) {
     #search_output .single-video {
-        flex: 0 0 calc(25% - 15px); /* Les vidéos prennent 25% de la largeur (4 vidéos par ligne) sur les écrans moyens */
+        flex: 0 0 calc(16.66% - 10px); /* 6 vidéos par ligne */
     }
 }
 
-/* Media query pour les petits écrans (mobiles) */
+@media (max-width: 991px) {
+    #search_output .single-video {
+        flex: 0 0 calc(20% - 10px); /* 5 vidéos par ligne */
+    }
+}
+
 @media (max-width: 768px) {
     #search_output .single-video {
-        flex: 0 0 calc(50% - 10px); /* Les vidéos prennent 50% de la largeur (2 vidéos par ligne) sur les petits écrans */
-        margin-bottom: 15px;
+        flex: 0 0 calc(25% - 10px); /* 4 vidéos par ligne */
     }
 }
 
-/* Media query pour les très petits écrans */
+@media (max-width: 640px) {
+    #search_output .single-video {
+        flex: 0 0 calc(33.33% - 10px); /* 3 vidéos par ligne */
+    }
+}
+
 @media (max-width: 480px) {
     #search_output .single-video {
-        flex: 0 0 calc(50% - 10px); /* Deux vidéos par ligne même sur les très petits écrans */
-        margin-bottom: 15px;
+        flex: 0 0 calc(50% - 10px); /* 2 vidéos par ligne */
     }
 }
 
+@media (max-width: 320px) {
+    #search_output .single-video {
+        flex: 0 0 calc(50% - 10px); /* Toujours 2 vidéos par ligne même sur très petits écrans */
+    }
+}
+
+/* Placeholder input style */
 .search .search-input input[type=text]::placeholder,
-		.search .search-input input[type=text].focus {
-			background: #0d071e !important;
-		}
+.search .search-input input[type=text]:focus {
+    background: #0d071e !important;
+}
