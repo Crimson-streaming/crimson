@@ -84,7 +84,6 @@ function displayRecentlyWatchedMovies() {
                 0: {
                     items: 2,
                     slideBy: 2,
-                    margin: 15
                 },
                 640: {
                     items: 3,

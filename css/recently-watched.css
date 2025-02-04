@@ -12,26 +12,6 @@
     object-fit: cover;
 }
 
-/* Alignement des films */
-#recently-watched .owl-item {
-    display: block; /* Important pour Owl Carousel */
-    padding: 2px; /* Réduire encore l'espacement interne */
-    width: calc(50% - 10px); /* Chaque film occupe 50% de l'écran, avec une marge de 10px entre les films */
-}
-
-/* Pour les tablettes et écrans plus grands */
-@media (min-width: 600px) {
-    #recently-watched .owl-item {
-        width: calc(33.33% - 10px); /* Chaque film occupe 33.33% de l'écran sur tablette, avec moins d'espacement */
-    }
-}
-
-/* Pour les grands écrans (bureau) */
-@media (min-width: 1000px) {
-    #recently-watched .owl-item {
-        width: calc(25% - 10px); /* Chaque film occupe 25% de l'écran sur bureau, avec moins d'espacement */
-    }
-}
 
 /* Boutons de navigation Owl Carousel */
 .recently-watched-video-carousel .owl-nav .owl-prev,
