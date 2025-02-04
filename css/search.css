@@ -1,12 +1,13 @@
 /* Style pour le conteneur des résultats de recherche */ 
 #search_output {
     display: flex;
-    flex-wrap: wrap; /* Pour faire passer les éléments à la ligne si nécessaire */
-    justify-content: center; /* Centrage des éléments */
-    gap: 15px; /* Espacement entre les éléments */
-    margin-top: 20px; /* Ajustement de la marge supérieure */
-    padding: 0 5vw; /* Padding fixe de 5vw sur les côtés */
+    flex-wrap: wrap;
+    justify-content: flex-start; /* Aligner les éléments à gauche */
+    gap: 15px;
+    margin-top: 20px;
+    padding: 0 5vw;
 }
+
 
 /* Style pour chaque résultat (affiche de film) */
 #search_output .single-video {
