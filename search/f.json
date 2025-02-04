@@ -130,6 +130,11 @@
         "emplacement": "film/wolfs.html"
     },
     {
+        "nom": "Wolf Man",
+        "affiche": "https://image.tmdb.org/t/p/w300/vtdEHG1j07PqLlVyhKNZRHTPKGt.jpg",
+        "emplacement": "film/wolf-man.html"
+    },
+    {
         "nom": "Blink Twice",
         "affiche": "https://image.tmdb.org/t/p/w300/51LUuruLaoe9JXit5hJD3qtpWTm.jpg",
         "emplacement": "film/blink-twice.html"
@@ -14423,6 +14428,11 @@
         "nom": "Norbourg",
         "affiche": "https://www.themoviedb.org/t/p/w300/kgT44Z9qJYULo4YHPiDBpa1pKFf.jpg",
         "emplacement": "film/norbourg.html"
+    },
+    {
+        "nom": "Bogotá: City of the Lost",
+        "affiche": "https://https://www.themoviedb.org/t/p/w300/3rTNq7sgAoAKNK8axPYA6MoBO83.jpg",
+        "emplacement": "film/bogotá-city-of-the-lost.html"
     },
     {
         "nom": "En plein choc",
