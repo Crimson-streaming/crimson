@@ -84,6 +84,12 @@
         "emplacement": "film/venom.html"
     },
     {
+        "nom": "Criminal Squad : Pantera",
+        "affiche": "https://image.tmdb.org/t/p/w300/mq6Ra2oXRKapp5FCfgPJ3AwKigX.jpg",
+        "genre": "Action, Crime, Thriller",
+        "emplacement": "film/criminal-squad--pantera.html"
+    },
+    {
         "nom": "Criminal Squad",
         "affiche": "https://image.tmdb.org/t/p/w300/qqhpwrvdYsJcsvP3pqZbWvKEG3U.jpg",
         "genre": "Action, Crime, Thriller",
@@ -502,12 +508,6 @@
         "affiche": "https://www.themoviedb.org/t/p/w300/vqFW2ZYgPzrPXVWcl4uihzYt6Eo.jpg",
         "genre": "Horreur, Thriller",
         "emplacement": "film/lexorciste--dévotion.html"
-    },
-    {
-        "nom": "Saw X",
-        "affiche": "https://www.themoviedb.org/t/p/w300/aQPeznSu7XDTrrdCtT5eLiu52Yu.jpg",
-        "genre": "Horreur, Mystère, Thriller",
-        "emplacement": "film/saw-x.html"
     },
     {
         "nom": "Retribution",
@@ -4092,9 +4092,15 @@
         "emplacement": "film/little-dixie.html"
     },
     {
+        "nom": "Riverboom",
+        "affiche": "https://image.tmdb.org/t/p/w300/o2Qh8gbt1efpTXCwuuHDR4N4mde.jpg",
+        "genre": "Documentaire, Comédie",
+        "emplacement": "film/riverboom.html"
+    },
+    {
         "nom": "Mayday",
         "affiche": "https://www.themoviedb.org/t/p/w300/qGKE0vJsydUcRzeoR2r5j3W25Il.jpg",
-        "genre": "Documentaire, Drame, Crime",
+        "genre": "Action, Aventure, Mystère, Thriller",
         "emplacement": "film/mayday.html"
     },
     {
@@ -13560,6 +13566,12 @@
         "emplacement": "film/gliitch.html"
     },
     {
+        "nom": "Saw X",
+        "affiche": "https://www.themoviedb.org/t/p/w300/aQPeznSu7XDTrrdCtT5eLiu52Yu.jpg",
+        "genre": "Horreur, Mystère, Thriller",
+        "emplacement": "film/saw-x.html"
+    },
+    {
         "nom": "Jigsaw",
         "affiche": "https://www.themoviedb.org/t/p/w300/pFecI8W7i2hVePUKGNyeuVoLDd2.jpg",
         "genre": "Horreur, Mystère, Thriller",
@@ -13580,7 +13592,7 @@
     {
         "nom": "Saw V",
         "affiche": "https://www.themoviedb.org/t/p/w300/cAVsTZTFGmPlZYhdgiRhu3GRLU3.jpg",
-        "genre": "Crime, Drame, Mystère",
+        "genre": "Horreur, Thriller, Crime",
         "emplacement": "film/saw-v.html"
     },
     {
@@ -15586,6 +15598,12 @@
         "affiche": "https://image.tmdb.org/t/p/w300/hBuprCd23nhi6IOwzVKI0tIAZDG.jpg",
         "genre": "Thriller, Drame",
         "emplacement": "film/skincare.html"
+    },
+    {
+        "nom": "The Calendar Killer",
+        "affiche": "https://image.tmdb.org/t/p/w300/bnciRmZZSdyqp7HcrAwNG0mObaP.jpg",
+        "genre": "Crime, Thriller",
+        "emplacement": "film/the-calendar-killer.html"
     },
     {
         "nom": "1992",
@@ -18508,6 +18526,18 @@
         "affiche": "https://image.tmdb.org/t/p/w300/zEhKOyBjwIVAulYMBge09p7zIFy.jpg",
         "genre": "Drame",
         "emplacement": "film/quand-vient-lautomne.html"
+    },
+    {
+        "nom": "Les Deux Hémisphères de Lucca",
+        "affiche": "https://image.tmdb.org/t/p/w300/99pnb5V86oINhIt1C42FtBE4HWl.jpg",
+        "genre": "Drame",
+        "emplacement": "film/les-deux-hémisphères-de-lucca.html"
+    },
+    {
+        "nom": "La femme cachée",
+        "affiche": "https://image.tmdb.org/t/p/w300/czKosmmsbpZRvygGWcMMMXDDtTf.jpg",
+        "genre": "Drame",
+        "emplacement": "film/la-femme-cachée.html"
     },
     {
         "nom": "L'heureuse élue",

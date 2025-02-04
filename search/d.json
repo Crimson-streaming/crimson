@@ -70,6 +70,11 @@
         "emplacement": "../film/venom.html"
     },
     {
+        "nom": "Criminal Squad : Pantera",
+        "affiche": "https://image.tmdb.org/t/p/w300/mq6Ra2oXRKapp5FCfgPJ3AwKigX.jpg",
+        "emplacement": "../film/criminal-squad--pantera.html"
+    },
+    {
         "nom": "Criminal Squad",
         "affiche": "https://image.tmdb.org/t/p/w300/qqhpwrvdYsJcsvP3pqZbWvKEG3U.jpg",
         "emplacement": "../film/criminal-squad.html"
@@ -418,11 +423,6 @@
         "nom": "L'Exorciste : Dévotion",
         "affiche": "https://www.themoviedb.org/t/p/w300/vqFW2ZYgPzrPXVWcl4uihzYt6Eo.jpg",
         "emplacement": "../film/lexorciste--dévotion.html"
-    },
-    {
-        "nom": "Saw X",
-        "affiche": "https://www.themoviedb.org/t/p/w300/aQPeznSu7XDTrrdCtT5eLiu52Yu.jpg",
-        "emplacement": "../film/saw-x.html"
     },
     {
         "nom": "Retribution",
@@ -3403,6 +3403,11 @@
         "nom": "Little Dixie",
         "affiche": "https://www.themoviedb.org/t/p/w300/cmWTZj9zzT9KFt3XyL0gssL7Ig8.jpg",
         "emplacement": "../film/little-dixie.html"
+    },
+    {
+        "nom": "Riverboom",
+        "affiche": "https://image.tmdb.org/t/p/w300/o2Qh8gbt1efpTXCwuuHDR4N4mde.jpg",
+        "emplacement": "../film/riverboom.html"
     },
     {
         "nom": "Mayday",
@@ -11270,6 +11275,11 @@
         "emplacement": "../film/gliitch.html"
     },
     {
+        "nom": "Saw X",
+        "affiche": "https://www.themoviedb.org/t/p/w300/aQPeznSu7XDTrrdCtT5eLiu52Yu.jpg",
+        "emplacement": "../film/saw-x.html"
+    },
+    {
         "nom": "Jigsaw",
         "affiche": "https://www.themoviedb.org/t/p/w300/pFecI8W7i2hVePUKGNyeuVoLDd2.jpg",
         "emplacement": "../film/jigsaw.html"
@@ -12930,14 +12940,14 @@
         "emplacement": "../film/skincare.html"
     },
     {
-        "nom": "1992",
-        "affiche": "https://image.tmdb.org/t/p/w300/tPvFmQZM5HMspryyYbrtW02NR0G.jpg",
-        "emplacement": "../film/1992.html"
-    },
-    {
         "nom": "The Calendar Killer",
         "affiche": "https://image.tmdb.org/t/p/w300/bnciRmZZSdyqp7HcrAwNG0mObaP.jpg",
         "emplacement": "../film/the-calendar-killer.html"
+    },
+    {
+        "nom": "1992",
+        "affiche": "https://image.tmdb.org/t/p/w300/tPvFmQZM5HMspryyYbrtW02NR0G.jpg",
+        "emplacement": "../film/1992.html"
     },
     {
         "nom": "10 jours entre le bien et le mal",
@@ -15328,6 +15338,16 @@
         "nom": "Quand vient l'automne",
         "affiche": "https://image.tmdb.org/t/p/w300/zEhKOyBjwIVAulYMBge09p7zIFy.jpg",
         "emplacement": "../film/quand-vient-lautomne.html"
+    },
+    {
+        "nom": "Les Deux Hémisphères de Lucca",
+        "affiche": "https://image.tmdb.org/t/p/w300/99pnb5V86oINhIt1C42FtBE4HWl.jpg",
+        "emplacement": "../film/les-deux-hémisphères-de-lucca.html"
+    },
+    {
+        "nom": "La femme cachée",
+        "affiche": "https://image.tmdb.org/t/p/w300/czKosmmsbpZRvygGWcMMMXDDtTf.jpg",
+        "emplacement": "../film/la-femme-cachée.html"
     },
     {
         "nom": "L'heureuse élue",
