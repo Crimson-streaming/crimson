@@ -168,7 +168,7 @@ span::after, span.warning-icon::after {
     width: 0%; /* La barre commence vide */
     height: 100%; /* Prend toute la hauteur du conteneur */
     background-color: #b81b0e; /* Couleur de la barre de progression */
-    transition: width 3s linear; /* Animation fluide sur 3 secondes */
+    transition: width 2.5s linear; /* Animation fluide sur 3 secondes */
     border-radius: 4px; /* Coins arrondis */
     position: relative; /* Important pour le positionnement de la boule */
 }
