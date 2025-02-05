@@ -1,2 +1,0 @@
-(()=>{})();
-//# sourceMappingURL=search.js.map

@@ -45,4 +45,3 @@
             </a>
 
         `,document.body.appendChild(n)}});console.log("Tous les scripts sont charg\xE9s !");})();
-//# sourceMappingURL=bundle.js.map

@@ -1,2 +1,0 @@
-(()=>{})();
-//# sourceMappingURL=watchlist.js.map
