@@ -25,6 +25,11 @@
         "emplacement": "https://crimson-streaming.github.io/crimson/film/wicked.html"
     },
     {
+        "nom": "5 Septembre",
+        "affiche": "https://image.tmdb.org/t/p/w300/j2lft7UvyA0FYnbf9v07dtm0CrE.jpg",
+        "emplacement": "https://crimson-streaming.github.io/crimson/film/5-septembre.html"
+    },
+    {
         "nom": "Nosferatu",
         "affiche": "https://image.tmdb.org/t/p/w300/8qCijVB6gYi25UbsEPuutbBIfD.jpg",
         "emplacement": "https://crimson-streaming.github.io/crimson/film/nosferatu.html"
@@ -618,6 +623,11 @@
         "nom": "Black Panther : Wakanda Forever",
         "affiche": "https://www.themoviedb.org/t/p/w300/7ZINBixo7zO21iF9doe1cSTHrV4.jpg",
         "emplacement": "https://crimson-streaming.github.io/crimson/film/black-panther--wakanda-forever.html"
+    },
+    {
+        "nom": "Le Géant de fer",
+        "affiche": "https://image.tmdb.org/t/p/w300/1Z1Gn2bbyOygv8R2qE2uLjwualf.jpg",
+        "emplacement": "https://crimson-streaming.github.io/crimson/film/le-géant-de-fer.html"
     },
     {
         "nom": "Le Chat Potté 2 : la dernière quête",
@@ -4390,6 +4400,16 @@
         "emplacement": "https://crimson-streaming.github.io/crimson/film/la-gardav.html"
     },
     {
+        "nom": "À toute allure",
+        "affiche": "https://image.tmdb.org/t/p/w300/lEiDGpR7EfLzOfcnoh4nwWcVsqt.jpg",
+        "emplacement": "https://crimson-streaming.github.io/crimson/film/à-toute-allure.html"
+    },
+    {
+        "nom": "Baby bluff",
+        "affiche": "https://image.tmdb.org/t/p/w300/9fQalEFwcCnnUuqrnRj0wKIrCkb.jpg",
+        "emplacement": "https://crimson-streaming.github.io/crimson/film/baby-bluff.html"
+    },
+    {
         "nom": "Le Médium",
         "affiche": "https://image.tmdb.org/t/p/w300/6ow7N8NXC83dobCrNONpZQQPeHm.jpg",
         "emplacement": "https://crimson-streaming.github.io/crimson/film/le-médium.html"
@@ -7143,6 +7163,11 @@
         "nom": "Kiddo",
         "affiche": "https://image.tmdb.org/t/p/w300/fnmowsvDOWYXbOExnRuMNMucGqF.jpg",
         "emplacement": "https://crimson-streaming.github.io/crimson/film/kiddo.html"
+    },
+    {
+        "nom": "Wish You Were Here",
+        "affiche": "https://image.tmdb.org/t/p/w300/4Oen7LeSsIWqY2jnVW8uW9Klg9Y.jpg",
+        "emplacement": "https://crimson-streaming.github.io/crimson/film/wish-you-were-here.html"
     },
     {
         "nom": "Sidonie au Japon",
@@ -10410,6 +10435,11 @@
         "emplacement": "https://crimson-streaming.github.io/crimson/film/hellboy-the-crooked-man.html"
     },
     {
+        "nom": "Hancock",
+        "affiche": "https://image.tmdb.org/t/p/w300/lXQQjSkVEldG03LAI3MsEwp18n.jpg",
+        "emplacement": "https://crimson-streaming.github.io/crimson/film/hancock.html"
+    },
+    {
         "nom": "Hellboy",
         "affiche": "https://image.tmdb.org/t/p/w300/cI4SSzdj94j7YPa8VAN2yTQshff.jpg",
         "emplacement": "https://crimson-streaming.github.io/crimson/film/hellboy.html"
@@ -12398,6 +12428,11 @@
         "nom": "Alita : Battle Angel",
         "affiche": "https://www.themoviedb.org/t/p/w300/rV3itKLEALozktTGOCd1EE9vjG6.jpg",
         "emplacement": "https://crimson-streaming.github.io/crimson/film/alita--battle-angel.html"
+    },
+    {
+        "nom": "I, Robot",
+        "affiche": "https://image.tmdb.org/t/p/w300/5lxgTqmvxazjR9veAUXm1x3mX2o.jpg",
+        "emplacement": "https://crimson-streaming.github.io/crimson/film/i-robot.html"
     },
     {
         "nom": "Shin Ultraman",

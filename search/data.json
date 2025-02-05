@@ -30,6 +30,12 @@
         "emplacement": "film/wicked.html"
     },
     {
+        "nom": "5 Septembre",
+        "affiche": "https://image.tmdb.org/t/p/w300/j2lft7UvyA0FYnbf9v07dtm0CrE.jpg",
+        "genre": "Drame, Thriller, Histoire",
+        "emplacement": "film/5-septembre.html"
+    },
+    {
         "nom": "Nosferatu",
         "affiche": "https://image.tmdb.org/t/p/w300/8qCijVB6gYi25UbsEPuutbBIfD.jpg",
         "genre": "Horreur, Drame, Fantastique",
@@ -742,6 +748,12 @@
         "affiche": "https://www.themoviedb.org/t/p/w300/7ZINBixo7zO21iF9doe1cSTHrV4.jpg",
         "genre": "Action, Aventure, Science-Fiction",
         "emplacement": "film/black-panther--wakanda-forever.html"
+    },
+    {
+        "nom": "Le Géant de fer",
+        "affiche": "https://image.tmdb.org/t/p/w300/1Z1Gn2bbyOygv8R2qE2uLjwualf.jpg",
+        "genre": "Familial, Animation, Science-Fiction, Aventure",
+        "emplacement": "film/le-géant-de-fer.html"
     },
     {
         "nom": "Le Chat Potté 2 : la dernière quête",
@@ -5274,6 +5286,18 @@
         "emplacement": "film/la-gardav.html"
     },
     {
+        "nom": "À toute allure",
+        "affiche": "https://image.tmdb.org/t/p/w300/lEiDGpR7EfLzOfcnoh4nwWcVsqt.jpg",
+        "genre": "Comédie, Romance",
+        "emplacement": "film/à-toute-allure.html"
+    },
+    {
+        "nom": "Baby bluff",
+        "affiche": "https://image.tmdb.org/t/p/w300/9fQalEFwcCnnUuqrnRj0wKIrCkb.jpg",
+        "genre": "Comédie, Romance",
+        "emplacement": "film/baby-bluff.html"
+    },
+    {
         "nom": "Le Médium",
         "affiche": "https://image.tmdb.org/t/p/w300/6ow7N8NXC83dobCrNONpZQQPeHm.jpg",
         "genre": "Comédie, Romance",
@@ -8578,6 +8602,12 @@
         "affiche": "https://image.tmdb.org/t/p/w300/fnmowsvDOWYXbOExnRuMNMucGqF.jpg",
         "genre": "Horreur, Drame",
         "emplacement": "film/kiddo.html"
+    },
+    {
+        "nom": "Wish You Were Here",
+        "affiche": "https://image.tmdb.org/t/p/w300/4Oen7LeSsIWqY2jnVW8uW9Klg9Y.jpg",
+        "genre": "Drame, Romance",
+        "emplacement": "film/wish-you-were-here.html"
     },
     {
         "nom": "Sidonie au Japon",
@@ -12510,6 +12540,12 @@
         "emplacement": "film/hellboy-the-crooked-man.html"
     },
     {
+        "nom": "Hancock",
+        "affiche": "https://image.tmdb.org/t/p/w300/lXQQjSkVEldG03LAI3MsEwp18n.jpg",
+        "genre": "Fantastique, Action",
+        "emplacement": "film/hancock.html"
+    },
+    {
         "nom": "Hellboy",
         "affiche": "https://image.tmdb.org/t/p/w300/cI4SSzdj94j7YPa8VAN2yTQshff.jpg",
         "genre": "Fantastique, Action",
@@ -14944,6 +14980,12 @@
         "affiche": "https://www.themoviedb.org/t/p/w300/rV3itKLEALozktTGOCd1EE9vjG6.jpg",
         "genre": "Action, Science-Fiction, Aventure",
         "emplacement": "film/alita--battle-angel.html"
+    },
+    {
+        "nom": "I, Robot",
+        "affiche": "https://image.tmdb.org/t/p/w300/5lxgTqmvxazjR9veAUXm1x3mX2o.jpg",
+        "genre": "Action, Science-Fiction",
+        "emplacement": "film/i-robot.html"
     },
     {
         "nom": "Shin Ultraman",
