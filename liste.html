@@ -280,10 +280,21 @@
 	<a class="close" href="#" title="close"><i class="fas fa-times"></i></a>
   </div>     
 <div class="eupopup eupopup-bottom"></div>
+
+<script>async function showSuggestions(query){const searchOutput=document.getElementById('search_output');searchOutput.innerHTML='';if(!query)return;try{const response=await fetch('../search/d.json');if(!response.ok){throw new Error('Erreur réseau')}
+    const movies=await response.json();const normalizedQuery=normalizeString(query);const filteredMovies=movies.filter(movie=>normalizeString(movie.nom).includes(normalizedQuery));const limitedMovies=filteredMovies.slice(0,48);if(limitedMovies.length>0){limitedMovies.forEach(movie=>{const movieDiv=document.createElement('div');movieDiv.classList.add('single-video');movieDiv.innerHTML=`
+                        <a href="${movie.emplacement}">
+                            <div class="video-img">
+                                <span class="video-item-content">${movie.nom}</span>
+                                <img src="${movie.affiche}" alt="${movie.nom}">
+                            </div>
+                        </a>
+                    `;searchOutput.appendChild(movieDiv)})}else{searchOutput.innerHTML='<p>Aucun résultat trouvé.</p>'}}catch(error){searchOutput.innerHTML='<p>Une erreur est survenue lors du chargement des données.</p>';console.error('Erreur de recherche:',error)}}
+    function normalizeString(str){return str.toLowerCase().normalize('NFD').replace(/[\u0300-\u036f]/g,'').replace(/['’]/g,'').replace(/-/g,' ').trim()}
+</script>
  
 
 <!-- Load Local JS -->
-
 <script src="js/jquery-3.3.1.min.js"></script>
 <script src="js/jquery.easing.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
@@ -293,7 +304,6 @@
 <script src="js/splide.min.js"></script>
 <script src="js/custom-main.js"></script>
 <script src="js/jquery-eu-cookie-law-popup.js"></script>
-<script src="js/main.js"></script>
 <script src="js/liste.js"></script>
 <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
