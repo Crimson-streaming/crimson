@@ -4,6 +4,7 @@ Thumbs.db
 package-lock.json
 package.json
 webpack.config.js
+build.js
 
 # Configurations spécifiques à votre éditeur et environnements de développement
 .vscode/
