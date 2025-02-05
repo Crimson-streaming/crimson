@@ -1,6 +1,9 @@
 # Fichiers système et temporaires
 .DS_Store
 Thumbs.db
+package-lock.json
+package.json
+webpack.config.js
 
 # Configurations spécifiques à votre éditeur et environnements de développement
 .vscode/
