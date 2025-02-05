@@ -1,5 +1,5 @@
 import './player.js';
-import './search.js';
+import '../js/search.js';
 import './trailer.js';
 import './watchlist.js';
 import './suggestions.js';
