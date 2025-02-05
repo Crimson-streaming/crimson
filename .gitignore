@@ -13,7 +13,6 @@ build.js
 
 # Dossiers de modules et de compilation
 node_modules/
-dist/
 cache/
 dowload/
 
