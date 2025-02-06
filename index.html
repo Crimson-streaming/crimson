@@ -957,12 +957,10 @@
 	
 	</script> 
 
-
 <!--import js-->
 <script src="js/jquery.easing.min.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
 <script src="js/bootstrap.min.js"></script>
-<script src="js/jquery.nice-select.min.js"></script>
 <script src="js/megamenu.js"></script>
 <script src="js/splide.min.js"></script>
 <script src="js/recently-watched.js"></script>
@@ -972,41 +970,11 @@
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
 
 <script>
-    if (!localStorage.getItem('popupDisplayed')) {
-        Swal.fire({
-            title: "⚠️ Site en construction ⚠️",
-            text: "Le site est actuellement en construction. Vous pourriez rencontrer des bugs ou des films qui ne fonctionnent pas.",
-            icon: "info",
-            confirmButtonText: "Je comprends",
-            confirmButtonColor: "#b81b0e",
-            background: "#0d071e",
-            iconColor: "#b81b0e",
-            color: "#ffffff",
-            footer: '<a href="https://crimson-streaming.github.io/crimson/pages/signaler-un-probl%C3%A8me.html" style="color: #b81b0e; text-decoration: underline;">Signaler un problème</a>',
-            customClass: { popup: 'custom-swal' }
-        });
-        localStorage.setItem('popupDisplayed', 'true');
-    }
-	function showMinimalAlert() {
-	  Swal.fire({
-		  text: 'Bientôt disponible',
-		  icon: 'info', // Icône d'information
-		  background: '#0d071e',
-		  color: '#ffffff',
-		  showConfirmButton: false,
-		  timer: 1500, // Fermeture automatique après 1,5 seconde
-		  width: '300px', // Réduit la largeur de la popup
-		  customClass: {
-			  popup: 'minimal-alert'
-		  }
-	  });
-  }
-  
+    function showMinimalAlert(){Swal.fire({text:"Bientôt disponible",icon:"info",background:"#0d071e",color:"#ffffff",showConfirmButton:!1,timer:1500,width:"300px",customClass:{popup:"minimal-alert"}})}localStorage.getItem("popupDisplayed")||(Swal.fire({title:"⚠️ Site en construction ⚠️",text:"Le site est actuellement en construction. Vous pourriez rencontrer des bugs ou des films qui ne fonctionnent pas.",icon:"info",confirmButtonText:"Je comprends",confirmButtonColor:"#b81b0e",background:"#0d071e",iconColor:"#b81b0e",color:"#ffffff",footer:'<a href="https://crimson-streaming.github.io/crimson/pages/signaler-un-probl%C3%A8me.html" style="color: #b81b0e; text-decoration: underline;">Signaler un problème</a>',customClass:{popup:"custom-swal"}}),localStorage.setItem("popupDisplayed","true"));
     $(document).ready((function(){$(".video-shows-carousel").owlCarousel({nav:!0,margin:20,navText:['<i class="fas fa-angle-left"></i>','<i class="fas fa-angle-right"></i>'],responsive:{0:{items:1,slideBy:1},640:{items:2,slideBy:2},768:{items:2,slideBy:2},991:{items:3,slideBy:3},1198:{items:3,slideBy:3}}})}));
 	document.getElementById("spin-the-wheel-link").addEventListener("click",async function(e){e.preventDefault();try{let r=await fetch("search/f.json"),n=await r.json(),t=Array.isArray(n)?n:[n],a=t[Math.floor(Math.random()*t.length)];a&&a.emplacement?window.location.href=`${a.emplacement}`:(console.error("Entr\xe9e invalide dans le JSON :",a),alert("Une erreur est survenue, veuillez r\xe9essayer."))}catch(l){console.error("Erreur lors du chargement ou du traitement du JSON :",l),alert("Impossible de charger les donn\xe9es. Veuillez r\xe9essayer plus tard.")}});
 	const progressBar=document.getElementById("progress-bar"),loadingScreen=document.getElementById("loading-screen");function startLoading(){progressBar.style.width="100%"}function hideLoadingScreen(){loadingScreen.classList.add("hidden")}startLoading(),progressBar.addEventListener("transitionend",()=>{hideLoadingScreen()});
 	"serviceWorker"in navigator?window.addEventListener("load",()=>{navigator.serviceWorker.register("service-worker.js").then(e=>{console.log("Service Worker enregistr\xe9 avec succ\xe8s :",e.scope)}).catch(e=>{console.error("Erreur lors de l'enregistrement du Service Worker :",e)})}):console.log("Les Service Workers ne sont pas pris en charge par ce navigateur.");
-
 </script>
 
 </body>
