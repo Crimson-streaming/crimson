@@ -239,4 +239,4 @@ document.querySelector('#regarder').addEventListener('click', function (e) {
         console.error('Le lecteur Plyr n’est pas détecté ou n’a pas été initialisé correctement.');
       }
     }, 500);
-  });
+  }); 
