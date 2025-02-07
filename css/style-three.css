@@ -4829,3 +4829,37 @@ ul.nav > li:hover > a {
   .home-carousel-top-10 .vfx-item-section{
 	margin-bottom: -35px;
   }
+
+  /*Séries Responsive*/
+  @media (max-width: 576px) {
+	/* Pour les très petits écrans (ex. : téléphones) */
+	.col-xs-12 {
+	  flex: 0 0 100%;
+	  max-width: 100%;
+	}
+  }
+  
+  @media (min-width: 576px) and (max-width: 768px) {
+	/* Pour les petits écrans (ex. : téléphones en mode paysage) */
+	.col-sm-6 {
+	  flex: 0 0 50%;
+	  max-width: 50%;
+	}
+  }
+  
+  @media (min-width: 768px) and (max-width: 992px) {
+	/* Pour les écrans moyens (ex. : tablettes) */
+	.col-md-4 {
+	  flex: 0 0 33.33%;
+	  max-width: 33.33%;
+	}
+  }
+  
+  @media (min-width: 992px) {
+	/* Pour les grands écrans (ex. : ordinateurs de bureau) */
+	.col-lg-3 {
+	  flex: 0 0 25%;
+	  max-width: 25%;
+	}
+  }
+  
