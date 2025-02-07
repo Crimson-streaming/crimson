@@ -1,27 +1,30 @@
-/* Style pour le conteneur des résultats de recherche */ 
+/* Style pour le conteneur des résultats de recherche */
 #search_output {
     display: flex;
     flex-wrap: wrap;
-    justify-content: flex-start; /* Aligner les éléments à gauche */
-    gap: 15px;
+    justify-content: space-between; /* Évite un déséquilibre des marges */
+    gap: 10px; /* Réduction de l'espace entre les éléments */
     margin-top: 20px;
-    padding: 0 5vw;
+    width: 90%;
+    max-width: 1200px;
+    margin-left: auto;
+    margin-right: auto;
+    padding: 0;
 }
-
 
 /* Style pour chaque résultat (affiche de film) */
 #search_output .single-video {
-    background-color: #1b1b1b; /* Optionnel : couleur de fond pour l'esthétique */
+    background-color: #1b1b1b;
     border-radius: 8px;
-    margin-bottom: 20px;
-    flex: 0 0 calc(16.66% - 15px); /* 6 vidéos par ligne par défaut */
+    margin-bottom: 15px; /* Réduction de l'espacement vertical */
+    flex: 0 0 calc(16.66% - 10px); /* 6 vidéos par ligne par défaut */
 }
 
 /* Style pour l'image et le texte */
 #search_output .video-img img {
     width: 100%;
     height: auto;
-    border-radius: 8px; /* Arrondi des images */
+    border-radius: 8px;
 }
 
 #search_output .video-item-content {
@@ -30,40 +33,17 @@
     margin-top: 5px;
 }
 
-/* Responsive design ajusté */
-@media (max-width: 1198px) {
-    #search_output .single-video {
-        flex: 0 0 calc(16.66% - 10px); /* 6 vidéos par ligne */
-    }
-}
-
-@media (max-width: 991px) {
-    #search_output .single-video {
-        flex: 0 0 calc(20% - 10px); /* 5 vidéos par ligne */
-    }
-}
-
-@media (max-width: 768px) {
+/* Tablette (768px - 1023px) : 4 vidéos par ligne */
+@media (max-width: 1023px) {
     #search_output .single-video {
         flex: 0 0 calc(25% - 10px); /* 4 vidéos par ligne */
     }
 }
 
-@media (max-width: 640px) {
-    #search_output .single-video {
-        flex: 0 0 calc(33.33% - 10px); /* 3 vidéos par ligne */
-    }
-}
-
-@media (max-width: 480px) {
+/* Mobile S, M, L (≤767px) : 2 vidéos par ligne */
+@media (max-width: 767px) {
     #search_output .single-video {
         flex: 0 0 calc(50% - 10px); /* 2 vidéos par ligne */
-    }
-}
-
-@media (max-width: 320px) {
-    #search_output .single-video {
-        flex: 0 0 calc(50% - 10px); /* Toujours 2 vidéos par ligne même sur très petits écrans */
     }
 }
 
