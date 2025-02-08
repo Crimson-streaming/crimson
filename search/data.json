@@ -582,6 +582,12 @@
         "emplacement": "film/blue-beetle.html"
     },
     {
+        "nom": "Rasta Rockett",
+        "affiche": "https://image.tmdb.org/t/p/w300/jHMhDrbZY9G4C0RPhlNjqJHfQDK.jpg",
+        "genre": "Comédie, Aventure, Drame",
+        "emplacement": "film/rasta-rockett.html"
+    },
+    {
         "nom": "Barbie",
         "affiche": "https://www.themoviedb.org/t/p/w300/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
         "genre": "Comédie, Aventure",
@@ -818,7 +824,7 @@
     {
         "nom": "Elvis",
         "affiche": "https://www.themoviedb.org/t/p/w300/mTzwJL0ENwqIuMNGp2q6vkK3yis.jpg",
-        "genre": "Biopic, Musical",
+        "genre": "Drame, Musique, Histoire",
         "emplacement": "film/elvis.html"
     },
     {
@@ -2000,7 +2006,7 @@
     {
         "nom": "Winnie l'ourson",
         "affiche": "https://www.themoviedb.org/t/p/w300/pUeFtL9BqTYhx53DGY8q8GVx0ij.jpg",
-        "genre": "Comédie, Animation, Comédie musicale",
+        "genre": "Animation, Familial, Comédie, Aventure",
         "emplacement": "film/winnie-lourson.html"
     },
     {
@@ -2284,6 +2290,12 @@
         "affiche": "https://www.themoviedb.org/t/p/w300/q5qIVm9URjCA6iq4gRDuhzkuUxx.jpg",
         "genre": "Animation, Comédie, Familial",
         "emplacement": "film/le-journal-dun-dégonflé--rodrick-fait-sa-loi.html"
+    },
+    {
+        "nom": "Kiki la petite sorcière",
+        "affiche": "https://image.tmdb.org/t/p/w300/tdOJxx6PCzjPYViSnk0OPQ80X2d.jpg",
+        "genre": "Animation, Familial, Fantastique",
+        "emplacement": "film/kiki-la-petite-sorcière.html"
     },
     {
         "nom": "Scrooge, Un (mé)chant de Noël",
@@ -3056,7 +3068,7 @@
     {
         "nom": "Ride On",
         "affiche": "https://image.tmdb.org/t/p/w300/gVn4EP1Fu5csdTveD45FQqoRBL0.jpg",
-        "genre": "Animation, Action & Adventure, Kids",
+        "genre": "Action, Comédie, Drame",
         "emplacement": "film/ride-on.html"
     },
     {
@@ -4472,7 +4484,7 @@
     {
         "nom": "La Légende des super-héros",
         "affiche": "https://www.themoviedb.org/t/p/w300/fRWy8CcA5jaoC9upmPX3rzCXPyr.jpg",
-        "genre": "Animation, Action & Adventure, Science-Fiction & Fantastique, Kids",
+        "genre": "Action",
         "emplacement": "film/la-légende-des-super-héros.html"
     },
     {
@@ -4748,7 +4760,7 @@
     {
         "nom": "Jumanji",
         "affiche": "https://image.tmdb.org/t/p/w300/nLXYV4WmYUF4i8pX0iE0H1rltmf.jpg",
-        "genre": "Animation, Kids",
+        "genre": "Aventure, Fantastique, Familial",
         "emplacement": "film/jumanji.html"
     },
     {
@@ -5166,6 +5178,12 @@
         "emplacement": "film/dakota.html"
     },
     {
+        "nom": "30 Minutes maximum",
+        "affiche": "https://image.tmdb.org/t/p/w300/aR7j7Mk0MfZwn3MACVpUCMcuTrS.jpg",
+        "genre": "Action, Aventure, Comédie",
+        "emplacement": "film/30-minutes-maximum.html"
+    },
+    {
         "nom": "Le Secret de la cité perdue",
         "affiche": "https://www.themoviedb.org/t/p/w300/rK8s7bTDZiOs41FXsOcoSv8X9Y5.jpg",
         "genre": "Action, Aventure, Comédie",
@@ -5378,7 +5396,7 @@
     {
         "nom": "Paradis Paris",
         "affiche": "https://image.tmdb.org/t/p/w300/gnoqVr3lHr1TgTX9njcljRaQqOf.jpg",
-        "genre": "Talk",
+        "genre": "Comédie, Drame",
         "emplacement": "film/paradis-paris.html"
     },
     {
@@ -5786,7 +5804,7 @@
     {
         "nom": "Les Dalton",
         "affiche": "https://image.tmdb.org/t/p/w300/mWQR9eGbf9dTiceypaGKmVXzRVE.jpg",
-        "genre": "Animation, Kids, Comédie",
+        "genre": "Comédie, Western, Aventure",
         "emplacement": "film/les-dalton.html"
     },
     {
@@ -5964,10 +5982,10 @@
         "emplacement": "film/popular-theory.html"
     },
     {
-        "nom": "Fitting In",
-        "affiche": "https://image.tmdb.org/t/p/w300/4wXF4k9TP6h24tXi6ppA9uNWq5n.jpg",
-        "genre": "Comédie, Talk",
-        "emplacement": "film/fitting-in.html"
+        "nom": "Ma vie, mes règles",
+        "affiche": "https://image.tmdb.org/t/p/w300/k5byF52n35yreYJif6d0hpVSDwb.jpg",
+        "genre": "Comédie, Drame",
+        "emplacement": "film/ma-vie-mes-règles.html"
     },
     {
         "nom": "Scrambled",
@@ -6578,7 +6596,7 @@
     {
         "nom": "Voyages en Italie",
         "affiche": "https://www.themoviedb.org/t/p/w300/5ExAJJJfixiLalZ4Vevqz1i9G8.jpg",
-        "genre": "Reality, Documentaire",
+        "genre": "Romance, Comédie",
         "emplacement": "film/voyages-en-italie.html"
     },
     {
@@ -6740,7 +6758,7 @@
     {
         "nom": "Le Meilleur",
         "affiche": "https://www.themoviedb.org/t/p/w300/XXBFRbwPqzoZbe5l6GyaCN9egy.jpg",
-        "genre": "Reality",
+        "genre": "Musique, Familial, Comédie",
         "emplacement": "film/le-meilleur.html"
     },
     {
@@ -6980,7 +6998,7 @@
     {
         "nom": "Boule & Bill",
         "affiche": "https://www.themoviedb.org/t/p/w300/aPyzPbpHTj7yFqUOP0v8DfsAQGx.jpg",
-        "genre": "Animation, Kids, Comédie, Familial",
+        "genre": "Comédie, Familial",
         "emplacement": "film/boule--bill.html"
     },
     {
@@ -7328,7 +7346,7 @@
     {
         "nom": "Le Secret de la momie",
         "affiche": "https://www.themoviedb.org/t/p/w300/phAA9mIwnFT9JxthzmR9oUpNcqO.jpg",
-        "genre": "Action & Adventure, Reality",
+        "genre": "Familial, Comédie, Fantastique",
         "emplacement": "film/le-secret-de-la-momie.html"
     },
     {
@@ -7622,7 +7640,7 @@
     {
         "nom": "Ima",
         "affiche": "https://www.themoviedb.org/t/p/w300/zjlUaiZqw7z9Hqb8QE2YeNcIDT.jpg",
-        "genre": "Kids, Animation, Familial, Science-Fiction & Fantastique, Comédie",
+        "genre": "Romance, Comédie",
         "emplacement": "film/ima.html"
     },
     {
@@ -7724,7 +7742,7 @@
     {
         "nom": "Coupez !",
         "affiche": "https://www.themoviedb.org/t/p/w300/sOCMpVoR8Q8zdpS5JQjjqfQ72na.jpg",
-        "genre": "News, Talk",
+        "genre": "Horreur, Comédie",
         "emplacement": "film/coupez-.html"
     },
     {
@@ -8234,13 +8252,13 @@
     {
         "nom": "50/50",
         "affiche": "https://image.tmdb.org/t/p/w300/z8soUuHdQ6qtFyiu0OAJrHILBZA.jpg",
-        "genre": "Reality",
+        "genre": "Comédie, Drame",
         "emplacement": "film/5050.html"
     },
     {
         "nom": "Saturday Night",
-        "affiche": "https://image.tmdb.org/t/p/w300/duaU0P9zaiFEyFgrBnfr8zApRx.jpg",
-        "genre": "Comédie, News",
+        "affiche": "https://image.tmdb.org/t/p/w300/aW5gOluIAHq115DGLNZjExtYHBz.jpg",
+        "genre": "Comédie, Drame",
         "emplacement": "film/saturday-night.html"
     },
     {
@@ -8306,7 +8324,7 @@
     {
         "nom": "Eat the Night",
         "affiche": "https://image.tmdb.org/t/p/w300/zg97Dnbqnao9ID8IFPESiGisJXu.jpg",
-        "genre": "Documentaire, News",
+        "genre": "Drame, Thriller, Crime",
         "emplacement": "film/eat-the-night.html"
     },
     {
@@ -9104,7 +9122,7 @@
     {
         "nom": "Une vie",
         "affiche": "https://image.tmdb.org/t/p/w300/aZn2ZjZFTgTg7hw2sEsiDZf4BcH.jpg",
-        "genre": "Animation, Comédie, Kids",
+        "genre": "Histoire, Drame",
         "emplacement": "film/une-vie.html"
     },
     {
@@ -9224,7 +9242,7 @@
     {
         "nom": "Comme par magie",
         "affiche": "https://image.tmdb.org/t/p/w300/aDH3lt7RboPpeowSiZkmsk9cQ29.jpg",
-        "genre": "Familial, Mystère, Reality",
+        "genre": "Comédie, Drame",
         "emplacement": "film/comme-par-magie.html"
     },
     {
@@ -9950,7 +9968,7 @@
     {
         "nom": "Le Cours de la vie",
         "affiche": "https://www.themoviedb.org/t/p/w300/wg92fUpEqy6ymuld69dBbDa3Arv.jpg",
-        "genre": "Soap, Drame",
+        "genre": "Drame, Comédie",
         "emplacement": "film/le-cours-de-la-vie.html"
     },
     {
@@ -10453,8 +10471,8 @@
     },
     {
         "nom": "Infiltration",
-        "affiche": "https://www.themoviedb.org/t/p/w300/74jKQES20eONbHJmFSOGWkHJyje.jpg",
-        "genre": "Documentaire, Reality",
+        "affiche": "https://image.tmdb.org/t/p/w300/nUI80er0ouSDgupOHaaZAntjUOK.jpg",
+        "genre": "Guerre, Drame",
         "emplacement": "film/infiltration.html"
     },
     {
@@ -10796,7 +10814,7 @@
     {
         "nom": "Sans filtre",
         "affiche": "https://www.themoviedb.org/t/p/w300/r6i19y9p08YBnZHUbJPODAg0XII.jpg",
-        "genre": "Reality",
+        "genre": "Comédie, Drame",
         "emplacement": "film/sans-filtre.html"
     },
     {
@@ -11006,7 +11024,7 @@
     {
         "nom": "Johnny",
         "affiche": "https://www.themoviedb.org/t/p/w300/6UoWEfDbLm8q9VtrnLRp0ORzbNd.jpg",
-        "genre": "Talk",
+        "genre": "Drame",
         "emplacement": "film/johnny.html"
     },
     {
@@ -11204,7 +11222,7 @@
     {
         "nom": "EO",
         "affiche": "https://www.themoviedb.org/t/p/w300/1MK86Vr2nf1GSYOtRd8pFvA5RM8.jpg",
-        "genre": "Drame",
+        "genre": "Drame, Aventure",
         "emplacement": "film/eo.html"
     },
     {
@@ -11514,9 +11532,15 @@
         "emplacement": "film/une-ardente-patience.html"
     },
     {
+        "nom": "We Are Four Lions",
+        "affiche": "https://image.tmdb.org/t/p/w300/aX9a0rx3tGvSkd14tGHD1iZXCIy.jpg",
+        "genre": "Comédie, Crime, Drame",
+        "emplacement": "film/we-are-four-lions.html"
+    },
+    {
         "nom": "A Man of Action",
         "affiche": "https://www.themoviedb.org/t/p/w300/gL6lwQE5WrdQrMiisjma0uIonpT.jpg",
-        "genre": "Comédie, Crime, Drame",
+        "genre": "Drame, Histoire",
         "emplacement": "film/a-man-of-action.html"
     },
     {
@@ -11870,7 +11894,7 @@
     {
         "nom": "L'horizon",
         "affiche": "https://www.themoviedb.org/t/p/w300/l6lEBiRMPwwhCEE43LFpZFaufz7.jpg",
-        "genre": "Animation, Action & Adventure, Kids, Comédie, Science-Fiction & Fantastique",
+        "genre": "Drame",
         "emplacement": "film/lhorizon.html"
     },
     {
@@ -11942,7 +11966,7 @@
     {
         "nom": "Le Pardon",
         "affiche": "https://www.themoviedb.org/t/p/w300/wuzjIYlspeQCMHTPblRRYkbzMYJ.jpg",
-        "genre": "Soap",
+        "genre": "Drame",
         "emplacement": "film/le-pardon.html"
     },
     {
@@ -11978,7 +12002,7 @@
     {
         "nom": "Love is Love is Love",
         "affiche": "https://www.themoviedb.org/t/p/w300/xM7bf2IvPHYThad3BE0bLqGtOJC.jpg",
-        "genre": "Reality",
+        "genre": "Comédie, Romance, Drame",
         "emplacement": "film/love-is-love-is-love.html"
     },
     {
@@ -12346,6 +12370,12 @@
         "affiche": "https://www.themoviedb.org/t/p/w300/6zFL2RD3nGV8PZID5NPws0ldrX9.jpg",
         "genre": "Drame",
         "emplacement": "film/mes-frères-et-moi.html"
+    },
+    {
+        "nom": "Sound of Metal",
+        "affiche": "https://image.tmdb.org/t/p/w300/g0Lx4sHdMYrj5HMfS8glU9BYRUi.jpg",
+        "genre": "Drame, Musique",
+        "emplacement": "film/sound-of-metal.html"
     },
     {
         "nom": "Haut et fort",
@@ -12986,7 +13016,7 @@
     {
         "nom": "Rainbow",
         "affiche": "https://www.themoviedb.org/t/p/w300/pFg29SbNbXkcuSgbnwnTz4wie4x.jpg",
-        "genre": "Comédie, Kids",
+        "genre": "Fantastique, Drame, Comédie, Musique",
         "emplacement": "film/rainbow.html"
     },
     {
@@ -13934,7 +13964,7 @@
     {
         "nom": "La Tour",
         "affiche": "https://www.themoviedb.org/t/p/w300/AntmPfbbt8Hrlw0M7lfm6cYwJYa.jpg",
-        "genre": "Talk",
+        "genre": "Horreur, Fantastique, Drame",
         "emplacement": "film/la-tour.html"
     },
     {
@@ -14666,7 +14696,7 @@
     {
         "nom": "X-Men",
         "affiche": "https://image.tmdb.org/t/p/w300/s0xiSjjC0zZgG9ZVzjwSKWVdvm4.jpg",
-        "genre": "Kids, Animation, Science-Fiction & Fantastique, Action & Adventure, Drame",
+        "genre": "Aventure, Action, Science-Fiction",
         "emplacement": "film/x-men.html"
     },
     {
@@ -14930,7 +14960,7 @@
     {
         "nom": "The Kitchen",
         "affiche": "https://image.tmdb.org/t/p/w300/tV0hK1BiqYrYlehChv4WJXIWgmZ.jpg",
-        "genre": "Reality, Familial, Talk, Drame",
+        "genre": "Science-Fiction, Thriller, Drame, Aventure, Comédie",
         "emplacement": "film/the-kitchen.html"
     },
     {
@@ -15026,7 +15056,7 @@
     {
         "nom": "Tropic",
         "affiche": "https://www.themoviedb.org/t/p/w300/6RiI8MVIt09vT0HgAadl2pD9w5L.jpg",
-        "genre": "Soap, Drame, Comédie",
+        "genre": "Drame, Science-Fiction",
         "emplacement": "film/tropic.html"
     },
     {
@@ -15812,14 +15842,14 @@
     {
         "nom": "CTRL",
         "affiche": "https://image.tmdb.org/t/p/w300/6bdKunzqqadZwiDd8FYHXlRMlJc.jpg",
-        "genre": "Comédie, Science-Fiction & Fantastique",
+        "genre": "Thriller, Drame",
         "emplacement": "film/ctrl.html"
     },
     {
-        "nom": "El diario",
+        "nom": "Le Journal",
         "affiche": "https://image.tmdb.org/t/p/w300/zxtCoLjUVnb7k47k3szlTNhVcTV.jpg",
-        "genre": "Talk",
-        "emplacement": "film/el-diario.html"
+        "genre": "Thriller, Drame",
+        "emplacement": "film/le-journal.html"
     },
     {
         "nom": "Strange Darling",
@@ -16584,10 +16614,10 @@
         "emplacement": "film/river-wild.html"
     },
     {
-        "nom": "Out of the Blue",
+        "nom": "Désir fatal",
         "affiche": "https://www.themoviedb.org/t/p/w300/5EpQX8h6LuHKt7JzRV4T7IMaLJj.jpg",
-        "genre": "Soap, Drame",
-        "emplacement": "film/out-of-the-blue.html"
+        "genre": "Mystère, Thriller, Romance",
+        "emplacement": "film/désir-fatal.html"
     },
     {
         "nom": "Paradise",
@@ -17402,7 +17432,7 @@
     {
         "nom": "Vengeance",
         "affiche": "https://www.themoviedb.org/t/p/w300/pdQFGAX68LWoiBqzXwZhMRaraC0.jpg",
-        "genre": "Drame, Mystère, Soap",
+        "genre": "Comédie, Mystère, Thriller",
         "emplacement": "film/vengeance.html"
     },
     {
@@ -18376,6 +18406,12 @@
         "affiche": "https://image.tmdb.org/t/p/w300/v313aUGmMNj6yNveaiQXysBmjVS.jpg",
         "genre": "Action, Crime, Thriller",
         "emplacement": "film/alarum.html"
+    },
+    {
+        "nom": "Little Miss Sunshine",
+        "affiche": "https://image.tmdb.org/t/p/w300/pUPR2pgiVfWMkHcE0SqaE4skDl9.jpg",
+        "genre": "Comédie, Drame",
+        "emplacement": "film/little-miss-sunshine.html"
     },
     {
         "nom": "Les Barbares",

@@ -1,29 +1,18 @@
-/* Conteneur des résultats de recherche */
+/* Style pour le conteneur des résultats de recherche */
 #search_output {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: wrap; /* Pour faire passer les éléments à la ligne si nécessaire */
     justify-content: flex-start; /* Aligne les éléments à gauche */
-    gap: 10px;
-    margin-top: 20px;
-    padding-left: clamp(5px, 3vw, 40px); /* Évolutif selon la taille de l'écran */
-    padding-right: clamp(5px, 3vw, 40px);
-    max-width: 1200px;
-    margin-left: auto;
-    margin-right: auto;
+    gap: 15px; /* Espacement entre les éléments */
+    margin-top: 20px; /* Ajustement de la marge supérieure */
+    padding: 0 40px 0 40px; /* Padding par défaut (grands écrans) */
 }
 
 /* Style pour chaque résultat (affiche de film) */
 #search_output .single-video {
-    background-color: #1b1b1b;
-    border-radius: 8px;
-    margin-bottom: 15px;
-    flex: 0 0 calc(16.66% - 10px); /* 6 vidéos par ligne */
-}
-
-/* Style pour l'image et le texte */
-#search_output .video-img img {
-    width: 100%;
-    height: auto;
+    flex: 0 0 calc(16.66% - 15px); /* 6 vidéos par ligne sur grands écrans */
+    margin-bottom: 20px;
+    background-color: #1b1b1b; /* Optionnel : couleur de fond pour l'esthétique */
     border-radius: 8px;
 }
 
@@ -33,30 +22,40 @@
     margin-top: 5px;
 }
 
-/* Tablette (768px - 1023px) : 4 vidéos par ligne */
-@media (max-width: 1023px) {
+/* Media query pour les écrans moyens (tablettes) */
+@media (max-width: 1024px) {
     #search_output {
-        padding-left: clamp(5px, 2vw, 20px);
-        padding-right: clamp(5px, 2vw, 20px);
+        padding: 0 30px; /* Ajustement du padding pour les tablettes */
     }
     #search_output .single-video {
-        flex: 0 0 calc(25% - 10px); /* 4 vidéos par ligne */
+        flex: 0 0 calc(25% - 15px); /* 4 vidéos par ligne sur tablettes */
     }
 }
 
-/* Mobile (≤767px) : 2 vidéos par ligne avec padding réduit */
-@media (max-width: 767px) {
+/* Media query pour les petits écrans (mobiles) */
+@media (max-width: 768px) {
     #search_output {
-        padding-left: 5px;
-        padding-right: 5px;
+        padding: 0 15px; /* Padding réduit pour les mobiles */
     }
     #search_output .single-video {
-        flex: 0 0 calc(50% - 10px); /* 2 vidéos par ligne */
+        flex: 0 0 calc(50% - 10px); /* 2 vidéos par ligne sur mobiles */
+        margin-bottom: 15px;
     }
 }
 
-/* Placeholder input style */
-.search .search-input input[type=text]::placeholder,
-.search .search-input input[type=text]:focus {
+/* Media query pour les très petits écrans */
+@media (max-width: 480px) {
+    #search_output {
+        padding: 0 15px; /* Assure que le padding est bien de 15px sur très petits écrans */
+    }
+    #search_output .single-video {
+        flex: 0 0 calc(50% - 10px); /* 2 vidéos par ligne même sur les très petits écrans */
+        margin-bottom: 15px;
+    }
+}
+
+/* Style pour l'input de recherche */
+.search .search-input input[type="text"]::placeholder,
+.search .search-input input[type="text"].focus {
     background: #0d071e !important;
 }

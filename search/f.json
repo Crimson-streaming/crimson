@@ -485,6 +485,11 @@
         "emplacement": "film/blue-beetle.html"
     },
     {
+        "nom": "Rasta Rockett",
+        "affiche": "https://image.tmdb.org/t/p/w300/jHMhDrbZY9G4C0RPhlNjqJHfQDK.jpg",
+        "emplacement": "film/rasta-rockett.html"
+    },
+    {
         "nom": "Barbie",
         "affiche": "https://www.themoviedb.org/t/p/w300/iuFNMS8U5cb6xfzi51Dbkovj7vM.jpg",
         "emplacement": "film/barbie.html"
@@ -1903,6 +1908,11 @@
         "nom": "Le Journal d'un dégonflé : Rodrick fait sa loi",
         "affiche": "https://www.themoviedb.org/t/p/w300/q5qIVm9URjCA6iq4gRDuhzkuUxx.jpg",
         "emplacement": "film/le-journal-dun-dégonflé--rodrick-fait-sa-loi.html"
+    },
+    {
+        "nom": "Kiki la petite sorcière",
+        "affiche": "https://image.tmdb.org/t/p/w300/tdOJxx6PCzjPYViSnk0OPQ80X2d.jpg",
+        "emplacement": "film/kiki-la-petite-sorcière.html"
     },
     {
         "nom": "Scrooge, Un (mé)chant de Noël",
@@ -4300,6 +4310,11 @@
         "emplacement": "film/dakota.html"
     },
     {
+        "nom": "30 Minutes maximum",
+        "affiche": "https://image.tmdb.org/t/p/w300/aR7j7Mk0MfZwn3MACVpUCMcuTrS.jpg",
+        "emplacement": "film/30-minutes-maximum.html"
+    },
+    {
         "nom": "Le Secret de la cité perdue",
         "affiche": "https://www.themoviedb.org/t/p/w300/rK8s7bTDZiOs41FXsOcoSv8X9Y5.jpg",
         "emplacement": "film/le-secret-de-la-cité-perdue.html"
@@ -4965,9 +4980,9 @@
         "emplacement": "film/popular-theory.html"
     },
     {
-        "nom": "Fitting In",
-        "affiche": "https://image.tmdb.org/t/p/w300/4wXF4k9TP6h24tXi6ppA9uNWq5n.jpg",
-        "emplacement": "film/fitting-in.html"
+        "nom": "Ma vie, mes règles",
+        "affiche": "https://image.tmdb.org/t/p/w300/k5byF52n35yreYJif6d0hpVSDwb.jpg",
+        "emplacement": "film/ma-vie-mes-règles.html"
     },
     {
         "nom": "Scrambled",
@@ -6861,7 +6876,7 @@
     },
     {
         "nom": "Saturday Night",
-        "affiche": "https://image.tmdb.org/t/p/w300/duaU0P9zaiFEyFgrBnfr8zApRx.jpg",
+        "affiche": "https://image.tmdb.org/t/p/w300/aW5gOluIAHq115DGLNZjExtYHBz.jpg",
         "emplacement": "film/saturday-night.html"
     },
     {
@@ -8706,7 +8721,7 @@
     },
     {
         "nom": "Infiltration",
-        "affiche": "https://www.themoviedb.org/t/p/w300/74jKQES20eONbHJmFSOGWkHJyje.jpg",
+        "affiche": "https://image.tmdb.org/t/p/w300/nUI80er0ouSDgupOHaaZAntjUOK.jpg",
         "emplacement": "film/infiltration.html"
     },
     {
@@ -9590,6 +9605,11 @@
         "emplacement": "film/une-ardente-patience.html"
     },
     {
+        "nom": "We Are Four Lions",
+        "affiche": "https://image.tmdb.org/t/p/w300/aX9a0rx3tGvSkd14tGHD1iZXCIy.jpg",
+        "emplacement": "film/we-are-four-lions.html"
+    },
+    {
         "nom": "A Man of Action",
         "affiche": "https://www.themoviedb.org/t/p/w300/gL6lwQE5WrdQrMiisjma0uIonpT.jpg",
         "emplacement": "film/a-man-of-action.html"
@@ -10278,6 +10298,11 @@
         "nom": "Mes frères et moi",
         "affiche": "https://www.themoviedb.org/t/p/w300/6zFL2RD3nGV8PZID5NPws0ldrX9.jpg",
         "emplacement": "film/mes-frères-et-moi.html"
+    },
+    {
+        "nom": "Sound of Metal",
+        "affiche": "https://image.tmdb.org/t/p/w300/g0Lx4sHdMYrj5HMfS8glU9BYRUi.jpg",
+        "emplacement": "film/sound-of-metal.html"
     },
     {
         "nom": "Haut et fort",
@@ -13115,9 +13140,9 @@
         "emplacement": "film/ctrl.html"
     },
     {
-        "nom": "El diario",
+        "nom": "Le Journal",
         "affiche": "https://image.tmdb.org/t/p/w300/zxtCoLjUVnb7k47k3szlTNhVcTV.jpg",
-        "emplacement": "film/el-diario.html"
+        "emplacement": "film/le-journal.html"
     },
     {
         "nom": "Strange Darling",
@@ -13745,9 +13770,9 @@
         "emplacement": "film/river-wild.html"
     },
     {
-        "nom": "Out of the Blue",
+        "nom": "Désir fatal",
         "affiche": "https://www.themoviedb.org/t/p/w300/5EpQX8h6LuHKt7JzRV4T7IMaLJj.jpg",
-        "emplacement": "film/out-of-the-blue.html"
+        "emplacement": "film/désir-fatal.html"
     },
     {
         "nom": "Paradise",
@@ -15218,6 +15243,11 @@
         "nom": "Alarum",
         "affiche": "https://image.tmdb.org/t/p/w300/v313aUGmMNj6yNveaiQXysBmjVS.jpg",
         "emplacement": "film/alarum.html"
+    },
+    {
+        "nom": "Little Miss Sunshine",
+        "affiche": "https://image.tmdb.org/t/p/w300/pUPR2pgiVfWMkHcE0SqaE4skDl9.jpg",
+        "emplacement": "film/little-miss-sunshine.html"
     },
     {
         "nom": "Les Barbares",
