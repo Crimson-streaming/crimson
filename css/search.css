@@ -1,36 +1,23 @@
-/* Style pour le conteneur des résultats de recherche */
+/* Style pour le conteneur des résultats de recherche */ 
 #search_output {
     display: flex;
     flex-wrap: wrap;
-    justify-content: space-between; /* Évite un déséquilibre des marges */
-    gap: 10px; /* Réduction de l'espace entre les éléments */
+    justify-content: flex-start; /* Aligne les éléments à gauche */
+    gap: 10px;
     margin-top: 20px;
-    width: 90%;
+    width: calc(100% - 40px); /* Ajuste la largeur totale */
     max-width: 1200px;
     margin-left: auto;
     margin-right: auto;
-    padding: 0;
+    padding: 0 20px; /* Padding équilibré à gauche et à droite */
 }
 
 /* Style pour chaque résultat (affiche de film) */
 #search_output .single-video {
     background-color: #1b1b1b;
     border-radius: 8px;
-    margin-bottom: 15px; /* Réduction de l'espacement vertical */
+    margin-bottom: 15px;
     flex: 0 0 calc(16.66% - 10px); /* 6 vidéos par ligne par défaut */
-}
-
-/* Style pour l'image et le texte */
-#search_output .video-img img {
-    width: 100%;
-    height: auto;
-    border-radius: 8px;
-}
-
-#search_output .video-item-content {
-    text-align: center;
-    font-size: 12px;
-    margin-top: 5px;
 }
 
 /* Tablette (768px - 1023px) : 4 vidéos par ligne */
@@ -45,10 +32,4 @@
     #search_output .single-video {
         flex: 0 0 calc(50% - 10px); /* 2 vidéos par ligne */
     }
-}
-
-/* Placeholder input style */
-.search .search-input input[type=text]::placeholder,
-.search .search-input input[type=text]:focus {
-    background: #0d071e !important;
 }
