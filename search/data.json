@@ -14185,8 +14185,8 @@
     },
     {
         "nom": "Barbare",
-        "affiche": "https://m.media-amazon.com/images/MV5BNWQ5MDgwMzMtNWZhMy00Y2Q4LWI5NTAtODA4MDIzYTExOGQzXkEyXkFqcGc@._V1_UX67_CR0,0,67,98_AL_.jpg",
-        "genre": " Epouvante-horreur, Thriller",
+        "affiche": "https://image.tmdb.org/t/p/w300/rJS3o7TgR0pvdtD045kQJQpHXMd.jpg",
+        "genre": "Horreur, Mystère",
         "emplacement": "film/barbare.html"
     },
     {
@@ -14498,7 +14498,7 @@
     {
         "nom": "Conjuring 1 - Les Dossiers Warren",
         "affiche": "https://www.themoviedb.org/t/p/w300/iqT98jBxX2NoWoSorMaylaM3K7D.jpg",
-        "genre": "Epouvante-horreur",
+        "genre": "Horreur, Thriller",
         "emplacement": "film/conjuring-1---les-dossiers-warren.html"
     },
     {
