@@ -2659,7 +2659,7 @@
     },
     {
         "nom": "Retour au bercail",
-        "affiche": "https://i.imgur.com/eclju0g.png",
+        "affiche": "https://www.themoviedb.org/t/p/w300/wkstPfRHozVjJWDnnFn4hg5gVZd.jpg",
         "genre": "Familial, Animation, Aventure, Comédie",
         "emplacement": "film/retour-au-bercail.html"
     },
@@ -2774,7 +2774,7 @@
     {
         "nom": "Kill Them All",
         "affiche": "https://image.tmdb.org/t/p/w300/v41dKmYScgy3w3hbl4eejqRXwgX.jpg",
-        "genre": "Action, Crime",
+        "genre": "Action, Policier",
         "emplacement": "film/kill-them-all.html"
     },
     {
@@ -3139,7 +3139,7 @@
     },
     {
         "nom": "24 Hours with Gaspar",
-        "affiche": "https://image.tmdb.org/t/p/w300/oZ0ZPJPRnjtM8B8s2Mh0IBr6ygb.jpg",
+        "affiche": "https://image.tmdb.org/t/p/w300/8jJKM0ZR3GQo6E3CUkMKKVa4S8B.jpg",
         "genre": "Action, Crime, Drame, Mystère, Science-Fiction, Thriller",
         "emplacement": "film/24-hours-with-gaspar.html"
     },
@@ -4310,7 +4310,7 @@
     {
         "nom": "Master Ip Man : The Awakening",
         "affiche": "https://www.themoviedb.org/t/p/w300/A7vhdyGrpPMKXsuFBZzxmave94F.jpg",
-        "genre": "Action, Aventure, Histoire, Drame",
+        "genre": " Action, Aventure",
         "emplacement": "film/master-ip-man--the-awakening.html"
     },
     {
@@ -5420,7 +5420,7 @@
     {
         "nom": "#Chef",
         "affiche": "https://image.tmdb.org/t/p/w300/9w7DrlzxxOWJRrt93KGxS6m7w5t.jpg",
-        "genre": "Reality",
+        "genre": "Comédie",
         "emplacement": "film/chef.html"
     },
     {
@@ -7861,7 +7861,7 @@
     },
     {
         "nom": "La Faute au karma ?",
-        "affiche": "https://i.imgur.com/dIHloC3.png",
+        "affiche": "https://www.themoviedb.org/t/p/w300/eQQ512Frm00WQu4iuC8ZeWxvd3N.jpg",
         "genre": "Romance, Comédie",
         "emplacement": "film/la-faute-au-karma-.html"
     },
@@ -9194,7 +9194,7 @@
     {
         "nom": "Shirley",
         "affiche": "https://image.tmdb.org/t/p/w300/ooo4D4kyZyFee5aiNfwZ43oKOkc.jpg",
-        "genre": "Comédie, Drame",
+        "genre": "Histoire, Drame",
         "emplacement": "film/shirley.html"
     },
     {
@@ -9728,7 +9728,7 @@
     {
         "nom": "À contretemps",
         "affiche": "https://www.themoviedb.org/t/p/w300/27LtzIIFxQTZfho3ND47i472nJV.jpg",
-        "genre": "Documentaire",
+        "genre": "Drame",
         "emplacement": "film/à-contretemps.html"
     },
     {
@@ -11822,12 +11822,12 @@
     {
         "nom": "The Captain",
         "affiche": "https://www.themoviedb.org/t/p/w300/jG82eg6xnG95XuR6Tqn6GjXytQI.jpg",
-        "genre": " Drame, Historique",
+        "genre": " Thriller, Action, Aventure, Familial",
         "emplacement": "film/the-captain.html"
     },
     {
         "nom": "Sous emprise",
-        "affiche": "https://i.imgur.com/AF2sqtm.png",
+        "affiche": "https://www.themoviedb.org/t/p/w300/lAP4sWFCch4Ed3ylOdhprCge5Li.jpg",
         "genre": "Horreur, Mystère, Thriller",
         "emplacement": "film/sous-emprise.html"
     },
@@ -13868,7 +13868,7 @@
     {
         "nom": "Blood",
         "affiche": "https://www.themoviedb.org/t/p/w300/mNxs32ZbCusD53mA35kWlq6oNCW.jpg",
-        "genre": "Drame, Mystère",
+        "genre": "Horreur, Mystère, Thriller",
         "emplacement": "film/blood.html"
     },
     {
@@ -15553,7 +15553,7 @@
     },
     {
         "nom": "Blasted : Les aliens ou nous !",
-        "affiche": "https://i.imgur.com/vQijVZX.jpg",
+        "affiche": "https://www.themoviedb.org/t/p/w300/tu0gtn1DPBWLluiRY0uq61biDJ6.jpg",
         "genre": "Science-Fiction, Comédie, Action",
         "emplacement": "film/blasted--les-aliens-ou-nous-.html"
     },
@@ -15584,7 +15584,7 @@
     {
         "nom": "Sonic, le film",
         "affiche": "https://www.themoviedb.org/t/p/w300/vwuNoe7sCWxZw7Feo3iIhym5rKM.jpg",
-        "genre": "Aventure, Comédie, Familial, Science-Fiction",
+        "genre": "Action, Science-Fiction, Comédie, Familial",
         "emplacement": "film/sonic-le-film.html"
     },
     {
@@ -15979,7 +15979,7 @@
     },
     {
         "nom": "Vanished into the Night",
-        "affiche": "https://i.imgur.com/N8Ey0Pv.png",
+        "affiche": "https://image.tmdb.org/t/p/w300/f83MF5KVFRs5zuFCPlb6UQV1Yo9.jpg",
         "genre": "Thriller, Mystère, Drame",
         "emplacement": "film/vanished-into-the-night.html"
     },
@@ -17048,7 +17048,7 @@
     {
         "nom": "Jane",
         "affiche": "https://www.themoviedb.org/t/p/w300/4IRtmYsaEP9W7QlpCh3ASUomsrj.jpg",
-        "genre": "Documentaire",
+        "genre": "Mystère, Thriller, Drame",
         "emplacement": "film/jane.html"
     },
     {
@@ -17131,7 +17131,7 @@
     },
     {
         "nom": "Filière Criminelle",
-        "affiche": "https://i.imgur.com/EakT5vf.png",
+        "affiche": "https://image.tmdb.org/t/p/w300/dWIcHswussFS5ntobBytmYg0trN.jpg",
         "genre": "Action, Crime",
         "emplacement": "film/filière-criminelle.html"
     },
@@ -17155,8 +17155,8 @@
     },
     {
         "nom": "L’Ecuyer du Roi",
-        "affiche": "https://i.imgur.com/v5r77C3.png",
-        "genre": "Science-Fiction & Fantastique, Action & Adventure, Familial",
+        "affiche": "https://www.themoviedb.org/t/p/w300/4vcaOjcCG0vbCSIHhuzMJ3npMah.jpg",
+        "genre": "Drame",
         "emplacement": "film/lecuyer-du-roi.html"
     },
     {
@@ -17263,8 +17263,8 @@
     },
     {
         "nom": "American Girl",
-        "affiche": "https://i.imgur.com/oQXsGxd.png",
-        "genre": "Comédie",
+        "affiche": "https://image.tmdb.org/t/p/w300/7O7VPHIIiHpSLb3Xfiwo4T1lCpF.jpg",
+        "genre": "Drame, Thriller, Mystère",
         "emplacement": "film/american-girl.html"
     },
     {
@@ -17485,7 +17485,7 @@
     },
     {
         "nom": "Colère divine",
-        "affiche": "https://i.imgur.com/gVw22lh.png",
+        "affiche": "https://image.tmdb.org/t/p/w300/bO56BhJBLScGBf7VCY4CAM9HbOM.jpg",
         "genre": "Thriller, Drame",
         "emplacement": "film/colère-divine.html"
     },
@@ -17576,12 +17576,12 @@
     {
         "nom": "Gold",
         "affiche": "https://www.themoviedb.org/t/p/w300/vogcwnaaJBFr8NxEMLbHdN8UfDN.jpg",
-        "genre": "Soap",
+        "genre": "Action, Aventure, Thriller",
         "emplacement": "film/gold.html"
     },
     {
         "nom": "Les Enquêtes du département V : Promesse",
-        "affiche": "https://i.imgur.com/Qfr2RFB.png",
+        "affiche": "https://image.tmdb.org/t/p/w300/iJ03YXhIYYM1EH8mCmrMNJacwCy.jpg",
         "genre": "Thriller, Crime",
         "emplacement": "film/les-enquêtes-du-département-v--promesse.html"
     },
@@ -17647,7 +17647,7 @@
     },
     {
         "nom": "Marc Marquez, la résurrection",
-        "affiche": "https://i.imgur.com/aLhSCFY.png",
+        "affiche": "https://image.tmdb.org/t/p/w300/qv37CaXPJOLgSrLAUybPFuGuABW.jpg",
         "genre": "Documentaire",
         "emplacement": "film/marc-marquez-la-résurrection.html"
     },
@@ -17713,7 +17713,7 @@
     },
     {
         "nom": "Cryptomonnaies - Mon incroyable Odyssée",
-        "affiche": "https://i.imgur.com/zMOozUZ.jpeg",
+        "affiche": "https://i.imgur.com/zMOozwUZ.jpeg",
         "genre": "Documentaire",
         "emplacement": "film/cryptomonnaies---mon-incroyable-odyssée.html"
     },
@@ -17898,10 +17898,10 @@
         "emplacement": "film/redouane-bougheraba---on-mappelle-marseille.html"
     },
     {
-        "nom": "Mustapha El Atrassi : Que Du Sale",
+        "nom": "Mustapha El Atrassi - Que Du Sale",
         "affiche": "https://www.themoviedb.org/t/p/w300/zCLmkEy1TPtlxrdNtd3OBPmi4ob.jpg",
         "genre": "Comédie",
-        "emplacement": "film/mustapha-el-atrassi--que-du-sale.html"
+        "emplacement": "film/mustapha-el-atrassi---que-du-sale.html"
     },
     {
         "nom": "Mustapha El Atrassi : Game Over",
@@ -17953,8 +17953,8 @@
     },
     {
         "nom": "Mustapha El Atrassi : N**** SA GRAND-MÈRE",
-        "affiche": "https://play-lh.googleusercontent.com/mF-quVCkJOnMnlftbZf_HVF-BQsSwqPoj3OLPnam5adZJBfQ7tt8lOOkNvOhkOrR4LhZKptoBnnmK9JUWDc=w240-h480-rw",
-        "genre": "Comédie,",
+        "affiche": "https://image.tmdb.org/t/p/w300/4oyf6fbX61bIMMyXbUoAf7ZOXA1.jpg",
+        "genre": "Comédie",
         "emplacement": "film/mustapha-el-atrassi--n-sa-grand-mère.html"
     },
     {
