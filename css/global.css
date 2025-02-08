@@ -1,7 +1,125 @@
 .search .search-input input[type=text]::placeholder, .search .search-input input[type=text].focus {
     background: #0d071e !important;
 }
+.vibrating-button {
+    padding: 10px 16px;
+    background-color: #b81b0e;
+    color: white;
+    border: none;
+    font-size: 16px;
+    border-radius: 14px;
+    transition: background-color 0.3s ease, transform 0.2s;
+    cursor: pointer;
+    margin-top: 0px;
+    margin-bottom: 35px;
+}
+.vibrating-button:hover {
+    background-color: #b81b0e !important;
+    transform: scale(1.05);
+}
+#video-loader {
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    z-index: 9999;
+    display: none; /* Par défaut, l'animation est cachée */
+}
 
+@media (max-width: 767px) {
+    .warning-icon {
+        top: -15px !important;
+    	left: -25px !important;
+    }
+}
+
+span::after, span.warning-icon::after {
+    content: none !important;
+    display: none !important;
+}
+
+.swal2-html-container {
+    font-size: 92% !important;
+}
+.rubrique-container {
+    display: flex;
+    gap: 20px;
+    margin-top: 2rem;
+    flex-wrap: wrap;
+    width: 100%;
+}
+
+.rubrique-button {
+    display: flex;
+    align-items: center;
+    padding: 1rem;
+    background-color: #b81b0e;
+    color: white;
+    border-radius: 1rem;
+    width: 100%;
+    transition: background-color 0.3s;
+    justify-content: space-between;
+}
+
+.rubrique-button:hover {
+    background-color: #a0170d;
+}
+
+.icon {
+    height: 4rem;
+    width: 4rem;
+    margin: -2rem 10px 0 -5px;
+}
+
+.content {
+    flex-grow: 1;
+}
+
+.text {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.link {
+    display: inline-flex;
+    align-items: center;
+    gap: 5px;
+    font-size: 0.875rem;
+    color: rgba(255, 255, 255, 0.7);
+}
+
+.arrow-icon {
+    width: 1rem;
+    height: 1rem;
+}
+
+.suggestion-film-footepadding: 0 0 40px 0 !important;
+}
+@media (max-width: 767px) {
+    .rubrique-container {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+    }
+
+    .rubrique-button {
+        width: 100%;
+    }
+}
+
+@media (min-width: 768px) {
+    .rubrique-container {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .rubrique-button {
+        width: 48%;
+        margin-bottom: 20px;
+    }
+}
 
 /* Styles pour l'écran de chargement */
 #loading-screen {
