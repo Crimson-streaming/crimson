@@ -58,19 +58,32 @@ function normalizeString(str) {
 }
 
 document.addEventListener('DOMContentLoaded', () => {
-    const screenIsLargeEnough = window.innerWidth >= 600;
 
-    const playerControls = screenIsLargeEnough
-        ? ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen']
-        : ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
+    const isMobile = 'ontouchstart' in window || /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+    const screenIsLargeEnough = window.innerWidth >= 600 && !isMobile;
+    const playerControls = screenIsLargeEnough ?
+        ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'] :
+        ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
 
+    console.log("Contrôles du lecteur :", playerControls);
+    
     const player = new Plyr('#player', {
         controls: playerControls,
         settings: ["captions", "quality", "speed"],
         playsinline: true,
-        keyboard: { focused: true, global: true },
-        fullscreen: { enabled: true, fallback: true, iosNative: true },
-        storage: { enabled: true, key: "player" },
+        keyboard: {
+            focused: true,
+            global: true
+        },
+        fullscreen: {
+            enabled: true,
+            fallback: true,
+            iosNative: true
+        },
+        storage: {
+            enabled: true,
+            key: "player"
+        },
         invertTime: false,
         disableContextMenu: true,
         ratio: "16:9",
