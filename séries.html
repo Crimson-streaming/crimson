@@ -267,6 +267,68 @@
 	<a class="close" href="#" title="close"><i class="fas fa-times"></i></a>
   </div>     
 <div class="eupopup eupopup-bottom"></div>
+
+<script>
+	async function showSuggestions(query) {
+		const searchOutput = document.getElementById('search_output');
+		searchOutput.innerHTML = ''; // Réinitialiser les résultats
+	  
+		if (!query) return; // Si la requête est vide, ne rien faire
+	
+		try {
+			const response = await fetch('search/f.json');
+			if (!response.ok) {
+				throw new Error('Erreur réseau');
+			}
+	
+			const movies = await response.json();
+	
+			// Normaliser la requête
+			const normalizedQuery = normalizeString(query);
+	
+			// Filtrer les films en fonction de la requête normalisée
+			const filteredMovies = movies.filter(movie =>
+				normalizeString(movie.nom).includes(normalizedQuery)
+			);
+	
+			// Limiter les résultats à 48
+			const limitedMovies = filteredMovies.slice(0, 48);
+	
+			if (limitedMovies.length > 0) {
+				limitedMovies.forEach(movie => {
+					const movieDiv = document.createElement('div');
+					movieDiv.classList.add('single-video');
+					movieDiv.innerHTML = `
+						<a href="${movie.emplacement}">
+							<div class="video-img">
+								<span class="video-item-content">${movie.nom}</span>
+								<img src="${movie.affiche}" alt="${movie.nom}">
+							</div>
+						</a>
+					`;
+					searchOutput.appendChild(movieDiv);
+				});
+			} else {
+				searchOutput.innerHTML = '<p>Aucun résultat trouvé.</p>';
+			}
+		} catch (error) {
+			searchOutput.innerHTML = '<p>Une erreur est survenue lors du chargement des données.</p>';
+			console.error('Erreur de recherche:', error);
+		}
+	}
+	
+	// Fonction pour normaliser les chaînes (insensible aux accents, tirets, majuscules, etc.)
+	function normalizeString(str) {
+		return str
+			.toLowerCase() // Convertir en minuscule
+			.normalize('NFD') // Séparer les caractères accentués
+			.replace(/[\u0300-\u036f]/g, '') // Supprimer les accents
+			.replace(/['’]/g, '') // Supprimer les apostrophes
+			.replace(/-/g, ' ') // Remplacer les tirets par des espaces
+			.trim(); // Supprimer les espaces inutiles
+	}
+	
+	</script> 
   
   
   <!-- Load Local JS -->
