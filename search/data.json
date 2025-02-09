@@ -8790,6 +8790,12 @@
         "emplacement": "film/goyo.html"
     },
     {
+        "nom": "Monsieur Aznavour",
+        "affiche": "https://image.tmdb.org/t/p/w300/23FkaTaAosaTcTgyuJdTf7TvcJu.jpg",
+        "genre": "Histoire, Musique",
+        "emplacement": "film/monsieur-aznavour.html"
+    },
+    {
         "nom": "Boléro",
         "affiche": "https://image.tmdb.org/t/p/w300/wfj4TvvU26Ph0n0abb7yxLa6gXU.jpg",
         "genre": "Histoire, Musique",

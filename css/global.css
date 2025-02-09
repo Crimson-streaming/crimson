@@ -93,8 +93,11 @@ span::after, span.warning-icon::after {
     height: 1rem;
 }
 
-.suggestion-film-footepadding: 0 0 40px 0 !important;
+
+.suggestion-film-footer{
+    padding: 0 0 40px 0 !important;
 }
+
 @media (max-width: 767px) {
     .rubrique-container {
         display: flex;
