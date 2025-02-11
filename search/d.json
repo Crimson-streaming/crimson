@@ -1,5 +1,20 @@
 [
     {
+        "nom": "Terrifier 3",
+        "affiche": "https://image.tmdb.org/t/p/w300/gvYCs5EbUIB9drsuROYgZeaHAOZ.jpg",
+        "emplacement": "../film/terrifier-3.html"
+    },
+    {
+        "nom": "The Witcher : Les sirènes des abysses",
+        "affiche": "https://image.tmdb.org/t/p/w300/mfy5SyaNBleBACs5mIVudDP7UNY.jpg",
+        "emplacement": "../film/the-witcher--les-sirènes-des-abysses.html"
+    },
+    {
+        "nom": "Better Man",
+        "affiche": "https://image.tmdb.org/t/p/w300/i5mwFI8FutZKnbcQWKGJMEJvtqa.jpg",
+        "emplacement": "../film/better-man.html"
+    },
+    {
         "nom": "Vaiana 2",
         "affiche": "https://image.tmdb.org/t/p/w300/usdwoEwm68cdeMOvGFPwSk9nLTr.jpg",
         "emplacement": "../film/vaiana-2.html"
@@ -4058,6 +4073,11 @@
         "nom": "Blueback : Une Amitié Sous-Marine",
         "affiche": "https://www.themoviedb.org/t/p/w300/mpF5HMyJHfL5XhmanZDktU7TU4.jpg",
         "emplacement": "../film/blueback--une-amitié-sous-marine.html"
+    },
+    {
+        "nom": "Bookworm",
+        "affiche": "https://image.tmdb.org/t/p/w300/3LfSI2GpyF1Q0WJs5bjL4jDono6.jpg",
+        "emplacement": "../film/bookworm.html"
     },
     {
         "nom": "Zodi et Téhu, frères du désert",
@@ -9316,7 +9336,7 @@
     },
     {
         "nom": "Ce soir, tu dormiras avec moi",
-        "affiche": "https://image.tmdb.org/t/p/original/sSB4lWnC8toeZ58JoDXxCNkbA5d.jpg",
+        "affiche": "https://image.tmdb.org/t/p/w1280/sSB4lWnC8toeZ58JoDXxCNkbA5d.jpg",
         "emplacement": "../film/ce-soir-tu-dormiras-avec-moi.html"
     },
     {
@@ -11605,6 +11625,11 @@
         "emplacement": "../film/terrifier-2.html"
     },
     {
+        "nom": "Terrifier  [VOSTFR]",
+        "affiche": "https://image.tmdb.org/t/p/w300/deOSc1shhi8NhBUeSa6NkXQ2ivL.jpg",
+        "emplacement": "../film/terrifier--vostfr.html"
+    },
+    {
         "nom": "L'Oeil du mal",
         "affiche": "https://www.themoviedb.org/t/p/w300/7ToOejML1WLeywcou73hEn0sVXI.jpg",
         "emplacement": "../film/loeil-du-mal.html"
@@ -13853,6 +13878,21 @@
         "nom": "Master Gardener",
         "affiche": "https://www.themoviedb.org/t/p/w300/qfhLkNNymITD0qNQtFgwqCBpYb7.jpg",
         "emplacement": "../film/master-gardener.html"
+    },
+    {
+        "nom": "Melchior l'apothicaire : Le Glaive du bourreau",
+        "affiche": "https://image.tmdb.org/t/p/w300/gDeikPFr4b9gxhub6xVoTjivljz.jpg",
+        "emplacement": "../film/melchior-lapothicaire--le-glaive-du-bourreau.html"
+    },
+    {
+        "nom": "Melchior l'apothicaire : Le spectre de la rue du Puits",
+        "affiche": "https://image.tmdb.org/t/p/w300/i7YhqCmcbGK226ZG531Mjri4VaI.jpg",
+        "emplacement": "../film/melchior-lapothicaire--le-spectre-de-la-rue-du-puits.html"
+    },
+    {
+        "nom": "Melchior l'apothicaire : L'énigme de Saint-Olav",
+        "affiche": "https://image.tmdb.org/t/p/w300/yAYM2FXuophtbOEOHByeYlBrsBj.jpg",
+        "emplacement": "../film/melchior-lapothicaire--lénigme-de-saint-olav.html"
     },
     {
         "nom": "Cliff Walkers",

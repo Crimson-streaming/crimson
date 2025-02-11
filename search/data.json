@@ -1,5 +1,23 @@
 [
     {
+        "nom": "Terrifier 3",
+        "affiche": "https://image.tmdb.org/t/p/w300/gvYCs5EbUIB9drsuROYgZeaHAOZ.jpg",
+        "genre": "Horreur, Thriller",
+        "emplacement": "film/terrifier-3.html"
+    },
+    {
+        "nom": "The Witcher : Les sirènes des abysses",
+        "affiche": "https://image.tmdb.org/t/p/w300/mfy5SyaNBleBACs5mIVudDP7UNY.jpg",
+        "genre": "Animation, Fantastique, Action",
+        "emplacement": "film/the-witcher--les-sirènes-des-abysses.html"
+    },
+    {
+        "nom": "Better Man",
+        "affiche": "https://image.tmdb.org/t/p/w300/i5mwFI8FutZKnbcQWKGJMEJvtqa.jpg",
+        "genre": "Musique, Drame",
+        "emplacement": "film/better-man.html"
+    },
+    {
         "nom": "Vaiana 2",
         "affiche": "https://image.tmdb.org/t/p/w300/usdwoEwm68cdeMOvGFPwSk9nLTr.jpg",
         "genre": "Animation, Aventure, Familial, Comédie, Mystère",
@@ -4876,6 +4894,12 @@
         "affiche": "https://www.themoviedb.org/t/p/w300/mpF5HMyJHfL5XhmanZDktU7TU4.jpg",
         "genre": "Familial, Drame, Aventure",
         "emplacement": "film/blueback--une-amitié-sous-marine.html"
+    },
+    {
+        "nom": "Bookworm",
+        "affiche": "https://image.tmdb.org/t/p/w300/3LfSI2GpyF1Q0WJs5bjL4jDono6.jpg",
+        "genre": "Aventure, Familial, Comédie, Drame",
+        "emplacement": "film/bookworm.html"
     },
     {
         "nom": "Zodi et Téhu, frères du désert",
@@ -11185,7 +11209,7 @@
     },
     {
         "nom": "Ce soir, tu dormiras avec moi",
-        "affiche": "https://image.tmdb.org/t/p/original/sSB4lWnC8toeZ58JoDXxCNkbA5d.jpg",
+        "affiche": "https://image.tmdb.org/t/p/w1280/sSB4lWnC8toeZ58JoDXxCNkbA5d.jpg",
         "genre": "Romance, Drame",
         "emplacement": "film/ce-soir-tu-dormiras-avec-moi.html"
     },
@@ -13962,6 +13986,12 @@
         "emplacement": "film/terrifier-2.html"
     },
     {
+        "nom": "Terrifier  [VOSTFR]",
+        "affiche": "https://image.tmdb.org/t/p/w300/deOSc1shhi8NhBUeSa6NkXQ2ivL.jpg",
+        "genre": "Horreur, Thriller",
+        "emplacement": "film/terrifier--vostfr.html"
+    },
+    {
         "nom": "L'Oeil du mal",
         "affiche": "https://www.themoviedb.org/t/p/w300/7ToOejML1WLeywcou73hEn0sVXI.jpg",
         "genre": "Mystère, Thriller, Action",
@@ -16714,6 +16744,24 @@
         "affiche": "https://www.themoviedb.org/t/p/w300/qfhLkNNymITD0qNQtFgwqCBpYb7.jpg",
         "genre": "Drame, Crime",
         "emplacement": "film/master-gardener.html"
+    },
+    {
+        "nom": "Melchior l'apothicaire : Le Glaive du bourreau",
+        "affiche": "https://image.tmdb.org/t/p/w300/gDeikPFr4b9gxhub6xVoTjivljz.jpg",
+        "genre": "Thriller, Crime, Histoire, Drame",
+        "emplacement": "film/melchior-lapothicaire--le-glaive-du-bourreau.html"
+    },
+    {
+        "nom": "Melchior l'apothicaire : Le spectre de la rue du Puits",
+        "affiche": "https://image.tmdb.org/t/p/w300/i7YhqCmcbGK226ZG531Mjri4VaI.jpg",
+        "genre": "Thriller, Crime, Histoire, Drame",
+        "emplacement": "film/melchior-lapothicaire--le-spectre-de-la-rue-du-puits.html"
+    },
+    {
+        "nom": "Melchior l'apothicaire : L'énigme de Saint-Olav",
+        "affiche": "https://image.tmdb.org/t/p/w300/yAYM2FXuophtbOEOHByeYlBrsBj.jpg",
+        "genre": "Thriller, Crime, Histoire, Drame",
+        "emplacement": "film/melchior-lapothicaire--lénigme-de-saint-olav.html"
     },
     {
         "nom": "Cliff Walkers",
