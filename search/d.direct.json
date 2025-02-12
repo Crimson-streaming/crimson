@@ -30,25 +30,25 @@
         "genre":"Sport"
     },
     {
-        "nom": "CANAL +",
+        "nom": "CANAL+",
         "affiche": "../img/direct/canal-plus.png",
         "emplacement": "../direct/Canal-plus.html",
         "genre":"Cinéma"
     },
     {
-        "nom": "CANAL + SPORT 360",
+        "nom": "CANAL+ SPORT 360",
         "affiche": "../img/direct/canal-plus-sport-360-logo.png",
         "emplacement": "../direct/canal-plus-sport-360.html",
         "genre":"Sport"
     },
     {
-        "nom": "CANAL + Foot",
+        "nom": "CANAL+ Foot",
         "affiche": "../img/direct/canal-plus-foot.png",
         "emplacement": "../direct/canal-plus-foot.html",
         "genre":"Sport"
     },
     {
-        "nom": "CANAL + SPORT HD",
+        "nom": "CANAL+ SPORT HD",
         "affiche": "../img/direct/canal-plus-sport-hd-logo.png",
         "emplacement": "../direct/canal-plus-sport-hd.html",
         "genre":"Sport"
