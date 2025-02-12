@@ -1,0 +1,23 @@
+.video-img span.video-item-content {
+	background: linear-gradient(60deg, #b81b0e, #b81b0e) !important;
+    bottom: 0;
+    color: #ffffff;
+    font-size: 12px;
+    position: absolute;
+    left: 0;
+    right: 0;
+    text-align: center;
+    width: auto;
+    padding: 8px 4px;
+    line-height: 18px;
+    font-weight: 600;
+    width: 100%;
+    text-overflow: ellipsis;
+    overflow: hidden;
+    white-space: nowrap;
+    display: block;
+    z-index: 2;
+    -webkit-transition: all .5sease-out;
+    -o-transition: all .5s ease-out;
+    transition: all .5sease-out;
+}
