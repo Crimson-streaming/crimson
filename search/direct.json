@@ -42,15 +42,39 @@
         "genre":"Cinéma"
     },
     {
+        "nom": "CANAL+ Cinema",
+        "affiche": "img/direct/canal-plus-cinema-logo.png",
+        "emplacement": "direct/canal-plus-cinema.html",
+        "genre":"Cinéma"
+    },
+    {
         "nom": "Canal+ SERIES",
         "affiche": "img/direct/canal-plus-series-logo.png",
         "emplacement": "direct/canal-plus-series.html",
         "genre":"Cinéma"
     },
     {
-        "nom": "CANAL+ Cinema",
-        "affiche": "img/direct/canal-plus-cinema-logo.png",
-        "emplacement": "direct/canal-plus-cinema.html",
+        "nom": "Cine+ Family",
+        "affiche": "img/direct/cine-plus-family-logo.png",
+        "emplacement": "direct/cine-plus-family.html",
+        "genre":"Cinéma"
+    },
+    {
+        "nom": "Cine+ Classic",
+        "affiche": "img/direct/cine-plus-classic-logo.png",
+        "emplacement": "direct/cine-plus-classic.html",
+        "genre":"Cinéma"
+    },
+    {
+        "nom": "Cine+ Emotion",
+        "affiche": "img/direct/cine-plus-emotion-logo.png",
+        "emplacement": "direct/cine-plus-emotion.html",
+        "genre":"Cinéma"
+    },
+    {
+        "nom": "Cine+ Frisson",
+        "affiche": "img/direct/cine-plus-frisson-logo.png",
+        "emplacement": "direct/cine-plus-frisson.html",
         "genre":"Cinéma"
     },
     {

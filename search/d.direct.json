@@ -30,9 +30,51 @@
         "genre":"Sport"
     },
     {
+        "nom": "DAZN 3",
+        "affiche": "../img/direct/dazn-3-logo.png",
+        "emplacement": "../direct/dazn-3.html",
+        "genre":"Sport"
+    },
+    {
         "nom": "CANAL+",
         "affiche": "../img/direct/canal-plus.png",
         "emplacement": "../direct/Canal-plus.html",
+        "genre":"Cinéma"
+    },
+    {
+        "nom": "CANAL+ Cinema",
+        "affiche": "../img/direct/canal-plus-cinema-logo.png",
+        "emplacement": "../direct/canal-plus-cinema.html",
+        "genre":"Cinéma"
+    },
+    {
+        "nom": "Canal+ SERIES",
+        "affiche": "../img/direct/canal-plus-series-logo.png",
+        "emplacement": "../direct/canal-plus-series.html",
+        "genre":"Cinéma"
+    },
+    {
+        "nom": "Cine+ Family",
+        "affiche": "../img/direct/cine-plus-family-logo.png",
+        "emplacement": "../direct/cine-plus-family.html",
+        "genre":"Cinéma"
+    },
+    {
+        "nom": "Cine+ Classic",
+        "affiche": "../img/direct/cine-plus-classic-logo.png",
+        "emplacement": "../direct/cine-plus-classic.html",
+        "genre":"Cinéma"
+    },
+    {
+        "nom": "Cine+ Emotion",
+        "affiche": "../img/direct/cine-plus-emotion-logo.png",
+        "emplacement": "../direct/cine-plus-emotion.html",
+        "genre":"Cinéma"
+    },
+    {
+        "nom": "Cine+ Frisson",
+        "affiche": "../img/direct/cine-plus-frisson-logo.png",
+        "emplacement": "../direct/cine-plus-frisson.html",
         "genre":"Cinéma"
     },
     {
@@ -51,6 +93,12 @@
         "nom": "CANAL+ SPORT HD",
         "affiche": "../img/direct/canal-plus-sport-hd-logo.png",
         "emplacement": "../direct/canal-plus-sport-hd.html",
+        "genre":"Sport"
+    },
+    {
+        "nom": "CANAL+ MOTOGP",
+        "affiche": "../img/direct/canal-plus-motogp-logo.png",
+        "emplacement": "../direct/canal-plus-motogp.html",
         "genre":"Sport"
     },
     {
@@ -93,6 +141,12 @@
         "nom": "OCS City",
         "affiche": "../img/direct/ocs-city.png",
         "emplacement": "../direct/ocs-city.html",
+        "genre":"Cinéma"
+    },
+    {
+        "nom": "Warner TV",
+        "affiche": "../img/direct/warner-tv-logo.png",
+        "emplacement": "../direct/warner-tv.html",
         "genre":"Cinéma"
     },
     {
@@ -180,6 +234,12 @@
         "genre":"Général"
     },
     {
+        "nom": "6ter",
+        "affiche": "../img/direct/6ter-logo.png",
+        "emplacement": "../direct/6ter.html",
+        "genre":"Général"
+    },
+    {
         "nom": "RMC Découverte",
         "affiche": "../img/direct/rmc-decouverte-logo.png",
         "emplacement": "../direct/rmc-decouverte.html",
@@ -234,6 +294,30 @@
         "genre":"Jeunesse"
     },
     {
+        "nom": "Tiji",
+        "affiche": "../img/direct/tiji-logo.png",
+        "emplacement": "../direct/tiji.html",
+        "genre":"Jeunesse"
+    },
+    {
+        "nom": "Nickelodeon",
+        "affiche": "../img/direct/nickelodeon-logo.png",
+        "emplacement": "../direct/nickelodeon.html",
+        "genre":"Jeunesse"
+    },
+    {
+        "nom": "Canal J",
+        "affiche": "../img/direct/canal-j-logo.png",
+        "emplacement": "../direct/canal-j.html",
+        "genre":"Jeunesse"
+    },
+    {
+        "nom": "Boomerang",
+        "affiche": "../img/direct/boomerang-logo.png",
+        "emplacement": "../direct/boomerang.html",
+        "genre":"Jeunesse"
+    },
+    {
         "nom": "ADN",
         "affiche": "../img/direct/adn-logo.png",
         "emplacement": "../direct/adn.html",
@@ -283,8 +367,8 @@
     },
     {
         "nom": "Doctor Who",
-        "affiche": "img/direct/doctor-who-logo.png",
-        "emplacement": "direct/doctor-who.html",
+        "affiche": "../img/direct/doctor-who-logo.png",
+        "emplacement": "../direct/doctor-who.html",
         "genre":"Cinéma"
     },
     {
