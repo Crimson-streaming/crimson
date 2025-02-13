@@ -1,5 +1,11 @@
 [
     {
+        "nom": "L'Amour ouf",
+        "affiche": "https://image.tmdb.org/t/p/w300/6akNNv4KyrguZUiG4uemfV6toVq.jpg",
+        "genre": "Romance, Crime, Drame",
+        "emplacement": "film/lamour-ouf.html"
+    },
+    {
         "nom": "Terrifier 3",
         "affiche": "https://image.tmdb.org/t/p/w300/gvYCs5EbUIB9drsuROYgZeaHAOZ.jpg",
         "genre": "Horreur, Thriller",
@@ -10,6 +16,18 @@
         "affiche": "https://image.tmdb.org/t/p/w300/mfy5SyaNBleBACs5mIVudDP7UNY.jpg",
         "genre": "Animation, Fantastique, Action",
         "emplacement": "film/the-witcher--les-sirènes-des-abysses.html"
+    },
+    {
+        "nom": "Lune de miel avec ma mère",
+        "affiche": "https://image.tmdb.org/t/p/w300/bzW0afBIyWZ0bjCje8GPezvETy0.jpg",
+        "genre": "Comédie",
+        "emplacement": "film/lune-de-miel-avec-ma-mère.html"
+    },
+    {
+        "nom": "Umami",
+        "affiche": "https://image.tmdb.org/t/p/w300/hgT250M6F0o0bUUTyXjEjof6knA.jpg",
+        "genre": "Drame",
+        "emplacement": "film/umami.html"
     },
     {
         "nom": "Better Man",
@@ -2958,6 +2976,12 @@
         "emplacement": "film/bad-boys.html"
     },
     {
+        "nom": "Warhorse One",
+        "affiche": "https://image.tmdb.org/t/p/w300/laFhAOqkWFi4sFeGPg8uun2Julw.jpg",
+        "genre": "Action, Guerre, Drame",
+        "emplacement": "film/warhorse-one.html"
+    },
+    {
         "nom": "The Arctic Convoy",
         "affiche": "https://image.tmdb.org/t/p/w300/sNNDsAMl7IBF8DcNezRHfvQpywm.jpg",
         "genre": "Guerre, Drame",
@@ -3952,6 +3976,12 @@
         "affiche": "https://www.themoviedb.org/t/p/w300/pqB8Xlu0QdwsONakoiKtortANdn.jpg",
         "genre": "Action, Crime, Drame",
         "emplacement": "film/batman-begins.html"
+    },
+    {
+        "nom": "L’histoire de Souleymane",
+        "affiche": "https://image.tmdb.org/t/p/w300/jUVmSuqiJ4FTBpkeJe89khym116.jpg",
+        "genre": "Drame",
+        "emplacement": "film/lhistoire-de-souleymane.html"
     },
     {
         "nom": "Souviens-toi des cacahuètes",
@@ -13989,7 +14019,7 @@
         "nom": "Terrifier [VOSTFR]",
         "affiche": "https://image.tmdb.org/t/p/w300/deOSc1shhi8NhBUeSa6NkXQ2ivL.jpg",
         "genre": "Horreur, Thriller",
-        "emplacement": "film/terrifier--vostfr.html"
+        "emplacement": "film/terrifier-vostfr.html"
     },
     {
         "nom": "L'Oeil du mal",
@@ -17872,6 +17902,12 @@
         "affiche": "https://image.tmdb.org/t/p/w300/xgL2B6eXjaZlwdTzW20UWPpeiKU.jpg",
         "genre": "Documentaire",
         "emplacement": "film/marcher-sur-leau.html"
+    },
+    {
+        "nom": "Dahomey",
+        "affiche": "https://image.tmdb.org/t/p/w300/48fA9EgWwxsfAU6sWDbLFn5qXQ.jpg",
+        "genre": "Documentaire",
+        "emplacement": "film/dahomey.html"
     },
     {
         "nom": "Elon Musk : The Real Life Iron Man",
