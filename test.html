@@ -11,7 +11,7 @@
     
   
 <!-- Favicon -->
-	<link rel="icon" type="image/png" href="../img/favicon/favicon.png">
+	<link rel="icon" type="image/png" href="img/favicon/favicon.png">
 
 	<!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-7QZGKN17QX"></script>
@@ -28,18 +28,18 @@
      <!-- soon pwa -->
 	
   
-  <link rel="stylesheet" href="../css/bootstrap.min.css">
-  <link rel="stylesheet" href="../css/megamenu.css">
-  <link rel="stylesheet" href="../css/style-three.css" id="theme">
-  <link rel="stylesheet" href="../css/ionicons.css">
-  <link rel="stylesheet" href="../css/font-awesome.min.css">
-  <link rel="stylesheet" href="../css/responsive.css">
-  <link rel="stylesheet" href="../css/splide.min.css">
-  <link rel="stylesheet" href="../css/player-crimson.css">
-  <link rel="stylesheet" href="../css/jquery-eu-cookie-law-popup.css">
-  <link rel="stylesheet" href="../css/search.css">
-  <link rel="stylesheet" href="../css/validatesecurity.css">
-  <link rel="stylesheet" href="../css/popup-video.css">
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/megamenu.css">
+  <link rel="stylesheet" href="css/style-three.css" id="theme">
+  <link rel="stylesheet" href="css/ionicons.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/responsive.css">
+  <link rel="stylesheet" href="css/splide.min.css">
+  <link rel="stylesheet" href="css/player-crimson.css">
+  <link rel="stylesheet" href="css/jquery-eu-cookie-law-popup.css">
+  <link rel="stylesheet" href="css/search.css">
+  <link rel="stylesheet" href="css/validatesecurity.css">
+  <link rel="stylesheet" href="css/popup-video.css">
 
   <!-- owl Carousel -->
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
@@ -49,7 +49,7 @@
   <link rel="stylesheet" href="https://cdn.plyr.io/3.7.8/plyr.css">
 
   <!-- SweetAlert2 -->
-  <script src="../js/sweetalert2@11.js"></script>
+  <script src="js/sweetalert2@11.js"></script>
 
   <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css?family=Nunito:300,400,600,700,800&display=swap" rel="stylesheet">
@@ -70,7 +70,7 @@
         <div class="mod-menu">
           <div class="row">
             <div class="col-2"> 
-              <a href="../index.html" title="logo" class="logo"><img src="../img/logo.png" alt="logo" title="logo"></a>
+              <a href="index.html" title="logo" class="logo"><img src="img/logo.png" alt="logo" title="logo"></a>
             </div>
             <div class="col-7 nav-order-last nopadding">
               <div class="main-nav leftnav">
@@ -79,10 +79,10 @@
                 </ul>
                 <div id="menu" class="collapse header-menu">
                   <ul class="nav vfx-item-nav">
-                    <li><a href="../index.html" class="" title="home">Home</a></li>
-                    <li><a href="../films.html" class="" title="Films">Films</a></li>
-                    <li><a href="../séries.html" class="" title="Séries">Séries</a>
-                    <li><a href="../direct.html" class="active" title="En direct">En direct</a>
+                    <li><a href="index.html" class="" title="home">Home</a></li>
+                    <li><a href="films.html" class="" title="Films">Films</a></li>
+                    <li><a href="séries.html" class="" title="Séries">Séries</a>
+                    <li><a href="direct.html" class="active" title="En direct">En direct</a>
                     <ul class="dm-align-2 mega-list">
                   </ul>
                 </div>
@@ -98,10 +98,10 @@
                   </form>
                 </div>
             <div class="user-menu">
-                  <a href="../settings.html" title="paramètre">
+                  <a href="settings.html" title="paramètre">
                       <div class="user-name">
                           <span class="profile-container">
-                              <img src="../img/assets/settings-logo.png" alt="settings_img" title="settings" id="userPic">
+                              <img src="img/assets/settings-logo.png" alt="settings_img" title="settings" id="userPic">
                           </span>
                       </div>
                   </a>
@@ -116,12 +116,173 @@
 
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4 mb-5">
       <!-- Player -->
-      <video id="player" playsinline controls preload="auto" poster="../img/direct/6ter-banner.png">
+      <video id="player" playsinline controls preload="auto" poster="img/direct/6ter-banner.png">
           <source id="video-source" src="https://fremtv.lol:443/live/A6B56AC724C0686C98984A5A92CA1DC1/159.m3u8" type="application/x-mpegURL">
           
           Nous travaillons activement pour vous offrir ce contenu. Merci de votre patience. ❤️
       </video>
   </div>
+
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+    const screenIsLargeEnough = window.innerWidth >= 600;
+
+    const playerControls = screenIsLargeEnough
+        ? ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen']
+        : ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
+
+    const player = new Plyr('#player', {
+        controls: playerControls,
+        settings: ["captions", "quality", "speed"],
+        playsinline: true,
+        keyboard: { focused: true, global: true },
+        fullscreen: { enabled: true, fallback: true, iosNative: true },
+        storage: { enabled: true, key: "player" },
+        invertTime: false,
+        disableContextMenu: true,
+        ratio: "16:9",
+        autoplay: true,
+        i18n: {
+            restart: 'Recommencer',
+            rewind: 'Revenir de {seektime}s',
+            play: 'Lecture',
+            pause: 'Pause',
+            fastForward: 'Avancer de {seektime}s',
+            seek: 'Rechercher',
+            seekLabel: '{currentTime} de {duration}',
+            played: 'Lancé',
+            buffered: 'Mis en mémoire',
+            currentTime: 'Temps actuel',
+            duration: 'Durée',
+            volume: 'Volume',
+            mute: 'Silence',
+            unmute: 'Son activé',
+            enableCaptions: 'Activer les sous-titres',
+            disableCaptions: 'Désactiver les sous-titres',
+            download: 'Télécharger',
+            enterFullscreen: 'Plein écran',
+            exitFullscreen: 'Sortir du plein écran',
+            frameTitle: 'Lecteur pour {title}',
+            captions: 'Sous-titres',
+            settings: 'Réglages',
+            pip: 'Picture-In-Picture',
+            menuBack: 'Retour au menu précédent',
+            speed: 'Vitesse',
+            normal: 'Normal',
+            quality: 'Qualité',
+            loop: 'Boucle',
+            start: 'Début',
+            end: 'Fin',
+            all: 'Tous',
+            reset: 'Réinitialiser',
+            disabled: 'Désactivé',
+            enabled: 'Activé',
+            advertisement: 'Publicité',
+        },
+        volume: 1,
+        muted: false
+    });
+
+    // Déclaration de variables avec des noms plus compréhensibles
+    let iframeLoaded = false;
+    const userAdAllowed = true; // À définir correctement
+
+
+    // Fonction de gestion de la lecture du flux vidéo
+    function hideLoader() {
+        iframeLoaded = true;
+        const loader = document.getElementById('loader');
+        loader.style.display = 'none';
+
+        const videoWrapper = document.querySelector('.plyr__video-wrapper');
+        videoWrapper.style.display = 'block';
+    }
+
+    // Construction de l'URL de la source
+    let source = document.createElement('source');
+    source.src = channelUrl + 'video.m3u8';
+    source.type = 'application/x-mpegURL';
+
+    // Ajout de la source à l'élément vidéo
+    let videoElement = document.getElementById('player-livetv-1');
+    videoElement.appendChild(source);
+    videoElement.play();
+
+    // Fonction de gestion de l'affichage du loader lors de la première réception du flux
+    function hideLoaderOnFirstPacket() {
+        const loader = document.getElementById('loader');
+        const loader154 = document.getElementById('loading-overlay-154');
+        const video = document.querySelector('#player');
+
+        if (video) {
+            loader.style.display = 'none';
+            video.style.display = 'block';
+        }
+
+        if (userAdAllowed) {
+            loader154.style.display = 'none';
+        }
+    }
+
+    // Fonction pour recharger le flux vidéo en cas d'erreur
+    function reloadStream() {
+        const video = document.querySelector('#player');
+        video.load();
+        video.play().catch((error) => {
+            console.error('Erreur de lecture vidéo:', error);
+            errorMessage.style.display = 'none';
+        });
+    }
+
+    // Vérification de la compatibilité de Hls.js pour la lecture du flux m3u8
+    if (Hls.isSupported() && videoSrc.endsWith('.m3u8')) {
+        const hls = new Hls({
+            startPosition: 0,
+            autoStartLoad: true,
+            liveSyncPlaybackRate: 1,
+            backBufferLength: 90
+        });
+
+        // Initialisation du flux avec Hls.js
+        hls.loadSource(videoSrc);
+        hls.attachMedia(videoElement);
+
+        // Gestion des événements de Hls.js
+        hls.on(Hls.Events.MANIFEST_PARSED, function() {
+            videoElement.currentTime = 0;
+            videoElement.play().catch((error) => {
+                console.error('Erreur de lecture vidéo:', error);
+            });
+        });
+
+        hls.on(Hls.Events.BUFFER_APPENDED, function() {
+            hideLoaderOnFirstPacket();
+        });
+
+        hls.on(Hls.Events.ERROR, function(_, data) {
+            if (data.fatal) {
+                switch (data.type) {
+                    case Hls.ErrorTypes.NETWORK_ERROR:
+                        console.log('Erreur réseau, tentative de reconnexion...');
+                        hls.startLoad();
+                        break;
+                    case Hls.ErrorTypes.MEDIA_ERROR:
+                        console.log('Erreur média, tentative de correction...');
+                        hls.recoverMediaError();
+                        break;
+                    default:
+                        console.log('Erreur inconnue, rechargement...');
+                        reloadButton.style.display = 'block';
+                }
+            }
+        });
+    } else {
+        // Si Hls.js n'est pas pris en charge, on charge la vidéo normalement
+        videoElement.play();
+    }
+});
+
+  </script>
 
     <div class="page-content-area vfx-item-ptb pt-3">
         <div class="container-fluid">
@@ -162,12 +323,11 @@
    <script src="https://code.jquery.com/jquery-3.3.1.min.js"></script>
    <script src="https://cdn.plyr.io/3.7.8/plyr.polyfilled.js"></script>
    <script src="https://cdn.jsdelivr.net/npm/hls.js@latest"></script>
-   <script src="../js/FWDEVPlayer.js"></script>
-   <script src="../js/bootstrap.min.js"></script>
-   <script src="../js/jquery.nice-select.min.js"></script>  
-   <script src="../js/megamenu.js"></script> 
-   <script src="../js/custom-main.js"></script>
-   <script src="../js/direct.js"></script>
+   <script src="js/FWDEVPlayer.js"></script>
+   <script src="js/bootstrap.min.js"></script>
+   <script src="js/jquery.nice-select.min.js"></script>  
+   <script src="js/megamenu.js"></script> 
+   <script src="js/custom-main.js"></script>
    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.6.0/css/all.min.css">
    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
 
@@ -182,9 +342,9 @@
                   <div class="footer-bottom">
                     <div class="footer-links">
                       <ul>
-                        <li><a href="../pages/signaler-un-problème.html" title="⚐ Signaler un Problème">⚐ Signaler un Problème</a></li>
-                        <li><a href="../pages/recrutement.html" title="⛭ Recrutement">⛭ Recrutement</a></li>
-                        <li><a href="../pages/dmca.html" title="DMCA">DMCA</a></li>
+                        <li><a href="pages/signaler-un-problème.html" title="⚐ Signaler un Problème">⚐ Signaler un Problème</a></li>
+                        <li><a href="pages/recrutement.html" title="⛭ Recrutement">⛭ Recrutement</a></li>
+                        <li><a href="pages/dmca.html" title="DMCA">DMCA</a></li>
                       </ul>
                     </div>
                     <div class="copyright-text">
@@ -212,7 +372,7 @@
                     <div class="footer-heading-wrap">
                       <h3 class="footer-heading">
                         Crimson
-                        <img src="../img/assets/popcorn.webp" alt="Logo Crimson" style="margin-top: -6px;">
+                        <img src="img/assets/popcorn.webp" alt="Logo Crimson" style="margin-top: -6px;">
                       </h3>
                     </div>
                   </div>
