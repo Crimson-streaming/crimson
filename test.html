@@ -117,7 +117,7 @@
     <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12 mt-4 mb-5">
       <!-- Player -->
       <video id="player" playsinline controls preload="auto" poster="img/direct/6ter-banner.png">
-          <source id="video-source" src="https://fremtv.lol:443/live/A6B56AC724C0686C98984A5A92CA1DC1/159.m3u8" type="application/x-mpegURL">
+          <source id="video-source" src="https://raw.githubusercontent.com/Paradise-91/ParaTV/main/streams/m6plus/gulli.m3u8" type="application/x-mpegURL">
           
           Nous travaillons activement pour vous offrir ce contenu. Merci de votre patience. ❤️
       </video>
@@ -129,122 +129,132 @@ document.addEventListener('DOMContentLoaded', () => {
     const videoElement = document.getElementById('player');
 
     if (videoElement) {
-        // Ajouter la source vidéo (au cas où la source n'est pas déjà définie)
+        // Récupérer la source vidéo existante (celle avec l'ID 'video-source')
         const videoSource = videoElement.querySelector('#video-source');
-        const videoSrc = 'https://fremtv.lol:443/live/A6B56AC724C0686C98984A5A92CA1DC1/159.m3u8'; // L'URL du flux
+        
+        // Si la source vidéo existe
+        if (videoSource) {
+            const videoSrc = videoSource.src; // URL de la source
+            console.log('Source vidéo trouvée :', videoSrc);
 
-        if (!videoSource) {
-            // Si la source n'est pas présente, créer et ajouter la source
-            const source = document.createElement('source');
-            source.id = 'video-source';
-            source.src = videoSrc;
-            source.type = 'application/x-mpegURL';
-            videoElement.appendChild(source);
-        } else {
-            // Si la source est déjà présente, s'assurer qu'elle pointe vers le bon flux
-            videoSource.src = videoSrc;
-        }
+            const isMobile = 'ontouchstart' in window || /Android|iPhone|iPad|iPod|Windows Phone/i.test(navigator.userAgent);
+    const screenIsLargeEnough = window.innerWidth >= 600 && !isMobile;
+    const playerControls = screenIsLargeEnough ?
+        ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'] :
+        ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'];
 
-        // Initialiser Plyr
-        const player = new Plyr('#player', {
-            controls: ['play-large', 'rewind', 'play', 'fast-forward', 'progress', 'current-time', 'mute', 'volume', 'settings', 'captions', 'pip', 'airplay', 'fullscreen'],
-            settings: ["captions", "quality", "speed"],
-            playsinline: true,
-            keyboard: { focused: true, global: true },
-            fullscreen: { enabled: true, fallback: true, iosNative: true },
-            storage: { enabled: true, key: "player" },
-            invertTime: false,
-            disableContextMenu: true,
-            ratio: "16:9",
-            autoplay: true,
-            i18n: {
-                restart: 'Recommencer',
-                rewind: 'Revenir de {seektime}s',
-                play: 'Lecture',
-                pause: 'Pause',
-                fastForward: 'Avancer de {seektime}s',
-                seek: 'Rechercher',
-                seekLabel: '{currentTime} de {duration}',
-                played: 'Lancé',
-                buffered: 'Mis en mémoire',
-                currentTime: 'Temps actuel',
-                duration: 'Durée',
-                volume: 'Volume',
-                mute: 'Silence',
-                unmute: 'Son activé',
-                enableCaptions: 'Activer les sous-titres',
-                disableCaptions: 'Désactiver les sous-titres',
-                download: 'Télécharger',
-                enterFullscreen: 'Plein écran',
-                exitFullscreen: 'Sortir du plein écran',
-                frameTitle: 'Lecteur pour {title}',
-                captions: 'Sous-titres',
-                settings: 'Réglages',
-                pip: 'Picture-In-Picture',
-                menuBack: 'Retour au menu précédent',
-                speed: 'Vitesse',
-                normal: 'Normal',
-                quality: 'Qualité',
-                loop: 'Boucle',
-                start: 'Début',
-                end: 'Fin',
-                all: 'Tous',
-                reset: 'Réinitialiser',
-                disabled: 'Désactivé',
-                enabled: 'Activé',
-                advertisement: 'Publicité',
-            },
-            volume: 1,
-            muted: false
-        });
+    console.log("Contrôles du lecteur :", playerControls);
+    
+    const player = new Plyr('#player', {
+        controls: playerControls,
+        settings: ["captions", "quality", "speed"],
+        playsinline: true,
+        keyboard: {
+            focused: true,
+            global: true
+        },
+        fullscreen: {
+            enabled: true,
+            fallback: true,
+            iosNative: true
+        },
+        storage: {
+            enabled: true,
+            key: "player"
+        },
+        invertTime: false,
+        disableContextMenu: true,
+        ratio: "16:9",
+        i18n: {
+            restart: 'Recommencer',
+            rewind: 'Revenir de {seektime}s',
+            play: 'Lecture',
+            pause: 'Pause',
+            fastForward: 'Avancer de {seektime}s',
+            seek: 'Rechercher',
+            seekLabel: '{currentTime} de {duration}',
+            played: 'Lancé',
+            buffered: 'Mis en mémoire',
+            currentTime: 'Temps actuel',
+            duration: 'Durée',
+            volume: 'Volume',
+            mute: 'Silence',
+            unmute: 'Son activé',
+            enableCaptions: 'Activer les sous-titres',
+            disableCaptions: 'Désactiver les sous-titres',
+            download: 'Télécharger',
+            enterFullscreen: 'Plein écran',
+            exitFullscreen: 'Sortir du plein écran',
+            frameTitle: 'Lecteur pour {title}',
+            captions: 'Sous-titres',
+            settings: 'Réglages',
+            pip: 'Picture-In-Picture',
+            menuBack: 'Retour au menu précédent',
+            speed: 'Vitesse',
+            normal: 'Normal',
+            quality: 'Qualité',
+            loop: 'Boucle',
+            start: 'Début',
+            end: 'Fin',
+            all: 'Tous',
+            reset: 'Réinitialiser',
+            disabled: 'Désactivé',
+            enabled: 'Activé',
+            advertisement: 'Publicité',
+        },
+        volume: 1,
+        muted: false
+    });
 
-        // Vérifier si HLS.js est supporté pour lire des fichiers .m3u8
-        if (Hls.isSupported()) {
-            const hls = new Hls();
-            hls.loadSource(videoSrc);
-            hls.attachMedia(videoElement);
+            // Vérifier si HLS.js est supporté pour lire des fichiers .m3u8
+            if (Hls.isSupported()) {
+                const hls = new Hls();
+                hls.loadSource(videoSrc);
+                hls.attachMedia(videoElement);
 
-            hls.on(Hls.Events.MANIFEST_PARSED, () => {
-                videoElement.currentTime = 0;
+                hls.on(Hls.Events.MANIFEST_PARSED, () => {
+                    videoElement.currentTime = 0;
+                    videoElement.play().catch((error) => {
+                        console.error('Erreur de lecture vidéo:', error);
+                    });
+                });
+
+                hls.on(Hls.Events.BUFFER_APPENDED, () => {
+                    // Cacher le loader (si applicable) une fois le premier paquet reçu
+                    const loader = document.getElementById('loader');
+                    if (loader) loader.style.display = 'none';
+                    videoElement.style.display = 'block';
+                });
+
+                hls.on(Hls.Events.ERROR, (event, data) => {
+                    if (data.fatal) {
+                        switch (data.type) {
+                            case Hls.ErrorTypes.NETWORK_ERROR:
+                                console.log('Erreur réseau, tentative de reconnexion...');
+                                hls.startLoad();
+                                break;
+                            case Hls.ErrorTypes.MEDIA_ERROR:
+                                console.log('Erreur média, tentative de récupération...');
+                                hls.recoverMediaError();
+                                break;
+                            default:
+                                console.log('Erreur inconnue, tentative de rechargement...');
+                        }
+                    }
+                });
+            } else {
+                // Si Hls.js n'est pas pris en charge, lire directement le flux
                 videoElement.play().catch((error) => {
                     console.error('Erreur de lecture vidéo:', error);
                 });
-            });
-
-            hls.on(Hls.Events.BUFFER_APPENDED, () => {
-                // Cacher le loader (si applicable) une fois le premier paquet reçu
-                const loader = document.getElementById('loader');
-                if (loader) loader.style.display = 'none';
-                videoElement.style.display = 'block';
-            });
-
-            hls.on(Hls.Events.ERROR, (event, data) => {
-                if (data.fatal) {
-                    switch (data.type) {
-                        case Hls.ErrorTypes.NETWORK_ERROR:
-                            console.log('Erreur réseau, tentative de reconnexion...');
-                            hls.startLoad();
-                            break;
-                        case Hls.ErrorTypes.MEDIA_ERROR:
-                            console.log('Erreur média, tentative de récupération...');
-                            hls.recoverMediaError();
-                            break;
-                        default:
-                            console.log('Erreur inconnue, tentative de rechargement...');
-                    }
-                }
-            });
+            }
         } else {
-            // Si Hls.js n'est pas pris en charge, lire directement le flux
-            videoElement.play().catch((error) => {
-                console.error('Erreur de lecture vidéo:', error);
-            });
+            console.error('Aucune source vidéo trouvée.');
         }
     } else {
         console.error('L\'élément vidéo avec l\'ID "player" n\'a pas été trouvé.');
     }
 });
-
 
   </script>
 
