@@ -59,3 +59,6 @@
 .search .search-input input[type="text"].focus {
     background: #0d071e !important;
 }
+.minimal-alert {
+    border-radius: 8px !important;
+}
