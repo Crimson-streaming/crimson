@@ -40,9 +40,9 @@
         "emplacement": "https://crimson-streaming.github.io/crimson/film/lune-de-miel-avec-ma-mère.html"
     },
     {
-        "nom": "Umami",
-        "affiche": "https://image.tmdb.org/t/p/w300/hgT250M6F0o0bUUTyXjEjof6knA.jpg",
-        "emplacement": "https://crimson-streaming.github.io/crimson/film/umami.html"
+        "nom": "Ébullition",
+        "affiche": "https://image.tmdb.org/t/p/w300/rdn3Iv6CWqPkBxAWH0NhBhkpd5u.jpg",
+        "emplacement": "https://crimson-streaming.github.io/crimson/film/ébullition.html"
     },
     {
         "nom": "Better Man",
@@ -8378,6 +8378,11 @@
         "nom": "Le Cours de la vie",
         "affiche": "https://www.themoviedb.org/t/p/w300/wg92fUpEqy6ymuld69dBbDa3Arv.jpg",
         "emplacement": "https://crimson-streaming.github.io/crimson/film/le-cours-de-la-vie.html"
+    },
+    {
+        "nom": "Umami",
+        "affiche": "https://www.themoviedb.org/t/p/w300/oGJIo2zbfvFtIlnD15fF2OayzKl.jpg",
+        "emplacement": "https://crimson-streaming.github.io/crimson/film/umami.html"
     },
     {
         "nom": "Marinette",
