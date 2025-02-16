@@ -4743,7 +4743,7 @@ header .modal-body .btn.btn-primary {
     z-index: 999;
 }
 .player_prev_next:hover{
-	background:#ff8508;
+	background: #e63c30;
 	color: #ffffff; 
 }
 .player_prev_next:hover a{
