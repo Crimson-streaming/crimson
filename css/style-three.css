@@ -4809,7 +4809,7 @@ ul.nav > li:hover > a {
 	z-index: 9999;
 	-webkit-background-clip: text;
 	background-clip: text;
-	background-image: linear-gradient(to right, #e3baff, #960ef3);
+	background-image: linear-gradient(to right, #ff4b2b, #ff0000);
 	color: #00000000;
 	-webkit-text-stroke-color: transparent;
 	-webkit-text-stroke-width: var(--stroke-width);
@@ -4817,20 +4817,50 @@ ul.nav > li:hover > a {
 	font-weight: 1000;
 	font-size: 120px;
 	text-shadow: 5px 5px 15px rgba(0, 0, 0, 0.75);
-	text-shadow: 0px 0px 25px #710eb4;
-  }
+	text-shadow: 0px 0px 25px #b81b0e;
+
+}
   
   @media (min-width: 640px) {
 	  .ranking-badge {
   
 	  }
   }
-  
+
+  .video-shows-carousel {
+    overflow: visible !important;
+}
+
+.video-shows-carousel .owl-stage-outer {
+    overflow: visible !important;
+}
+
+
+body, html {
+    overflow-x: hidden;
+}
+
   .carousel-top-10 .owl-stage-outer{
 	padding: 50px 0px 0px 0px;
   }
   .home-carousel-top-10 .vfx-item-section{
 	margin-bottom: -35px;
+  }
+  .video-img-live {
+	  box-shadow : 0px 0px 0px rgba(0, 0, 0, 0.2) !important;
+  }
+  .video-img-live:after {
+	  bottom: 10px !important;
+	  opacity: 1 !important;
+	  visibility: visible !important;
+	  border-radius: 20px;
+  }
+  .season-title-item-live {
+	  text-align: center !important;
+  }
+  .img-img-live{
+	  padding-top: 23px !important;
+	  padding-bottom: 12px !important;
   }
 
   
