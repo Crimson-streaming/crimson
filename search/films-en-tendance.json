@@ -1,12 +1,12 @@
 [
     {
-        "nom": "À Contre-Sens : Londres",
+        "title": "À Contre-Sens : Londres",
         "img": "https://image.tmdb.org/t/p/w300/y9ii1qorIELEshaxaLuF2MlyRv.jpg",
         "link": "film/à-contre-sens--londres.html"
     },
     {
-        "nom": "L'Amour ouf",
-        "img": "https://image.tmdb.org/t/p/w300/6akNNv4KyrguZUiG4uemfV6toVq.jpg",
+        "title": "L'Amour ouf",
+        "img": "https://image.tmdb.org/t/p/w300/ivzXcoMCZWAPnOqsvv9p7pjYGvC.jpg",
         "link": "film/lamour-ouf.html"
     },
     {
@@ -20,7 +20,7 @@
         "img": "img/film/Sonic-3-le-film/sonic-3-le-film-affiche.jpg"
     },
     {
-        "nom": "Closer",
+        "title": "Closer",
         "img": "https://image.tmdb.org/t/p/w300/122qCjs197rrC1GOntNYBcNyyQc.jpg",
         "link": "film/closer.html"
     },
@@ -35,17 +35,17 @@
         "img": "https://media.themoviedb.org/t/p/w342/bn4qZZO5nSN48D5pXVypf4MF2wg.jpg"
     },
     {
-        "nom": "À contre-sens",
+        "title": "À contre-sens",
         "img": "https://www.themoviedb.org/t/p/w300/3ZCfSSxZ2e4Kiwu3Y9dvfT5n1m6.jpg",
         "link": "film/à-contre-sens.html"
     },
     {
-        "nom": "Les Tuche 4",
+        "title": "Les Tuche 4",
         "img": "https://www.themoviedb.org/t/p/w300/dv60Gev15GBYSHJrIzl1iE2dkew.jpg",
         "link": "film/les-tuche-4.html"
     },
     {
-        "nom": "Kraven the Hunter",
+        "title": "Kraven the Hunter",
         "img": "https://image.tmdb.org/t/p/w300/1GvBhRxY6MELDfxFrete6BNhBB5.jpg",
         "link": "film/kraven-the-hunter.html"
     }
