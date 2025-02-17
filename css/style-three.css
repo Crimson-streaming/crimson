@@ -4826,6 +4826,7 @@ ul.nav > li:hover > a {
   }
 
 
+
   /* Conteneur du carrousel - Permet aux éléments de déborder */
   .video-carousel-tendance {
 	overflow: visible !important;  /* Permet aux éléments de sortir du conteneur */
